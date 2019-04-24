@@ -1,0 +1,495 @@
+<!doctype html>
+<html class="fixed sidebar-left-collapsed">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="UTF-8">
+
+		<title>AJG Sarlaft</title>
+		<meta name="keywords" content="HTML5 Admin Template" />
+		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
+		<meta name="author" content="okler.net">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- Web Fonts  -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="octopus/assets/vendor/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="octopus/assets/vendor/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="octopus/assets/vendor/magnific-popup/magnific-popup.css" />
+		<link rel="stylesheet" href="octopus/assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
+
+		<!-- Specific Page Vendor CSS -->
+		<link rel="stylesheet" href="octopus/assets/vendor/summernote/summernote.css" />
+		<link rel="stylesheet" href="octopus/assets/vendor/summernote/summernote-bs3.css" />
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="octopus/assets/stylesheets/theme.css" />
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="octopus/assets/stylesheets/skins/default.css" />
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="octopus/assets/stylesheets/theme-custom.css">
+
+		<!-- Head Libs -->
+		<script src="octopus/assets/vendor/modernizr/modernizr.js"></script>
+
+	</head>
+	<body>
+		<section class="body">
+
+			<!-- start: header -->
+			<header class="header">
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <img src="img/thumbnail_image.png" height="45" style="padding-left: 0.5cm"  alt="JSOFT Admin"/>
+                    </a>
+                    <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+                        <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                    </div>
+                </div>
+                
+                <!-- start: search & user box -->
+                <div class="header-right">
+            
+                    <form action="#" class="search nav-form">
+                        <div class="input-group input-search">
+                            <input type="text" class="form-control" name="q" id="q" placeholder="Buscar...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </form>								
+                                
+                    <span class="separator"></span>  
+                    <div id="userbox" class="userbox">
+                        <a href="#" data-toggle="dropdown">							
+                            <div class="profile-info">
+                                <span class="name">Nombre Usuario</span>								
+                            </div>
+            
+                            <i class="fa custom-caret"></i>
+                        </a>
+            
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled">
+                                <li class="divider"></li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="#"><i class="fa fa-user"></i> Perfil</a>
+                                </li>								
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="#"><i class="fa fa-power-off"></i> Cerrar Sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- end: search & user box -->
+            </header>
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+				<aside id="sidebar-left" class="sidebar-left">
+                    <div class="sidebar-header">
+                        <div class="sidebar-title">
+                            Navegación
+                        </div>
+                        <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+                            <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                        </div>
+                    </div>
+                
+                    <div class="nano">
+                        <div class="nano-content">
+                            <nav id="menu" class="nav-main" role="navigation">
+                                <ul class="nav nav-main">
+                                    <li>
+                                        <a href="index.html">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <span>Inicio</span>
+                                        </a>
+                                    </li>	
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <span>Perfil</span>
+                                        </a>
+                                    </li>  
+                                    <li class="nav-parent nav-expanded nav-active">
+                                        <a>
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                            <span>Creación</span>
+                                        </a>
+                                        <ul class="nav nav-children text-white">
+                                            <li>
+                                                <a href="juridico1.html">
+                                                    Inicio
+                                                </a>
+                                            </li>
+                                            <li class="nav-parent nav-active">
+                                                <a>Información Básica</a>
+                                                <ul class="nav nav-children">
+                                                    <li class="nav-active">
+                                                        <a href="juridico2.html" >
+                                                            Datos Básicos
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            Representante Legal
+                                                        </a>
+                                                    </li>   
+                                                    <li>
+                                                        <a href="#">
+                                                            Accionistas
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                        Personas Expuestas Publicamente
+                                                        </a>
+                                                    </li> 
+                                                    <li>
+                                                        <a href="#">
+                                                            Accionistas y Beneficiarios Finales
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            Información Financiera
+                                                        </a>
+                                                    </li>                         
+
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    Origen de Fondos
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    Operaciones Internacionales
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    Reclamaciones en seguros
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    Cláusula de Autorización
+                                                </a>
+                                            </li> 
+                                            <li>
+                                                <a href="">
+                                                    Imprimir Formulario 
+                                                </a>
+                                            </li>                                                        
+                                        </ul>
+                                    </li>    																																																																			
+                                </ul>
+                            </nav>																															
+                        </div>				
+                    </div>	
+				
+				</aside>
+				<!-- end: sidebar -->
+
+				<section role="main" class="content-body">
+					<header class="page-header">
+                        <h2>Información Básica</h2>
+					
+						<div class="right-wrapper pull-right">
+							<ol class="breadcrumbs">
+								<li>
+									<a href="index.html">
+										<i class="fa fa-home"></i>
+									</a>
+								</li>
+                                <li><span>Información Básica</span></li>
+                                <li><span style="padding-right: 1cm">Datos Básicos</span></li>
+							</ol>
+												
+						</div>
+					</header>
+
+					<!-- start: page -->					
+                    <div>
+                        <br>
+                        <section class="panel">
+                            <header class="panel-heading">                                        
+                                <h2 class="panel-title text-center">Datos Básicos</h2>   
+                            </header>
+                            <div class="panel-body">
+                                <form class="form-bordered" method="POST">
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" >Nombre o Razón Social</label>                                                
+                                                <div class="col-md-9">
+                                                    <input type="text" class="form-control" placeholder="Nombre - Razón Social" data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Nombre">                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <label class="col-md-4 control-label">Tipo de Documento</label>
+                                            <div class="col-md-8">
+                                                <select class="form-control mb-md">
+                                                    <option>NIT</option>
+                                                    <option>Otro sin NIT</option>                                                
+                                                </select>  
+                                            </div>    
+                                        </div>                                    
+                                    </div>
+                                    <br>                                    
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <label class="col-md-4 control-label">NIT</label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" placeholder="NIT ">
+                                            </div>                                 
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div  class="form-group">
+                                                <label class="col-sm-3 control-label">DV</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" placeholder="DV">
+                                                </div>                                 
+                                            </div>                                                    
+                                        </div>                                    
+                                        <div class="col-sm-5">
+                                            <div  class="form-group">
+                                                <label class="col-sm-4 control-label">Oficina Principal</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" placeholder="Dirección">
+                                                </div>                                 
+                                            </div>                                                    
+                                        </div>                                            
+                                    </div>
+                                    <br>                                    
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div  class="form-group">
+                                                <label class="col-md-4 control-label">Tipo de Empresa</label>
+                                                <div class="col-md-8">
+                                                    <select class="form-control mb-md">
+                                                        <option></option>
+                                                        <option>Mixta</option>
+                                                        <option>Oficina de Representación</option>
+                                                        <option>Privada</option>
+                                                        <option>Pública</option>
+                                                        <option>Sin Ánimo de Lucro</option>
+                                                        <option>Sociedad Extranjera</option>
+                                                    </select>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div  class="form-group">
+                                                <label class="col-sm-1 control-label">CIIU</label>
+                                                <div class="col-sm-11">
+                                                    <select class="form-control mb-md">
+                                                        <option></option>
+                                                        <option>Agricultura, ganadería, caza, silvicultura y pesca</option>
+                                                        <option>Explotación de minas y canteras</option>
+                                                        <option>Industrias manufactureras</option>
+                                                        <option>Suministro de electricidad, gas, vapor y aire acondicionado</option>
+                                                        <option>Distribución de agua; evaluación y tratamiento de aguas residuales, gestión de desechos y actividades de saneamiento ambiental</option>
+                                                        <option>Construcción</option>
+                                                        <option>Comercio al por mayor y al por menor; reparación de vehículos automotores y motocicletas</option>
+                                                        <option>Transporte y Almacenamiento</option>
+                                                        <option>Alojamiento y servicios de comida</option>
+                                                        <option>Información y comunicaciones</option>
+                                                        <option>Actividades financieras y de seguros</option>
+                                                        <option>Actividades Inmobiliarias</option>
+                                                        <option>Actividades profesionales, científicas y técnicas</option>
+                                                        <option>Actividades de servicios administrativos y de apoyo</option>
+                                                        <option>Administración pública y defensa; planes de seguridad social de afiliación obligatoria</option>
+                                                        <option>Educación</option>
+                                                        <option>Actividades de ateción de la salud humana y de asistencia social</option>
+                                                        <option>Actividades artísticas,de entretenimiento y recreación </option>
+                                                        <option>Otras actividades de servicios</option>
+                                                        <option>Actividades de los hogares en calidad de empleadores; actividades no diferenciadas de los hogares individuales como productores de bienes y servicios para uso propio</option>
+                                                        <option>Actividades de organizaciones y entidades extrateritoriales</option>
+                                                    </select>
+                                                </div>                                 
+                                            </div>                                                    
+                                        </div>                                            
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div  class="form-group">
+                                                <label class="col-md-4 control-label">CIIU (Cod)</label>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" placeholder="Código">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label class="col-md-3 control-label">Sector</label>
+                                            <div class="col-md-9">
+                                                <select class="form-control mb-md">
+                                                    <option></option>
+                                                    <option>Agropecuadio</option>
+                                                    <option>Comercio</option>
+                                                    <option>Construcción</option>
+                                                    <option>Financiero</option>
+                                                    <option>Industrial</option>
+                                                    <option>Minero y Energético</option>
+                                                    <option>Servicios</option>
+                                                    <option>Solidario</option>
+                                                    <option>Transporte</option>
+                                                </select>  
+                                            </div>
+                                        </div>                                        
+                                        <div class="col-sm-4">
+                                            <div  class="form-group">
+                                                <label class="col-sm-4 control-label">Departamento</label>
+                                                <div class="col-sm-8" style="padding-left: 0.5cm">
+                                                    <select class="form-control mb-md">
+                                                        <option></option>
+                                                        <option>Amazonas</option>
+                                                        <option>Antioquia</option>
+                                                        <option>Arauca</option>
+                                                        <option>Atlantico</option>
+                                                        <option>Bogotá</option>
+                                                        <option>Bolivar</option>
+                                                        <option>Boyaca</option>
+                                                        <option>Caldas</option>
+                                                        <option>Caqueta</option>
+                                                        <option>Casanare</option>
+                                                        <option>Cauca</option>
+                                                        <option>Cesar</option>
+                                                    </select>
+                                                </div>                                 
+                                            </div>                                                    
+                                        </div>                                            
+                                    </div>
+                                    <br>
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div  class="form-group">
+                                                <label class="col-md-4 control-label">Ciudad</label>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" placeholder="Ej: Bogota ">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div  class="form-group">
+                                                <label class="col-md-3 control-label">Teléfono</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" class="form-control" placeholder="Teléfono ">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div  class="form-group">
+                                                <label class="col-md-3 control-label">E-mail</label>
+                                                <div class="col-md-9">
+                                                    <input type="email" class="form-control" placeholder="email">
+                                                </div>
+                                            </div>
+                                        </div>                                
+                                                                    
+                                    </div>                                                                        
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div  class="form-group">
+                                                <label class="col-md-4 control-label">Sucursal o Agencia:</label>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" placeholder="Dirección ">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div  class="form-group">
+                                                <label class="col-sm-4 control-label">Departamento</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control mb-md">
+                                                        <option></option>
+                                                        <option>Amazonas</option>
+                                                        <option>Antioquia</option>
+                                                        <option>Arauca</option>
+                                                        <option>Atlantico</option>
+                                                        <option>Bogotá</option>
+                                                        <option>Bolivar</option>
+                                                        <option>Boyaca</option>
+                                                        <option>Caldas</option>
+                                                        <option>Caqueta</option>
+                                                        <option>Casanare</option>
+                                                        <option>Cauca</option>
+                                                        <option>Cesar</option>
+                                                    </select>
+                                                </div>                                 
+                                            </div>                                                    
+                                        </div>                                            
+                                        
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div  class="form-group">
+                                                <label class="col-md-4 control-label">Ciudad</label>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" placeholder="Ej: ">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div  class="form-group">
+                                                <label class="col-md-4 control-label">Teléfono</label>
+                                                <div class="col-md-8">
+                                                    <input type="email" class="form-control" placeholder="Ej: ">
+                                                </div>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                    <br>
+                                    <a href="juridico3.html"  class="btn btn-primary col-md-4 col-md-offset-4">
+                                        Siguiente
+                                    </a>                               
+                                </form>
+                            </div>
+                        </section>
+                    </div>  
+					<!-- end: page -->
+				</section>
+			</div>
+
+			
+		</section>
+
+		<!-- Vendor -->
+		<script src="octopus/assets/vendor/jquery/jquery.js"></script>
+		<script src="octopus/assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+		<script src="octopus/assets/vendor/bootstrap/js/bootstrap.js"></script>
+		<script src="octopus/assets/vendor/nanoscroller/nanoscroller.js"></script>
+		<script src="octopus/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="octopus/assets/vendor/magnific-popup/magnific-popup.js"></script>
+		<script src="octopus/assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+		
+		<!-- Specific Page Vendor -->
+		<script src="octopus/assets/vendor/summernote/summernote.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="octopus/assets/javascripts/theme.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="octopus/assets/javascripts/theme.custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="octopus/assets/javascripts/theme.init.js"></script>
+
+	</body>
+</html>
