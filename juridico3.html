@@ -34,7 +34,7 @@
 
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="octopus/assets/stylesheets/theme-custom.css">
-
+        <link rel="stylesheet" href="styles.css">
 		<!-- Head Libs -->
 		<script src="octopus/assets/vendor/modernizr/modernizr.js"></script>
 
@@ -94,52 +94,52 @@
 
 			<div class="inner-wrapper">
 				<!-- start: sidebar -->
-				<aside id="sidebar-left" class="sidebar-left">
+				<aside id="sidebar-left" class="sidebar-left ajg-color-dark">
                     <div class="sidebar-header">
-                        <div class="sidebar-title">
+                        <div class="sidebar-title" style="color:white">
                             Navegación
                         </div>
-                        <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
-                            <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                        <div class="sidebar-toggle hidden-xs" style="background-color: rgb(0,38,62);color:white;" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+                            <i class="fa fa-bars" style="color:white" aria-label="Toggle sidebar"></i>
                         </div>
                     </div>
                 
                     <div class="nano">
-                        <div class="nano-content">
+                        <div class="nano-content ajg-color-dark">
                             <nav id="menu" class="nav-main" role="navigation">
                                 <ul class="nav nav-main">
                                     <li>
-                                        <a href="index.html">
+                                        <a href="index.html"  class="ajg-dark-button">
                                             <i class="fa fa-home" aria-hidden="true"></i>
                                             <span>Inicio</span>
                                         </a>
                                     </li>	
                                     <li>
-                                        <a href="#">
+                                        <a href="#"  class="ajg-dark-button">
                                             <i class="fa fa-user" aria-hidden="true"></i>
                                             <span>Perfil</span>
                                         </a>
                                     </li>  
-                                    <li class="nav-parent nav-expanded nav-active">
-                                        <a>
+                                    <li class="nav-parent nav-expanded nav-active" id="light-list">
+                                        <a  class="ajg-dark-button">
                                             <i class="fa fa-plus" aria-hidden="true"></i>
                                             <span>Creación</span>
                                         </a>
-                                        <ul class="nav nav-children text-white">
+                                        <ul class="nav nav-children text-white" style="background-color: white">
                                             <li>
                                                 <a href="juridico1.html">
-                                                    Inicio
+                                                    1. Inicio
                                                 </a>
                                             </li>
                                             <li class="nav-parent nav-active">
-                                                <a>Información Básica</a>
+                                                <a>2. Información Básica</a>
                                                 <ul class="nav nav-children">
-                                                    <li>
+                                                    <li class="nav-active">
                                                         <a href="juridico2.html" >
                                                             Datos Básicos
                                                         </a>
                                                     </li>
-                                                    <li class="nav-active">
+                                                    <li>
                                                         <a href="#">
                                                             Representante Legal
                                                         </a>
@@ -169,27 +169,27 @@
                                             </li>
                                             <li>
                                                 <a href="">
-                                                    Origen de Fondos
+                                                    3. Origen de Fondos
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="">
-                                                    Operaciones Internacionales
+                                                    4. Operaciones Internacionales
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="">
-                                                    Reclamaciones en seguros
+                                                    5. Reclamaciones en seguros
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="">
-                                                    Cláusula de Autorización
+                                                    6. Cláusula de Autorización
                                                 </a>
                                             </li> 
                                             <li>
                                                 <a href="">
-                                                    Imprimir Formulario
+                                                    7. Imprimir Formulario 
                                                 </a>
                                             </li>                                                        
                                         </ul>
@@ -203,18 +203,18 @@
 				<!-- end: sidebar -->
 
 				<section role="main" class="content-body">
-					<header class="page-header">
+					<header class="page-header  ajg-color-dark">
                         <h2>Información Básica</h2>
 					
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
 								<li>
 									<a href="index.html">
-										<i class="fa fa-home"></i>
+										<i class="fa fa-home title"></i>
 									</a>
 								</li>
-                                <li><span>Información Básica</span></li>
-                                <li><span style="padding-right: 1cm">Representante Legal</span></li>
+                                <li><span style="color:white">Información Básica</span></li>
+                                <li><span style="padding-right: 1cm; color:white">Representante Legal</span></li>
 							</ol>
 												
 						</div>
@@ -223,15 +223,257 @@
 					<!-- start: page -->					
                     <div>
                         <br>
-                        <section class="panel">
+                        <section class="panel" style="color:rgb(0,38,62);">
                             <header class="panel-heading">                                        
-                                    <h2 class="panel-title text-center">Representante Legal</h2>   
+                                <h2 class="panel-title text-center ajg-title-dark">Representante Legal</h2>   
                             </header>
-                            
-                                
-                                        
+                            <div class="panel-body">
+                                <form class="form-bordered" method="POST">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label" >Primer Apellido</label>                                                
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" placeholder="Primer Apellido - Representante Legal" data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Primer Apellido del Representante Legal">                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label class="col-md-4 control-label">Segundo Apellido</label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" placeholder="Segundo Apellido" data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Segundo Apellido del Representante Legal">                                                    
+                                            </div>    
+                                        </div>                                    
+                                        <div class="col-sm-4">
+                                            <label class="col-md-4 control-label">Nombre</label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" placeholder="Nombre" data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Nombre del Representante Legal">                                                    
+                                            </div>    
+                                        </div> 
+                                    </div>
+                                    <br>                                    
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <label class="col-md-4 control-label">Tipo de Documento</label>
+                                            <div class="col-md-8">
+                                                <select class="form-control mb-md">
+                                                    <option></option>
+                                                    <option>C.C.</option>
+                                                    <option>C.E.</option>
+                                                    <option>NIT</option>
+                                                    <option>NUIP</option>
+                                                    <option>T.I.</option>
+                                                    <option>Pasaporte</option>
+                                                    <option>Otro Sin</option>
+                                                </select>  
+                                            </div>                                 
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div  class="form-group">
+                                                <label class="col-sm-4 control-label">Número</label>
+                                                <div class="col-sm-8">
+                                                    <input type="number" class="form-control" placeholder="Número">
+                                                </div>                                 
+                                            </div>                                                    
+                                        </div>                                    
+                                        <div class="col-sm-4">
+                                            <div  class="form-group">
+                                                <label class="col-sm-4 control-label">Fecha de Expedición</label>
+                                                <div class="col-sm-8">
+                                                    <input type="date" class="form-control">
+                                                </div>                                 
+                                            </div>                                                    
+                                        </div>                                            
+                                    </div>
+                                    <br>                                    
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div  class="form-group">
+                                                <label class="col-md-4 control-label">Lugar de Expedición</label>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div  class="form-group">
+                                                <label class="col-sm-4 control-label">Fecha de Nacimiento</label>
+                                                <div class="col-sm-8">
+                                                    <input type="date" class="form-control">
+                                                </div>                                 
+                                            </div>                                                    
+                                        </div> 
+                                        <div class="col-sm-3">
+                                            <div  class="form-group">
+                                                <label class="col-md-4 control-label">Nacionalidad 1</label>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" placeholder="Nacionalidad 1">
+                                                </div>
+                                            </div>
+                                        </div>             
+                                        <div class="col-sm-3">
+                                            <div  class="form-group">
+                                                <label class="col-md-4 control-label">Nacionalidad 2</label>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" placeholder="Nacionalidad 2">
+                                                </div>
+                                            </div>
+                                        </div>                              
+                                    </div>
                                     <br>
-                                    <a href="juridico4.html"  class="btn btn-primary col-md-4 col-md-offset-4">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div  class="form-group">
+                                                <label class="col-md-4 control-label">E-mail</label>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" placeholder="E-mail">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label class="col-md-3 control-label">Dirección</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" placeholder="Dirección" data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Dirección de Residencia">                                                    
+                                            </div>
+                                        </div>                                        
+                                        <div class="col-sm-4">
+                                            <div  class="form-group">
+                                                <label class="col-sm-3 control-label">Ciudad</label>
+                                                <div class="col-sm-9" >
+                                                    <input type="text" class="form-control" placeholder="Ciudad" data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Ciudad de la Residencia">                                                    
+                                                </div>                                 
+                                            </div>                                                    
+                                        </div>                                            
+                                    </div>
+                                    <br>
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div  class="form-group">
+                                                <label class="col-md-5 control-label">Departamento</label>
+                                                <div class="col-md-7">
+                                                    <select class="form-control mb-md">
+                                                        <option></option>
+                                                        <option>Amazonas</option>
+                                                        <option>Antioquia</option>
+                                                        <option>Arauca</option>
+                                                        <option>Atlantico</option>
+                                                        <option>Bogotá</option>
+                                                        <option>Bolivar</option>
+                                                        <option>Boyaca</option>
+                                                        <option>Caldas</option>
+                                                        <option>Caqueta</option>
+                                                        <option>Casanare</option>
+                                                        <option>Cauca</option>
+                                                        <option>Cesar</option>
+                                                        <option>Choco</option>
+                                                        <option>Cordoba</option>
+                                                        <option>Cundinamarcar</option>
+                                                        <option>Guainía</option>
+                                                        <option>Guaviare</option>
+                                                        <option>Huila</option>
+                                                        <option>La Guajira</option>
+                                                        <option>Magdalenta</option>
+                                                        <option>Meta</option>
+                                                        <option>N. de Santander</option>
+                                                        <option>Nariño</option>
+                                                        <option>Putumayo</option>
+                                                        <option>Quindio</option>
+                                                        <option>Risaralda</option>
+                                                        <option>San Andres</option>
+                                                        <option>Santander</option>
+                                                        <option>Sucre</option>
+                                                        <option>Tolima</option>
+                                                        <option>Valle del Cauca</option>
+                                                        <option>Vaupes</option>
+                                                        <option>Vichada</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div  class="form-group">
+                                                <label class="col-md-3 control-label">País</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" class="form-control" placeholder="País">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div  class="form-group">
+                                                <label class="col-md-3 control-label">Teléfono</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" class="form-control" placeholder="Télefono">
+                                                </div>
+                                            </div>
+                                        </div>                                
+                                        <div class="col-sm-3">
+                                            <div  class="form-group">
+                                                <label class="col-md-3 control-label">Celular</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" class="form-control" placeholder="Celular">
+                                                </div>
+                                            </div>
+                                        </div>      
+                                                                    
+                                    </div>                                                                        
+                                    <br>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label" style="padding-right: 1cm" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" 
+                                        data-content="i) Las personas expuestas políticamente-conforme al (Decreto 1674 de 2016), ii) Los representantes legales de organizaciones internacionales y 
+                                        iii) Las personas que gozan de reconocimiento público. Se entiene por persona políticamente expuesta (Decrerto 1674 /2016) los individuos que desempeñan o han desempeñado funciones públicas destacadas como 
+                                        jefes de Estado, políticos de alta jerarquía, funcionarios gubernamentales, judiciales o militares de alta jerarquía, altos ejecutivos (directores y gerentes) de empresas sociales, 
+                                        inductriales y comerciales del estado y de sociedades de economía mixta, unidades administrativas especiales, y funcionarios importantes de partidos políticos">
+                                            ¿Alguno de los administradores (Representantes legales, miembros de la Junta Directiva) es una Persona Públicamente Expuesta?
+                                        </label>
+                                        
+                                        <div class="radio-custom radio-primary col-sm-1" >
+                                            <input value="tomador" type="radio" name="perPublic" />
+                                            <label>Si</label>
+                                        </div>
+                                        <div class="radio-custom radio-primary col-sm-1">
+                                            <input value="tomador" type="radio" name="perPublic"/>
+                                            <label>No</label>
+                                        </div>        
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label" style="padding-right: 1cm" >
+                                            ¿Por su cargo o actividad, alguno de los administradores (Representantes legales, miembros de la Junta Directiva) administra recursos públicos?
+                                        </label>
+                                        <div class="radio-custom radio-primary col-sm-1" >
+                                            <input value="tomador" type="radio" name="recPublic" />
+                                            <label>Si</label>
+                                        </div>
+                                        <div class="radio-custom radio-primary col-sm-1">
+                                            <input value="tomador" type="radio" name="recPublic"/>
+                                            <label>No</label>
+                                        </div>        
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label" style="padding-right: 1cm" >
+                                            ¿Es usted sujeto de obligaciones tributarias en otro país o grupo de países?
+                                        </label>
+                                        <div class="radio-custom radio-primary col-sm-1" >
+                                            <input value="tomador" type="radio" name="obligTrib" />
+                                            <label>Si</label>
+                                        </div>
+                                        <div class="radio-custom radio-primary col-sm-1">
+                                            <input value="tomador" type="radio" name="obligTrib"/>
+                                            <label>No</label>
+                                        </div>    
+                                        <div class="col-sm-4">                                        
+                                            <div  class="form-group">
+                                                <label class="col-md-3 control-label">Indique</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div>                                            
+                                        </div>        
+                                    </div>
+                                    
+                                    <br>
+                                    <a  href="juridico4.shtml" class="btn ajg-button col-md-4 col-md-offset-4">
                                         Siguiente
                                     </a>                               
                                 </form>
