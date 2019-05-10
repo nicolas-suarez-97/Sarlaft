@@ -97,7 +97,7 @@
 
 			<div class="inner-wrapper">
 				<!-- start: sidebar -->
-				    <!--#4DINCLUDE panelJuridico.shtml-->
+				    <!--#4DINCLUDE panelJuridico.shtml-->   
 				<!-- end: sidebar -->
 
 				<section role="main" class="content-body">
@@ -112,7 +112,7 @@
 									</a>
 								</li>
                                 <li><span style="color:white">Información Básica</span></li>
-                                <li><span style="padding-right: 1cm; color:white">Personas Expuestas Públicamente</span></li>
+                                <li><span style="padding-right: 1cm; color:white">Accionistas y Beneficiarios Finales</span></li>
 							</ol>
 												
 						</div>
@@ -123,43 +123,33 @@
                         <br>
                         <section class="panel">
                             <header class="panel-heading">                                        
-                                <h2 class="panel-title text-center ajg-title-dark">Personas Expuestas Públicamente</h2>   
+                                <h2 class="panel-title text-center ajg-title-dark">Accionistas y Beneficiarios Finales</h2>   
                             </header>
                             <div class="panel-body">
                                 <form class="form-bordered" method="POST">                                                                           
                                     <div class="panel-body">                                            
-                                        <h4 class="ajg-title-dark" style="font-weight:bold">Conocimiento mejorado de Personas Expuestas Públicamente</h4>
-                                        <p class="ajg-title-dark">
-                                            En cumplimiento de Decreto 1674, se relacionan los siguiente campos en caso de ser considerado como persona 
-                                            políticamente expuesta o vínculado:
-                                        </p>                              
-                                        <p>*Vinculo/Relación: 1. Representante Legal 2. Miembro de la Junda Directiva 3. Accionista</p>         
-                                        <br>                                       
-                                                                                  
-                                            <div class="table-responsive">
-                                                <table class="table mb-none">
+                                        <h4 class="ajg-title-dark" style="font-weight:bold">Conocimiento ampliado de Accionistas y Beneficiarios Finales</h4>                                           
+                                        <br>                                                                                                                   
+                                        <div class="table-responsive">
+                                            <table class="table mb-none">
                 
                                                 <thead>
                                                     <tr class="ajg-title-dark">
-                                                        <th>Vínculo / Relación *</th>
+                                                        <th>Numero ID</th>
                                                         <th>Nombre</th>
+                                                        <th>Nombre/Raazón Social de la Sociedad de la que es Accionista</th>
                                                         <th>Tipo ID</th>
-                                                        <th>No de ID</th>
-                                                        <th>Nacionalidad</th>
-                                                        <th>Entidad</th>
-                                                        <th>Cargo</th>
-                                                        <th>Fecha Desvinculación</th>
+                                                        <th>ID</th>
+                                                        <th>% Participación</th>                                                            
                                                     </tr>
                                                 </thead>
                                                 <tbody>                                                    
-                                                    <tr >
+                                                    <tr >                                                          
                                                         <td>
-                                                            <select class="form-control mb-md">
-                                                                <option value=""></option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>                                                                   
-                                                            </select>
+                                                            <input type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control">
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
@@ -168,10 +158,8 @@
                                                             <select class="form-control mb-md">
                                                                 <option value=""></option>
                                                                 <option value="C.C.">C.C.</option>
-                                                                <option value="C.E.">C.E.</option>
-                                                                <option value="NUIP">NUIP</option>
-                                                                <option value="Pasaporte">Pasaporte</option>
-                                                                <option value="R.C.">R.C.</option>
+                                                                <option value="NIT">NIT</option>
+                                                                <option value="Otro sin NIT">Otro sin NIT</option>                                                                    
                                                             </select>
                                                         </td>
                                                         <td>
@@ -179,26 +167,15 @@
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td>                                                           
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td> 
+                                                        </td>                                                                                                                       
                                                     </tr>
 
-                                                    <tr >
+                                                    <tr >                                                          
                                                         <td>
-                                                            <select class="form-control mb-md">
-                                                                <option value=""></option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>                                                                   
-                                                            </select>
+                                                            <input type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control">
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
@@ -207,10 +184,8 @@
                                                             <select class="form-control mb-md">
                                                                 <option value=""></option>
                                                                 <option value="C.C.">C.C.</option>
-                                                                <option value="C.E.">C.E.</option>
-                                                                <option value="NUIP">NUIP</option>
-                                                                <option value="Pasaporte">Pasaporte</option>
-                                                                <option value="R.C.">R.C.</option>
+                                                                <option value="NIT">NIT</option>
+                                                                <option value="Otro sin NIT">Otro sin NIT</option>                                                                    
                                                             </select>
                                                         </td>
                                                         <td>
@@ -218,26 +193,15 @@
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td>                                                           
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td> 
+                                                        </td>                                                                                                                       
                                                     </tr>
 
-                                                    <tr >
+                                                    <tr >                                                          
                                                         <td>
-                                                            <select class="form-control mb-md">
-                                                                <option value=""></option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>                                                                   
-                                                            </select>
+                                                            <input type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control">
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
@@ -246,10 +210,8 @@
                                                             <select class="form-control mb-md">
                                                                 <option value=""></option>
                                                                 <option value="C.C.">C.C.</option>
-                                                                <option value="C.E.">C.E.</option>
-                                                                <option value="NUIP">NUIP</option>
-                                                                <option value="Pasaporte">Pasaporte</option>
-                                                                <option value="R.C.">R.C.</option>
+                                                                <option value="NIT">NIT</option>
+                                                                <option value="Otro sin NIT">Otro sin NIT</option>                                                                    
                                                             </select>
                                                         </td>
                                                         <td>
@@ -257,26 +219,15 @@
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td>                                                           
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td> 
+                                                        </td>                                                                                                                       
                                                     </tr>
 
-                                                    <tr >
+                                                    <tr >                                                          
                                                         <td>
-                                                            <select class="form-control mb-md">
-                                                                <option value=""></option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>                                                                   
-                                                            </select>
+                                                            <input type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control">
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
@@ -285,10 +236,8 @@
                                                             <select class="form-control mb-md">
                                                                 <option value=""></option>
                                                                 <option value="C.C.">C.C.</option>
-                                                                <option value="C.E.">C.E.</option>
-                                                                <option value="NUIP">NUIP</option>
-                                                                <option value="Pasaporte">Pasaporte</option>
-                                                                <option value="R.C.">R.C.</option>
+                                                                <option value="NIT">NIT</option>
+                                                                <option value="Otro sin NIT">Otro sin NIT</option>                                                                    
                                                             </select>
                                                         </td>
                                                         <td>
@@ -296,26 +245,15 @@
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td>                                                           
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td> 
+                                                        </td>                                                                                                                       
                                                     </tr>
 
-                                                    <tr >
+                                                    <tr >                                                          
                                                         <td>
-                                                            <select class="form-control mb-md">
-                                                                <option value=""></option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>                                                                   
-                                                            </select>
+                                                            <input type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control">
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
@@ -324,10 +262,8 @@
                                                             <select class="form-control mb-md">
                                                                 <option value=""></option>
                                                                 <option value="C.C.">C.C.</option>
-                                                                <option value="C.E.">C.E.</option>
-                                                                <option value="NUIP">NUIP</option>
-                                                                <option value="Pasaporte">Pasaporte</option>
-                                                                <option value="R.C.">R.C.</option>
+                                                                <option value="NIT">NIT</option>
+                                                                <option value="Otro sin NIT">Otro sin NIT</option>                                                                    
                                                             </select>
                                                         </td>
                                                         <td>
@@ -335,26 +271,15 @@
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td>                                                           
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td> 
+                                                        </td>                                                                                                                       
                                                     </tr>
 
-                                                    <tr >
+                                                    <tr >                                                          
                                                         <td>
-                                                            <select class="form-control mb-md">
-                                                                <option value=""></option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>                                                                   
-                                                            </select>
+                                                            <input type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control">
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
@@ -363,10 +288,8 @@
                                                             <select class="form-control mb-md">
                                                                 <option value=""></option>
                                                                 <option value="C.C.">C.C.</option>
-                                                                <option value="C.E.">C.E.</option>
-                                                                <option value="NUIP">NUIP</option>
-                                                                <option value="Pasaporte">Pasaporte</option>
-                                                                <option value="R.C.">R.C.</option>
+                                                                <option value="NIT">NIT</option>
+                                                                <option value="Otro sin NIT">Otro sin NIT</option>                                                                    
                                                             </select>
                                                         </td>
                                                         <td>
@@ -374,16 +297,33 @@
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
+                                                        </td>                                                                                                                       
+                                                    </tr>
+
+                                                    <tr >                                                          
+                                                        <td>
+                                                            <input type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <select class="form-control mb-md">
+                                                                <option value=""></option>
+                                                                <option value="C.C.">C.C.</option>
+                                                                <option value="NIT">NIT</option>
+                                                                <option value="Otro sin NIT">Otro sin NIT</option>                                                                    
+                                                            </select>
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
                                                         </td>
                                                         <td>
                                                             <input type="text" class="form-control">
-                                                        </td>                                                           
-                                                        <td>
-                                                            <input type="text" class="form-control">
-                                                        </td> 
+                                                        </td>                                                                                                                       
                                                     </tr>
                                                 </tbody>
                                             </table>                                                                                        
@@ -393,7 +333,7 @@
                                     <br>
 
                                     
-                                    <a  href="juridico6.shtml" class="btn ajg-button col-md-4 col-md-offset-4">
+                                    <a  href="juridico7.shtml" class="btn ajg-button col-md-4 col-md-offset-4">
                                         Siguiente
                                     </a>   
                                     
