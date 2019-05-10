@@ -50,7 +50,7 @@
 			<!-- start: header -->
 			<header class="header">
                 <div class="logo-container">
-                    <a href="index.html" class="logo">
+                    <a href="index.shtml" class="logo">
                         <img src="img/thumbnail_image.png" height="45" style="padding-left: 0cm"  alt="JSOFT Admin"/>
                     </a>
                     <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
@@ -116,7 +116,7 @@
                             <nav id="menu" class="nav-main " role="navigation">
                                 <ul class="nav nav-main">
                                     <li class="nav-active">
-                                        <a href="index.html" class="ajg-dark-button">
+                                        <a href="index.shtml" class="ajg-dark-button">
                                             <i class="fa fa-home"  aria-hidden="true"></i>
                                             <span>Inicio</span>
                                         </a>
@@ -142,7 +142,7 @@
                             <div class="right-wrapper pull-right">
                                 <ol class="breadcrumbs">
                                     <li>
-                                        <a href="index.html">
+                                        <a href="index.shtml">
                                             <i class="fa fa-home title" ></i>
                                         </a>
                                     </li>

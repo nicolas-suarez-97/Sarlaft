@@ -1,0 +1,536 @@
+<!doctype html>
+<html class="fixed sidebar-left-collapsed">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="UTF-8">
+
+		<title>AJG Sarlaft</title>
+		<meta name="keywords" content="HTML5 Admin Template" />
+		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
+		<meta name="author" content="okler.net">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- Web Fonts  -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="octopus/assets/vendor/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="octopus/assets/vendor/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="octopus/assets/vendor/magnific-popup/magnific-popup.css" />
+		<link rel="stylesheet" href="octopus/assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
+
+		<!-- Specific Page Vendor CSS -->
+		<link rel="stylesheet" href="octopus/assets/vendor/select2/select2.css" />
+		<link rel="stylesheet" href="octopus/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css" />
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="octopus/assets/stylesheets/theme.css" />
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="octopus/assets/stylesheets/skins/default.css" />
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="octopus/assets/stylesheets/theme-custom.css">
+
+		<!-- Head Libs -->
+		<script src="octopus/assets/vendor/modernizr/modernizr.js"></script>
+        <link rel="stylesheet" href="styles.css">		
+
+
+	</head>
+	<body>
+		<section class="body">
+
+			<!-- start: header -->
+			<header class="header">
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <img src="img/thumbnail_image.png" height="45" style="padding-left: 0.5cm"  alt="JSOFT Admin"/>
+                    </a>
+                    <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+                        <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                    </div>
+                </div>
+                
+                <!-- start: search & user box -->
+                <div class="header-right">
+            
+                    <form action="#" class="search nav-form">
+                        <div class="input-group input-search">
+                            <input type="text" class="form-control" name="q" id="q" placeholder="Buscar...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </form>								
+                                
+                    <span class="separator"></span>  
+                    <div id="userbox" class="userbox">
+                        <a href="#" data-toggle="dropdown">							
+                            <div class="profile-info">
+                                <span class="name">Nombre Usuario</span>								
+                            </div>
+            
+                            <i class="fa custom-caret"></i>
+                        </a>
+            
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled">
+                                <li class="divider"></li>
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="#"><i class="fa fa-user"></i> Perfil</a>
+                                </li>								
+                                <li>
+                                    <a role="menuitem" tabindex="-1" href="#"><i class="fa fa-power-off"></i> Cerrar Sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- end: search & user box -->
+            </header>
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+				<aside id="sidebar-left" class="sidebar-left ajg-color-dark">
+                    <div class="sidebar-header">
+                        <div class="sidebar-title" style="color:white">
+                            Navegación
+                        </div>
+                        <div class="sidebar-toggle hidden-xs" style="background-color: rgb(0,38,62);color:white;" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+                            <i class="fa fa-bars" style="color:white" aria-label="Toggle sidebar"></i>
+                        </div>
+                    </div>
+                
+                    <div class="nano">
+                        <div class="nano-content ajg-color-dark">
+                            <nav id="menu" class="nav-main" role="navigation">
+                                <ul class="nav nav-main">
+                                    <li>
+                                        <a href="index.html"  class="ajg-dark-button">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <span>Inicio</span>
+                                        </a>
+                                    </li>	
+                                    <li>
+                                        <a href="#"  class="ajg-dark-button">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <span>Perfil</span>
+                                        </a>
+                                    </li>  
+                                    <li class="nav-parent nav-expanded nav-active" id="light-list">
+                                        <a  class="ajg-dark-button">
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                            <span>Creación</span>
+                                        </a>
+                                        <ul class="nav nav-children text-white" style="background-color: white">
+                                            <li>
+                                                <a href="juridico1.html">
+                                                    1. Inicio
+                                                </a>
+                                            </li>
+                                            <li class="nav-parent nav-active">
+                                                <a>2. Información Básica</a>
+                                                <ul class="nav nav-children">
+                                                    <li class="nav-active">
+                                                        <a href="juridico2.html" >
+                                                            Datos Básicos
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            Representante Legal
+                                                        </a>
+                                                    </li>   
+                                                    <li>
+                                                        <a href="#">
+                                                            Accionistas
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                        Personas Expuestas Publicamente
+                                                        </a>
+                                                    </li> 
+                                                    <li>
+                                                        <a href="#">
+                                                            Accionistas y Beneficiarios Finales
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            Información Financiera
+                                                        </a>
+                                                    </li>                         
+
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    3. Origen de Fondos
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    4. Operaciones Internacionales
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    5. Reclamaciones en seguros
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    6. Cláusula de Autorización
+                                                </a>
+                                            </li> 
+                                            <li>
+                                                <a href="">
+                                                    7. Imprimir Formulario 
+                                                </a>
+                                            </li>                                                        
+                                        </ul>
+                                    </li>    																																																																			
+                                </ul>
+                            </nav>																															
+                        </div>				
+                    </div>	
+				
+				</aside>
+				<!-- end: sidebar -->
+
+				<section role="main" class="content-body">
+					<header class="page-header  ajg-color-dark">
+                        <h2>Información Básica</h2>
+					
+						<div class="right-wrapper pull-right">
+							<ol class="breadcrumbs">
+								<li>
+									<a href="index.html">
+										<i class="fa fa-home title"></i>
+									</a>
+								</li>
+                                <li><span style="color:white">Información Básica</span></li>
+                                <li><span style="padding-right: 1cm; color:white">Accionistas</span></li>
+							</ol>
+												
+						</div>
+					</header>
+
+					<!-- start: page -->					
+                    <div>
+                        <br>
+                        <section class="panel">
+                            <header class="panel-heading">                                        
+                                <h2 class="panel-title text-center ajg-title-dark">Accionistas</h2>   
+                            </header>
+                            <div class="panel-body">
+                                <form class="form-bordered" method="POST">                                                                           
+                                    <div class="panel-body">                                            
+                                        <h4 class="ajg-title-dark" style="font-weight:bold">Instrucciones de Diligenciamiento</h4>
+                                        <p class="ajg-title-dark">
+                                            1) Por favor relacione los accionistas o asociados que tenga directa o indirectamente mas del 5% del Capital Social,
+                                            aporte o participación.
+                                        </p>
+                                        <p class="ajg-title-dark" stle=" text-align: justify;">
+                                            2) Si el accionista o asociado relacionado en la siguiente sección es un apersona Jurídica que no cotiza en bolsa, por favor relaciones la información 
+                                            de su composición accionaria en la sección para el conocimiento ampliado de Accionistas y Beneficiarios FInales, y suministre esta información para todos 
+                                            los accionistas/asociados indirectos que cumplan esta condición hasta relacionar la persona natural que ejerce control final sobre la entidad. 
+                                            (En caso de requerir más espacio debe anexar una relación por separado)
+                                        </p>
+                                        <p class="ajg-title-dark">
+                                            3) Si alguno de los accionistas o asociados (personas naturales) es una Persona Expuesta Públicamente, sirvase diligenciar la sección correspondiente.
+                                        </p>
+                                        <br>                                       
+                                        <div class="container">
+                                            <div class="table-responsive">
+                                                    <table class="table mb-none">
+                                                    <thead>
+                                                        <tr class="ajg-title-dark">
+                                                            <th>Tipo ID</th>
+                                                            <th>Número ID</th>
+                                                            <th>Nombre</th>
+                                                            <th>% Participación</th>
+                                                            <th>¿Es Persona Jurídica que cotiza en Bolsa</th>
+                                                            <th>¿Es Persona Públicamente Expuesta, o vinculada con una de ellas?</th>
+                                                            <th>¿Es sujeto de tributación en otro país u otro grupo de países?, Indique cual(es)</th>                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>                                                    
+                                                        <tr >
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="C.C.">C.C.</option>
+                                                                    <option value="C.E.">C.E.</option>
+                                                                    <option value="NIT">NIT</option>
+                                                                    <option value="NUIP">NUIP</option>
+                                                                    <option value="T.I.">T.I.</option>
+                                                                    <option value="Pasaporte">Pasaporte</option>
+                                                                    <option value="Pase Diplomático">Pase Diplomático</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="Si">Si</option>
+                                                                    <option value="No">No</option>
+                                                                    <option value="N/A">N/A</option>                                                                   
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="Si">Si</option>
+                                                                    <option value="No">No</option>
+                                                                    <option value="N/A">N/A</option>    
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>                                                           
+                                                        </tr>
+
+                                                        <tr >
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="C.C.">C.C.</option>
+                                                                    <option value="C.E.">C.E.</option>
+                                                                    <option value="NIT">NIT</option>
+                                                                    <option value="NUIP">NUIP</option>
+                                                                    <option value="T.I.">T.I.</option>
+                                                                    <option value="Pasaporte">Pasaporte</option>
+                                                                    <option value="Pase Diplomático">Pase Diplomático</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="Si">Si</option>
+                                                                    <option value="No">No</option>
+                                                                    <option value="N/A">N/A</option>                                                                   
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="Si">Si</option>
+                                                                    <option value="No">No</option>
+                                                                    <option value="N/A">N/A</option>    
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>                                                           
+                                                        </tr>
+
+                                                        <tr >
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="C.C.">C.C.</option>
+                                                                    <option value="C.E.">C.E.</option>
+                                                                    <option value="NIT">NIT</option>
+                                                                    <option value="NUIP">NUIP</option>
+                                                                    <option value="T.I.">T.I.</option>
+                                                                    <option value="Pasaporte">Pasaporte</option>
+                                                                    <option value="Pase Diplomático">Pase Diplomático</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="Si">Si</option>
+                                                                    <option value="No">No</option>
+                                                                    <option value="N/A">N/A</option>                                                                   
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="Si">Si</option>
+                                                                    <option value="No">No</option>
+                                                                    <option value="N/A">N/A</option>    
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>                                                           
+                                                        </tr>
+
+                                                        <tr >
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="C.C.">C.C.</option>
+                                                                    <option value="C.E.">C.E.</option>
+                                                                    <option value="NIT">NIT</option>
+                                                                    <option value="NUIP">NUIP</option>
+                                                                    <option value="T.I.">T.I.</option>
+                                                                    <option value="Pasaporte">Pasaporte</option>
+                                                                    <option value="Pase Diplomático">Pase Diplomático</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="Si">Si</option>
+                                                                    <option value="No">No</option>
+                                                                    <option value="N/A">N/A</option>                                                                   
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="Si">Si</option>
+                                                                    <option value="No">No</option>
+                                                                    <option value="N/A">N/A</option>    
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>                                                           
+                                                        </tr>
+                                                            
+                                                        <tr >
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="C.C.">C.C.</option>
+                                                                    <option value="C.E.">C.E.</option>
+                                                                    <option value="NIT">NIT</option>
+                                                                    <option value="NUIP">NUIP</option>
+                                                                    <option value="T.I.">T.I.</option>
+                                                                    <option value="Pasaporte">Pasaporte</option>
+                                                                    <option value="Pase Diplomático">Pase Diplomático</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="Si">Si</option>
+                                                                    <option value="No">No</option>
+                                                                    <option value="N/A">N/A</option>                                                                   
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="Si">Si</option>
+                                                                    <option value="No">No</option>
+                                                                    <option value="N/A">N/A</option>    
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>                                                           
+                                                        </tr>
+                                                    </tbody>
+                                                </table>                                            
+                                            </div>                                           
+                                        </div>
+                                    </div>                                                                                    
+                                    <br>
+
+                                    
+                                    <a  href="juridico5.shtml" class="btn ajg-button col-md-4 col-md-offset-4">
+                                        Siguiente
+                                    </a>   
+                                    
+                                    
+                                </form>
+                            </div>
+                        </section>
+                    </div>  
+					<!-- end: page -->
+				</section>
+			</div>
+
+			
+		</section>
+
+		<!-- Vendor -->
+		<script src="octopus/assets/vendor/jquery/jquery.js"></script>
+		<script src="octopus/assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+		<script src="octopus/assets/vendor/bootstrap/js/bootstrap.js"></script>
+		<script src="octopus/assets/vendor/nanoscroller/nanoscroller.js"></script>
+		<script src="octopus/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="octopus/assets/vendor/magnific-popup/magnific-popup.js"></script>
+		<script src="octopus/assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+		
+		<!-- Specific Page Vendor -->
+		<script src="octopus/assets/vendor/select2/select2.js"></script>
+		<script src="octopus/assets/vendor/jquery-datatables/media/js/jquery.dataTables.js"></script>
+		<script src="octopus/assets/vendor/jquery-datatables-bs3/assets/js/datatables.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="octopus/assets/javascripts/theme.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="octopus/assets/javascripts/theme.custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="octopus/assets/javascripts/theme.init.js"></script>
+
+
+		<!-- Examples -->
+		<script src="octopus/assets/javascripts/tables/examples.datatables.editable.js"></script>
+		
+
+
+	</body>
+</html>
