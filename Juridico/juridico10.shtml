@@ -125,18 +125,18 @@
                                 <h2 class="panel-title text-center ajg-title-dark">Información Sobre Reclamaciones en Seguros</h2>   
                             </header>
                             <div class="panel-body ajg-title-dark">
-                                <form class="form-bordered ajg-title-dark" method="POST">
+                                <form class="form-bordered ajg-title-dark" method="POST" enctype="multipart/form-data" action="/Juridico/clausula_autorizacion">
                                     <br>
                                     <div class="form-group">
                                         <label class="col-sm-8 control-label" style="padding-right: 1cm" >
                                             ¿Ha presentado reclamaciones o ha recibido indemnizaciones en seguros en los dos últimos años?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="tomador" type="radio" name="monedaExtranjera" />
+                                            <input value="si" type="radio" name="monedaExtranjera" required/>
                                             <label>Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="tomador" type="radio" name="monedaExtranjera"/>
+                                            <input value="no" type="radio" name="monedaExtranjera"/>
                                             <label>No</label>
                                         </div>                                               
                                     </div>
@@ -156,61 +156,52 @@
                                             <tbody>                                                    
                                                 <tr >                                                          
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="año1" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="ramo1" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="caompañia1" type="text" class="form-control">
                                                     </td>                                                   
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="valor1" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <select class="form-control mb-md">
+                                                        <select name="resultado1" class="form-control mb-md">
                                                             <option></option>
                                                             <option>Reclamación</option>
                                                             <option>Indemnización</option>                                                            
                                                         </select>
-                                                    </td> 
-                                                                                                                                                                      
+                                                    </td>                                                                                                                                                                       
                                                 </tr>
                                                 <tr >                                                          
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="año2" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="ramo2" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="caompañia2" type="text" class="form-control">
                                                     </td>                                                   
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="valor2" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <select class="form-control mb-md">
+                                                        <select name="resultado2" class="form-control mb-md">
                                                             <option></option>
                                                             <option>Reclamación</option>
                                                             <option>Indemnización</option>                                                            
                                                         </select>
-                                                    </td> 
-                                                                                                                                                                        
+                                                    </td>                                                                                                                                                                         
                                                 </tr>
                                               
                                             </tbody>
                                         </table>                                                                                        
-                                    </div>                                     
-                                    
-
-
+                                    </div>                                                                         
                                     <br>
-                                    <a  href="juridico11.shtml" class="btn ajg-button col-md-4 col-md-offset-4">
-                                        Siguiente
-                                    </a>
-                                    
-                                    
+                                    <button type="submit" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>                                    
                                 </form>
                             </div>
                         </section>

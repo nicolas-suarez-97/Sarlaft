@@ -126,20 +126,20 @@
                                 <h2 class="panel-title text-center ajg-title-dark">Información Financiera</h2>   
                             </header>
                             <div class="panel-body">
-                                <form class="form-bordered ajg-title-dark" method="POST">                                                                                                               
+                                <form class="form-bordered ajg-title-dark" method="POST" enctype="multipart/form-data" action="/Juridico/origen_fondos">                                                                                                               
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <label class="col-md-4 control-label">Ingresos Mensuales</label>
                                             <div class="col-md-8">
-                                                <input type="text" class="form-control" placeholder="Ingresos">
+                                                <input name="ingresosMensuales" type="number" class="form-control" placeholder="Ingresos (Pesos)" required>
                                             </div>                                 
                                         </div>
                                         <div class="col-sm-4">
                                             <div  class="form-group">
                                                 <label class="col-sm-3 control-label">Egresos Mensuales</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" placeholder="Egresos">
+                                                    <input name="egresosMensuales" type="number" class="form-control" placeholder="Egresos (Pesos)" required>
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                    
@@ -147,7 +147,7 @@
                                             <div  class="form-group">
                                                 <label class="col-sm-4 control-label">Activos</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" placeholder="Dirección">
+                                                    <input name="activos" type="number" class="form-control" placeholder="Activos (Pesos)" required>
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                            
@@ -157,14 +157,14 @@
                                         <div class="col-sm-4">
                                             <label class="col-md-4 control-label">Pasivos</label>
                                             <div class="col-md-8">
-                                                <input type="text" class="form-control" placeholder="Ingresos">
+                                                <input name="pasivos" type="number" class="form-control" placeholder="Pasivos (Pesos)" required>
                                             </div>                                 
                                         </div>
                                         <div class="col-sm-4">
                                             <div  class="form-group">
                                                 <label class="col-sm-3 control-label">Patrimonio</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" placeholder="Egresos">
+                                                    <input name="patrimonio" type="number" class="form-control" placeholder="Patrimonio" required>
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                    
@@ -172,7 +172,7 @@
                                             <div  class="form-group">
                                                 <label class="col-sm-4 control-label">Otros Ingresos</label>
                                                 <div class="col-sm-8">
-                                                    <input type="text" class="form-control" placeholder="Dirección">
+                                                    <input name="otrosIngresos" type="text" class="form-control" placeholder="Otros Ingresos">
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                            
@@ -182,16 +182,13 @@
                                         <div class="col-sm-12">
                                             <label class="col-md-2 control-label">Concepto de Otros Ingresos</label>
                                             <div class="col-md-10">
-                                                <input type="text-area" class="form-control" placeholder="Otros Ingresos">
+                                                <input name="conceptoOtros" type="text-area" class="form-control" placeholder="Concepto de Otros Ingresos">
                                             </div>                                 
                                         </div>                                                                              
                                     </div>
                                     <br>
-                                    <a  href="juridico8.shtml" class="btn ajg-button col-md-4 col-md-offset-4">
-                                        Siguiente
-                                    </a>   
-                                    
-                                    
+                                    <button type="submit"  class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>                                   
+                                                                        
                                 </form>
                             </div>
                         </section>

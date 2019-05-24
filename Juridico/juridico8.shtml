@@ -125,7 +125,7 @@
                                 <h2 class="panel-title text-center ajg-title-dark">Declaración de Origen de Fondos</h2>   
                             </header>
                             <div class="panel-body ajg-title-dark">
-                                <form class="form-bordered ajg-title-dark" method="POST">                                                                                                                                                                                                                                                                
+                                <form class="form-bordered ajg-title-dark" method="POST" enctype="multipart/form-data" action="/Juridico/operaciones_internacionales">
                                     <h4>Declaro expresamente que:</h4>
                                     <p>
                                         1. La actividad, profesión u oficio de la compañía es lícita y se ejerce dentro del marco legal y los recursos de la misma no provienen
@@ -145,15 +145,11 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <label class="col-md-2 control-label" style="font-size:20px;">Origen de Fondos:</label>                                                                                        
-                                            <textarea type="text" class="form-control"> </textarea>
+                                            <textarea name="origenFondos" type="text" class="form-control" required> </textarea>
                                         </div>                                                                              
                                     </div>
                                     <br>
-                                    <a  href="juridico9.shtml" class="btn ajg-button col-md-4 col-md-offset-4">
-                                        Siguiente
-                                    </a>   
-                                    
-                                    
+                                    <button type="submit" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>
                                 </form>
                             </div>
                         </section>

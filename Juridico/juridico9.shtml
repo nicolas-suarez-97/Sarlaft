@@ -127,25 +127,25 @@
                                 <h2 class="panel-title text-center ajg-title-dark">Actividades en Operaciones Internacionales</h2>   
                             </header>
                             <div class="panel-body ajg-title-dark">
-                                <form class="form-bordered ajg-title-dark" method="POST">
+                                <form class="form-bordered ajg-title-dark" method="POST" enctype="multipart/form-data" action="/Juridico/reclamaciones_seguros">
                                     <br>
                                     <div class="form-group">
                                         <label class="col-sm-4 control-label" style="padding-right: 1cm" >
                                             ¿Realiza Transacciones en Moneda Extranjera?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="tomador" type="radio" name="monedaExtranjera" />
+                                            <input value="si" type="radio" name="monedaExtranjera" required/>
                                             <label>Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="tomador" type="radio" name="monedaExtranjera"/>
+                                            <input value="no" type="radio" name="monedaExtranjera"/>
                                             <label>No</label>
                                         </div>    
                                         <div class="col-sm-6">                                        
                                             <div  class="form-group">
                                                 <label class="col-md-3 control-label">Cuál</label>
                                                 <div class="col-md-9">
-                                                    <select class="form-control mb-md">
+                                                    <select name="cualOperacion" class="form-control mb-md">
                                                         <option></option>
                                                         <option>Importaciones</option>
                                                         <option>Exportaciones</option>
@@ -161,7 +161,7 @@
                                     <div  class="form-group">
                                         <label class="col-sm-4 control-label">Indique Otras Operaciones</label>
                                         <div class="col-sm-8" style="transform:translateX(-20px)">
-                                            <input type="text" class="form-control" >
+                                            <input name="otrasOperaciones" type="text" class="form-control" >
                                         </div>                                 
                                     </div>                                                                               
                                 
@@ -170,11 +170,11 @@
                                             ¿Posee productos Financieros en el Exterior?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="tomador" type="radio" name="productosExtranjero" />
+                                            <input value="si" type="radio" name="productosExtranjero" required />
                                             <label>Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="tomador" type="radio" name="productosExtranjero"/>
+                                            <input value="no" type="radio" name="productosExtranjero"/>
                                             <label>No</label>
                                         </div>                                             
                                     </div>
@@ -184,11 +184,11 @@
                                             ¿Posee Cuentas en Moneda Extranjera?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="tomador" type="radio" name="cuentasMonedaExtr" />
+                                            <input value="Si" type="radio" name="cuentasMonedaExtr" required />
                                             <label>Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="tomador" type="radio" name="cuentasMonedaExtr"/>
+                                            <input value="no" type="radio" name="cuentasMonedaExtr"/>
                                             <label>No</label>
                                         </div>                                                  
                                     </div>
@@ -211,75 +211,75 @@
                                             <tbody>                                                    
                                                 <tr >                                                          
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="tipoProd1" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="numProd1" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="entidad1" type="text" class="form-control">
                                                     </td>                                                   
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="monto1" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="ciudad1" type="text" class="form-control">
                                                     </td> 
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="pais1" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control">
-                                                    </td>                                                                                                                       
-                                                </tr>
-                                                <tr >                                                          
-                                                    <td>
-                                                        <input type="text" class="form-control">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="form-control">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="form-control">
-                                                    </td>                                                   
-                                                    <td>
-                                                        <input type="text" class="form-control">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="form-control">
-                                                    </td> 
-                                                    <td>
-                                                        <input type="text" class="form-control">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="moneda1" type="text" class="form-control">
                                                     </td>                                                                                                                       
                                                 </tr>
 
                                                 <tr >                                                          
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="tipoProd2" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="numProd2" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="entidad2" type="text" class="form-control">
                                                     </td>                                                   
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="monto2" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="ciudad2" type="text" class="form-control">
                                                     </td> 
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="pais2" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control">
+                                                        <input name="moneda2" type="text" class="form-control">
                                                     </td>                                                                                                                       
                                                 </tr>
-                                              
+
+                                                <tr >                                                          
+                                                    <td>
+                                                        <input name="tipoProd3" type="text" class="form-control">
+                                                    </td>
+                                                    <td>
+                                                        <input name="numProd3" type="text" class="form-control">
+                                                    </td>
+                                                    <td>
+                                                        <input name="entidad3" type="text" class="form-control">
+                                                    </td>                                                   
+                                                    <td>
+                                                        <input name="monto3" type="text" class="form-control">
+                                                    </td>
+                                                    <td>
+                                                        <input name="ciudad3" type="text" class="form-control">
+                                                    </td> 
+                                                    <td>
+                                                        <input name="pais3" type="text" class="form-control">
+                                                    </td>
+                                                    <td>
+                                                        <input name="moneda3" type="text" class="form-control">
+                                                    </td>                                                                                                                       
+                                                </tr>                                                                                             
                                             </tbody>
                                         </table>                                                                                        
                                     </div>                                     
@@ -289,26 +289,11 @@
                                         <p>- Fotocopia del documento de identidad del representante legal, ampliada al 150%.</p>
                                         <p>- Certificado de existencia y representación legal expedido por la autoridad competente no mayor a 30 días.</p>
                                         <p>- Inventario general de los bienes objeto del seguro.</p>
-                                        
-                                        <div class="row">
-                                            <div class="col-xs-12">
-                                                <section class="panel">                                                   
-                                                    <div class="panel-body">
-                                                        <form action="/upload" class="dropzone dz-square" id="dropzone-example" ></form>
-                                                    </div>
-                                                </section>
-                                            </div>
-                                        </div>
+                                                                             
     
                                     </div>
-
-
                                     <br>
-                                    <a  href="juridico10.shtml" class="btn ajg-button col-md-4 col-md-offset-4">
-                                        Siguiente
-                                    </a>
-                                    
-                                    
+                                    <button type="submit" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>
                                 </form>
                             </div>
                         </section>

@@ -126,7 +126,7 @@
                                 <h2 class="panel-title text-center ajg-title-dark">Accionistas</h2>   
                             </header>
                             <div class="panel-body">
-                                <form class="form-bordered" method="POST">                                                                           
+                                <form class="form-bordered" method="POST" enctype="multipart/form-data" action="/Juridico/personas_expuestas">                                                                           
                                     <div class="panel-body">                                            
                                         <h4 class="ajg-title-dark" style="font-weight:bold">Instrucciones de Diligenciamiento</h4>
                                         <p class="ajg-title-dark">
@@ -143,7 +143,7 @@
                                             3) Si alguno de los accionistas o asociados (personas naturales) es una Persona Expuesta Públicamente, sirvase diligenciar la sección correspondiente.
                                         </p>
                                         <br>                                       
-                                        <div class="container">
+                                        
                                             <div class="table-responsive">
                                                     <table class="table mb-none">
                                                     <thead>
@@ -160,7 +160,7 @@
                                                     <tbody>                                                    
                                                         <tr >
                                                             <td>
-                                                                <select class="form-control mb-md">
+                                                                <select name="tipoId1" class="form-control mb-md" required>
                                                                     <option value=""></option>
                                                                     <option value="C.C.">C.C.</option>
                                                                     <option value="C.E.">C.E.</option>
@@ -172,16 +172,16 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="numId1" type="number" class="form-control" required>
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="nombre1" type="text" class="form-control" required>
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="porcent1" type="number" class="form-control" required>
                                                             </td>
                                                             <td>
-                                                                <select class="form-control mb-md">
+                                                                <select name="cotizaBolsa1" class="form-control mb-md" required>
                                                                     <option value=""></option>
                                                                     <option value="Si">Si</option>
                                                                     <option value="No">No</option>
@@ -189,7 +189,7 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <select class="form-control mb-md">
+                                                                <select name="publicamenteExpuesta1" class="form-control mb-md" required>
                                                                     <option value=""></option>
                                                                     <option value="Si">Si</option>
                                                                     <option value="No">No</option>
@@ -197,13 +197,13 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="tributOtroPais1" type="text" class="form-control" required>
                                                             </td>                                                           
                                                         </tr>
 
                                                         <tr >
                                                             <td>
-                                                                <select class="form-control mb-md">
+                                                                <select name="tipoId2" class="form-control mb-md" >
                                                                     <option value=""></option>
                                                                     <option value="C.C.">C.C.</option>
                                                                     <option value="C.E.">C.E.</option>
@@ -215,16 +215,16 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="numId2" type="number" class="form-control" >
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="nombre2" type="text" class="form-control" >
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="porcent2" type="number" class="form-control" >
                                                             </td>
                                                             <td>
-                                                                <select class="form-control mb-md">
+                                                                <select name="cotizaBolsa2" class="form-control mb-md" >
                                                                     <option value=""></option>
                                                                     <option value="Si">Si</option>
                                                                     <option value="No">No</option>
@@ -232,7 +232,7 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <select class="form-control mb-md">
+                                                                <select name="publicamenteExpuesta2" class="form-control mb-md">
                                                                     <option value=""></option>
                                                                     <option value="Si">Si</option>
                                                                     <option value="No">No</option>
@@ -240,13 +240,13 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="tributOtroPais2" type="text" class="form-control">
                                                             </td>                                                           
                                                         </tr>
 
                                                         <tr >
                                                             <td>
-                                                                <select class="form-control mb-md">
+                                                                <select name="tipoId3" class="form-control mb-md" >
                                                                     <option value=""></option>
                                                                     <option value="C.C.">C.C.</option>
                                                                     <option value="C.E.">C.E.</option>
@@ -258,16 +258,16 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="numId3" type="number" class="form-control" >
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="nombre3" type="text" class="form-control" >
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="porcent3" type="number" class="form-control" >
                                                             </td>
                                                             <td>
-                                                                <select class="form-control mb-md">
+                                                                <select name="cotizaBolsa3" class="form-control mb-md" >
                                                                     <option value=""></option>
                                                                     <option value="Si">Si</option>
                                                                     <option value="No">No</option>
@@ -275,7 +275,7 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <select class="form-control mb-md">
+                                                                <select name="publicamenteExpuesta3" class="form-control mb-md">
                                                                     <option value=""></option>
                                                                     <option value="Si">Si</option>
                                                                     <option value="No">No</option>
@@ -283,13 +283,56 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="tributOtroPais3" type="text" class="form-control">
+                                                            </td>                                                           
+                                                        </tr>
+                                                        
+                                                        <tr >
+                                                            <td>
+                                                                <select name="tipoId4" class="form-control mb-md" >
+                                                                    <option value=""></option>
+                                                                    <option value="C.C.">C.C.</option>
+                                                                    <option value="C.E.">C.E.</option>
+                                                                    <option value="NIT">NIT</option>
+                                                                    <option value="NUIP">NUIP</option>
+                                                                    <option value="T.I.">T.I.</option>
+                                                                    <option value="Pasaporte">Pasaporte</option>
+                                                                    <option value="Pase Diplomático">Pase Diplomático</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input name="numId4" type="number" class="form-control" >
+                                                            </td>
+                                                            <td>
+                                                                <input name="nombre4" type="text" class="form-control" >
+                                                            </td>
+                                                            <td>
+                                                                <input name="porcent4" type="number" class="form-control" >
+                                                            </td>
+                                                            <td>
+                                                                <select name="cotizaBolsa4" class="form-control mb-md" >
+                                                                    <option value=""></option>
+                                                                    <option value="Si">Si</option>
+                                                                    <option value="No">No</option>
+                                                                    <option value="N/A">N/A</option>                                                                   
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select name="publicamenteExpuesta4" class="form-control mb-md">
+                                                                    <option value=""></option>
+                                                                    <option value="Si">Si</option>
+                                                                    <option value="No">No</option>
+                                                                    <option value="N/A">N/A</option>    
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input name="tributOtroPais4" type="text" class="form-control">
                                                             </td>                                                           
                                                         </tr>
 
                                                         <tr >
                                                             <td>
-                                                                <select class="form-control mb-md">
+                                                                <select name="tipoId5" class="form-control mb-md" >
                                                                     <option value=""></option>
                                                                     <option value="C.C.">C.C.</option>
                                                                     <option value="C.E.">C.E.</option>
@@ -301,16 +344,16 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="numId5" type="number" class="form-control" >
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="nombre5" type="text" class="form-control" >
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="porcent5" type="number" class="form-control" >
                                                             </td>
                                                             <td>
-                                                                <select class="form-control mb-md">
+                                                                <select name="cotizaBolsa5" class="form-control mb-md" >
                                                                     <option value=""></option>
                                                                     <option value="Si">Si</option>
                                                                     <option value="No">No</option>
@@ -318,7 +361,7 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <select class="form-control mb-md">
+                                                                <select name="publicamenteExpuesta5" class="form-control mb-md">
                                                                     <option value=""></option>
                                                                     <option value="Si">Si</option>
                                                                     <option value="No">No</option>
@@ -326,65 +369,16 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control">
-                                                            </td>                                                           
-                                                        </tr>
-                                                            
-                                                        <tr >
-                                                            <td>
-                                                                <select class="form-control mb-md">
-                                                                    <option value=""></option>
-                                                                    <option value="C.C.">C.C.</option>
-                                                                    <option value="C.E.">C.E.</option>
-                                                                    <option value="NIT">NIT</option>
-                                                                    <option value="NUIP">NUIP</option>
-                                                                    <option value="T.I.">T.I.</option>
-                                                                    <option value="Pasaporte">Pasaporte</option>
-                                                                    <option value="Pase Diplomático">Pase Diplomático</option>
-                                                                </select>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control">
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control">
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control">
-                                                            </td>
-                                                            <td>
-                                                                <select class="form-control mb-md">
-                                                                    <option value=""></option>
-                                                                    <option value="Si">Si</option>
-                                                                    <option value="No">No</option>
-                                                                    <option value="N/A">N/A</option>                                                                   
-                                                                </select>
-                                                            </td>
-                                                            <td>
-                                                                <select class="form-control mb-md">
-                                                                    <option value=""></option>
-                                                                    <option value="Si">Si</option>
-                                                                    <option value="No">No</option>
-                                                                    <option value="N/A">N/A</option>    
-                                                                </select>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control">
+                                                                <input name="tributOtroPais5" type="text" class="form-control">
                                                             </td>                                                           
                                                         </tr>
                                                     </tbody>
                                                 </table>                                            
                                             </div>                                           
-                                        </div>
+                                        
                                     </div>                                                                                    
                                     <br>
-
-                                    
-                                    <a  href="juridico5.shtml" class="btn ajg-button col-md-4 col-md-offset-4">
-                                        Siguiente
-                                    </a>   
-                                    
-                                    
+                                    <button class="btn ajg-button col-md-4 col-md-offset-4" type="submit">Siguiente</button>                                   
                                 </form>
                             </div>
                         </section>
