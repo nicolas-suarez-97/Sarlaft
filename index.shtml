@@ -157,37 +157,30 @@
                         <div class="panel-body">
                             <h2 class="text-center ajg-title-dark">Bienvenido, por favor seleccione la acción a realizar:</h2>
                             <br>
-                            <form class="form-horizontal form-bordered " method="POST">
+                            <form class="form-horizontal form-bordered " method="POST" enctype="multipart/form-data" action="/formulario">
                                 <div class="form-group">
                                     <label class="col-md-3 control-label ajg-title-dark" for="inputDefault">Tipo Solicitud</label>
                                     <div class="col-md-8">
-                                        <select class="form-control mb-md">
-                                            <option>Creación</option>
-                                            <option>Actualización</option>                                                
+                                        <select class="form-control mb-md" name="accion">
+                                            <option value="creacion">Creación</option>
+                                            <option value="actualizacion">Actualización</option>                                                
                                         </select>
                                     </div>
                                 </div>                               
                                 <div class="form-group ">
                                     <label class="col-md-3 control-label ajg-title-dark" for="inputDefault">Tipo de Persona:</label>
                                     <div class="col-md-8">
-                                        <select class="form-control mb-md">
-                                            <option>Natural</option>
-                                            <option>Jurídica</option>                                                
+                                        <select class="form-control mb-md" name="seleccion">
+                                            <option value="natural">Natural</option>
+                                            <option value="juridico">Jurídica</option>                                                
                                         </select>
                                     </div>
                                 </div>                               
                                 
-                                <a href="Juridico/juridico1.shtml"  class="btn ajg-button col-md-4 col-md-offset-4">
-                                    Continuar
-                                </a>
+                                <button  class="btn ajg-button col-md-4 col-md-offset-4" type="submit"> Continuar</button>                               
                             </form>
                         </div>
-					</section>
-                    <!--#4DSCRIPT/WEB_Listar_Accionistas-->
-                    <!--#4DLOOP [ACCIONISTAS]-->
-                        <h1 style="color:black"><!--#4DTEXT [ACCIONISTAS]Tipo_ID--></h1>
-                    <!--#4DENDLOOP-->
-					<!-- end: page -->
+					</section>                 
 				</section>
 			</div>
 

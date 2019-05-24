@@ -23,11 +23,13 @@
 		<link rel="stylesheet" href="../octopus/assets/vendor/bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" href="../octopus/assets/vendor/font-awesome/css/font-awesome.css" />
 		<link rel="stylesheet" href="../octopus/assets/vendor/magnific-popup/magnific-popup.css" />
-		<link rel="stylesheet" href="../octopus/assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
+        <link rel="stylesheet" href="../octopus/assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
+        <link rel="stylesheet" href="../octopus/assets/vendor/dropzone/css/dropzone.css" />
+        <link rel="stylesheet" href="../octopus/assets/vendor/dropzone/css/basic.css" />       
 
 		<!-- Specific Page Vendor CSS -->
 		<link rel="stylesheet" href="../octopus/assets/vendor/select2/select2.css" />
-		<link rel="stylesheet" href="../octopus/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css" />
+        <link rel="stylesheet" href="../octopus/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css" />                	
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="../octopus/assets/stylesheets/theme.css" />
@@ -111,7 +113,7 @@
 										<i class="fa fa-home title"></i>
 									</a>
 								</li>
-                                <li><span style="color:white">Actividades en Operaciones Internacionales</span></li>                                
+                                <li><span style="color:white;padding-right: 1cm;">Actividades en Operaciones Internacionales</span></li>                                
 							</ol>
 												
 						</div>
@@ -281,7 +283,24 @@
                                             </tbody>
                                         </table>                                                                                        
                                     </div>                                     
-                                    
+                                    <br>
+                                    <div >
+                                        <h4 style="font-weight:bold; text-align:center">DOCUMENTOS REQUERIDOS</h4>
+                                        <p>- Fotocopia del documento de identidad del representante legal, ampliada al 150%.</p>
+                                        <p>- Certificado de existencia y representación legal expedido por la autoridad competente no mayor a 30 días.</p>
+                                        <p>- Inventario general de los bienes objeto del seguro.</p>
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <section class="panel">                                                   
+                                                    <div class="panel-body">
+                                                        <form action="/upload" class="dropzone dz-square" id="dropzone-example" ></form>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+    
+                                    </div>
 
 
                                     <br>
@@ -311,12 +330,15 @@
 		<script src="../octopus/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 		<script src="../octopus/assets/vendor/magnific-popup/magnific-popup.js"></script>
 		<script src="../octopus/assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
-		
+        <script src="../octopus/assets/vendor/dropzone/dropzone.js"></script>
+        
+
 		<!-- Specific Page Vendor -->
 		<script src="../octopus/assets/vendor/select2/select2.js"></script>
 		<script src="../octopus/assets/vendor/jquery-datatables/media/js/jquery.dataTables.js"></script>
-		<script src="../octopus/assets/vendor/jquery-datatables-bs3/assets/js/datatables.js"></script>
-		
+		<script src="../octopus/assets/vendor/jquery-datatables-bs3/assets/js/datatables.js"></script>               
+
+        
 		<!-- Theme Base, Components and Settings -->
 		<script src="../octopus/assets/javascripts/theme.js"></script>
 		
