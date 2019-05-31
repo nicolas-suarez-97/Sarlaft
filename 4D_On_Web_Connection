@@ -1,0 +1,160 @@
+C_TEXT($1;$2;$3;$4)
+ARRAY TEXT($noms;0)
+ARRAY TEXT($vals;0)
+$rqt:=$1
+
+Case of 
+	: ($rqt="/formulario_inicio")
+		WEB GET VARIABLES($noms;$vals)
+		$pos:=Find in array($noms;"seleccion")
+		
+		If ($vals{$pos}="juridico")
+			WEB SEND FILE("Juridico/juridico1.shtml")
+		Else 
+			WEB SEND FILE("Natural/natural1.shtml")
+		End if 
+		
+		
+	: ($rqt="/Juridico@")
+		WEB GET VARIABLES($noms;$vals)
+		
+		Case of 
+				  //** **//
+			: ($rqt="/Juridico/datos_basicos")
+				For ($i;1;Size of array($noms))
+					  //ALERT($noms{$i}+" - "+$vals{$i})
+				End for 
+				  //ALERT(String("!"+$vals{Find in array($noms;"fechaDiligenciamiento")}+"!";ISO date))
+				[Informacion_Sarlaft]Ciudad_Diligenciamiento:=$vals{Find in array($noms;"ciudadDiligenciamiento")}
+				SAVE RECORD([Informacion_Sarlaft])
+				WEB SEND FILE("Juridico/juridico2.shtml")
+				
+				  //** **//
+			: ($rqt="/Juridico/representante_legal")
+				For ($i;1;Size of array($noms))
+					  //ALERT($noms{$i}+" - "+$vals{$i})
+				End for 
+				WEB SEND FILE("Juridico/juridico3.shtml")
+				
+				  //** **//
+			: ($rqt="/Juridico/accionistas")
+				For ($i;1;Size of array($noms))
+					  //ALERT($noms{$i}+" - "+$vals{$i})
+				End for 
+				WEB SEND FILE("Juridico/juridico4.shtml")
+				
+				
+				  //** **//
+			: ($rqt="/Juridico/personas_expuestas")
+				For ($i;1;Size of array($noms))
+					If ($vals{$i}#"")
+						  //ALERT($noms{$i}+" - "+$vals{$i})
+					End if 
+				End for 
+				WEB SEND FILE("Juridico/juridico5.shtml")
+				
+				
+				  //** **//
+			: ($rqt="/Juridico/accionistas_beneficiarios")
+				
+				For ($i;1;Size of array($noms))
+					If ($vals{$i}#"")
+						  //ALERT($noms{$i}+" - "+$vals{$i})
+					End if 
+				End for 
+				WEB SEND FILE("Juridico/juridico6.shtml")
+				
+				
+				  //** **//
+			: ($rqt="/Juridico/informacion_financiera")
+				For ($i;1;Size of array($noms))
+					If ($vals{$i}#"")
+						  //ALERT($noms{$i}+" - "+$vals{$i})
+					End if 
+				End for 
+				WEB SEND FILE("Juridico/juridico7.shtml")
+				
+				
+				  //** **//
+			: ($rqt="/Juridico/origen_fondos")
+				For ($i;1;Size of array($noms))
+					If ($vals{$i}#"")
+						  //ALERT($noms{$i}+" - "+$vals{$i})
+					End if 
+				End for 
+				WEB SEND FILE("Juridico/juridico8.shtml")
+				
+				
+				  //** **//
+			: ($rqt="/Juridico/operaciones_internacionales")
+				For ($i;1;Size of array($noms))
+					If ($vals{$i}#"")
+						  //ALERT($noms{$i}+" - "+$vals{$i})
+					End if 
+				End for 
+				WEB SEND FILE("Juridico/juridico9.shtml")
+				
+				
+				  //** **//
+			: ($rqt="/Juridico/reclamaciones_seguros")
+				
+				For ($i;1;Size of array($noms))
+					If ($vals{$i}#"")
+						  //ALERT($noms{$i}+" - "+$vals{$i})
+					End if 
+				End for 
+				WEB SEND FILE("Juridico/juridico10.shtml")
+				
+			: ($rqt="/Juridico/clausula_autorizacion")
+				
+				For ($i;1;Size of array($noms))
+					If ($vals{$i}#"")
+						  //ALERT($noms{$i}+" - "+$vals{$i})
+					End if 
+				End for 
+				WEB SEND FILE("Juridico/juridico11.shtml")
+				
+				
+				  //****//
+			: ($rqt="/Juridico/imprimir_formulario")
+				
+				For ($i;1;Size of array($noms))
+					If ($vals{$i}#"")
+						  //ALERT($noms{$i}+" - "+$vals{$i})
+					End if 
+				End for 
+				WEB SEND FILE("Juridico/juridico12.shtml")
+				
+				
+		End case 
+		
+		
+		
+	: ($rqt="/Natural@")
+		WEB GET VARIABLES($noms;$vals)
+		Case of 
+			: ($rqt="/Natural/datos_basicos")
+				WEB SEND FILE("Natural/natural2.shtml")
+				
+			: ($rqt="/Natural/datos_basicos2")
+				WEB SEND FILE("Natural/natural3.shtml")
+				
+			: ($rqt="/Natural/origen_fondos")
+				WEB SEND FILE("Natural/natural4.shtml")
+				
+			: ($rqt="/Natural/operaciones_internacionales")
+				WEB SEND FILE("Natural/natural5.shtml")
+				
+			: ($rqt="/Natural/reclamaciones_seguros")
+				WEB SEND FILE("Natural/natural6.shtml")
+				
+			: ($rqt="/Natural/clausula_autorizacion")
+				WEB SEND FILE("Natural/natural7.shtml")
+				
+			: ($rqt="/Natural/imprimir_formulario")
+				WEB SEND FILE("Natural/natural8.shtml")
+				
+		End case 
+		
+		
+End case 
