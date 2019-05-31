@@ -250,39 +250,7 @@
                                                 <div class="col-md-7">
                                                     <select name="deptoRep" class="form-control mb-md">
                                                         <option></option>
-                                                        <option>Amazonas</option>
-                                                        <option>Antioquia</option>
-                                                        <option>Arauca</option>
-                                                        <option>Atlantico</option>
-                                                        <option>Bogotá</option>
-                                                        <option>Bolivar</option>
-                                                        <option>Boyaca</option>
-                                                        <option>Caldas</option>
-                                                        <option>Caqueta</option>
-                                                        <option>Casanare</option>
-                                                        <option>Cauca</option>
-                                                        <option>Cesar</option>
-                                                        <option>Choco</option>
-                                                        <option>Cordoba</option>
-                                                        <option>Cundinamarcar</option>
-                                                        <option>Guainía</option>
-                                                        <option>Guaviare</option>
-                                                        <option>Huila</option>
-                                                        <option>La Guajira</option>
-                                                        <option>Magdalenta</option>
-                                                        <option>Meta</option>
-                                                        <option>N. de Santander</option>
-                                                        <option>Nariño</option>
-                                                        <option>Putumayo</option>
-                                                        <option>Quindio</option>
-                                                        <option>Risaralda</option>
-                                                        <option>San Andres</option>
-                                                        <option>Santander</option>
-                                                        <option>Sucre</option>
-                                                        <option>Tolima</option>
-                                                        <option>Valle del Cauca</option>
-                                                        <option>Vaupes</option>
-                                                        <option>Vichada</option>
+                                                      <!--#4DINCLUDE ../departamentos.shtml-->
                                                     </select>
                                                 </div>
                                             </div>
