@@ -4,6 +4,13 @@ ARRAY TEXT($vals;0)
 $rqt:=$1
 
 Case of 
+	: ($rqt="/inicio")
+		WEB GET VARIABLES($noms;$vals)
+		For ($i;1;Size of array($noms))
+			  //ALERT($noms{$i}+" - "+$vals{$i})
+		End for 
+		WEB SEND FILE("index.shtml")
+		
 	: ($rqt="/formulario_inicio")
 		WEB GET VARIABLES($noms;$vals)
 		$pos:=Find in array($noms;"seleccion")
@@ -19,14 +26,18 @@ Case of
 		WEB GET VARIABLES($noms;$vals)
 		
 		Case of 
+			: ($rqt="/Juridico/formulario_inicio")
+				
+				WEB SEND FILE("Juridico/juridico1.shtml")
+				
 				  //** **//
 			: ($rqt="/Juridico/datos_basicos")
 				For ($i;1;Size of array($noms))
 					  //ALERT($noms{$i}+" - "+$vals{$i})
 				End for 
 				  //ALERT(String("!"+$vals{Find in array($noms;"fechaDiligenciamiento")}+"!";ISO date))
-				[Informacion_Sarlaft]Ciudad_Diligenciamiento:=$vals{Find in array($noms;"ciudadDiligenciamiento")}
-				SAVE RECORD([Informacion_Sarlaft])
+				  //[Informacion_Sarlaft]Ciudad_Diligenciamiento:=$vals{Find in array($noms;"ciudadDiligenciamiento")}
+				  //SAVE RECORD([Informacion_Sarlaft])
 				WEB SEND FILE("Juridico/juridico2.shtml")
 				
 				  //** **//
@@ -133,6 +144,9 @@ Case of
 	: ($rqt="/Natural@")
 		WEB GET VARIABLES($noms;$vals)
 		Case of 
+			: ($rqt="/Natural/formulario_inicio")
+				WEB SEND FILE("Natural/natural1.shtml")
+				
 			: ($rqt="/Natural/datos_basicos")
 				WEB SEND FILE("Natural/natural2.shtml")
 				
@@ -149,6 +163,9 @@ Case of
 				WEB SEND FILE("Natural/natural6.shtml")
 				
 			: ($rqt="/Natural/clausula_autorizacion")
+				For ($i;1;Size of array($noms))
+					ALERT($noms{$i}+" - "+$vals{$i})
+				End for 
 				WEB SEND FILE("Natural/natural7.shtml")
 				
 			: ($rqt="/Natural/imprimir_formulario")
@@ -156,5 +173,7 @@ Case of
 				
 		End case 
 		
+	: ($rqt="/LogIn")
+		WEB SEND FILE("login.shtml")
 		
 End case 

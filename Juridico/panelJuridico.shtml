@@ -35,7 +35,7 @@
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">1. Inicio</button>
                                     </form> 
                                 </li>
-                                <li class="nav-parent nav-active">
+                                <li class="nav-parent">
                                     <a>2. Información Básica</a>
                                     
                                     <ul class="nav nav-children">
