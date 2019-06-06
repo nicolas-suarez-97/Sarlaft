@@ -45,7 +45,7 @@
 			<!-- start: header -->
 			<header class="header">
                 <div class="logo-container">
-                    <img src="../img/thumbnail_image.png" height="45" class="logo" style="padding-left: 0.5cm; transform: translateY(-5px);"  alt="JSOFT Admin"/>                    
+                    <img src="../img/logo-1.png" height="45" class="logo" style="padding-left: 0.5cm; "  alt="JSOFT Admin"/>                    
                     <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
                         <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
                     </div>
@@ -199,7 +199,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Lugar de Nacimiento</label>
                                                 <div class="col-md-8">
-                                                    <input name="lugarNacimiento" type="date" class="form-control" required>
+                                                    <input name="lugarNacimiento" type="text" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>                                                                                                                    

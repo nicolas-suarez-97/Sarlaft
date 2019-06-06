@@ -52,7 +52,7 @@
 			<!-- start: header -->
 			<header class="header">
                 <div class="logo-container">
-                    <img src="../img/thumbnail_image.png" height="45" class="logo" style="padding-left: 0.5cm; transform: translateY(-5px);"  alt="JSOFT Admin"/>                    
+                    <img src="../img/logo-1.png" height="45" class="logo" style="padding-left: 0.5cm; "  alt="JSOFT Admin"/>                    
                     <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
                         <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
                     </div>
@@ -286,11 +286,40 @@
                                     <br>
                                     <div >
                                         <h4 style="font-weight:bold; text-align:center">DOCUMENTOS REQUERIDOS</h4>
-                                        <p>- Fotocopia del documento de identidad del representante legal, ampliada al 150%.</p>
-                                        <p>- Certificado de existencia y representación legal expedido por la autoridad competente no mayor a 30 días.</p>
-                                        <p>- Inventario general de los bienes objeto del seguro.</p>
-                                                                             
-    
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p>- Fotocopia del documento de identidad del representante legal, ampliada al 150%.</p>                                                
+                                            </div>
+                                            <div class="form-group">                                              
+                                                <div class="col-md-6">
+                                                    <input type="file" class="form-control "  name="inventario">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p>- Certificado de existencia y representación legal expedido por la autoridad competente no mayor a 30 días.</p>                                                
+                                            </div>
+                                            <div class="form-group">                                              
+                                                <div class="col-md-6">
+                                                    <input type="file" class="form-control "  name="inventario">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p>- Inventario general de los bienes objeto del seguro.</p>
+                                            </div>
+                                            <div class="form-group">                                              
+                                                <div class="col-md-6">
+                                                    <input type="file" class="form-control "  name="inventario">
+                                                </div>
+                                            </div>
+                                        </div>                                        
+                                                                                 
                                     </div>
                                     <br>
                                     <button type="submit" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>

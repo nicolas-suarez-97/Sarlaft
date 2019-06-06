@@ -30,71 +30,72 @@
                                 <span>Creación</span>
                             </a>
                             <ul class="nav nav-children text-white" style="background-color: white">
-                                <li>
-                                    <a href="juridico1.shtml">
-                                        1. Inicio
-                                    </a>
+                                <li>                                    
+                                    <form action="/Juridico/formulario_inicio"  method="POST" enctype="multipart/form-data">
+                                        <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">1. Inicio</button>
+                                    </form> 
                                 </li>
                                 <li class="nav-parent nav-active">
                                     <a>2. Información Básica</a>
+                                    
                                     <ul class="nav nav-children">
-                                        <li class="nav-active">
-                                            <a href="juridico2.shtml" >
-                                                Datos Básicos
-                                            </a>
-                                        </li>
                                         <li>
-                                            <a href="juridico3.shtml">
-                                                Representante Legal
-                                            </a>
+                                            <form action="/Juridico/datos_basicos"  method="POST" enctype="multipart/form-data" style="background-color: white">
+                                                <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 70px;">Datos Básicos</button>
+                                            </form>                                            
+                                        </li>
+                                        <li>                                           
+                                            <form action="/Juridico/representante_legal"  method="POST" enctype="multipart/form-data" style="background-color: white">
+                                                <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 70px;">Representante Legal</button>
+                                            </form> 
                                         </li>   
                                         <li>
-                                            <a href="juridico4.shtml">
-                                                Accionistas
-                                            </a>
+                                            <form action="/Juridico/accionistas"  method="POST" enctype="multipart/form-data" style="background-color: white">
+                                                <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 70px;">Accionistas</button>
+                                            </form>                                           
                                         </li>
-                                        <li>
-                                            <a href="juridico5.shtml">
-                                            Personas Expuestas Publicamente
-                                            </a>
+                                        <li>                                            
+                                            <form action="/Juridico/personas_expuestas"  method="POST" enctype="multipart/form-data" style="background-color: white">
+                                                <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 70px;text-align: left">Personas Expuestas Publicamente</button>
+                                            </form> 
                                         </li> 
-                                        <li>
-                                            <a href="juridico6.shtml">
-                                                Accionistas y Beneficiarios Finales
-                                            </a>
+                                        <li>                                            
+                                            <form action="/Juridico/accionistas_beneficiarios"  method="POST" enctype="multipart/form-data" style="background-color: white">
+                                                <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 70px;text-align: left">Accionistas y Beneficiarios Finales</button>
+                                            </form> 
                                         </li>
-                                        <li>
-                                            <a href="juridico7.shtml">
-                                                Información Financiera
-                                            </a>
+                                        <li>                                            
+                                            <form action="/Juridico/informacion_financiera"  method="POST" enctype="multipart/form-data" style="background-color: white">
+                                                <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 70px;">Información Financiera</button>
+                                            </form> 
                                         </li>                         
 
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="juridico8.shtml">
-                                        3. Origen de Fondos
-                                    </a>
+                                <li>                                    
+                                    <form action="/Juridico/origen_fondos"  method="POST" enctype="multipart/form-data">
+                                        <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">3. Origen de Fondos</button>
+                                    </form>
                                 </li>
-                                <li>
-                                    <a href="juridico9.shtml">
-                                        4. Operaciones Internacionales
-                                    </a>
+                                <li>                                   
+                                    <form action="/Juridico/operaciones_internacionales"  method="POST" enctype="multipart/form-data">
+                                        <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">4. Operaciones Internacionales</button>
+                                    </form>
                                 </li>
-                                <li>
-                                    <a href="juridico10.shtml">
-                                        5. Reclamaciones en seguros
-                                    </a>
+                                <li>                                    
+                                    <form action="/Juridico/reclamaciones_seguros"  method="POST" enctype="multipart/form-data">
+                                        <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">5. Reclamaciones en seguros</button>
+                                    </form>
                                 </li>
-                                <li>
-                                    <a href="juridico11.shtml">
-                                        6. Cláusula de Autorización
-                                    </a>
+                                <li>                                   
+                                    <form action="/Juridico/clausula_autorizacion"  method="POST" enctype="multipart/form-data">
+                                        <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">6. Cláusula de Autorización</button>
+                                    </form>
                                 </li> 
                                 <li>
-                                    <a href="juridico12.shtml">
-                                        7. Imprimir Formulario 
-                                    </a>
+                                    <form action="/Juridico/imprimir_formulario"  method="POST" enctype="multipart/form-data">
+                                        <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">7. Imprimir Formulario </button>
+                                    </form>
                                 </li>                                                        
                             </ul>
                         </li>    																																																																			
