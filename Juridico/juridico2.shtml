@@ -208,7 +208,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div  class="form-group">
-                                                <label class="col-md-4 control-label">Sucursal o Agencia:</label>
+                                                <label class="col-md-4 control-label">Sucursal o Agencia: Dirección</label>
                                                 <div class="col-md-8">
                                                     <input name="sucursalOficina" type="text" class="form-control" placeholder="Dirección ">
                                                 </div>

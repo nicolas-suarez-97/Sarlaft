@@ -41,17 +41,38 @@
 							</header>
 							<form class="form-bordered ajg-title-dark" method="POST" enctype="multipart/form-data" action="/Natural/imprimir_formulario">
 								<div class="panel-body ajg-title-dark" style="text-align: justify">
+									<h3 class="center">CONSIDERACIONES</h3>
+									<p>
+										1. Que los datos personales solicitados en el presente formulario de conocimiento del cliente son recogidos atendiendo las disposiciones e 
+										instrucciones de la Superintendencia Financiera de Colombia y los estándares internacionales para prevenir y controlar el lavado de activos y la
+										financiación del terrorismo.
+									</p>
+									<p>
+										2. Que conforme con lo dispuesto por la literal b) del artículo 2 de la Ley 1581 de 2012, las disposiciones que buscan la protección de datos personales 
+										y que se encuentran contenidos en dicha disposición, no son aplicables a la base de datos y archivos que tengan por finalidad la prevención, detección,
+										monitoreo y control del lavado de activos y el financiamiento del terrorismo, por lo que en principio su utilización no requeriría de una autorización de su 
+										titular, la cual proviene de la ley.
+									</p>
+									<p>
+										3. Que los datos personales adicionales para el estudio técnico del riesgo asegurable y reasegurable se tratarán observando las leyes 1581 de 2012 y 1266 de 2008 segun el caso.
+									</p>
+									<p>
+										4. Que los datos también serán tratados para fines comerciales, razón por la cual procedo a emitir la siguiente: 										
+									</p>
+
 									<h3 class="center">AUTORIZACIÓN</h3>
 									<p>
 										Para efectos de la presente autorización, entiéndase por LA ASEGURADORA y/o cualquier sociedad controlada, directa 
 										o indirectamente, por la misma sociedad(es) matriz de la(s) sociedad(es) referenciadas y con la(s) que se suscriban contrato(s) de seguros.
 									</p>
 									<p>
-										Así mismo, entiendase como INTERMEDIARIO DE SEGUROS la(s) sociedad(es) ____________________, y/o cualquier sociedad controlada, directa o 
-										indirectamente, por la misma sociedad matriz de la(s) sociedad(es) antes mencionada(s).
+										Así mismo, entiendase como INTERMEDIARIO DE SEGUROS la(s) sociedad(es) ____________________, 
 									</p>
 									<p>
-										Dirección_______________________________, Teléfono________________________
+										Dirección_______________________________, Teléfono________________________,
+									</p>
+									<p>
+										y/o cualquier sociedad controlada, directa o indirectamente, por la misma sociedad matriz de la(s) sociedad(es) antes mencionada(s).
 									</p>
 									<p>
 										Autorizo expresa e inequívocamente a usar mis datos personales con fines comerciales en los términos que trata la consideración 4 de la 
@@ -71,7 +92,7 @@
 									<p>Declaro expresamente:</p>
 									<p>
 										<span style="font-weight: bold">I.</span> Que para efectos de acceder a la prestación de servicios por parte de 
-										<span style="font-weight: bold">LA ASEGURADORA Y/O EL INTERMEDIARIO DE SEGUROS</span>, suministramos nuestros datos para todos 
+										<span style="font-weight: bold">LA ASEGURADORA Y/O EL INTERMEDIARIO DE SEGUROS</span>, suministro mis datos para todos 
 										los fines precontractuales y contractuales que compnde la actividad aseguradora.
 									</p>
 									<p>
@@ -80,8 +101,8 @@
 									</p>
 									<p>
 										1. <span style="font-weight: bold">FINALIDAD DEL TRATAMIENTO DE DATOS PERSONALES:</span>
-										Nuestros datos serán trratados por LA ASEGURADORA Y/O EL INTERMEDIARIO DE SEGUROS, para las siguientes finalidads: 
-										i) El trámite de nuestra solicitud de vinculación como consumidor financiero, deudos, contraparte contractual y/o proveedor 
+										Mis datos serán trratados por LA ASEGURADORA Y/O EL INTERMEDIARIO DE SEGUROS, para las siguientes finalidads: 
+										i) El trámite de mi solicitud de vinculación como consumidor financiero, deudor, contraparte contractual y/o proveedor 
 										ii) El proceso de negociación de contratos con LA ASEGURADORA, incluyendo la determinación de primas y la selección de riesgos. 
 										iii) La ejecución y el cumplimiento de los contratos que celebre.
 										iv) El control y la prevención del fraude.
@@ -112,15 +133,21 @@
 										4. <span style="font-weight: bold"> TRANSFERENCIA INTERNACIONAL DE INFORMACIÓN A TERCEROS PAÍSES:</span> Que en ciertas situaciones es necesario realizar transefencias internacionales de mis datos para cumplir las finalidades del tratamiento.
 									</p>
 									<p>
-										5. <span style="font-weight: bold"> DATOS PERSONALES DE NIÑAS, NIÑOS Y ADOLESCENTES: </span>Que son facultativas las respues a las preguntas sobre datos de niñas, niños y adolescentes.
-											En consecuencia, no hemos sido obligados a responerlas.
+										5. <span style="font-weight: bold"> DATOS SENSIBLES: </span> Que son facultativas las preguntas que me han hecho o me harán sobre datos personales sensibles,
+										de conformidad con la definición legal vigente. En consecuencia, no he sido obligado a responderlas, por lo que autorizo expresamente para que se lleve a cabo el tratamiento de mis datos sensibles,
+										en especial, los relativos a la salud y a los datos biométricos. En todo caso, para efectos del presente formulario de conocimiento se debe tener en consideración que el capítulo XI del Título I de la 
+										Circular Básica Jurídica de la Superintendencia Financiera de Colombia exige las mismas.
 									</p>
 									<p>
-										6. <span style="font-weight: bold"> DERECHOS DEL TITULAR DE LA INFORMACIÓN:</span> Que como titular de la información, nos asisten los derechos previstos en la Ley 1266 de 2008.
-											En especial, el derecho a conocer, actualizar y rectificar las informaciones que se hayan recogido sobre nosotros.
+										6. <span style="font-weight: bold"> DATOS PERSONALES DE NIÑAS, NIÑOS Y ADOLESCENTES: </span>Que son facultativas las respuestas a las preguntas sobre datos de niñas, niños y adolescentes.
+											En consecuencia, no he sido obligados a responerlas.
 									</p>
 									<p>
-										7. <span style="font-weight: bold">RESPONSABLES Y ENCARGADOS DEL TRATAMIENTO DE LA INFORMACIÓN: </span>Que los responsables del tratamiento de la información son 
+										7. <span style="font-weight: bold"> DERECHOS DEL TITULAR DE LA INFORMACIÓN:</span> Que como titular de la información, me asisten los derechos previstos en la Ley 1266 de 2008.
+											En especial, el derecho a conocer, actualizar y rectificar las informaciones que se hayan recogido sobre mí.
+									</p>
+									<p>
+										8. <span style="font-weight: bold">RESPONSABLES Y ENCARGADOS DEL TRATAMIENTO DE LA INFORMACIÓN: </span>Que los responsables del tratamiento de la información son 
 										<span style="font-weight: bold"> LAS ASEGURADORAS Y/O LOS INTERMEDIARIOS,</span> cuyos datos de contacto se incluyeron en el encabezado de esta autorización.
 										En todo caso, los encargados del Tratamiento de los datos que se comparta, transfieran, transmitan, entreguen o divulguen, en desarrollo de lo previsto en el literal v) del numeral 3 anterior, seran:
 										<p >
@@ -155,13 +182,7 @@
 									<p>
 										<span style="font-weight: bold">III. AUTORIZACIÓN:</span> De manera expresa, AUTORIZAMOS el Tratamiento de los datos y, de ser necesario, la transferencia nacional e internacional de los mismos,
 										por las personas, para las finalidades y en los términos que nos fueron informados en este documento.
-									</p>
-									<p>
-										<span style="font-weight: bold">IV. CERTIFICACIÓN:</span> Manifestamos que la información suministrada por nosotros para las finalidades señaladas en este documento, puede contener datos personales 
-										de empleados, proveedores, colaboradores o clientes de la compañía, por lo cual certificamos de manera expresa que la misma, ha sido:
-										i) obtenida de acuerdo con lo previsto en la legislación aplicable, particularmente en la Ley 1581 de 2012 y ii) que, existen las autorizaciones necesarias de acuerdo con lo previsto en la legislación aplicable, 
-											para el tratamiento y circulación de esta Base de Datos por parte de <span style="font-weight: bold"> LA(S) ASEGURADORA(S) Y/O LOS INTERMEDIARIOS </span>señalados en este documento.
-									</p>
+									</p>								
 									<br>
 									<button type="submit" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>	
 									<br>

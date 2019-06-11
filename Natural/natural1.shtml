@@ -31,7 +31,7 @@
 												
 						</div>
 					</header>
-
+                    
 					<!-- start: page -->
 					<h3 class="text-center ajg-title-dark">FORMULARIO DE CONOCIMIENTO DEL CLIENTE PERSONA NATURAL-SECTOR ASEGURADOR</h3>                    
                     <div>
@@ -41,19 +41,18 @@
                                 <h2 class="panel-title">Inicio</h2>
                             </header>
                             <div class="panel-body">
-                                <form class="form-bordered " method="POST" enctype="multipart/form-data" action="/Natural/datos_basicos">
-
+                                <form class="form-bordered " method="POST" enctype="multipart/form-data" action="/Natural/datos_basicos">                                    
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group ">
                                                 <label class="control-label">Fecha Diligenciamiento</label>                                                
-                                                <input type="date" class="form-control" id="inputDate" placeholder="Fecha" name="fechaDiligenciamiento">                                                
+                                                <input type="date" class="form-control" id="inputDate" name="fechaDiligenciamiento" value="<!--4DTEXT [Sarlaft]Fecha_Diligenciamiento-->">                                                
                                             </div>   
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label class="control-label" >Ciudad</label>                                                
-                                                <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad diligenciamiento" required name="ciudadDiligenciamiento">                                                
+                                                <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad diligenciamiento" required name="ciudadDiligenciamiento" value="<!--4DTEXT [Sarlaft]Ciudad_Diligenciamiento-->">                                                
                                             </div>
                                         </div>
                                     </div>                                    
@@ -62,16 +61,16 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label class="control-label" >Sucursal</label>                                                
-                                                <input type="text" class="form-control" id="inputSucursal" placeholder="Sucursal" required name="sucursal">                                                
+                                                <input type="text" class="form-control" id="inputSucursal" placeholder="Sucursal" required name="sucursal" value="<!--4DTEXT [Sarlaft]Sucursal-->">                                                
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label class="control-label">Tipo Solicitud</label>                                                
                                                 <select class="form-control mb-md" name="tipoSolicitud">
-                                                    <option>Actualización</option>
-                                                    <option>Renovación</option>
-                                                    <option>Vinculación</option>
+                                                    <option id="actualizacion" <!--4DIF ([Sarlaft]Tipo_Solicitud="actualizacion")-->selected<!--4DENDIF-->>Actualización</option>
+                                                    <option value="renovacion" <!--4DIF ([Sarlaft]Tipo_Solicitud="renovacion")-->selected<!--4DENDIF-->>Renovación</option>
+                                                    <option value="vinculacion" <!--4DIF ([Sarlaft]Tipo_Solicitud="vinculacion")-->selected<!--4DENDIF-->>Vinculación</option>
                                                 </select>                                                
                                             </div>     
                                         </div>
@@ -84,33 +83,33 @@
                                         <div class="row ">
                                             <label class="col-sm-3 control-label">Clase de la Vinculación</label>
                                             <div class="checkbox-custom chekbox-primary col-sm-1" >
-                                                <input value="Tomador" type="checkbox" name="tomador"/>
+                                                <input value="Tomador" type="checkbox" name="tomador" <!--4DIF ([Sarlaft]Clase_VInculacion_Tomador)-->checked<!--4DENDIF-->/>
                                                 <label>Tomador</label>
                                             </div>
                                             <div class="checkbox-custom chekbox-primary col-sm-1">
-                                                <input value="Asegurador" type="checkbox" name="asegurador"/>
+                                                <input value="Asegurador" type="checkbox" name="asegurador" <!--4DIF ([Sarlaft]Clase_Vinculacion_Asegurado)-->checked<!--4DENDIF-->/>
                                                 <label>Asegurador</label>
                                             </div>                                            
                                             <div class="checkbox-custom chekbox-primary col-sm-1">
-                                                <input value="Beneficiario" type="checkbox" name="beneficiario"/>
+                                                <input value="Beneficiario" type="checkbox" name="beneficiario" <!--4DIF ([Sarlaft]Clase_Vinculacion_Benef)-->checked<!--4DENDIF-->/>
                                                 <label>Beneficiario</label>
                                             </div>
                                             <div class="checkbox-custom chekbox-primary col-sm-1">
-                                                <input value="Afianzado" type="checkbox" name="afianzado"/>
+                                                <input value="Afianzado" type="checkbox" name="afianzado" <!--4DIF ([Sarlaft]Clase_Vinculacion_Afianzado)-->checked<!--4DENDIF-->/>
                                                 <label>Afianzado</label>
                                             </div>                                            
                                             <div class="checkbox-custom chekbox-primary col-sm-1">
-                                                <input value="Proveedor" type="checkbox" name="proveedor"/>
+                                                <input value="Proveedor" type="checkbox" name="proveedor" <!--4DIF ([Sarlaft]Clase_Vinculacion_Proveedor)-->checked<!--4DENDIF-->/>
                                                 <label>Proveedor</label>
                                             </div>
                                             <div class="checkbox-custom chekbox-primary col-sm-1">
-                                                <input value="Intermediario" type="checkbox" name="intermediario"/>
+                                                <input value="Intermediario" type="checkbox" name="intermediario" <!--4DIF ([Sarlaft]Clase_Vinculacion_Inter)-->checked<!--4DENDIF-->/>
                                                 <label>Intermediario</label>
                                             </div>
                                             <div class="col-sm-3  ">
                                                 <label class="col-sm-2">Otro</label>
                                                 <div class="col-sm-6">
-                                                    <input type="text" class="form-control input-sm" name="otroVinculacion"/>
+                                                    <input type="text" class="form-control input-sm" name="otroVinculacion" value="<!--4DTEXT [Sarlaft]Clase_Vinculacion_Otro-->"/>
                                                 </div>
                                             </div>
                                         </div>                                                                                    
@@ -122,25 +121,25 @@
                                         <div class="row">
                                             <label class="col-sm-4 control-label">Tomador - Asegurado</label>
                                             <div class="radio-custom radio-primary col-sm-1">
-                                                <input id="awesome" name="TomaASeg" type="radio" value="familiar" required />
+                                                <input id="awesome" name="TomaASeg" type="radio" value="familiar" required <!--4DIF ([Sarlaft]Tomador_Asegurado_Familiar)-->checked<!--4DENDIF-->/>
                                                 <label >Familliar</label>
                                             </div>
                                             <div class="radio-custom radio-primary col-sm-1">
-                                                <input id="very-awesome" name="TomaASeg" type="radio" value="comercial" />
+                                                <input id="very-awesome" name="TomaASeg" type="radio" value="comercial" <!--4DIF ([Sarlaft]Tomador_Asegurado_Comercial)-->checked<!--4DENDIF-->/>
                                                 <label >Comercial </label>
                                             </div>
                                             <div class="radio-custom radio-primary col-sm-1">
-                                                <input id="ultra-awesome" name="TomaASeg" type="radio" value="laboral" />
+                                                <input id="ultra-awesome" name="TomaASeg" type="radio" value="laboral" <!--4DIF ([Sarlaft]Tomador_Asegurado_Laboral)-->checked<!--4DENDIF-->/>
                                                 <label >Laboral</label>
                                             </div>
                                             <div class="radio-custom radio-primary col-sm-1">
-                                                <input id="ultra-awesome" name="TomaASeg" type="radio" value="otro" />
+                                                <input id="ultra-awesome" name="TomaASeg" type="radio" value="otro" <!--4DIF ([Sarlaft]Tomador_Asegurado_Otra)-->checked<!--4DENDIF-->/>
                                                 <label for="ultra-awesome">Otro</label>
                                             </div>
                                             <div class="col-sm-2">                                                    
                                                 <label class="control-label col-sm-3 " >Cual: </label>  
                                                 <div class="col-sm-9 ">
-                                                    <input type="text" class="form-control input-sm "  name="otroTomadorA">                                                                                                    
+                                                    <input type="text" class="form-control input-sm "  name="otroTomadorA" value="<!--4DTEXT [Sarlaft]Tomador_Asegurado_Cual-->">                                                                                                    
                                                 </div>                                              
                                             </div>
                                         </div>                                    
@@ -148,25 +147,25 @@
                                         <div class="row">
                                             <label class="col-sm-4 control-label">Tomador - Beneficiario</label>
                                             <div class="radio-custom radio-primary col-sm-1">
-                                                <input id="awesome" name="TomaBenef" type="radio" value="familiar" required />
+                                                <input id="awesome" name="TomaBenef" type="radio" value="familiar" required <!--4DIF ([Sarlaft]Tomador_Benef_Familiar)-->checked<!--4DENDIF--> />
                                                 <label for="awesome">Familliar</label>
                                             </div>
                                             <div class="radio-custom radio-primary col-sm-1">
-                                                <input id="very-awesome" name="TomaBenef" type="radio" value="comercial" />
+                                                <input id="very-awesome" name="TomaBenef" type="radio" value="comercial" <!--4DIF ([Sarlaft]Tomador_Benef_Comercial)-->checked<!--4DENDIF-->/>
                                                 <label for="very-awesome">Comercial </label>
                                             </div>
                                             <div class="radio-custom radio-primary col-sm-1">
-                                                <input id="ultra-awesome" name="TomaBenef" type="radio" value="laboral" />
+                                                <input id="ultra-awesome" name="TomaBenef" type="radio" value="laboral" <!--4DIF ([Sarlaft]Tomador_Benef_Laboral)-->checked<!--4DENDIF-->/>
                                                 <label for="ultra-awesome">Laboral</label>
                                             </div>
                                             <div class="radio-custom radio-primary col-sm-1">
-                                                <input id="ultra-awesome" name="TomaBenef" type="radio" value="otro" />
+                                                <input id="ultra-awesome" name="TomaBenef" type="radio" value="otro" <!--4DIF ([Sarlaft]Tomador_Benef_Otra)-->checked<!--4DENDIF-->/>
                                                 <label for="ultra-awesome">Otro</label>
                                             </div>
                                             <div class="col-sm-2">                                                    
                                                 <label class="control-label col-sm-3" >Cual: </label>  
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control input-sm " name="otroTomadorB" >                                                                                                    
+                                                    <input type="text" class="form-control input-sm " name="otroTomadorB" value="<!--4DTEXT [Sarlaft]Tomador_Benef_Cual-->">                                                                                                    
                                                 </div>                                              
                                             </div>
                                         </div>
@@ -174,25 +173,25 @@
                                         <div class="row">
                                             <label class="col-sm-4 control-label">Asegurado - Beneficiario</label>
                                             <div class="radio-custom radio-primary col-sm-1">
-                                                <input id="awesome" name="AsegBenef" type="radio" value="familiar" required />
+                                                <input id="awesome" name="AsegBenef" type="radio" value="familiar" required <!--4DIF ([Sarlaft]Asegura_Benef_Familiar)-->checked<!--4DENDIF-->/>
                                                 <label for="awesome">Familliar</label>
                                             </div>
                                             <div class="radio-custom radio-primary col-sm-1">
-                                                <input id="very-awesome" name="AsegBenef" type="radio" value="comercial" />
+                                                <input id="very-awesome" name="AsegBenef" type="radio" value="comercial" <!--4DIF ([Sarlaft]Asegura_Benef_Comercial)-->checked<!--4DENDIF-->/>
                                                 <label for="very-awesome">Comercial </label>
                                             </div>
                                             <div class="radio-custom radio-primary col-sm-1">
-                                                <input id="ultra-awesome" name="AsegBenef" type="radio" value="laboral" />
+                                                <input id="ultra-awesome" name="AsegBenef" type="radio" value="laboral" <!--4DIF ([Sarlaft]Asegura_Benef_Laboral)-->checked<!--4DENDIF-->/>
                                                 <label for="ultra-awesome">Laboral</label>
                                             </div>
                                             <div class="radio-custom radio-primary col-sm-1">
-                                                <input id="ultra-awesome" name="AsegBenef" type="radio" value="otro" />
+                                                <input id="ultra-awesome" name="AsegBenef" type="radio" value="otro" <!--4DIF ([Sarlaft]Asegura_Benef_Otra)-->checked<!--4DENDIF-->/>
                                                 <label for="ultra-awesome">Otro</label>
                                             </div>
                                             <div class="col-sm-2">                                                    
                                                 <label class="control-label col-sm-3" >Cual: </label>  
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control input-sm "  name="otroAseguradoB">                                                                                                    
+                                                    <input type="text" class="form-control input-sm "  name="otroAseguradoB" value="<!--4DTEXT [Sarlaft]Asegura_Benef_Cual-->">                                                                                                    
                                                 </div>                                              
                                             </div>
                                         </div>

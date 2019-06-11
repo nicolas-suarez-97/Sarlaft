@@ -110,7 +110,7 @@
 					<section class="content-with-menu mailbox">
                         <div class="panel-body">
                             <h2 class="text-center ajg-title-dark">Bienvenido, por favor seleccione la acción a realizar:</h2>
-                            <br>
+                            <br>                            
                             <form class="form-horizontal form-bordered " method="POST" enctype="multipart/form-data" action="/formulario_inicio">
                                 <div class="form-group">
                                     <label class="col-md-3 control-label ajg-title-dark" for="inputDefault">Tipo Solicitud</label>
