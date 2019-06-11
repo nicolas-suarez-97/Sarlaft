@@ -46,7 +46,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group ">
                                                 <label class="control-label">Fecha Diligenciamiento</label>                                                
-                                                <input type="date" class="form-control" id="inputDate" name="fechaDiligenciamiento" value="<!--4DTEXT [Sarlaft]Fecha_Diligenciamiento-->">                                                
+                                                <input type="date" class="form-control" id="inputDate" name="fechaDiligenciamiento" value="<!--4DTEXT Substring(String([Sarlaft]Fecha_Diligenciamiento;ISO date);1;10)-->"> 
                                             </div>   
                                         </div>
                                         <div class="col-sm-6">

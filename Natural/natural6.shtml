@@ -123,7 +123,12 @@
                                                 <p>- Fotocopia del documento de identidad del representante legal, ampliada al 150%.</p>
                                             </div>                                                                                         
                                             <div class="col-md-6">
-                                                <input type="file" class="form-control " required name="documentoIdentidad" >
+                                                <!--4DIF (OB Get([Sarlaft]Adjuntos;"documentoIdentidad")="")-->
+                                                    <input type="file" class="form-control " required name="documentoIdentidad">
+                                                <!--4DELSE-->                                                    
+                                                    <input type="text" class="form-control col-md-6" disabled value="<!--4DTEXT OB Get([Sarlaft]Adjuntos;"documentoIdentidad")-->" >
+                                                    <input type="file" class="form-control col-md-6" required name="documentoIdentidad">
+                                                <!--4DENDIF-->
                                             </div>                                            
                                         </div>
                                         <br>

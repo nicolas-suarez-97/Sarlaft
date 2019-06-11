@@ -370,7 +370,8 @@ Case of
 				C_TEXT($vPartName;$vPartMimeType;$vPartFileName;$vDestinationFolder)
 				C_BLOB($vPartContentBlob)
 				C_LONGINT($i)
-				$vDestinationFolder:=Get 4D folder(Current resources folder)+"documentos_sarlaft"+Folder separator+String([Sarlaft]Documento_Numero)
+				C_OBJECT($obDoc)
+				$vDestinationFolder:=Get 4D folder(Current resources folder)+"documentos_sarlaft"+Folder separator+String([Sarlaft]Documento_Numero)+Folder separator
 				
 				If (Test path name($vDestinationFolder)#Is a folder)
 					CREATE FOLDER($vDestinationFolder;*)
@@ -381,10 +382,11 @@ Case of
 					
 					If ($vPartFileName#"")
 						$rutaDoc:=$vDestinationFolder+$vPartFileName
-						[Sarlaft]Ruta_Documentos:=$rutaDoc
-					End if
+						BLOB TO DOCUMENT($rutaDoc;$vPartContentBlob)
+						OB SET([Sarlaft]Adjuntos;$vPartName;$rutaDoc)
+					End if 
 					
-				End for
+				End for 
 				
 				SAVE RECORD([Sarlaft])
 				WEB SEND FILE("Natural/natural7.shtml")
