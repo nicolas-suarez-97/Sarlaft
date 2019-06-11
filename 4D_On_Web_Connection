@@ -367,6 +367,24 @@ Case of
 				WEB SEND FILE("Natural/natural6.shtml")
 				
 			: ($rqt="/Natural/clausula_autorizacion")
+				C_TEXT($vPartName;$vPartMimeType;$vPartFileName;$vDestinationFolder)
+				C_BLOB($vPartContentBlob)
+				C_LONGINT($i)
+				$vDestinationFolder:=Get 4D folder(Current resources folder)+"documentos_sarlaft"+Folder separator+String([Sarlaft]Documento_Numero)
+				
+				If (Test path name($vDestinationFolder)#Is a folder)
+					CREATE FOLDER($vDestinationFolder;*)
+				End if 
+				
+				For ($i;1;WEB Get body part count)
+					WEB GET BODY PART($i;$vPartContentBlob;$vPartName;$vPartMimeType;$vPartFileName)
+					
+					If ($vPartFileName#"")
+						$rutaDoc:=$vDestinationFolder+$vPartFileName
+						[Sarlaft]Ruta_Documentos:=$rutaDoc
+					End if
+					
+				End for
 				
 				SAVE RECORD([Sarlaft])
 				WEB SEND FILE("Natural/natural7.shtml")
