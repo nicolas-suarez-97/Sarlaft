@@ -1,0 +1,11 @@
+$obWebVars:=WEB_Get_Vars 
+
+
+If (OB Get($obWebVars;"panel")="true")
+	
+	WEB SEND FILE("Juridico/juridico11.shtml")
+Else 
+	
+	SAVE RECORD([Sarlaft])
+	WEB SEND FILE("Juridico/juridico11.shtml")
+End if 

@@ -1,0 +1,58 @@
+$obWebVars:=WEB_Get_Vars 
+
+
+If (OB Get($obWebVars;"panel")="true")
+	
+	WEB SEND FILE("Juridico/juridico10.shtml")
+Else 
+	
+	If (OB Get($obWebVars;"monedaExtranjera")="si")
+		[Sarlaft]Transacciones_Moneda_Ext:=True
+		[Sarlaft]Trans_MonedaE_cual:=OB Get($obWebVars;"cualOperacion")
+	Else 
+		[Sarlaft]Transacciones_Moneda_Ext:=False
+		[Sarlaft]Trans_MonedaE_cual:=""
+	End if 
+	
+	[Sarlaft]Otras_Operaciones:=OB Get($obWebVars;"otrasOperaciones")
+	
+	If (OB Get($obWebVars;"productosExtranjero")="si")
+		[Sarlaft]ProductosFin_Exterior:=True
+	Else 
+		[Sarlaft]ProductosFin_Exterior:=False
+	End if 
+	
+	If (OB Get($obWebVars;"cuentasMonedaExtr")="si")
+		[Sarlaft]Cuentas_MonedaEx:=True
+	Else 
+		[Sarlaft]Cuentas_MonedaEx:=False
+	End if 
+	
+	C_TEXT($vPartName;$vPartMimeType;$vPartFileName;$vDestinationFolder)
+	C_BLOB($vPartContentBlob)
+	C_LONGINT($i)
+	C_OBJECT($obDoc)
+	
+	$vDestinationFolder:=Get 4D folder(Current resources folder)+"documentos_sarlaft"+Folder separator+String([Sarlaft]Documento_Numero)+Folder separator
+	
+	If (Test path name($vDestinationFolder)#Is a folder)
+		CREATE FOLDER($vDestinationFolder;*)
+	End if 
+	
+	For ($i;1;WEB Get body part count)
+		WEB GET BODY PART($i;$vPartContentBlob;$vPartName;$vPartMimeType;$vPartFileName)
+		
+		If ($vPartFileName#"")
+			$rutaDoc:=$vDestinationFolder+$vPartFileName
+			BLOB TO DOCUMENT($rutaDoc;$vPartContentBlob)
+			OB SET([Sarlaft]Ruta_Adjuntos;$vPartName;$rutaDoc)
+			OB SET([Sarlaft]Nombre_Adjuntos;$vPartName;$vPartFileName)
+		End if 
+		
+	End for 
+	
+	
+	
+	SAVE RECORD([Sarlaft])
+	WEB SEND FILE("Juridico/juridico10.shtml")
+End if 

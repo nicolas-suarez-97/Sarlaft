@@ -1,0 +1,12 @@
+$obWebVars:=WEB_Get_Vars 
+
+
+If (OB Get($obWebVars;"panel")="true")
+	
+	WEB SEND FILE("Juridico/juridico9.shtml")
+Else 
+	
+	[Sarlaft]Origen_fondos:=OB Get($obWebVars;"origenFondos")
+	SAVE RECORD([Sarlaft])
+	WEB SEND FILE("Juridico/juridico9.shtml")
+End if 
