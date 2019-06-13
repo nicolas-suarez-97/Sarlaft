@@ -40,7 +40,9 @@
                                 <h1 class="panel-title text-center ajg-title-dark">Imprimir Formulario</h1>   
                             </header>
                             <div class="panel-body ajg-title-dark" style="text-align: justify">
-								<form class="form-bordered ajg-title-dark" method="POST" enctype="multipart/form-data" >
+								<form class="form-bordered ajg-title-dark" method="POST" enctype="multipart/form-data" action="/Natural/imprimir" >									
+									<!--<a href="" class="btn ajg-button col-md-4 col-md-offset-4">Descargar PDF</a>-->
+									<br>
 									<button type="submit" class="btn ajg-button col-md-4 col-md-offset-4">Descargar PDF</button>	
 								</form>
                             </div>

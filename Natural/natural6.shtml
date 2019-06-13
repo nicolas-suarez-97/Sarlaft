@@ -128,51 +128,31 @@
                                             </div>                                                                                         
                                             <div class="col-md-6">
                                                 <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
-                                                    <input type="file" class="form-control " required name="documentoIdentidad">
+                                                    <input type="file" class="form-control-file " required name="documentoIdentidad">
                                                 <!--4DELSE-->                              
                                                     <div class="col-md-4">
                                                         <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"documentoIdentidad")--></h5>
                                                     </div>                
                                                     <div class="col-md-8">
-                                                        <input type="file" class="form-control " name="documentoIdentidad">
+                                                        <input type="file" class="form-control-file " name="documentoIdentidad">
                                                     </div>                      
                                                 <!--4DENDIF-->
                                             </div>                                            
                                         </div>
-                                        <br>
-                                        <div class="row">                                        
-                                            <div class="col-md-6">
-                                                <p>- Certificado de existencia y representación legal expedido por la autoridad competente no mayor a 30 días.</p>                                                    
-                                            </div>                                                                      
-                                            <div class="col-md-6">                                                
-                                                <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
-                                                <input type="file" class="form-control " required name="certificado">
-                                                <!--4DELSE-->                              
-                                                    <div class="col-md-4">
-                                                        <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"certificado")--></h5>
-                                                    </div>                
-                                                    <div class="col-md-8">
-                                                        <input type="file" class="form-control " name="certificado">
-                                                    </div>                      
-                                                <!--4DENDIF-->
-                                            </div>                                                                                        
-                                        </div>
-                                        <div >
-                                        </div>
-                                        <br>
+                                        <br>                                                                                                                        
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <p>- Inventario general de los bienes objeto del seguro.</p>
                                             </div>                                                                                       
                                             <div class="col-md-6">                                                
                                                  <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
-                                                 <input type="file" class="form-control " required name="inventario">
+                                                 <input type="file" class="form-control-file" required name="inventario">
                                                  <!--4DELSE-->                              
                                                      <div class="col-md-4">
                                                             <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"inventario")--></h5>
                                                      </div>                
                                                      <div class="col-md-8">
-                                                         <input type="file" class="form-control " name="inventario">
+                                                         <input type="file" class="form-control-file " name="inventario">
                                                      </div>                      
                                                  <!--4DENDIF-->
                                                 
