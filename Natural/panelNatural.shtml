@@ -26,8 +26,8 @@
                         </li>--> 
                         <li class="nav-parent nav-expanded nav-active" id="light-list">
                             <a  class="ajg-dark-button">
-                                <i class="fa fa-plus" aria-hidden="true"></i>
-                                <span>Creación</span>
+                                <i class="fa fa-copy" aria-hidden="true"></i>
+                                <span>Formulario</span>
                             </a>
                             <ul class="nav nav-children text-white" style="background-color: white">
                                 <li>                                         
@@ -79,11 +79,11 @@
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">8. Imprimir Formulario </button>
                                     </form>
                                 </li> 
-                                <li>
+                                <!--<li>
                                     <a href="natural9.shtml">
                                         9. ANEXO - Personas Expuestas Públicamente
                                     </a>
-                                </li>                                                        
+                                </li>  -->                                                      
                             </ul>
                         </li>    																																																																			
                     </ul>

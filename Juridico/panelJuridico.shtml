@@ -26,8 +26,8 @@
                         </li>-->
                         <li class="nav-parent nav-expanded nav-active" id="light-list">
                             <a  class="ajg-dark-button">
-                                <i class="fa fa-plus" aria-hidden="true"></i>
-                                <span>Creación</span>
+                                <i class="fa fa-copy" aria-hidden="true"></i>
+                                <span>Formulario</span>
                             </a>
                             <ul class="nav nav-children text-white" style="background-color: white">
                                 <li>                                    
