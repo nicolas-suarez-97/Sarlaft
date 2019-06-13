@@ -47,11 +47,11 @@
                                             ¿Realiza Transacciones en Moneda Extranjera?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="si" type="radio" name="monedaExtranjera" required/>
+                                            <input value="si" type="radio" name="monedaExtranjera" required  <!--4DIF ([Sarlaft]Transacciones_Moneda_Ext=True)-->checked<!--4DENDIF-->/>
                                             <label>Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="no" type="radio" name="monedaExtranjera"/>
+                                            <input value="no" type="radio" name="monedaExtranjera"   <!--4DIF ([Sarlaft]Transacciones_Moneda_Ext=False)-->checked<!--4DENDIF-->/>
                                             <label>No</label>
                                         </div>    
                                         <div class="col-sm-6">                                        
@@ -59,7 +59,7 @@
                                                 <label class="col-md-3 control-label">Cuál</label>
                                                 <div class="col-md-9">
                                                     <select name="cualOperacion" class="form-control mb-md">
-                                                        <option></option>                                                        
+                                                        <option><!--4DTEXT [Sarlaft]Trans_MonedaE_cual--></option>                                                        
                                                         <option>Exportaciones</option>
                                                         <option>Giros</option>
                                                         <option>Importaciones</option>
@@ -76,7 +76,7 @@
                                     <div  class="form-group">
                                         <label class="col-sm-4 control-label">Indique Otras Operaciones</label>
                                         <div class="col-sm-8" style="transform:translateX(-20px)">
-                                            <input name="otrasOperaciones" type="text" class="form-control" >
+                                            <input name="otrasOperaciones" type="text" class="form-control" value="<!--4DTEXT [Sarlaft]Otras_Operaciones-->">
                                         </div>                                 
                                     </div>                                                                               
                                 
@@ -85,11 +85,11 @@
                                             ¿Posee productos Financieros en el Exterior?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="si" type="radio" name="productosExtranjero" required />
+                                            <input value="si" type="radio" name="productosExtranjero" required <!--4DIF [Sarlaft]ProductosFin_Exterior=True)-->checked<!--4DENDIF-->/>
                                             <label>Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="no" type="radio" name="productosExtranjero"/>
+                                            <input value="no" type="radio" name="productosExtranjero"  <!--4DIF [Sarlaft]ProductosFin_Exterior=False)-->checked<!--4DENDIF-->/>
                                             <label>No</label>
                                         </div>                                             
                                     </div>
@@ -99,16 +99,16 @@
                                             ¿Posee Cuentas en Moneda Extranjera?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="Si" type="radio" name="cuentasMonedaExtr" required />
+                                            <input value="si" type="radio" name="cuentasMonedaExtr" required <!--4DIF [Sarlaft]Cuentas_MonedaEx=True)-->checked<!--4DENDIF-->/>
                                             <label>Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="no" type="radio" name="cuentasMonedaExtr"/>
+                                            <input value="no" type="radio" name="cuentasMonedaExtr" <!--4DIF [Sarlaft]Cuentas_MonedaEx=False)-->checked<!--4DENDIF-->/>
                                             <label>No</label>
                                         </div>                                                  
                                     </div>
                                     
-                                                                         
+                                    <!--4DSCRIPT QUERY([Operaciones_Inter];[Operaciones_Inter]No_Ident=[Sarlaft]Documento_Numero)-->                                    
                                     <div class="table-responsive">
                                         <table class="table mb-none">
             
@@ -126,25 +126,25 @@
                                             <tbody>                                                    
                                                 <tr >                                                          
                                                     <td>
-                                                        <input name="tipoProd1" type="text" class="form-control">
+                                                        <input name="tipoProd1" value="<!--4DTEXT [Operaciones_Inter]Tipo_Producto-->" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="numProd1" type="text" class="form-control">
+                                                        <input name="numProd1" value="<!--4DTEXT [Operaciones_Inter]Iden_Num_Prod-->" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="entidad1" type="text" class="form-control">
+                                                        <input name="entidad1" value="<!--4DTEXT [Operaciones_Inter]Entidad-->" type="text" class="form-control">
                                                     </td>                                                   
                                                     <td>
-                                                        <input name="monto1" type="text" class="form-control">
+                                                        <input name="monto1" value="<!--4DTEXT [Operaciones_Inter]Monto-->" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="ciudad1" type="text" class="form-control">
+                                                        <input name="ciudad1" value="<!--4DTEXT [Operaciones_Inter]Ciudad-->" type="text" class="form-control">
                                                     </td> 
                                                     <td>
-                                                        <input name="pais1" type="text" class="form-control">
+                                                        <input name="pais1" value="<!--4DTEXT [Operaciones_Inter]Pais-->" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="moneda1" type="text" class="form-control">
+                                                        <input name="moneda1" value="<!--4DTEXT [Operaciones_Inter]Moneda-->" type="number" class="form-control">
                                                     </td>                                                                                                                       
                                                 </tr>                                                                                                                                       
                                             </tbody>

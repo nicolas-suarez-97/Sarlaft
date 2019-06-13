@@ -61,16 +61,16 @@
                                                 <tbody>                                                    
                                                     <tr >                                                          
                                                         <td>
-                                                            <input name="numID1" type="text" class="form-control" required>
+                                                            <input name="numID1" type="text" class="form-control" >
                                                         </td>
                                                         <td>
-                                                            <input name="nombre1" type="text" class="form-control" required>
+                                                            <input name="nombre1" type="text" class="form-control" >
                                                         </td>
                                                         <td>
-                                                            <input name="razonSocial1" type="text" class="form-control" required>
+                                                            <input name="razonSocial1" type="text" class="form-control" >
                                                         </td>
                                                         <td>
-                                                            <select name="tipoID1" class="form-control mb-md" required>
+                                                            <select name="tipoID1" class="form-control mb-md" >
                                                                 <option value=""></option>
                                                                 <option value="C.C.">C.C.</option>
                                                                 <option value="NIT">NIT</option>
@@ -78,10 +78,10 @@
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <input name="id1" type="text" class="form-control" required>
+                                                            <input name="id1" type="text" class="form-control" >
                                                         </td>
                                                         <td>
-                                                            <input name="porcentPart1" type="number" class="form-control" required>
+                                                            <input name="porcentPart1" type="number" class="form-control" >
                                                         </td>                                                                                                                       
                                                     </tr>
 

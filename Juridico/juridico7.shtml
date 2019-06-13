@@ -47,14 +47,14 @@
                                         <div class="col-sm-4">
                                             <label class="col-md-4 control-label">Ingresos Mensuales</label>
                                             <div class="col-md-8">
-                                                <input name="ingresosMensuales" type="number" class="form-control" placeholder="Ingresos (Pesos)" required>
+                                                <input name="ingresosMensuales" value="<!--4DTEXT [Sarlaft]Ingresos_Mensuales-->" type="number" class="form-control" placeholder="Ingresos (Pesos)" required>
                                             </div>                                 
                                         </div>
                                         <div class="col-sm-4">
                                             <div  class="form-group">
                                                 <label class="col-sm-3 control-label">Egresos Mensuales</label>
                                                 <div class="col-sm-9">
-                                                    <input name="egresosMensuales" type="number" class="form-control" placeholder="Egresos (Pesos)" required>
+                                                    <input name="egresosMensuales" value="<!--4DTEXT [Sarlaft]Egresos_Mensuales-->" type="number" class="form-control" placeholder="Egresos (Pesos)" required>
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                    
@@ -62,7 +62,7 @@
                                             <div  class="form-group">
                                                 <label class="col-sm-4 control-label">Activos</label>
                                                 <div class="col-sm-8">
-                                                    <input name="activos" type="number" class="form-control" placeholder="Activos (Pesos)" required>
+                                                    <input name="activos" value="<!--4DTEXT [Sarlaft]Activos-->" type="number" class="form-control" placeholder="Activos (Pesos)" required>
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                            
@@ -72,14 +72,14 @@
                                         <div class="col-sm-4">
                                             <label class="col-md-4 control-label">Pasivos</label>
                                             <div class="col-md-8">
-                                                <input name="pasivos" type="number" class="form-control" placeholder="Pasivos (Pesos)" required>
+                                                <input name="pasivos" value="<!--4DTEXT [Sarlaft]Pasivo-->" type="number" class="form-control" placeholder="Pasivos (Pesos)" required>
                                             </div>                                 
                                         </div>
                                         <div class="col-sm-4">
                                             <div  class="form-group">
                                                 <label class="col-sm-3 control-label">Patrimonio</label>
                                                 <div class="col-sm-9">
-                                                    <input name="patrimonio" type="number" class="form-control" placeholder="Patrimonio" required>
+                                                    <input name="patrimonio" value="<!--4DTEXT [Sarlaft]Patrimonio-->" type="number" class="form-control" placeholder="Patrimonio" required>
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                    
@@ -87,7 +87,7 @@
                                             <div  class="form-group">
                                                 <label class="col-sm-4 control-label">Otros Ingresos</label>
                                                 <div class="col-sm-8">
-                                                    <input name="otrosIngresos" type="text" class="form-control" placeholder="Otros Ingresos">
+                                                    <input name="otrosIngresos" value="<!--4DTEXT [Sarlaft]Otros_Ingresos-->" type="text" class="form-control" placeholder="Otros Ingresos">
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                            
@@ -97,7 +97,7 @@
                                         <div class="col-sm-12">
                                             <label class="col-md-2 control-label">Concepto de Otros Ingresos</label>
                                             <div class="col-md-10">
-                                                <input name="conceptoOtros" type="text-area" class="form-control" placeholder="Concepto de Otros Ingresos">
+                                                <input name="conceptoOtros" value="<!--4DTEXT [Sarlaft]Concepto_otros_Ingresos-->" type="text-area" class="form-control" placeholder="Concepto de Otros Ingresos">
                                             </div>                                 
                                         </div>                                                                              
                                     </div>

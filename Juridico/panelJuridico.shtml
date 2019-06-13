@@ -18,12 +18,12 @@
                                 <span>Inicio</span>
                             </a>
                         </li>	
-                        <li>
+                        <!--<li>
                             <a href="#"  class="ajg-dark-button">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span>Perfil</span>
                             </a>
-                        </li>  
+                        </li>-->
                         <li class="nav-parent nav-expanded nav-active" id="light-list">
                             <a  class="ajg-dark-button">
                                 <i class="fa fa-plus" aria-hidden="true"></i>
@@ -32,6 +32,7 @@
                             <ul class="nav nav-children text-white" style="background-color: white">
                                 <li>                                    
                                     <form action="/Juridico/formulario_inicio"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">1. Inicio</button>
                                     </form> 
                                 </li>
@@ -41,31 +42,37 @@
                                     <ul class="nav nav-children">
                                         <li>
                                             <form action="/Juridico/datos_basicos"  method="POST" enctype="multipart/form-data" style="background-color: white">
+                                                <input type="hidden" name="panel" value="true">
                                                 <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 70px;">Datos Básicos</button>
                                             </form>                                            
                                         </li>
                                         <li>                                           
                                             <form action="/Juridico/representante_legal"  method="POST" enctype="multipart/form-data" style="background-color: white">
+                                                <input type="hidden" name="panel" value="true">
                                                 <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 70px;">Representante Legal</button>
                                             </form> 
                                         </li>   
                                         <li>
                                             <form action="/Juridico/accionistas"  method="POST" enctype="multipart/form-data" style="background-color: white">
+                                                <input type="hidden" name="panel" value="true">
                                                 <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 70px;">Accionistas</button>
                                             </form>                                           
                                         </li>
                                         <li>                                            
                                             <form action="/Juridico/personas_expuestas"  method="POST" enctype="multipart/form-data" style="background-color: white">
+                                                <input type="hidden" name="panel" value="true">
                                                 <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 70px;text-align: left">Personas Expuestas Publicamente</button>
                                             </form> 
                                         </li> 
                                         <li>                                            
                                             <form action="/Juridico/accionistas_beneficiarios"  method="POST" enctype="multipart/form-data" style="background-color: white">
+                                                <input type="hidden" name="panel" value="true">
                                                 <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 70px;text-align: left">Accionistas y Beneficiarios Finales</button>
                                             </form> 
                                         </li>
                                         <li>                                            
                                             <form action="/Juridico/informacion_financiera"  method="POST" enctype="multipart/form-data" style="background-color: white">
+                                                <input type="hidden" name="panel" value="true">
                                                 <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 70px;">Información Financiera</button>
                                             </form> 
                                         </li>                         
@@ -74,26 +81,31 @@
                                 </li>
                                 <li>                                    
                                     <form action="/Juridico/origen_fondos"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">3. Origen de Fondos</button>
                                     </form>
                                 </li>
                                 <li>                                   
                                     <form action="/Juridico/operaciones_internacionales"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">4. Operaciones Internacionales</button>
                                     </form>
                                 </li>
                                 <li>                                    
                                     <form action="/Juridico/reclamaciones_seguros"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">5. Reclamaciones en seguros</button>
                                     </form>
                                 </li>
                                 <li>                                   
                                     <form action="/Juridico/clausula_autorizacion"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">6. Cláusula de Autorización</button>
                                     </form>
                                 </li> 
                                 <li>
                                     <form action="/Juridico/imprimir_formulario"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">7. Imprimir Formulario </button>
                                     </form>
                                 </li>                                                        

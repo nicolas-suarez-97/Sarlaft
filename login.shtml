@@ -76,7 +76,7 @@
 									</span>
 								</div>
 							</div>
-							<!--4DIF errTxt#""-->
+							<!--4DIF (errTxt#"")-->
 								<div class="alert alert-danger"><!--4DTEXT errTxt--></div>		
 							<!--4DENDIF-->													
                             <div class="col-sm-12">                                

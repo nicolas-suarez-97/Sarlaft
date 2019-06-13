@@ -46,7 +46,7 @@
                                         <div class="col-md-12">
                                             <label class="col-md-4">¿Qué tipo de productos y/o servicio comercializa? (Independientes o Comerciales)</label>
                                             <div class="col-md-8">
-                                                    <input name="productoServicio" type="text" class="form-control" >
+                                                    <input name="productoServicio" value="<!--4DTEXT [Sarlaft]Prod_Serv_Comerc-->" type="text" class="form-control" required >
                                             </div>
                                         </div>
                                     </div> 
@@ -55,13 +55,13 @@
                                         <div class="col-md-6">
                                             <label class="col-md-4">Ingresos Mensuales</label>
                                             <div class="col-md-8">
-                                                <input name="ingresosMensuales" type="text" class="form-control" placeholder="Ingresos  Mensuales (Pesos)">
+                                                <input name="ingresosMensuales" value="<!--4DTEXT [Sarlaft]Ingresos_Mensuales-->" type="number" class="form-control" placeholder="Ingresos  Mensuales (Pesos)">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="col-md-4">Egresos Mensuales</label>
                                             <div class="col-md-8">
-                                                <input name="egresosMensuales" type="text" class="form-control" placeholder="Egresos  Mensuales (Pesos)">
+                                                <input name="egresosMensuales" value="<!--4DTEXT [Sarlaft]Egresos_Mensuales-->" type="number" class="form-control" placeholder="Egresos  Mensuales (Pesos)">
                                             </div>
                                         </div>
                                     </div>                                   
@@ -71,13 +71,13 @@
                                         <div class="col-md-6">
                                             <label class="col-md-4">Activos</label>
                                             <div class="col-md-8">
-                                                <input name="activos" type="text" class="form-control" placeholder="Activos (Pesos)">
+                                                <input name="activos" value="<!--4DTEXT [Sarlaft]Activos-->" type="number" class="form-control" placeholder="Activos (Pesos)">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="col-md-4">Pasivos</label>
                                             <div class="col-md-8">
-                                                <input name="pasivos" type="text" class="form-control" placeholder="Pasivos (Pesos)">
+                                                <input name="pasivos" value="<!--4DTEXT [Sarlaft]Pasivo-->" type="number" class="form-control" placeholder="Pasivos (Pesos)">
                                             </div>
                                         </div>
                                     </div>                                   
@@ -87,13 +87,13 @@
                                         <div class="col-md-6">
                                             <label class="col-md-4">Patrimonio</label>
                                             <div class="col-md-8">
-                                                <input name="patrimonio" type="text" class="form-control" placeholder="Patrimonio (Activos - Pasivos, Pesos)">
+                                                <input name="patrimonio" value="<!--4DTEXT [Sarlaft]Patrimonio-->" type="number" class="form-control" placeholder="Patrimonio (Activos - Pasivos, Pesos)">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="col-md-4">Otros Ingresos</label>
                                             <div class="col-md-8">
-                                                <input name="otrosIngresos" type="text" class="form-control" placeholder="Otros Ingresos (Pesos)">
+                                                <input name="otrosIngresos" value="<!--4DTEXT [Sarlaft]Otros_Ingresos-->" type="number" class="form-control" placeholder="Otros Ingresos (Pesos)">
                                             </div>
                                         </div>
                                     </div>                                   
@@ -103,7 +103,7 @@
                                         <div class="col-md-12">
                                             <label class="col-md-4">Concepto Otros Ingresos Mensuales</label>
                                             <div class="col-md-8">
-                                                <input name="conceptoIngresos" type="text" class="form-control" placeholder="Concepto de Otros Ingresos Mensuales">
+                                                <input name="conceptoIngresos" value="<!--4DTEXT [Sarlaft]Concepto_otros_Ingresos-->" type="text" class="form-control" placeholder="Concepto de Otros Ingresos Mensuales">
                                             </div>
                                         </div>                                       
                                     </div>                                   
@@ -123,12 +123,12 @@
                                             <i class="fa fa-question-circle"></i>
                                         </button>
                                         <div class="radio-custom radio-primary col-sm-1"  >
-                                            <input value="si" type="radio" name="perPublic" required/>
-                                            <label>Si</label>
+                                            <input value="si" type="radio" name="perPublic" required <!--4DIF ([Sarlaft]Persona_PPE=True)-->checked<!--4DENDIF-->/>
+                                            <label >Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="Nacionalidad" type="radio" name="perPublic"/>
-                                            <label>No</label>
+                                            <input value="no" type="radio" name="perPublic" <!--4DIF ([Sarlaft]Persona_PPE=False)-->checked<!--4DENDIF-->/>
+                                            <label >No</label>
                                         </div>        
                                     </div>
                                     <div class="form-group">
@@ -136,11 +136,11 @@
                                             ¿Existe algún vínculo entre usted y una persona considerada públicamente expuesta?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="si" type="radio" name="vinculoPerExp" required />
+                                            <input value="si" type="radio" name="vinculoPerExp" required <!--4DIF ([Sarlaft]Vinculo_con_PPE=True)-->checked<!--4DENDIF-->/>
                                             <label>Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="no" type="radio" name="vinculoPerExp"/>
+                                            <input value="no" type="radio" name="vinculoPerExp" <!--4DIF ([Sarlaft]Vinculo_con_PPE=False)-->checked<!--4DENDIF-->/>
                                             <label>No</label>
                                         </div>        
                                     </div>
@@ -149,11 +149,11 @@
                                             ¿Por su cargo o actividad, administra recursos públicos?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="si" type="radio" name="recursosPublicos" required />
+                                            <input value="si" type="radio" name="recursosPublicos" required <!--4DIF ([Sarlaft]Recursos_Publicos=True)-->checked<!--4DENDIF-->/>
                                             <label>Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="no" type="radio" name="recursosPublicos"/>
+                                            <input value="no" type="radio" name="recursosPublicos" <!--4DIF ([Sarlaft]Recursos_Publicos=False)-->checked<!--4DENDIF-->/>
                                             <label>No</label>
                                         </div>        
                                     </div>
@@ -163,18 +163,18 @@
                                             ¿Es usted sujeto de obligaciones tributarias en otro país o grupo de paises?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="si" type="radio" name="obligTribut" required/>
+                                            <input value="si" type="radio" name="obligTribut" required <!--4DIF ([Sarlaft]Tributa_otro_Pais=True)-->checked<!--4DENDIF-->/>
                                             <label>Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="no" type="radio" name="obligTribut"/>
+                                            <input value="no" type="radio" name="obligTribut" <!--4DIF ([Sarlaft]Tributa_otro_Pais=False)-->checked<!--4DENDIF-->/>
                                             <label>No</label>
                                         </div>    
                                         <div class="col-sm-4">                                        
                                             <div  class="form-group">
                                                 <label class="col-md-3 control-label">Indique</label>
                                                 <div class="col-md-9">
-                                                    <input name="otroOblig" type="text" class="form-control" placeholder="">
+                                                    <input name="otroOblig" value="<!--4DTEXT [Sarlaft]Tributa_Otro_pais_cual-->" type="text" class="form-control" placeholder="">
                                                 </div>
                                             </div>                                            
                                         </div>        

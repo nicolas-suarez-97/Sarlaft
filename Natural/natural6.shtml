@@ -40,32 +40,35 @@
                                 <h2 class="panel-title text-center ajg-title-dark">Información Sobre Reclamaciones en Seguros</h2>   
                             </header>
                             <div class="panel-body ajg-title-dark">
-                                <form class="form-bordered ajg-title-dark" method="POST" enctype="multipart/form-data" action="/Natural/clausula_autorizacion">
+                                <form class="form-bordered ajg-title-dark" method="POST" id="form-id" enctype="multipart/form-data" action="/Natural/clausula_autorizacion">
                                     <br>
+                                    <input type="hidden" value="0" id="option" name="option">
                                     <div class="form-group">
                                         <label class="col-sm-8 control-label" style="padding-right: 1cm" >
                                             ¿Ha presentado reclamaciones o ha recibido indemnizaciones en seguros en los dos últimos años?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="si" type="radio" name="monedaExtranjera" required/>
+                                            <input value="si" type="radio" name="reclamIndem" required <!--4DIF [Sarlaft]Reclamacion_Indem=True)-->checked<!--4DENDIF-->/>
                                             <label>Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="no" type="radio" name="monedaExtranjera"/>
+                                            <input value="no" type="radio" name="reclamIndem" <!--4DIF [Sarlaft]Reclamacion_Indem=False)-->checked<!--4DENDIF-->/>
                                             <label>No</label>
                                         </div>                                               
                                     </div>
-                                                                                                                                                                                     
+                                    
+                                    
+                                    
                                     <div class="table-responsive">
                                         <table class="table mb-none">
-            
                                             <thead>
                                                 <tr class="ajg-title-dark">
                                                     <th>Año</th>
                                                     <th>Ramo</th>
                                                     <th>Compañía</th>
                                                     <th>Valor</th>
-                                                    <th>Resultado</th>                                                    
+                                                    <th>Resultado</th>   
+                                                    <th></th>                                                 
                                                 </tr>
                                             </thead>
                                             <tbody>                                                    
@@ -77,7 +80,7 @@
                                                         <input name="ramo1" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="caompañia1" type="text" class="form-control">
+                                                        <input name="compañia1" type="text" class="form-control">
                                                     </td>                                                   
                                                     <td>
                                                         <input name="valor1" type="text" class="form-control">
@@ -88,33 +91,34 @@
                                                             <option>Reclamación</option>
                                                             <option>Indemnización</option>                                                            
                                                         </select>
-                                                    </td>                                                                                                                                                                       
+                                                    </td> 
+                                                    <td> <button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px"><i class="fa fa-plus"></i></button> </td>
                                                 </tr>
+                                                <!--4DLOOP [Reclamaciones]-->
                                                 <tr >                                                          
                                                     <td>
-                                                        <input name="año2" type="text" class="form-control">
+                                                        <h4 type="text" class="form-control" ><!--4DTEXT [Reclamaciones]Año--></h4>
                                                     </td>
                                                     <td>
-                                                        <input name="ramo2" type="text" class="form-control">
+                                                        <h4 type="text" class="form-control" ><!--4DTEXT [Reclamaciones]Ramo--></h4>
                                                     </td>
                                                     <td>
-                                                        <input name="caompañia2" type="text" class="form-control">
+                                                        <h4 type="text" class="form-control"> <!--4DTEXT [Reclamaciones]Compañia--></h4>
                                                     </td>                                                   
                                                     <td>
-                                                        <input name="valor2" type="text" class="form-control">
+                                                        <h4 type="text" class="form-control"> <!--4DTEXT [Reclamaciones]Valor--></h4>
                                                     </td>
                                                     <td>
-                                                        <select name="resultado2" class="form-control mb-md">
-                                                            <option></option>
-                                                            <option>Reclamación</option>
-                                                            <option>Indemnización</option>                                                            
-                                                        </select>
-                                                    </td>                                                                                                                                                                         
+                                                        <h4 type="text"  type="text" class="form-control" ><!--4DTEXT [Reclamaciones]Resultado--></h4>                                                         
+                                                    </td>                                                          
+                                                    <input type="hidden" name="eliminarReg" value="<!--4DTEXT [Reclamaciones]ID-->">
+                                                    <td> <button type="button" id="delete" class="btn ajg-button col-md-4 col-md-offset-4 btn-danger"  style="width:40px"><i class="fa  fa-trash-o"></i></button></td>                                                                                                                                                                   
                                                 </tr>
-                                              
+                                                <!--4DENDLOOP-->
                                             </tbody>
                                         </table>                                                                                        
-                                    </div>                                                                         
+                                    </div> 
+                                                                                                        
                                     <br>
                                     <div >
                                         <h4 style="font-weight:bold; text-align:center">DOCUMENTOS REQUERIDOS</h4>
@@ -123,11 +127,15 @@
                                                 <p>- Fotocopia del documento de identidad del representante legal, ampliada al 150%.</p>
                                             </div>                                                                                         
                                             <div class="col-md-6">
-                                                <!--4DIF (OB Get([Sarlaft]Adjuntos;"documentoIdentidad")="")-->
+                                                <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
                                                     <input type="file" class="form-control " required name="documentoIdentidad">
-                                                <!--4DELSE-->                                                    
-                                                    <input type="text" class="form-control col-md-6" disabled value="<!--4DTEXT OB Get([Sarlaft]Adjuntos;"documentoIdentidad")-->" >
-                                                    <input type="file" class="form-control col-md-6" required name="documentoIdentidad">
+                                                <!--4DELSE-->                              
+                                                    <div class="col-md-4">
+                                                        <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"documentoIdentidad")--></h5>
+                                                    </div>                
+                                                    <div class="col-md-8">
+                                                        <input type="file" class="form-control " name="documentoIdentidad">
+                                                    </div>                      
                                                 <!--4DENDIF-->
                                             </div>                                            
                                         </div>
@@ -136,8 +144,17 @@
                                             <div class="col-md-6">
                                                 <p>- Certificado de existencia y representación legal expedido por la autoridad competente no mayor a 30 días.</p>                                                    
                                             </div>                                                                      
-                                            <div class="col-md-6">
-                                                <input type="file" class="form-control " required name="certificado" >
+                                            <div class="col-md-6">                                                
+                                                <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
+                                                <input type="file" class="form-control " required name="certificado">
+                                                <!--4DELSE-->                              
+                                                    <div class="col-md-4">
+                                                        <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"certificado")--></h5>
+                                                    </div>                
+                                                    <div class="col-md-8">
+                                                        <input type="file" class="form-control " name="certificado">
+                                                    </div>                      
+                                                <!--4DENDIF-->
                                             </div>                                                                                        
                                         </div>
                                         <div >
@@ -147,8 +164,18 @@
                                             <div class="col-md-6">
                                                 <p>- Inventario general de los bienes objeto del seguro.</p>
                                             </div>                                                                                       
-                                            <div class="col-md-6">
-                                                <input type="file" class="form-control "  name="inventario">
+                                            <div class="col-md-6">                                                
+                                                 <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
+                                                 <input type="file" class="form-control " required name="inventario">
+                                                 <!--4DELSE-->                              
+                                                     <div class="col-md-4">
+                                                            <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"inventario")--></h5>
+                                                     </div>                
+                                                     <div class="col-md-8">
+                                                         <input type="file" class="form-control " name="inventario">
+                                                     </div>                      
+                                                 <!--4DENDIF-->
+                                                
                                             </div>
                                         
                                         </div>
@@ -172,5 +199,6 @@
 			
 		</section>
         <!--4DINCLUDE scripts.html-->
+        <script src="natural6.js"></script>
 	</body>
 </html>

@@ -42,12 +42,12 @@
                             </header>
                             <div class="panel-body">
                                 <form class="form-bordered" method="POST" enctype="multipart/form-data" action="/Juridico/representante_legal">
-                                    <div class="row">
+                                    <div class="row">                                        
                                         <div class="col-sm-7">
                                             <div class="form-group">
                                                 <label class="col-md-3 control-label" >Nombre o Razón Social</label>                                                
                                                 <div class="col-md-9">
-                                                    <input name="razonSocial" type="text" class="form-control" placeholder="Nombre - Razón Social" data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Nombre" required>
+                                                    <input name="razonSocial" value="<!--4DTEXT [Sarlaft]Nombre_Razon_Social-->" type="text" class="form-control" placeholder="Nombre - Razón Social" data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Nombre" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -55,8 +55,8 @@
                                             <label class="col-md-4 control-label">Tipo de Documento</label>
                                             <div class="col-md-8">
                                                 <select name="tipoDoc" class="form-control mb-md">
-                                                    <option>NIT</option>
-                                                    <option>Otro sin NIT</option>                                                
+                                                    <option <!--4DIF ([Sarlaft]Tipo_Documento="NIT")-->checked<!--4DENDIF-->>NIT</option>
+                                                    <option <!--4DIF ([Sarlaft]Tipo_Documento="Otro sin NIT")-->checked<!--4DENDIF-->>Otro sin NIT</option>                                                
                                                 </select>  
                                             </div>    
                                         </div>                                    
@@ -66,14 +66,14 @@
                                         <div class="col-sm-4">
                                             <label class="col-md-4 control-label">NIT</label>
                                             <div class="col-md-8">
-                                                <input name="nit" type="number" class="form-control" placeholder="NIT ">
+                                                <input name="nit" value="<!--4DTEXT [Sarlaft]Documento_Numero-->" type="number" class="form-control" placeholder="NIT ">
                                             </div>                                 
                                         </div>
                                         <div class="col-sm-3">
                                             <div  class="form-group">
                                                 <label class="col-sm-3 control-label">DV</label>
                                                 <div class="col-sm-9">
-                                                    <input name="dv" type="number" class="form-control" placeholder="DV">
+                                                    <input name="dv" value="<!--4DTEXT [Sarlaft]DV-->" type="number" class="form-control" placeholder="DV">
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                    
@@ -81,7 +81,7 @@
                                             <div  class="form-group">
                                                 <label class="col-sm-4 control-label">Oficina Principal</label>
                                                 <div class="col-sm-8">
-                                                    <input name="oficinaPrincipal" type="text" class="form-control" placeholder="Dirección">
+                                                    <input name="oficinaPrincipal"  value="<!--4DTEXT [Sarlaft]Direccin_Oficina-->" type="text" class="form-control" placeholder="Dirección">
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                            
@@ -93,7 +93,7 @@
                                                 <label class="col-md-4 control-label">Tipo de Empresa</label>
                                                 <div class="col-md-8">
                                                     <select name="tipoEmpresa" class="form-control mb-md">
-                                                        <option></option>
+                                                        <option><!--4DTEXT [Sarlaft]Tipo_Empresa--></option>
                                                         <option>Mixta</option>
                                                         <option>Oficina de Representación</option>
                                                         <option>Privada</option>
@@ -109,7 +109,7 @@
                                                 <label class="col-sm-1 control-label">CIIU</label>
                                                 <div class="col-sm-11">
                                                     <select name="ciiuDescripcion" class="form-control mb-md">
-                                                        <option></option>
+                                                        <option><!--4DTEXT [Sarlaft]CIIU--></option>
                                                         <option>Agricultura, ganadería, caza, silvicultura y pesca</option>
                                                         <option>Explotación de minas y canteras</option>
                                                         <option>Industrias manufactureras</option>
@@ -142,7 +142,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">CIIU (Cod)</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciiuCodigo" type="text" class="form-control" placeholder="Código">
+                                                    <input name="ciiuCodigo" value="<!--4DTEXT [Sarlaft]CIIU_Codigo-->" type="text" class="form-control" placeholder="Código">
                                                 </div>
                                             </div>
                                         </div>
@@ -150,7 +150,7 @@
                                             <label class="col-md-3 control-label">Sector</label>
                                             <div class="col-md-9">
                                                 <select name="sector" class="form-control mb-md">
-                                                    <option></option>
+                                                    <option><!--4DTEXT [Sarlaft]Sector--></option>
                                                     <option>Agropecuadio</option>
                                                     <option>Comercio</option>
                                                     <option>Construcción</option>
@@ -168,7 +168,7 @@
                                                 <label class="col-sm-4 control-label">Departamento</label>
                                                 <div class="col-sm-8" style="padding-left: 0.5cm">
                                                     <select name="departamento" class="form-control mb-md">
-                                                        <option></option>
+                                                        <option><!--4DTEXT [Sarlaft]Departamento--></option>
                                                         <!--#4DINCLUDE ../departamentos.shtml-->
                                                     </select>
                                                 </div>                                 
@@ -182,7 +182,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciudadOficina" type="text" class="form-control" placeholder="Ej: Bogota ">
+                                                    <input name="ciudadOficina" value="<!--4DTEXT [Sarlaft]Ciudad_Oficina-->" type="text" class="form-control" placeholder="Ej: Bogota ">
                                                 </div>
                                             </div>
                                         </div>
@@ -190,7 +190,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-3 control-label">Teléfono</label>
                                                 <div class="col-md-9">
-                                                    <input name="telefonoOficina" type="number" class="form-control" placeholder="Teléfono ">
+                                                    <input name="telefonoOficina"  value="<!--4DTEXT [Sarlaft]Telefono_oficina-->" type="number" class="form-control" placeholder="Teléfono ">
                                                 </div>
                                             </div>
                                         </div>
@@ -198,7 +198,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-3 control-label">E-mail</label>
                                                 <div class="col-md-9">
-                                                    <input name="email" type="email" class="form-control" placeholder="email">
+                                                    <input name="email" value="<!--4DTEXT [Sarlaft]EMail-->" type="email" class="form-control" placeholder="email">
                                                 </div>
                                             </div>
                                         </div>                                
@@ -210,7 +210,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Sucursal o Agencia: Dirección</label>
                                                 <div class="col-md-8">
-                                                    <input name="sucursalOficina" type="text" class="form-control" placeholder="Dirección ">
+                                                    <input name="sucursalOficina"  value="<!--4DTEXT [Sarlaft]Sucursal-->" type="text" class="form-control" placeholder="Dirección ">
                                                 </div>
                                             </div>
                                         </div>
@@ -219,7 +219,7 @@
                                                 <label class="col-sm-4 control-label">Departamento</label>
                                                 <div class="col-sm-8">
                                                     <select name="departamento" class="form-control mb-md">
-                                                        <option></option>
+                                                        <option><!--4DTEXT [Sarlaft]Departamento_Sucursal--></option>
                                                         <!--#4DINCLUDE ../departamentos.shtml-->
                                                     </select>
                                                 </div>                                 
@@ -233,7 +233,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciudadOficina" type="text" class="form-control" placeholder="Ej: ">
+                                                    <input name="ciudadSucursal"  value="<!--4DTEXT [Sarlaft]Ciudad_SUcursal-->" type="text" class="form-control" placeholder="Ej: ">
                                                 </div>
                                             </div>
                                         </div>
@@ -241,7 +241,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Teléfono</label>
                                                 <div class="col-md-8">
-                                                    <input name="telefono" type="number" class="form-control" placeholder="Ej: ">
+                                                    <input name="telefono"  value="<!--4DTEXT [Sarlaft]Telefono_Sucursal-->" type="number" class="form-control" placeholder="Ej: ">
                                                 </div>
                                             </div>
                                         </div>   

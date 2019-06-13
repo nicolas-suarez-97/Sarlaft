@@ -47,11 +47,11 @@
                                             ¿Realiza Transacciones en Moneda Extranjera?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="si" type="radio" name="monedaExtranjera" required/>
-                                            <label>Si</label>
+                                            <input value="si" type="radio" name="monedaExtranjera" required <!--4DIF ([Sarlaft]Transacciones_Moneda_Ext=True)-->checked<!--4DENDIF-->/>
+                                            <label >Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="no" type="radio" name="monedaExtranjera"/>
+                                            <input value="no" type="radio" name="monedaExtranjera" <!--4DIF ([Sarlaft]Transacciones_Moneda_Ext=False)-->checked<!--4DENDIF-->/>
                                             <label>No</label>
                                         </div>    
                                         <div class="col-sm-6">                                        
@@ -59,7 +59,7 @@
                                                 <label class="col-md-3 control-label">Cuál</label>
                                                 <div class="col-md-9">
                                                     <select name="cualOperacion" class="form-control mb-md">
-                                                        <option></option>
+                                                        <option><!--4DTEXT [Sarlaft]Trans_MonedaE_cual--></option>
                                                         <option>Importaciones</option>
                                                         <option>Exportaciones</option>
                                                         <option>Inversiones</option>
@@ -74,7 +74,7 @@
                                     <div  class="form-group">
                                         <label class="col-sm-4 control-label">Indique Otras Operaciones</label>
                                         <div class="col-sm-8" style="transform:translateX(-20px)">
-                                            <input name="otrasOperaciones" type="text" class="form-control" >
+                                            <input name="otrasOperaciones" type="text" class="form-control" value="<!--4DTEXT [Sarlaft]Otras_Operaciones-->">
                                         </div>                                 
                                     </div>                                                                               
                                 
@@ -83,11 +83,11 @@
                                             ¿Posee productos Financieros en el Exterior?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="si" type="radio" name="productosExtranjero" required />
+                                            <input value="si" type="radio" name="productosExtranjero" required <!--4DIF ([Sarlaft]ProductosFin_Exterior=True)-->checked<!--4DENDIF-->/>
                                             <label>Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="no" type="radio" name="productosExtranjero"/>
+                                            <input value="no" type="radio" name="productosExtranjero" <!--4DIF ([Sarlaft]ProductosFin_Exterior=False)-->checked<!--4DENDIF-->/>
                                             <label>No</label>
                                         </div>                                             
                                     </div>
@@ -97,11 +97,11 @@
                                             ¿Posee Cuentas en Moneda Extranjera?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="Si" type="radio" name="cuentasMonedaExtr" required />
+                                            <input value="Si" type="radio" name="cuentasMonedaExtr" required <!--4DIF ([Sarlaft]Cuentas_MonedaEx=True)-->checked<!--4DENDIF-->/>
                                             <label>Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="no" type="radio" name="cuentasMonedaExtr"/>
+                                            <input value="no" type="radio" name="cuentasMonedaExtr" <!--4DIF ([Sarlaft]Cuentas_MonedaEx=False)-->checked<!--4DENDIF-->/>
                                             <label>No</label>
                                         </div>                                                  
                                     </div>
@@ -204,32 +204,54 @@
                                             <div class="col-md-6">
                                                 <p>- Fotocopia del documento de identidad del representante legal, ampliada al 150%.</p>                                                
                                             </div>
-                                            <div class="form-group">                                              
-                                                <div class="col-md-6">
-                                                    <input type="file" class="form-control "  name="inventario">
-                                                </div>
-                                            </div>
+                                            <div class="col-md-6">
+                                                <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
+                                                    <input type="file" class="form-control " required name="documentoIdentidad">
+                                                <!--4DELSE-->                              
+                                                    <div class="col-md-4">
+                                                        <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"documentoIdentidad")--></h5>
+                                                    </div>                
+                                                    <div class="col-md-8">
+                                                        <input type="file" class="form-control " name="documentoIdentidad">
+                                                    </div>                      
+                                                <!--4DENDIF-->
+                                            </div>   
                                         </div>
                                         <br>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <p>- Certificado de existencia y representación legal expedido por la autoridad competente no mayor a 30 días.</p>                                                
                                             </div>
-                                            <div class="form-group">                                              
-                                                <div class="col-md-6">
-                                                    <input type="file" class="form-control "  name="inventario">
-                                                </div>
-                                            </div>
+                                            <div class="col-md-6">                                                
+                                                <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
+                                                <input type="file" class="form-control " required name="certificado">
+                                                <!--4DELSE-->                              
+                                                    <div class="col-md-4">
+                                                        <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"certificado")--></h5>
+                                                    </div>                
+                                                    <div class="col-md-8">
+                                                        <input type="file" class="form-control " name="certificado">
+                                                    </div>                      
+                                                <!--4DENDIF-->
+                                            </div>  
                                         </div>
                                         <br>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <p>- Inventario general de los bienes objeto del seguro.</p>
                                             </div>
-                                            <div class="form-group">                                              
-                                                <div class="col-md-6">
-                                                    <input type="file" class="form-control "  name="inventario">
-                                                </div>
+                                            <div class="col-md-6">                                                
+                                                <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
+                                                <input type="file" class="form-control " required name="inventario">
+                                                <!--4DELSE-->                              
+                                                    <div class="col-md-4">
+                                                            <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"inventario")--></h5>
+                                                    </div>                
+                                                    <div class="col-md-8">
+                                                        <input type="file" class="form-control " name="inventario">
+                                                    </div>                      
+                                                <!--4DENDIF-->
+                                                
                                             </div>
                                         </div>                                        
                                                                                  

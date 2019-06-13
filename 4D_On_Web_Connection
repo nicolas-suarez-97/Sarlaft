@@ -9,7 +9,6 @@ $obWebVars:=WEB_Get_Vars
 Case of 
 	: ($rqt="/inicio")
 		errTxt:=""
-		
 		$user:=OB Get($obWebVars;"username")
 		$pwd:=OB Get($obWebVars;"pwd")
 		
@@ -353,15 +352,76 @@ Case of
 				
 			: ($rqt="/Natural/origen_fondos")
 				
+				[Sarlaft]ProdServComerc:=OB Get($obWebVars;"productoServicio")
+				[Sarlaft]Ingresos_Mensuales:=OB Get($obWebVars;"ingresosMensuales";Is real)
+				[Sarlaft]Egresos_Mensuales:=OB Get($obWebVars;"egresosMensuales";Is real)
+				[Sarlaft]Activos:=OB Get($obWebVars;"activos";Is real)
+				[Sarlaft]Pasivo:=OB Get($obWebVars;"pasivos";Is real)
+				[Sarlaft]Patrimonio:=OB Get($obWebVars;"patrimonio";Is real)
+				[Sarlaft]Otros_Ingresos:=OB Get($obWebVars;"otrosIngresos";Is real)
+				[Sarlaft]Concepto_otros_Ingresos:=OB Get($obWebVars;"conceptoIngresos")
+				
+				
+				If (OB Get($obWebVars;"perPublic")="si")
+					[Sarlaft]Persona_PPE:=True
+				Else 
+					[Sarlaft]Persona_PPE:=False
+				End if 
+				
+				If (OB Get($obWebVars;"vinculoPerExp")="si")
+					[Sarlaft]Vinculo_con_PPE:=True
+				Else 
+					[Sarlaft]Vinculo_con_PPE:=False
+				End if 
+				
+				If (OB Get($obWebVars;"recursosPublicos")="si")
+					[Sarlaft]Recursos_Publicos:=True
+				Else 
+					[Sarlaft]Recursos_Publicos:=False
+				End if 
+				
+				If (OB Get($obWebVars;"obligTribut")="si")
+					[Sarlaft]Tributa_otro_Pais:=True
+					[Sarlaft]Tributa_Otro_pais_cual:=OB Get($obWebVars;"otroOblig")
+				Else 
+					[Sarlaft]Tributa_otro_Pais:=False
+					[Sarlaft]Tributa_Otro_pais_cual:=""
+				End if 
+				
 				SAVE RECORD([Sarlaft])
 				WEB SEND FILE("Natural/natural4.shtml")
 				
 			: ($rqt="/Natural/operaciones_internacionales")
 				
+				[Sarlaft]Origen_fondos:=OB Get($obWebVars;"origenFondos")
+				
 				SAVE RECORD([Sarlaft])
 				WEB SEND FILE("Natural/natural5.shtml")
 				
 			: ($rqt="/Natural/reclamaciones_seguros")
+				
+				If (OB Get($obWebVars;"monedaExtranjera")="si")
+					[Sarlaft]Transacciones_Moneda_Ext:=True
+					[Sarlaft]Trans_MonedaE_cual:=OB Get($obWebVars;"cualOperacion")
+				Else 
+					[Sarlaft]Transacciones_Moneda_Ext:=False
+					[Sarlaft]Trans_MonedaE_cual:=""
+				End if 
+				
+				[Sarlaft]Otras_Operaciones:=OB Get($obWebVars;"otrasOperaciones")
+				
+				
+				If (OB Get($obWebVars;"productosExtranjero")="si")
+					[Sarlaft]ProductosFin_Exterior:=True
+				Else 
+					[Sarlaft]ProductosFin_Exterior:=False
+				End if 
+				
+				If (OB Get($obWebVars;"cuentasMonedaExtr")="si")
+					[Sarlaft]Cuentas_MonedaEx:=True
+				Else 
+					[Sarlaft]Cuentas_MonedaEx:=False
+				End if
 				
 				SAVE RECORD([Sarlaft])
 				WEB SEND FILE("Natural/natural6.shtml")
@@ -383,7 +443,8 @@ Case of
 					If ($vPartFileName#"")
 						$rutaDoc:=$vDestinationFolder+$vPartFileName
 						BLOB TO DOCUMENT($rutaDoc;$vPartContentBlob)
-						OB SET([Sarlaft]Adjuntos;$vPartName;$rutaDoc)
+						OB SET([Sarlaft]Ruta_Adjuntos;$vPartName;$rutaDoc)
+						OB SET([Sarlaft]Nombre_Adjuntos;$vPartName;$vPartFileName)
 					End if 
 					
 				End for 

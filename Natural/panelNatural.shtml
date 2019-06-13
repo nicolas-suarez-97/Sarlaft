@@ -18,12 +18,12 @@
                                 <span>Inicio</span>
                             </a>
                         </li>	
-                        <li>
+                        <!--<li>
                             <a href="#"  class="ajg-dark-button">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span>Perfil</span>
                             </a>
-                        </li>  
+                        </li>--> 
                         <li class="nav-parent nav-expanded nav-active" id="light-list">
                             <a  class="ajg-dark-button">
                                 <i class="fa fa-plus" aria-hidden="true"></i>
@@ -32,41 +32,50 @@
                             <ul class="nav nav-children text-white" style="background-color: white">
                                 <li>                                         
                                     <form action="/Natural/formulario_inicio"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">1. Inicio</button>
                                     </form>                             
                                 </li>
                                 <li>                                    
                                     <form action="/Natural/datos_basicos"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">2. Información Básica</button>
                                     </form>                                   
                                 </li>
                                 <li>                                    
                                     <form action="/Natural/datos_basicos2"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">3. Información Básica - 2</button>
                                     </form>                                   
                                 </li>
                                 <li>                                    
                                     <form action="/Natural/origen_fondos"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">4. Origen de Fondos</button>
                                     </form> 
                                 </li>
                                 <li>                                    
                                     <form action="/Natural/operaciones_internacionales"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">5. Operaciones Internacionales</button>
                                     </form> 
                                 </li>
                                 <li>                                    
                                     <form action="/Natural/reclamaciones_seguros"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">6. Reclamaciones en seguros</button>
                                     </form>
                                 </li>
                                 <li>                                    
                                     <form action="/Natural/clausula_autorizacion"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="option" value="0">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">7. Cláusula de Autorización</button>
                                     </form>
                                 </li> 
                                 <li>                                    
                                     <form action="/Natural/imprimir_formulario"  method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">8. Imprimir Formulario </button>
                                     </form>
                                 </li> 

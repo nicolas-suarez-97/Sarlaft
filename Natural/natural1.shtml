@@ -45,8 +45,12 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group ">
-                                                <label class="control-label">Fecha Diligenciamiento</label>                                                
-                                                <input type="date" class="form-control" id="inputDate" name="fechaDiligenciamiento" value="<!--4DTEXT Substring(String([Sarlaft]Fecha_Diligenciamiento;ISO date);1;10)-->"> 
+                                                <label class="control-label">Fecha Diligenciamiento</label>      
+                                                <!--4DIF ([Sarlaft]Fecha_Diligenciamiento=!00-00-00!)-->
+                                                <input type="date" class="form-control" id="inputDate" name="fechaDiligenciamiento" value="<!--4DTEXT Substring(String(Current date;ISO date);1;10)-->"> 
+                                                <!--4DELSE-->
+                                                    <input type="date" class="form-control" id="inputDate" name="fechaDiligenciamiento" value="<!--4DTEXT Substring(String([Sarlaft]Fecha_Diligenciamiento;ISO date);1;10)-->"> 
+                                                <!--4DENDIF-->
                                             </div>   
                                         </div>
                                         <div class="col-sm-6">
