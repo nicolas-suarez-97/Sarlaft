@@ -108,7 +108,7 @@
                                         </div>                                                  
                                     </div>
                                     
-                                    <!--4DSCRIPT QUERY([Operaciones_Inter];[Operaciones_Inter]No_Ident=[Sarlaft]Documento_Numero)-->                                    
+                                                                  
                                     <div class="table-responsive">
                                         <table class="table mb-none">
             

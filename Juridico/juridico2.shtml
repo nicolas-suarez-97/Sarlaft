@@ -168,7 +168,7 @@
                                                 <label class="col-sm-4 control-label">Departamento</label>
                                                 <div class="col-sm-8" style="padding-left: 0.5cm">
                                                     <select name="departamento" class="form-control mb-md">
-                                                        <option><!--4DTEXT [Sarlaft]Departamento--></option>
+                                                        <option><!--4DTEXT [Sarlaft]Depto_Oficina--></option>
                                                         <!--#4DINCLUDE ../departamentos.shtml-->
                                                     </select>
                                                 </div>                                 
@@ -210,7 +210,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Sucursal o Agencia: Dirección</label>
                                                 <div class="col-md-8">
-                                                    <input name="sucursalOficina"  value="<!--4DTEXT [Sarlaft]Sucursal-->" type="text" class="form-control" placeholder="Dirección ">
+                                                    <input name="sucursalOficina"  value="<!--4DTEXT [Sarlaft]Direccion_Sucursal-->" type="text" class="form-control" placeholder="Dirección ">
                                                 </div>
                                             </div>
                                         </div>

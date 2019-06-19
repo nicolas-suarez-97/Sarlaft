@@ -56,8 +56,7 @@
                                             <label>No</label>
                                         </div>                                               
                                     </div>
-                                    
-                                    
+                                                                        
                                     
                                     <div class="table-responsive">
                                         <table class="table mb-none">
@@ -92,7 +91,7 @@
                                                             <option>Indemnización</option>                                                            
                                                         </select>
                                                     </td> 
-                                                    <td> <button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px"><i class="fa fa-plus"></i></button> </td>
+                                                    <td> <button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px"  <!--4DIF (Records in Selection([Reclamaciones])>=2)-->disabled<!--4DENDIF-->><i class="fa fa-plus"></i></button> </td>
                                                 </tr>
                                                 <!--4DLOOP [Reclamaciones]-->
                                                 <tr >                                                          
