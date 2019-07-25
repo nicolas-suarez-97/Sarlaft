@@ -53,7 +53,8 @@
 							<div class="form-group mb-lg">
 								<label>Usuario</label>
 								<div class="input-group input-group-icon">
-									<input name="username" type="text" class="form-control input-lg" />
+									<!--oncopy="return false" oncut="return false" onpaste="return false"-->
+									<input name="username" type="text" class="form-control input-lg" autocomplete="off"/>
 									<span class="input-group-addon">
 										<span class="icon icon-lg">
 											<i class="fa fa-user"></i>
@@ -64,11 +65,10 @@
 
 							<div class="form-group mb-lg">
 								<div class="clearfix">
-									<label class="pull-left">Contraseña</label>
-									<a href="pages-recover-password.html" class="pull-right">Olvide mi Contraseña</a>
+									<label class="pull-left">Contraseña</label>									
 								</div>
 								<div class="input-group input-group-icon">
-									<input name="pwd" type="password" class="form-control input-lg" />
+									<input name="pwd" type="password" class="form-control input-lg" autocomplete="off"/>
 									<span class="input-group-addon">
 										<span class="icon icon-lg">
 											<i class="fa fa-lock"></i>

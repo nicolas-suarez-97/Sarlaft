@@ -80,11 +80,11 @@
 									</p>
 									<div style="display:flex;justify-content: center">
 										<div class="radio-custom radio-primary " style="margin-right: 20px">
-											<input value="si" type="radio" name="lecturaACabalidad" required <!--4DIF [Sarlaft]Autorizacion_Uso_Datos=True)-->checked<!--4DENDIF-->/>
+											<input value="si" type="radio" id="lecturaSi" name="lecturaACabalidad" required <!--4DIF [Sarlaft]Autorizacion_Uso_Datos=True)-->checked<!--4DENDIF-->/>
 											<label>Si</label>
 										</div>
 										<div class="radio-custom radio-primary" style="margin-left:20px">
-											<input value="no" type="radio" name="lecturaACabalidad"  <!--4DIF [Sarlaft]Autorizacion_Uso_Datos=False)-->checked<!--4DENDIF-->/>
+											<input value="no" type="radio" id="lecturaNo" name="lecturaACabalidad"  <!--4DIF [Sarlaft]Autorizacion_Uso_Datos=False)-->checked<!--4DENDIF-->/>
 											<label>No</label>
 										</div>    
 									</div>
@@ -166,11 +166,11 @@
 									</p>
 									<div style="display:flex;justify-content: center">
 										<div class="radio-custom radio-primary " style="margin-right: 20px">
-											<input value="si" type="radio" name="autorizacion" required  <!--4DIF [Sarlaft]Autorizacion_Usuario_Info=True)-->checked<!--4DENDIF-->/>
+											<input value="si" type="radio" name="autorizacion" id="autSi" required  <!--4DIF [Sarlaft]Autorizacion_Usuario_Info=True)-->checked<!--4DENDIF-->/>
 											<label>Si</label>
 										</div>
 										<div class="radio-custom radio-primary" style="margin-left:20px">
-											<input value="no" type="radio" name="autorizacion"  <!--4DIF [Sarlaft]Autorizacion_Usuario_Info=False)-->checked<!--4DENDIF-->/>
+											<input value="no" type="radio" name="autorizacion" id="autNo" <!--4DIF [Sarlaft]Autorizacion_Usuario_Info=False)-->checked<!--4DENDIF-->/>
 											<label>No</label>
 										</div>    
 									</div>
@@ -184,7 +184,7 @@
 										por las personas, para las finalidades y en los términos que nos fueron informados en este documento.
 									</p>								
 									<br>
-									<button type="submit" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>	
+									<button type="submit" id="submitButton" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>	
 									<br>
 								</div>
 							</form>
@@ -198,6 +198,7 @@
 
 			
 		</section>
+		<script src="natural7.js"></script>
 		<!--4DINCLUDE scripts.html-->			
 	</body>
 </html>

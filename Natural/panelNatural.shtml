@@ -14,8 +14,8 @@
                     <ul class="nav nav-main">
                         <li>
                             <a href="../index.shtml"  class="ajg-dark-button">
-                                <i class="fa fa-home" aria-hidden="true"></i>
-                                <span>Inicio</span>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span><!--4DTEXT [Clientes]Nombre_Razon_Social--></span>
                             </a>
                         </li>	
                         <!--<li>
@@ -24,7 +24,7 @@
                                 <span>Perfil</span>
                             </a>
                         </li>--> 
-                        <li class="nav-parent nav-expanded nav-active" id="light-list">
+                        <li class="nav-parent nav-active" id="light-list">
                             <a  class="ajg-dark-button">
                                 <i class="fa fa-copy" aria-hidden="true"></i>
                                 <span>Formulario</span>
@@ -85,7 +85,22 @@
                                     </a>
                                 </li>  -->                                                      
                             </ul>
-                        </li>    																																																																			
+                        </li>    
+                        <li>
+                            <a href="#" id="logOut" class="ajg-dark-button" >
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                <span>Salir</span>
+                            </a>
+                        </li>	
+                        <script>
+                            document.getElementById("logOut").addEventListener("click",function(){
+                                console.log("Salir");
+                                document.getElementById("form-logOut").submit();
+                            });
+                        </script>                      
+                        <li class="hidden">
+                            <form action="/LogIn" id="form-logOut" method="POST" enctype="multipart/form-data"></form> 
+                        </li>																																																																			
                     </ul>
                 </nav>																															
             </div>				
