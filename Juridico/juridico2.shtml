@@ -47,7 +47,9 @@
                                             <div class="form-group">
                                                 <label class="col-md-3 control-label" >Nombre o Razón Social</label>                                                
                                                 <div class="col-md-9">
-                                                    <input name="razonSocial" value="<!--4DTEXT [Sarlaft]Nombre_Razon_Social-->" type="text" class="form-control" placeholder="Nombre - Razón Social" data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Nombre" required>
+                                                    <input name="razonSocial" value="<!--4DTEXT [Sarlaft]Nombre_Razon_Social-->" type="text" class="form-control"
+                                                        placeholder="Nombre - Razón Social" data-container=".row" data-toggle="popover" data-trigger="hover"
+                                                        data-placement="top" data-content="Nombre" required autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>
@@ -66,14 +68,14 @@
                                         <div class="col-sm-4">
                                             <label class="col-md-4 control-label">NIT</label>
                                             <div class="col-md-8">
-                                                <input name="nit" value="<!--4DTEXT [Sarlaft]Documento_Numero-->" type="number" class="form-control" placeholder="NIT ">
+                                                <input name="nit" value="<!--4DTEXT [Sarlaft]Documento_Numero-->" type="number" class="form-control" placeholder="NIT " autocomplete="off">
                                             </div>                                 
                                         </div>
                                         <div class="col-sm-3">
                                             <div  class="form-group">
                                                 <label class="col-sm-3 control-label">DV</label>
                                                 <div class="col-sm-9">
-                                                    <input name="dv" value="<!--4DTEXT [Sarlaft]DV-->" type="number" class="form-control" placeholder="DV">
+                                                    <input name="dv" value="<!--4DTEXT [Sarlaft]DV-->" type="number" class="form-control" placeholder="DV" autocomplete="off">
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                    
@@ -81,7 +83,7 @@
                                             <div  class="form-group">
                                                 <label class="col-sm-4 control-label">Oficina Principal</label>
                                                 <div class="col-sm-8">
-                                                    <input name="oficinaPrincipal"  value="<!--4DTEXT [Sarlaft]Direccin_Oficina-->" type="text" class="form-control" placeholder="Dirección">
+                                                    <input name="oficinaPrincipal"  value="<!--4DTEXT [Sarlaft]Direccin_Oficina-->" type="text" class="form-control" placeholder="Dirección" autocomplete="off">
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                            
@@ -142,7 +144,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">CIIU (Cod)</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciiuCodigo" value="<!--4DTEXT [Sarlaft]CIIU_Codigo-->" type="text" class="form-control" placeholder="Código">
+                                                    <input name="ciiuCodigo" value="<!--4DTEXT [Sarlaft]CIIU_Codigo-->" type="number" class="form-control" placeholder="Código" autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>
@@ -182,7 +184,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciudadOficina" value="<!--4DTEXT [Sarlaft]Ciudad_Oficina-->" type="text" class="form-control" placeholder="Ej: Bogota ">
+                                                    <input name="ciudadOficina" value="<!--4DTEXT [Sarlaft]Ciudad_Oficina-->" type="text" class="form-control" placeholder="Ej: Bogota " autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>
@@ -190,7 +192,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-3 control-label">Teléfono</label>
                                                 <div class="col-md-9">
-                                                    <input name="telefonoOficina"  value="<!--4DTEXT [Sarlaft]Telefono_oficina-->" type="number" class="form-control" placeholder="Teléfono ">
+                                                    <input name="telefonoOficina"  value="<!--4DTEXT [Sarlaft]Telefono_oficina-->" type="number" class="form-control" placeholder="Teléfono " autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>
@@ -198,7 +200,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-3 control-label">E-mail</label>
                                                 <div class="col-md-9">
-                                                    <input name="email" value="<!--4DTEXT [Sarlaft]EMail-->" type="email" class="form-control" placeholder="email">
+                                                    <input name="email" value="<!--4DTEXT [Sarlaft]EMail-->" type="email" class="form-control" placeholder="email" autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>                                
@@ -210,7 +212,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Sucursal o Agencia: Dirección</label>
                                                 <div class="col-md-8">
-                                                    <input name="sucursalOficina"  value="<!--4DTEXT [Sarlaft]Direccion_Sucursal-->" type="text" class="form-control" placeholder="Dirección ">
+                                                    <input name="sucursalOficina"  value="<!--4DTEXT [Sarlaft]Direccion_Sucursal-->" type="text" class="form-control" placeholder="Dirección " autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>
@@ -233,7 +235,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciudadSucursal"  value="<!--4DTEXT [Sarlaft]Ciudad_SUcursal-->" type="text" class="form-control" placeholder="Ej: ">
+                                                    <input name="ciudadSucursal"  value="<!--4DTEXT [Sarlaft]Ciudad_SUcursal-->" type="text" class="form-control" placeholder="Ej: " autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>
@@ -241,7 +243,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Teléfono</label>
                                                 <div class="col-md-8">
-                                                    <input name="telefono"  value="<!--4DTEXT [Sarlaft]Telefono_Sucursal-->" type="number" class="form-control" placeholder="Ej: ">
+                                                    <input name="telefono"  value="<!--4DTEXT [Sarlaft]Telefono_Sucursal-->" type="number" class="form-control" placeholder="Ej: " autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>   

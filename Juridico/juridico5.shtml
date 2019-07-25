@@ -79,7 +79,7 @@
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <input name="nombre1" type="text" class="form-control" >
+                                                            <input name="nombre1" type="text" class="form-control" autocomplete="off" >
                                                         </td>
                                                         <td>
                                                             <select name="tipoID1" class="form-control mb-md" >
@@ -92,16 +92,16 @@
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <input name="numID1" type="number" class="form-control" >
+                                                            <input name="numID1" type="number" class="form-control" autocomplete="off" >
                                                         </td>
                                                         <td>
-                                                            <input name="nacionalidad1" type="text" class="form-control" >
+                                                            <input name="nacionalidad1" type="text" class="form-control" autocomplete="off" >
                                                         </td>
                                                         <td>
-                                                            <input name="entidad1" type="text" class="form-control" >
+                                                            <input name="entidad1" type="text" class="form-control" autocomplete="off" >
                                                         </td>
                                                         <td>
-                                                            <input name="cargo1" type="text" class="form-control" >
+                                                            <input name="cargo1" type="text" class="form-control" autocomplete="off" >
                                                         </td>                                                           
                                                         <td>
                                                             <input name="fechaDesvinculacion1" type="date" class="form-control" >

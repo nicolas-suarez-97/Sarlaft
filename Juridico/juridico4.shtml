@@ -89,13 +89,13 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <input name="numId1" type="number" class="form-control" >
+                                                                <input name="numId1" type="number" class="form-control" autocomplete="off" >
                                                             </td>
                                                             <td>
-                                                                <input name="nombre1" type="text" class="form-control" >
+                                                                <input name="nombre1" type="text" class="form-control" autocomplete="off" >
                                                             </td>
                                                             <td>
-                                                                <input name="porcent1" type="number" class="form-control" >
+                                                                <input name="porcent1" type="number" class="form-control" autocomplete="off"  >
                                                             </td>
                                                             <td>
                                                                 <select name="cotizaBolsa1" class="form-control mb-md" >
@@ -114,7 +114,7 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <input name="tributOtroPais1" type="text" class="form-control" >
+                                                                <input name="tributOtroPais1" type="text" class="form-control" autocomplete="off" >
                                                             </td>    
                                                             <td><button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px" ><i class="fa fa-plus"></i></button> </td>                                                       
                                                         </tr>
