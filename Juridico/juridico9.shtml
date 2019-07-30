@@ -40,7 +40,7 @@
                                 <h2 class="panel-title text-center ajg-title-dark">Actividades en Operaciones Internacionales</h2>   
                             </header>
                             <div class="panel-body ajg-title-dark">
-                                <form class="form-bordered ajg-title-dark" method="POST" enctype="multipart/form-data" action="/Juridico/reclamaciones_seguros">
+                                <form class="form-bordered ajg-title-dark" id="form-id" method="POST" enctype="multipart/form-data" action="/Juridico/reclamaciones_seguros">
                                     <br>
                                     <div class="form-group">
                                         <label class="col-sm-4 control-label" style="padding-right: 1cm" >
@@ -206,13 +206,13 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
-                                                    <input type="file" class="form-control-file " required name="documentoIdentidad">
+                                                    <input type="file" class="form-control-file " required name="documentoIdentidad"  onchange="ValidateSingleInput(this);">
                                                 <!--4DELSE-->                              
                                                     <div class="col-md-4">
                                                         <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"documentoIdentidad")--></h5>
                                                     </div>                
                                                     <div class="col-md-8">
-                                                        <input type="file" class="form-control-file " name="documentoIdentidad">
+                                                        <input type="file" class="form-control-file " name="documentoIdentidad"  onchange="ValidateSingleInput(this);">
                                                     </div>                      
                                                 <!--4DENDIF-->
                                             </div>   
@@ -224,13 +224,13 @@
                                             </div>
                                             <div class="col-md-6">                                                
                                                 <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
-                                                <input type="file" class="form-control-file " required name="certificado">
+                                                <input type="file" class="form-control-file " required name="certificado"  onchange="ValidateSingleInput(this);">
                                                 <!--4DELSE-->                              
                                                     <div class="col-md-4">
                                                         <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"certificado")--></h5>
                                                     </div>                
                                                     <div class="col-md-8">
-                                                        <input type="file" class="form-control-file " name="certificado">
+                                                        <input type="file" class="form-control-file " name="certificado"  onchange="ValidateSingleInput(this);">
                                                     </div>                      
                                                 <!--4DENDIF-->
                                             </div>  
@@ -242,13 +242,13 @@
                                             </div>
                                             <div class="col-md-6">                                                
                                                 <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
-                                                <input type="file" class="form-control-file " required name="inventario">
+                                                <input type="file" class="form-control-file " required name="inventario"  onchange="ValidateSingleInput(this);">
                                                 <!--4DELSE-->                              
                                                     <div class="col-md-4">
                                                             <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"inventario")--></h5>
                                                     </div>                
                                                     <div class="col-md-8">
-                                                        <input type="file" class="form-control-file " name="inventario">
+                                                        <input type="file" class="form-control-file " name="inventario"  onchange="ValidateSingleInput(this);">
                                                     </div>                      
                                                 <!--4DENDIF-->
                                                 
@@ -269,7 +269,8 @@
 			</div>
 
 			
-		</section>
+        </section>
+        <script src="juridico9.js"></script>
         <!--4DINCLUDE scripts.html-->
 	</body>
 </html>

@@ -184,7 +184,7 @@
 										por las personas, para las finalidades y en los términos que nos fueron informados en este documento.
 									</p>								
 									<br>
-									<button type="submit" id="submitButton" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>	
+									<button type="submit" id="submitButton" class="btn ajg-button col-md-4 col-md-offset-4" disabled>Siguiente</button>	
 									<br>
 								</div>
 							</form>

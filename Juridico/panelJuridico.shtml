@@ -110,22 +110,30 @@
                                     </form>
                                 </li>                                                        
                             </ul>
-                        </li>   
+                        </li>  
+                        <!--<li>
+                            <a href="#" id="save" class="ajg-dark-button" >
+                                <i class="fa fa-save" aria-hidden="true"></i>
+                                <span>Guardar</span>
+                            </a>
+                        </li>	--> 
                         <li>
                             <a href="#" id="logOut" class="ajg-dark-button" >
                                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                                 <span>Salir</span>
                             </a>
                         </li>	
+                        <li class="hidden">
+                            <form action="/LogIn" id="form-logOut" method="POST" enctype="multipart/form-data"></form> 
+                        </li>
+
                         <script>
                             document.getElementById("logOut").addEventListener("click",function(){
                                 console.log("Salir");
                                 document.getElementById("form-logOut").submit();
-                            });
+                            });                          
                         </script>                      
-                        <li class="hidden">
-                            <form action="/LogIn" id="form-logOut" method="POST" enctype="multipart/form-data"></form> 
-                        </li>
+                        
                     </ul>
                 </nav>																															
             </div>				

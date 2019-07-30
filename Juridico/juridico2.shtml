@@ -41,7 +41,7 @@
                                 <h2 class="panel-title text-center ajg-title-dark">Datos Básicos</h2>   
                             </header>
                             <div class="panel-body">
-                                <form class="form-bordered" method="POST" enctype="multipart/form-data" action="/Juridico/representante_legal">
+                                <form class="form-bordered" id="form-id" method="POST" enctype="multipart/form-data" action="/Juridico/representante_legal">
                                     <div class="row">                                        
                                         <div class="col-sm-7">
                                             <div class="form-group">

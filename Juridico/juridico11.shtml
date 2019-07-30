@@ -163,7 +163,7 @@
 											para el tratamiento y circulación de esta Base de Datos por parte de <span style="font-weight: bold"> LA(S) ASEGURADORA(S) Y/O LOS INTERMEDIARIOS </span>señalados en este documento.
 									</p>
 									<br>
-									<button type="submit" id="submitButton" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>	
+									<button type="submit" id="submitButton" class="btn ajg-button col-md-4 col-md-offset-4" disabled>Siguiente</button>	
 									<br>
 								</div>
 							</form>
