@@ -1,3 +1,22 @@
+var form = document.getElementById("form-id");
+var option = document.getElementById('option');
+
+document.getElementById("add").addEventListener("click", function () {
+    console.log("add");
+    option.value="add";
+    console.log(option);
+    form.submit();
+  
+});
+
+function del(id){
+    document.getElementById("eliminarReg").value=id;    
+    console.log("delete - "+document.getElementById("eliminarReg").value);
+    option.value="delete";
+    form.submit();
+}
+
+
 
 var _validFileExtensions = [".pdf"];    
 function ValidateSingleInput(oInput) {
@@ -22,7 +41,7 @@ function ValidateSingleInput(oInput) {
         }
     }
     var fileSize = oInput.files[0].size/1000;
-    if(fileSize > 2000){
+    if(fileSize > 5000){
         alert("El archivo excede el peso máximo");
         oInput.value = "";
         return false;

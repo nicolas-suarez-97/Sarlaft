@@ -9,13 +9,12 @@ document.getElementById("add").addEventListener("click", function () {
   
 });
 
-document.getElementById("delete").addEventListener("click", function () {
-    //form.submit();
-    console.log("delete");
+function del(id){
+    document.getElementById("eliminarReg").value=id;    
+    console.log("delete - "+document.getElementById("eliminarReg").value);
     option.value="delete";
     form.submit();
-  });
-
+}
 
   
 var _validFileExtensions = [".pdf"];    

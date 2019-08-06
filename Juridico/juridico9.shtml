@@ -40,7 +40,8 @@
                                 <h2 class="panel-title text-center ajg-title-dark">Actividades en Operaciones Internacionales</h2>   
                             </header>
                             <div class="panel-body ajg-title-dark">
-                                <form class="form-bordered ajg-title-dark" id="form-id" method="POST" enctype="multipart/form-data" action="/Juridico/reclamaciones_seguros">
+                                <form class="form-bordered ajg-title-dark" id="form-id" method="POST" id="form-id" enctype="multipart/form-data" action="/Juridico/reclamaciones_seguros">
+                                    <input type="hidden" value="0" id="option" name="option">
                                     <br>
                                     <div class="form-group">
                                         <label class="col-sm-4 control-label" style="padding-right: 1cm" >
@@ -119,6 +120,7 @@
                                                     <th>Ciudad</th>
                                                     <th>País</th>                                                            
                                                     <th>Moneda</th>
+                                                    <th><p style="color: white">Opciones</p></th>
                                                 </tr>
                                             </thead>
                                             <tbody>                                                    
@@ -143,56 +145,37 @@
                                                     </td>
                                                     <td>
                                                         <input name="moneda1" type="text" class="form-control">
-                                                    </td>                                                                                                                       
+                                                    </td>
+                                                    <td><button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px" ><i class="fa fa-plus"></i></button> </td>
                                                 </tr>
-
-                                                <tr >                                                          
+                                                <input type="hidden" id="eliminarReg" name="eliminarReg">
+                                                <!--4DLOOP [Accionistas]-->
+                                                <tr >
                                                     <td>
-                                                        <input name="tipoProd2" type="text" class="form-control">
+                                                        <input name="tipoProd1" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="numProd2" type="text" class="form-control">
+                                                        <input name="numProd1" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="entidad2" type="text" class="form-control">
+                                                        <input name="entidad1" type="text" class="form-control">
                                                     </td>                                                   
                                                     <td>
-                                                        <input name="monto2" type="text" class="form-control">
+                                                        <input name="monto1" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="ciudad2" type="text" class="form-control">
+                                                        <input name="ciudad1" type="text" class="form-control">
                                                     </td> 
                                                     <td>
-                                                        <input name="pais2" type="text" class="form-control">
+                                                        <input name="pais1" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="moneda2" type="text" class="form-control">
-                                                    </td>                                                                                                                       
+                                                        <input name="moneda1" type="text" class="form-control">
+                                                    </td>
+                                                    
+                                                    <td><button type="button" onclick="del(<!--4DTEXT [Accionistas]ID-->)" class="btn ajg-button col-md-4 col-md-offset-4 btn-danger"  style="width:40px"><i class="fa  fa-trash-o"></i></button></td>                                                         
                                                 </tr>
-
-                                                <tr >                                                          
-                                                    <td>
-                                                        <input name="tipoProd3" type="text" class="form-control">
-                                                    </td>
-                                                    <td>
-                                                        <input name="numProd3" type="text" class="form-control">
-                                                    </td>
-                                                    <td>
-                                                        <input name="entidad3" type="text" class="form-control">
-                                                    </td>                                                   
-                                                    <td>
-                                                        <input name="monto3" type="text" class="form-control">
-                                                    </td>
-                                                    <td>
-                                                        <input name="ciudad3" type="text" class="form-control">
-                                                    </td> 
-                                                    <td>
-                                                        <input name="pais3" type="text" class="form-control">
-                                                    </td>
-                                                    <td>
-                                                        <input name="moneda3" type="text" class="form-control">
-                                                    </td>                                                                                                                       
-                                                </tr>                                                                                             
+                                                <!--4DENDLOOP-->                                                                                  
                                             </tbody>
                                         </table>                                                                                        
                                     </div>                                     

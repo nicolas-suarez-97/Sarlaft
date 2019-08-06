@@ -71,7 +71,7 @@
                                                             <th>¿Es Persona Jurídica que cotiza en Bolsa</th>
                                                             <th>¿Es Persona Públicamente Expuesta, o vinculada con una de ellas?</th>
                                                             <th>¿Es sujeto de tributación en otro país u otro grupo de países?, Indique cual(es)</th>    
-                                                            <th><p style="color: white">Opciones</p></th>                                                        
+                                                            <th><p style="color: white">Opciones</p></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>                                                    
@@ -95,7 +95,7 @@
                                                                 <input name="nombre1" type="text" class="form-control" autocomplete="off" >
                                                             </td>
                                                             <td>
-                                                                <input name="porcent1" type="number" class="form-control" autocomplete="off"  >
+                                                                <input name="porcent1" type="number" class="form-control" autocomplete="off" max=100 >
                                                             </td>
                                                             <td>
                                                                 <select name="cotizaBolsa1" class="form-control mb-md" >
@@ -116,9 +116,10 @@
                                                             <td>
                                                                 <input name="tributOtroPais1" type="text" class="form-control" autocomplete="off" >
                                                             </td>    
-                                                            <td><button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px" ><i class="fa fa-plus"></i></button> </td>                                                       
+                                                            <td><button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px" ><i class="fa fa-plus"></i></button> </td>
                                                         </tr>
-                                                         <!--4DLOOP [Accionistas]-->
+                                                        <input type="hidden" id="eliminarReg" name="eliminarReg">
+                                                        <!--4DLOOP [Accionistas]-->
                                                         <tr >
                                                             <td>
                                                                 <h4 type="text" class="form-control" ><!--4DTEXT [Accionistas]Tipo_ID--></h4>
@@ -140,9 +141,8 @@
                                                             </td>
                                                             <td>
                                                                 <h4 type="text" class="form-control" ><!--4DTEXT [Accionistas]Sujeto_Tributacion--></h4>
-                                                            </td>  
-                                                            <input type="hidden" name="eliminarReg" value="<!--4DTEXT [Accionistas]ID-->">
-                                                            <td><button type="button" id="delete" class="btn ajg-button col-md-4 col-md-offset-4 btn-danger"  style="width:40px"><i class="fa  fa-trash-o"></i></button></td>                                                         
+                                                            </td>                                                              
+                                                            <td><button type="button" onclick="del(<!--4DTEXT [Accionistas]ID-->)" class="btn ajg-button col-md-4 col-md-offset-4 btn-danger"  style="width:40px"><i class="fa  fa-trash-o"></i></button></td>                                                         
                                                         </tr>
                                                         <!--4DENDLOOP-->                                                        
                                                     </tbody>
