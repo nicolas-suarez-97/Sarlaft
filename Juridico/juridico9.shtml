@@ -126,25 +126,25 @@
                                             <tbody>                                                    
                                                 <tr >                                                          
                                                     <td>
-                                                        <input name="tipoProd1" type="text" class="form-control">
+                                                        <input name="tipoProd1" id="tipoProd" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="numProd1" type="text" class="form-control">
+                                                        <input name="numProd1" id="numProd" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="entidad1" type="text" class="form-control">
+                                                        <input name="entidad1" id="entidad" type="text" class="form-control">
                                                     </td>                                                   
                                                     <td>
-                                                        <input name="monto1" type="number" class="form-control">
+                                                        <input name="monto1" id="monto" type="number" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="ciudad1" type="text" class="form-control">
+                                                        <input name="ciudad1" id="ciudad" type="text" class="form-control">
                                                     </td> 
                                                     <td>
-                                                        <input name="pais1" type="text" class="form-control">
+                                                        <input name="pais1" id="pais" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="moneda1" type="number" class="form-control">
+                                                        <input name="moneda1" id="moneda" type="number" class="form-control">
                                                     </td>
                                                     <td><button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px" 
                                                         <!--4DIF (Records in Selection([Operaciones_Inter])>=4)-->disabled<!--4DENDIF-->><i class="fa fa-plus"></i></button> </td>
@@ -183,6 +183,7 @@
                                     <br>
                                     <div >
                                         <h4 style="font-weight:bold; text-align:center">DOCUMENTOS REQUERIDOS</h4>
+                                        <p style="color:red">*NOTA: Formato PDF no mayor a 5 mb.</p>
                                         <br>
                                         <div class="row">
                                             <div class="col-md-6">

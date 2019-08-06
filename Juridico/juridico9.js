@@ -2,10 +2,24 @@ var form = document.getElementById("form-id");
 var option = document.getElementById('option');
 
 document.getElementById("add").addEventListener("click", function () {
-    console.log("add");
-    option.value="add";
-    console.log(option);
-    form.submit();
+    var tipoProd = document.getElementById("tipoProd").value;
+    var numProd =  document.getElementById("numProd").value;
+    var entidad = document.getElementById("entidad").value;
+    var monto = document.getElementById("monto").value;
+    var ciudad = document.getElementById("ciudad").value;
+    var pais = document.getElementById("pais").value;        
+    var moneda = document.getElementById("moneda").value;        
+    
+    if(tipoProd!="" && numProd!="" &&  entidad!="" && 
+    monto!="" && ciudad!="" && 
+    pais!="" && moneda!=""){
+        console.log("add");
+        option.value="add";
+        console.log(option);
+        form.submit();
+    }else{
+        alert("Parece que hay campos sin llenar!!");
+    }
   
 });
 

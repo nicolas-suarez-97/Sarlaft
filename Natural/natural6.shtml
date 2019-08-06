@@ -27,8 +27,7 @@
 									</a>
 								</li>
                                 <li><span style="color:white;padding-right: 1cm;">Reclamaciones en Seguros</span></li>                                
-							</ol>
-												
+							</ol>												
 						</div>
 					</header>
 
@@ -73,22 +72,22 @@
                                             <tbody>                                                    
                                                 <tr >                                                          
                                                     <td>
-                                                        <input name="año1" type="text" class="form-control">
+                                                        <input name="año1" id="año" type="number" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="ramo1" type="text" class="form-control">
+                                                        <input name="ramo1" id="ramo" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="compañia1" type="text" class="form-control">
+                                                        <input name="compañia1" id="compañia" type="text" class="form-control">
                                                     </td>                                                   
                                                     <td>
-                                                        <input name="valor1" type="text" class="form-control">
+                                                        <input name="valor1" id="valor" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <select name="resultado1" class="form-control mb-md">
-                                                            <option></option>
-                                                            <option>Reclamación</option>
-                                                            <option>Indemnización</option>                                                            
+                                                        <select name="resultado1" id="resultado" class="form-control mb-md">
+                                                            <option value=""></option>
+                                                            <option value="Reclamación">Reclamación</option>
+                                                            <option value="Indemnización">Indemnización</option>                                                            
                                                         </select>
                                                     </td> 
                                                     <td> <button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px"  
@@ -122,6 +121,7 @@
                                     <br>
                                     <div >
                                         <h4 style="font-weight:bold; text-align:center">DOCUMENTOS REQUERIDOS</h4>
+                                        <p style="color:red">*NOTA: Formato PDF no mayor a 5 mb.</p>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <p>- Fotocopia del documento de identidad del representante legal, ampliada al 150%.</p>

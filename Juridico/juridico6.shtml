@@ -61,18 +61,18 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>                                                    
-                                                    <tr >                                                          
+                                                    <tr>
                                                         <td>
-                                                            <input name="numID1" type="text" class="form-control" >
+                                                            <input name="numID1" id="numId" type="text" class="form-control" >
                                                         </td>
                                                         <td>
-                                                            <input name="nombre1" type="text" class="form-control" >
+                                                            <input name="nombre1" id="nombre" type="text" class="form-control" >
                                                         </td>
                                                         <td>
-                                                            <input name="razonSocial1" type="text" class="form-control" >
+                                                            <input name="razonSocial1" id="razonSocial" type="text" class="form-control" >
                                                         </td>
                                                         <td>
-                                                            <select name="tipoID1" class="form-control mb-md" >
+                                                            <select name="tipoID1" id="tipoID" class="form-control mb-md" >
                                                                 <option value=""></option>
                                                                 <option value="C.C.">C.C.</option>
                                                                 <option value="NIT">NIT</option>
@@ -80,10 +80,10 @@
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <input name="id1" type="text" class="form-control" >
+                                                            <input name="id1" id="id1" type="text" class="form-control" >
                                                         </td>
                                                         <td>
-                                                            <input name="porcentPart1" type="number" class="form-control" >
+                                                            <input name="porcentPart1" id="porcentP" type="number" class="form-control" >
                                                         </td>    
                                                         <td><button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px"
                                                             <!--4DIF (Records in Selection([Acci_Benef_Finales])>=7)-->disabled<!--4DENDIF--> ><i class="fa fa-plus"></i></button> </td>                                                                                                                   

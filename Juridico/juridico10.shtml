@@ -73,19 +73,19 @@
                                             <tbody>                                                    
                                                 <tr >                                                          
                                                     <td>
-                                                        <input name="año1" type="text" class="form-control">
+                                                        <input name="año1"  id="anyo" type="number" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="ramo1" type="text" class="form-control">
+                                                        <input name="ramo1" id="ramo" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="compañia1" type="text" class="form-control">
+                                                        <input name="compañia1" id="compañia" type="text" class="form-control">
                                                     </td>                                                   
                                                     <td>
-                                                        <input name="valor1" type="text" class="form-control">
+                                                        <input name="valor1" id="valor" type="number" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <select name="resultado1" class="form-control mb-md">
+                                                        <select name="resultado1" id="resultado" class="form-control mb-md">
                                                             <option></option>
                                                             <option>Reclamación</option>
                                                             <option>Indemnización</option>                                                            
