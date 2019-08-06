@@ -19,7 +19,7 @@ Else
 		[Sarlaft]Autorizacion_Usuario_Info:=False
 	End if 
 	
-	
+	SAVE RECORD([Sarlaft])
 	  //** GENERACIÓN DOCUMENTO PDF **//
 	If ([Sarlaft]UUID_PDF="")
 		[Sarlaft]UUID_PDF:=Generate UUID
@@ -33,7 +33,7 @@ Else
 	
 	SET CURRENT PRINTER($pdfprintername)
 	SET PRINT OPTION(Destination option;2;$rutaPDF)
-	FORM SET OUTPUT([Sarlaft];"Formulario_Persona_Natural")
+	FORM SET OUTPUT([Sarlaft];"Formulario_Persona_Juridica")
 	PRINT RECORD([Sarlaft];*)
 	SET CURRENT PRINTER("")
 	

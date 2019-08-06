@@ -13,6 +13,7 @@ Else
 	[Sarlaft]Fecha_Expedicion:=OB Get($obWebVars;"fechaExpedicion";Is date)
 	[Sarlaft]Lugar_Expedicion:=OB Get($obWebVars;"lugarExped")
 	[Sarlaft]Fecha_Nacimiento:=OB Get($obWebVars;"fechaNacim";Is date)
+	[Sarlaft]Lugar_Nacimiento:=OB Get($obWebVars;"lugarNacim")
 	[Sarlaft]Nacinalidad1:=OB Get($obWebVars;"nacionalidad1")
 	[Sarlaft]Nacionalidad2:=OB Get($obWebVars;"nacionalidad2")
 	[Sarlaft]EMail_RepLegal:=OB Get($obWebVars;"emailRep")

@@ -86,35 +86,30 @@
                                                             <input name="porcentPart1" type="number" class="form-control" >
                                                         </td>    
                                                         <td><button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px"
-                                                            <!--4DIF (Records in Selection([Accionistas])>=8)-->disabled<!--4DENDIF--> ><i class="fa fa-plus"></i></button> </td>                                                                                                                   
+                                                            <!--4DIF (Records in Selection([Acci_Benef_Finales])>=7)-->disabled<!--4DENDIF--> ><i class="fa fa-plus"></i></button> </td>                                                                                                                   
                                                     </tr>
                                                     <input type="hidden" id="eliminarReg" name="eliminarReg">
-                                                    <!--4DLOOP [Accionistas]-->
+                                                    <!--4DLOOP [Acci_Benef_Finales]-->
                                                     <tr >
                                                         <td>
-                                                            <input name="numID1" type="text" class="form-control" >
+                                                            <h4 type="text" class="form-control" ><!--4DTEXT [Acci_Benef_Finales]Nume_ID--></h4>
                                                         </td>
                                                         <td>
-                                                            <input name="nombre1" type="text" class="form-control" >
+                                                            <h4 type="text" class="form-control" ><!--4DTEXT [Acci_Benef_Finales]Nombre--></h4>
                                                         </td>
                                                         <td>
-                                                            <input name="razonSocial1" type="text" class="form-control" >
+                                                            <h4 type="text" class="form-control" ><!--4DTEXT [Acci_Benef_Finales]Razon_Social_Sociedad--></h4>
                                                         </td>
                                                         <td>
-                                                            <select name="tipoID1" class="form-control mb-md" >
-                                                                <option value=""></option>
-                                                                <option value="C.C.">C.C.</option>
-                                                                <option value="NIT">NIT</option>
-                                                                <option value="Otro sin NIT">Otro sin NIT</option>                                                                    
-                                                            </select>
+                                                            <h4 type="text" class="form-control" ><!--4DTEXT [Acci_Benef_Finales]Tipo_Ident--></h4>
                                                         </td>
                                                         <td>
-                                                            <input name="id1" type="text" class="form-control" >
+                                                            <h4 type="text" class="form-control" ><!--4DTEXT [Acci_Benef_Finales]ID_Reciente--></h4>
                                                         </td>
                                                         <td>
-                                                            <input name="porcentPart1" type="number" class="form-control" >
+                                                            <h4 type="text" class="form-control" ><!--4DTEXT [Acci_Benef_Finales]Porcent_Participacion--></h4>
                                                         </td>                                                         
-                                                        <td><button type="button" onclick="del(<!--4DTEXT [Accionistas]ID-->)" class="btn ajg-button col-md-4 col-md-offset-4 btn-danger"  style="width:40px"><i class="fa  fa-trash-o"></i></button></td>                                                         
+                                                        <td><button type="button" onclick="del(<!--4DTEXT [Acci_Benef_Finales]ID-->)" class="btn ajg-button col-md-4 col-md-offset-4 btn-danger"  style="width:40px"><i class="fa  fa-trash-o"></i></button></td>                                                         
                                                     </tr>
                                                     <!--4DENDLOOP-->  
                                                 

@@ -2,7 +2,7 @@ $obWebVars:=WEB_Get_Vars
 
 
 If (OB Get($obWebVars;"panel")="true")
-	
+	QUERY([Acci_Benef_Finales];[Acci_Benef_Finales]No_Ident=[Sarlaft]Documento_Numero)
 	WEB SEND FILE("Juridico/juridico6.shtml")
 Else 
 	
@@ -42,6 +42,7 @@ Else
 	If (options="0")
 		
 		  //SAVE RECORD([Sarlaft])
+		QUERY([Acci_Benef_Finales];[Acci_Benef_Finales]No_Ident=[Sarlaft]Documento_Numero)
 		WEB SEND FILE("Juridico/juridico6.shtml")
 	End if 
 	

@@ -17,10 +17,10 @@ Else
 	[Sarlaft]Nacionalidad2:=OB Get($obWebVars;"nacionalidad2")
 	[Sarlaft]EMail:=OB Get($obWebVars;"emailRep")
 	
-	[Sarlaft]Direccion_RepLegal:=OB Get($obWebVars;"dirResidencia")
+	[Sarlaft]Direccion:=OB Get($obWebVars;"dirResidencia")
 	[Sarlaft]Departamento:=OB Get($obWebVars;"deptoRep")
-	[Sarlaft]Ciudad_RepLegal:=OB Get($obWebVars;"ciudadRep")
-	[Sarlaft]Telefono_RepLegal:=OB Get($obWebVars;"telefonoRep")
+	[Sarlaft]Ciudad:=OB Get($obWebVars;"ciudadRep")
+	[Sarlaft]Telefono:=OB Get($obWebVars;"telefonoRep")
 	[Sarlaft]Celular:=OB Get($obWebVars;"celularRep")
 	
 	[Sarlaft]Actividad_Principal:=OB Get($obWebVars;"actividadPrinc")

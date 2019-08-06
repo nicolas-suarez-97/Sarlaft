@@ -40,7 +40,7 @@
                                 <h2 class="panel-title text-center ajg-title-dark">Información Sobre Reclamaciones en Seguros</h2>   
                             </header>
                             <div class="panel-body ajg-title-dark">
-                                <form class="form-bordered ajg-title-dark" method="POST" enctype="multipart/form-data" action="/Juridico/clausula_autorizacion">
+                                <form class="form-bordered ajg-title-dark" method="POST" id="form-id" enctype="multipart/form-data" action="/Juridico/clausula_autorizacion">
                                     <br>
                                     <input type="hidden" value="0" id="option" name="option">
                                     <div class="form-group">
@@ -48,11 +48,11 @@
                                             ¿Ha presentado reclamaciones o ha recibido indemnizaciones en seguros en los dos últimos años?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="si" type="radio" name="monedaExtranjera" required  <!--4DIF ([Sarlaft]Reclamacion_Indem=True)-->checked<!--4DENDIF-->/>
+                                            <input value="si" type="radio" name="reclamacion" required  <!--4DIF ([Sarlaft]Reclamacion_Indem=True)-->checked<!--4DENDIF-->/>
                                             <label>Si</label>   
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="no" type="radio" name="monedaExtranjera"  <!--4DIF ([Sarlaft]Reclamacion_Indem=False)-->checked<!--4DENDIF-->/>
+                                            <input value="no" type="radio" name="reclamacion"  <!--4DIF ([Sarlaft]Reclamacion_Indem=False)-->checked<!--4DENDIF-->/>
                                             <label>No</label>
                                         </div>                                               
                                     </div>
@@ -79,7 +79,7 @@
                                                         <input name="ramo1" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="caompañia1" type="text" class="form-control">
+                                                        <input name="compañia1" type="text" class="form-control">
                                                     </td>                                                   
                                                     <td>
                                                         <input name="valor1" type="text" class="form-control">
@@ -92,31 +92,27 @@
                                                         </select>
                                                     </td>  
                                                     <td><button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px" 
-                                                        <!--4DIF (Records in Selection([Accionistas])>=2)-->disabled<!--4DENDIF-->><i class="fa fa-plus"></i></button> </td>                                                                                                                                                                     
+                                                        <!--4DIF (Records in Selection([Reclamaciones])>=2)-->disabled<!--4DENDIF-->><i class="fa fa-plus"></i></button> </td>                                                                                                                                                                     
                                                 </tr>
                                                 <input type="hidden" id="eliminarReg" name="eliminarReg">
-                                                <!--4DLOOP [Accionistas]-->
+                                                <!--4DLOOP [Reclamaciones]-->
                                                 <tr >
                                                     <td>
-                                                        <input name="año1" type="text" class="form-control">
+                                                        <h4 type="text" class="form-control" ><!--4DTEXT [Reclamaciones]Año--></h4>
                                                     </td>
                                                     <td>
-                                                        <input name="ramo1" type="text" class="form-control">
+                                                        <h4 type="text" class="form-control" ><!--4DTEXT [Reclamaciones]Ramo--></h4>
                                                     </td>
                                                     <td>
-                                                        <input name="caompañia1" type="text" class="form-control">
+                                                        <h4 type="text" class="form-control" ><!--4DTEXT [Reclamaciones]Compañia--></h4>
                                                     </td>                                                   
                                                     <td>
-                                                        <input name="valor1" type="text" class="form-control">
+                                                        <h4 type="text" class="form-control" ><!--4DTEXT [Reclamaciones]Valor--></h4>
                                                     </td>
                                                     <td>
-                                                        <select name="resultado1" class="form-control mb-md">
-                                                            <option></option>
-                                                            <option>Reclamación</option>
-                                                            <option>Indemnización</option>                                                            
-                                                        </select>
+                                                        <h4 type="text" class="form-control" ><!--4DTEXT [Reclamaciones]Resultado--></h4>
                                                     </td>                                                     
-                                                    <td><button type="button" onclick="del(<!--4DTEXT [Accionistas]ID-->)" class="btn ajg-button col-md-4 col-md-offset-4 btn-danger"  style="width:40px"><i class="fa  fa-trash-o"></i></button></td>                                                         
+                                                    <td><button type="button" onclick="del(<!--4DTEXT [Reclamaciones]ID-->)" class="btn ajg-button col-md-4 col-md-offset-4 btn-danger"  style="width:40px"><i class="fa  fa-trash-o"></i></button></td>                                                         
                                                 </tr>
                                                 <!--4DENDLOOP--> 
                                               
