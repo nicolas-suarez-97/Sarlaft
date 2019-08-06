@@ -1,3 +1,22 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 style="font-weight: bold" class="modal-title" id="exampleModalLabel"></h3>             
+            </div>
+            <div class="modal-body">
+                <h4 style="text-align: center" class="ajg-title-dark">¿Esta seguro que desea salir?</h4>
+                <p  style="text-align: center">Es posible que no se guarden todos los cambios realizados. </p>
+            </div>
+            <div class="modal-footer" style="display: flex; justify-content: center;">
+                <button type="button" style="width:100px;" id="logOut" class="btn btn-primary ajg-dark-button">Si</button>
+                <button type="button" style="width:100px;" class="btn " data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
 <aside id="sidebar-left" class="sidebar-left ajg-color-dark">
         <div class="sidebar-header">
             <div class="sidebar-title" style="color:white">
@@ -118,10 +137,10 @@
                             </a>
                         </li>	--> 
                         <li>
-                            <a href="#" id="logOut" class="ajg-dark-button" >
+                            <a href="#"  data-toggle="modal" data-target="#exampleModal" class="ajg-dark-button" >
                                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                                 <span>Salir</span>
-                            </a>
+                            </a>                           
                         </li>	
                         <li class="hidden">
                             <form action="/LogIn" id="form-logOut" method="POST" enctype="multipart/form-data"></form> 

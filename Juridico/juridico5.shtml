@@ -106,7 +106,8 @@
                                                         <td>
                                                             <input name="fechaDesvinculacion1" type="date" class="form-control" >
                                                         </td> 
-                                                        <td> <button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px"><i class="fa fa-plus"></i></button> </td>
+                                                        <td> <button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px"
+                                                            <!--4DIF (Records in Selection([Perso_Expuest_Public])>=8)-->disabled<!--4DENDIF-->><i class="fa fa-plus"></i></button> </td>
                                                     </tr>
                                                     <input type="hidden" name="eliminarReg" id="eliminarReg">
                                                     <!--4DLOOP [Perso_Expuest_Public]-->
