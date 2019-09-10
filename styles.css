@@ -60,3 +60,10 @@
     flex-flow: row wrap;
 }
 
+.load{    
+    display: block;
+    margin: auto;        
+    background-color: white;
+    border-radius: 50px;            
+}
+
