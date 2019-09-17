@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="fixed sidebar-left-collapsed">
+	<head>
+        <!--4DINCLUDE headIncludes.html-->
+	</head>
+	<body>
+		<section class="body">
+
+			<!-- start: header -->
+                <!--4DINCLUDE header.html-->
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+			        <!--#4DINCLUDE panelConsulta.shtml-->
+				<!-- end: sidebar -->
+
+				<section role="main" class="content-body">
+					<header class="page-header ajg-color-dark "  >
+                        <h2>Consulta Sarlaft</h2>
+					
+						<div class="right-wrapper pull-right">
+							<ol class="breadcrumbs">
+								<li>
+									<a href="../index.shtml">
+										<i class="fa fa-home title" style="padding-right: 1cm; color:white"></i>
+									</a>
+								</li>								
+							</ol>
+												
+						</div>
+					</header>
+                    
+					<!-- start: page -->
+                    <div>                        
+                        <form class="form-bordered " method="POST" enctype="multipart/form-data" action="/Natural/datos_basicos">                                    
+                        </form>                        
+                        <h3 class="text-center ajg-title-dark" >CONSULTA DE DATOS SARLAFT</h3>                            
+                        <div class="filters row ajg-panel">  
+
+                            <div class="col-sm-9">
+                                
+                            </div>                                                                                                              
+                            <div class="search-bar col-sm-3 ">
+                                <input class="search-input col-sm-9" type="text" placeholder="Search" aria-label="Search">
+                                <button class="search-button col-sm-3"><i class="fa fa-search"></i></button>                            
+                            </div>     
+                           
+                        </div>
+                        <!--4DLOOP [Sarlaft]-->
+                        <section class="panel ajg-panel" style="color:rgb(0,38,62);">                            
+                            <!--<header class="panel-heading">
+                            </header>-->
+                            <div class="panel-body">
+                                <h2 class="panel-title"><!--4DTEXT  [Sarlaft]Nombre_Razon_Social--></h2>                            
+                                <p>Tipo Documento: <!--4DTEXT [Sarlaft]Tipo_Documento--></p>                           
+                            </div>
+                        </section>
+                        <!--4DENDLOOP-->
+                    </div>  
+					<!-- end: page -->
+				</section>
+			</div>
+
+			
+		</section>
+        <!--4DINCLUDE scripts.html-->
+	</body>
+</html>
