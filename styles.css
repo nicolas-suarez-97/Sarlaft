@@ -99,3 +99,10 @@
     border-style: none;
     border-radius: 50%;            
 }
+.load{    
+    display: block;
+    margin: auto;        
+    background-color: white;
+    border-radius: 50px;            
+}
+
