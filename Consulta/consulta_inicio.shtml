@@ -34,10 +34,9 @@
 					<!-- start: page -->
                     <div>                        
                         <form class="form-bordered " method="POST" enctype="multipart/form-data" action="/Natural/datos_basicos">                                    
-                        </form>
-                        <br>
+                        </form>                        
                         <h3 class="text-center ajg-title-dark" >CONSULTA DE DATOS SARLAFT</h3>                            
-                        <div class="filters row">  
+                        <div class="filters row ajg-panel">  
 
                             <div class="col-sm-9">
                                 
@@ -52,7 +51,7 @@
                         <section class="panel ajg-panel" style="color:rgb(0,38,62);">                            
                             <!--<header class="panel-heading">
                             </header>-->
-                            <div class="panel-body">                           
+                            <div class="panel-body">
                                 <h2 class="panel-title"><!--4DTEXT  [Sarlaft]Nombre_Razon_Social--></h2>                            
                                 <p>Tipo Documento: <!--4DTEXT [Sarlaft]Tipo_Documento--></p>                           
                             </div>

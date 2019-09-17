@@ -25,7 +25,7 @@ Case of
 				WEB SEND FILE("Natural/natural1.shtml")
 			End if 
 		Else 
-			WEB SEND FILE("/")
+			WEB SEND FILE("login.shtml")
 		End if 
 		
 		
@@ -69,7 +69,7 @@ Case of
 					
 			End case 
 		Else 
-			WEB SEND FILE("/")
+			WEB SEND FILE("./login.shtml")
 		End if 
 		
 	: ($rqt="/Natural@")
@@ -94,11 +94,20 @@ Case of
 					
 			End case 
 		Else 
-			WEB SEND FILE("/")
+			WEB SEND FILE("./login.shtml")
 		End if 
 	: ($rqt="/LogIn")
 		UNLOAD RECORD([Sarlaft])
 		UNLOAD RECORD([Clientes])
 		WEB SEND FILE("login.shtml")
 		
+	: ($rqt="/Consulta")
+		WEB SEND FILE("consulta.shtml")
+		
+	: ($rqt="/Inicio_Consulta")
+		Consulta_Login 
+		
+	: ($rqt="/LogOut")
+		UNLOAD RECORD([Users])
+		WEB SEND FILE("consulta.shtml")
 End case 
