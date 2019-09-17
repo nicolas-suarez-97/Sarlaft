@@ -64,17 +64,18 @@
 .ajg-panel{
     border-radius: 10px;
     box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.22);
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 15px auto;
+    background-color: white;    
 }
 
 .filters{
-    max-width: 1000px;
     margin: auto;
     background-color: white;
     border-radius: 10px;
     padding: 10px;
-   
+    display: flex;
+    align-items: center;    
 }
 
 .search-bar{
@@ -107,3 +108,32 @@
     border-radius: 50px;            
 }
 
+.ajg-ref{
+    font-weight: bold;
+}
+.ajg-ref:hover{
+    color: rgb(0,38,62) ;
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+.top{    
+    margin:10px;    
+}
+
+.top .btn-group{
+    padding: 20px;
+}
+
+.tabla{
+    display: none;
+}
+
+.link{
+    text-decoration: none;
+    color:rgb(173, 173, 173);
+}
+.link:hover{
+    text-decoration: underline;
+    color:rgb(0,38,62) ;
+}
