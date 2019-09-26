@@ -16,14 +16,6 @@ function buscar(action){
     form.submit();
 }
 
-function tablaVisible(){
-    tabla.style.display = 'block';
-    lista.style.display = 'none';
-    filters.style.display = 'none';
-}
-
-function listaVisible(){
-    tabla.style.display = 'none';
-    lista.style.display = 'block';
-    filters.style.display = 'block';
+function openView(id){
+    alert(id);
 }

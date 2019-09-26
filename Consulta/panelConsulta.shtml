@@ -32,7 +32,7 @@
                 <nav id="menu" class="nav-main" role="navigation">
                     <ul class="nav nav-main">
                         <li>
-                            <a href="../index.shtml"  class="ajg-dark-button">
+                            <a class="ajg-dark-button">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span><!--4DTEXT [Users]UserName--></span>
                             </a>

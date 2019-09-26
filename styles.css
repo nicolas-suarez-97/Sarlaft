@@ -119,6 +119,11 @@
 
 .top{    
     margin:10px;    
+<<<<<<< HEAD
+    display:flex;
+    align-items: center;
+=======
+>>>>>>> c01933d8de86644c35dc13e76bcd7906b381b1b7
 }
 
 .top .btn-group{
@@ -133,7 +138,14 @@
     text-decoration: none;
     color:rgb(173, 173, 173);
 }
+
+.shadow{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.24);
+    border-style: solid;
+    border-width: 0.5px;    
+    border-color: rgba(128, 128, 128, 0.322);
+}
 .link:hover{
     text-decoration: underline;
-    color:rgb(0,38,62) ;
+    color:rgb(0,38,62);
 }

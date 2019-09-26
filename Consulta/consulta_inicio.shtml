@@ -17,10 +17,10 @@
 				<!-- start: sidebar -->
 			        <!--#4DINCLUDE panelConsulta.shtml-->
 				<!-- end: sidebar -->
-
+				<!--4DINCLUDE menuAvanzado.shtml-->
 				<section role="main" class="content-body">
 					<header class="page-header ajg-color-dark "  >
-                        <h2>Consulta Sarlaft</h2>
+                        <h2>Sarlaft</h2>
 					
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
@@ -45,30 +45,18 @@
 								<h3 class=" ajg-title-dark" >CONSULTA DE DATOS SARLAFT</h3>   
 							</div>                    
 							<div class="col-sm-4">
-								<div class="btn-group btn-group-justified" >
-									<a class="btn btn-default" role="button" onclick="listaVisible()">Lista</a>							
-									<a class="btn btn-default" role="button" onclick="tablaVisible()">Tabla</a>
-								</div>						
+								<a type="button" href="Consulta/nuevaSolicitud.shtml" style="margin-top:10px;" class="btn btn-block ajg-dark-button"><i class="fa fa-plus"></i> Nueva Solicitud</a>
 							</div>						
 						</div>
 															
 						<div class="filters row ajg-panel" id="filters">  
-							<div class="col-sm-8">
+							<div class="col-sm-12">
 								<div class="btn-group btn-group-justified">
-									<a class="btn btn-default" role="button" onclick="buscar('all')">Mostrar Todos</a>
-									<div class="btn-group">
-										<a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-											Ordenar <span class="caret"></span>
-										</a>
-										<ul class="dropdown-menu" role="menu">
-											<li><a href="#">Razón Social</a></li>
-											<li><a href="#">Documento</a></li>											
-										</ul>
-									</div>
-									<a class="btn btn-default" role="button">Busqueda Avanzada</a>
+									<a class="btn btn-default" role="button" onclick="buscar('all')">Mostrar Todos</a>									
+									<a class="btn btn-default" role="button" data-toggle="modal" data-target="#menuAvanzado">Busqueda Avanzada</a>
 								</div>
 							</div>                                                                                                              
-							<div class="col-sm-4">
+							<div class="col-sm-4" style="display:none">
 								<form action="Consulta_Busqueda" method="POST" enctype="multipart/form-data" class="search nav-form">
 									<div class="input-group input-search">
 										<input type="text" class="form-control" name="buscar" id="buscar" placeholder="Buscar...">
@@ -79,41 +67,7 @@
 								</form>                          
 							</div>                                
 						</div>
-					</div>  
-					<div class="lista" id="lista" >
-						<!--4DLOOP [Sarlaft]-->
-						<section class="panel ajg-panel" style="color:rgb(0,38,62);" >                            
-							<!--<header class="panel-heading">
-							</header>-->
-							<div class="panel-body">	
-								<div class="row">
-									<div class="col-sm-6">
-										<a class="panel-title ajg-ref" href="#" onclick="submit(<!--4DTEXT [Sarlaft]ID-->)"><!--4DTEXT  [Sarlaft]Nombre_Razon_Social--></a>
-									</div>
-									<div class="col-sm-6">
-										<p style="font-weight: bold"> Nivel de Riesgo: <!--4DTEXT [Sarlaft]Nivel_Riesgo--></>
-									</div>
-								</div>															
-								<div class="row">
-									<div class="col-sm-6">
-										<p><!--4DTEXT [Sarlaft]Tipo_Documento--> : <!--4DTEXT [Sarlaft]Documento_numero--> <!--4DTEXT [Sarlaft]DV--></p> 
-										<p>Dirección: <!--4DTEXT [Sarlaft]Direccion--></p>  
-										<p>Teléfono: <!--4DTET [Sarlaft]Telefono--></p>										
-									</div>
-									<div class="col-sm-6">	
-										<p>Fecha Diligenciamiento: <!--4DTEXT [Sarlaft]Fecha_Diligenciamiento--></p>
-										<!--4DIF ([Sarlaft]Juridico_Natural = True)-->
-										<p>Persona Jurídica</p>
-										<!--4DELSE-->
-											<p>Persona Natural</p>
-										<!--4DENDIF-->
-									</div>									
-								</div>
-							</div>
-						</section>
-						<!--4DENDLOOP-->
-					</div>                    
-
+					</div>  					                  
 					<div class="tabla" id="tabla">
 						<section class="panel ajg-panel">
 							<div class="panel-body">							
@@ -129,8 +83,8 @@
 									</thead>
 									<tbody>
 										<!--4DLOOP [Sarlaft]-->
-										<tr>
-											<td><a href="#" class="link"><!--4DTEXT  [Sarlaft]Nombre_Razon_Social--></a></td>
+										<tr style="color:black">
+											<td><a href="#" class="link" style="color:black" onclick="openView(<!--4DTEXT [Sarlaft]ID-->)"><!--4DTEXT  [Sarlaft]Nombre_Razon_Social--></a></td>
 											<td><!--4DTEXT [Sarlaft]Nivel_Riesgo--></td>
 											<td><!--4DTEXT [Sarlaft]Tipo_Documento--> : <!--4DTEXT [Sarlaft]Documento_numero--> <!--4DTEXT [Sarlaft]DV--></td>
 											<td><!--4DTEXT [Sarlaft]Direccion--></td>
