@@ -138,19 +138,35 @@
                                             </div>                                                    
                                         </div>                                            
                                     </div>
-                                    <br>
+                                    <br>  
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div  class="form-group">
-                                                <label class="col-md-4 control-label">CIIU (Cod)</label>
-                                                <div class="col-md-8">
-                                                    <input name="ciiuCodigo" value="<!--4DTEXT [Sarlaft]CIIU_Codigo-->" type="number" class="form-control" placeholder="Código" autocomplete="off">
+                                                <label class="col-md-4 control-label ">CIIU (cod)</label>
+                                                <div class="col-md-8 ">                                                    
+                                                    <input type="number" id="codCiiu1" class="form-control" name="ciiuCodigo" required 
+                                                        autocomplete=off value="<!--4DTEXT [Sarlaft]CIIU_Codigo-->"
+                                                        onKeyPress="if(this.value.length==4) return false;" min=0 max=9999
+                                                        onchange="validateCIIU(this,'ciiu1')" onkeyup="validateErase(this,'ciiu1')"
+                                                        onkeydown="return validateArrowKey(event)">
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-sm-8">
+                                            <div  class="form-group">
+                                                <label class="col-md-2 control-label">Descripción</label>
+                                                <div class="col-md-10">
+                                                    <input id="ciiu1" type="text" class="form-control" placeholder="" disabled style="background-color:white">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <br>    
+                                    <br>                        
+                                    <div class="row">                                        
                                         <div class="col-sm-4">
-                                            <label class="col-md-3 control-label">Sector</label>
-                                            <div class="col-md-9">
+                                            <label class="col-md-4 control-label">Sector</label>
+                                            <div class="col-md-8">
                                                 <select name="sector" class="form-control mb-md">
                                                     <option><!--4DTEXT [Sarlaft]Sector--></option>
                                                     <option>Agropecuadio</option>
@@ -164,7 +180,7 @@
                                                     <option>Transporte</option>
                                                 </select>  
                                             </div>
-                                        </div>                                        
+                                        </div>                                                                                
                                         <div class="col-sm-4">
                                             <div  class="form-group">
                                                 <label class="col-sm-4 control-label">Departamento</label>
@@ -176,10 +192,6 @@
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                            
-                                    </div>
-                                    <br>
-                                    
-                                    <div class="row">
                                         <div class="col-sm-4">
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
@@ -188,23 +200,26 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                    </div>
+                                    <br>
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-6">
                                             <div  class="form-group">
-                                                <label class="col-md-3 control-label">Teléfono</label>
-                                                <div class="col-md-9">
+                                                <label class="col-md-4 control-label">Teléfono</label>
+                                                <div class="col-md-8">
                                                     <input name="telefonoOficina"  value="<!--4DTEXT [Sarlaft]Telefono_oficina-->" type="number" class="form-control" placeholder="Teléfono " autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                             <div  class="form-group">
-                                                <label class="col-md-3 control-label">E-mail</label>
-                                                <div class="col-md-9">
+                                                <label class="col-md-4 control-label">E-mail</label>
+                                                <div class="col-md-8">
                                                     <input name="email" value="<!--4DTEXT [Sarlaft]EMail-->" type="email" class="form-control" placeholder="email" autocomplete="off">
                                                 </div>
                                             </div>
-                                        </div>                                
-                                                                    
+                                        </div>                                                                                                    
                                     </div>                                                                        
                                     <br>
                                     <div class="row">
@@ -260,6 +275,7 @@
 
 			
 		</section>        
-	    <!--4DINCLUDE scripts.html-->
+        <!--4DINCLUDE scripts.html-->
+        <script src="juridico2.js"></script>
 	</body>
 </html>
