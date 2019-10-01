@@ -15,7 +15,7 @@ If (Records in selection([Clientes])=1)
 			WEB SEND FILE("Natural/natural1.shtml")
 		End if 
 		
-		  //WEB SEND FILE("index.shtml")
+		  //WEB SEND FILE("#")
 	Else 
 		
 		CREATE RECORD([Sarlaft])
@@ -30,7 +30,7 @@ If (Records in selection([Clientes])=1)
 		Else 
 			WEB SEND FILE("Natural/natural1.shtml")
 		End if 
-		  //WEB SEND FILE("index.shtml")
+		  //WEB SEND FILE("#")
 	End if 
 	
 Else 

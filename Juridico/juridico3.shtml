@@ -22,9 +22,7 @@
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
 								<li>
-									<a href="../index.shtml">
-										<i class="fa fa-home title"></i>
-									</a>
+                                    <i class="fa fa-home title"></i>									
 								</li>
                                 <li><span style="color:white">Información Básica</span></li>
                                 <li><span style="padding-right: 1cm; color:white">Representante Legal</span></li>
@@ -44,6 +42,14 @@
                                 <form class="form-bordered" method="POST" enctype="multipart/form-data" action="/Juridico/accionistas">
                                     <div class="row">
                                         <div class="col-sm-4">
+                                            <label class="col-md-4 control-label">Nombre</label>
+                                            <div class="col-md-8">
+                                                <input name="nombre" value="<!--4DTEXT [Sarlaft]Nombres-->" type="text" class="form-control" placeholder="Nombre"
+                                                    data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="top"
+                                                    data-content="Nombre del Representante Legal" required autocomplete="off">
+                                            </div>    
+                                        </div> 
+                                        <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label" >Primer Apellido</label>                                                
                                                 <div class="col-md-8">
@@ -61,15 +67,7 @@
                                                     placeholder="Segundo Apellido" data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="top"
                                                     data-content="Segundo Apellido del Representante Legal" required autocomplete="off">
                                             </div>    
-                                        </div>                                    
-                                        <div class="col-sm-4">
-                                            <label class="col-md-4 control-label">Nombre</label>
-                                            <div class="col-md-8">
-                                                <input name="nombre" value="<!--4DTEXT [Sarlaft]Nombres-->" type="text" class="form-control" placeholder="Nombre"
-                                                    data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="top"
-                                                    data-content="Nombre del Representante Legal" required autocomplete="off">
-                                            </div>    
-                                        </div> 
+                                        </div>                                                                            
                                     </div>
                                     <br>                                    
                                     <div class="row">
@@ -111,7 +109,10 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Lugar de Expedición</label>
                                                 <div class="col-md-8">
-                                                    <input name="lugarExped" value="<!--4DTEXT [Sarlaft]Lugar_Expedicion-->"  type="text" class="form-control" required autocomplete="off">
+                                                    <input name="lugarExped" list="listaCiudades" value="<!--4DTEXT [Sarlaft]Lugar_Expedicion-->"  type="text" class="form-control" required autocomplete="off">
+                                                    <datalist id="listaCiudades">                                                                             
+                                                        <!--4DINCLUDE ../listadoCiudades.shtml-->
+                                                    </datalist>
                                                 </div>
                                             </div>
                                         </div>
@@ -127,7 +128,7 @@
                                             <div  class="form-group">
                                                 <label class="col-sm-4 control-label">Lugar Nacimiento</label>
                                                 <div class="col-sm-8">
-                                                    <input name="lugarNacim" value="<!--4DTEXT [Sarlaft]Lugar_Nacimiento-->" required type="text" class="form-control" autocomplete="off">
+                                                    <input name="lugarNacim" list="listaCiudades" value="<!--4DTEXT [Sarlaft]Lugar_Nacimiento-->" required type="text" class="form-control" autocomplete="off">
                                                 </div>                                 
                                             </div>                                                    
                                         </div> 
@@ -167,7 +168,7 @@
                                                 <div class="col-sm-8" >
                                                     <input name="ciudadRep" value="<!--4DTEXT [Sarlaft]Ciudad_RepLegal-->" type="text" class="form-control"
                                                         placeholder="Ciudad" data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="top"
-                                                        data-content="Ciudad de la Residencia" autocomplete="off" required>
+                                                        data-content="Ciudad de la Residencia" autocomplete="off" required list="listaCiudades">
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                            

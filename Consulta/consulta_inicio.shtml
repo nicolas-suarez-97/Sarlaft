@@ -24,10 +24,8 @@
 					
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
-								<li>
-									<a href="../index.shtml">
-										<i class="fa fa-home title" style="padding-right: 1cm; color:white"></i>
-									</a>
+								<li>									
+									<i class="fa fa-home title" style="padding-right: 1cm; color:white"></i>									
 								</li>								
 							</ol>
 												

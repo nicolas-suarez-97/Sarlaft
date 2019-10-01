@@ -21,10 +21,8 @@
 					
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
-								<li>
-									<a href="../index.shtml">
-										<i class="fa fa-home title"></i>
-									</a>
+								<li>									
+                                    <i class="fa fa-home title"></i>		
 								</li>
                                 <li><span style="color:white">Información Básica</span></li>
                                 <li><span style="padding-right: 1cm; color:white">Datos Básicos</span></li>
@@ -68,7 +66,7 @@
                                         <div class="col-sm-4">
                                             <label class="col-md-4 control-label">NIT</label>
                                             <div class="col-md-8">
-                                                <input name="nit" value="<!--4DTEXT [Sarlaft]Documento_Numero-->" type="number" class="form-control" placeholder="NIT " autocomplete="off">
+                                                <input name="nit" value="<!--4DTEXT [Sarlaft]Documento_Numero-->" readonly type="number" class="form-control" placeholder="NIT " autocomplete="off" style="background-color:white">
                                             </div>                                 
                                         </div>
                                         <div class="col-sm-3">
@@ -196,7 +194,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciudadOficina" value="<!--4DTEXT [Sarlaft]Ciudad_Oficina-->" type="text" class="form-control" placeholder="Ej: Bogota " autocomplete="off">
+                                                    <input name="ciudadOficina" list="listaCiudades" value="<!--4DTEXT [Sarlaft]Ciudad_Oficina-->" type="text" class="form-control" placeholder="Ej: Bogota " autocomplete="off">                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -250,7 +248,10 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciudadSucursal"  value="<!--4DTEXT [Sarlaft]Ciudad_SUcursal-->" type="text" class="form-control" placeholder="Ej: " autocomplete="off">
+                                                    <input name="ciudadSucursal" list="listaCiudades" value="<!--4DTEXT [Sarlaft]Ciudad_SUcursal-->" type="text" class="form-control" placeholder="Ej: " autocomplete="off">
+                                                    <datalist id="listaCiudades">                                                                             
+                                                        <!--4DINCLUDE ../listadoCiudades.shtml-->
+                                                    </datalist>
                                                 </div>
                                             </div>
                                         </div>

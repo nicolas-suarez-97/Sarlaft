@@ -22,9 +22,7 @@
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
 								<li>
-									<a href="../index.shtml">
-										<i class="fa fa-home title"></i>
-									</a>
+                                    <i class="fa fa-home title"></i>
 								</li>
                                 <li><span style="color:white">Información Básica</span></li>
                                 <li><span style="padding-right: 1cm; color:white">Información Financiera</span></li>

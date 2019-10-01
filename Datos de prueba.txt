@@ -6,3 +6,7 @@ SILA3003t lt
 
 localcheck.com.co
 infolaf
+
+curl -X POST https://infolaftsearch.com/infolaft/login -H "Content-Type:application/x-www-form-urlencoded" -H "Accept: application/json" --data "username=<Silat>&password=<Silat%2019>" -v
+
+curl -X POST https://infolaftsearch.com/infolaft/Search/searchPaginated?accuracyLevel=MEDIA&forceSearch=true&isPhoneticSearch=true&page=2&queryById=&queryByName=GUSTAVO+CERON&queryByNameAndId=&searchId=dlopp83c40a-e72b-46223db-8546-484c0587acd8&searchMode=SearchByName&size=10&sort=" -H "Accept: application/json" -H "Cookie: JSESSIONID=<<B208533CAAEF52F9D3F7E782F2349255>>" -v
