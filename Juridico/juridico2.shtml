@@ -46,7 +46,7 @@
                                                 <label class="col-md-3 control-label" >Nombre o Razón Social</label>                                                
                                                 <div class="col-md-9">
                                                     <input name="razonSocial" value="<!--4DTEXT [Sarlaft]Nombre_Razon_Social-->" type="text" class="form-control"
-                                                        placeholder="Nombre - Razón Social" data-container=".row" data-toggle="popover" data-trigger="hover"
+                                                        placeholder="Nombre - Razón Social" data-container=".row" data-toggle="popover" data-trigger="hover" onkeyup="upperCase(this)"
                                                         data-placement="top" data-content="Nombre" required autocomplete="off">
                                                 </div>
                                             </div>
@@ -194,7 +194,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciudadOficina" list="listaCiudades" value="<!--4DTEXT [Sarlaft]Ciudad_Oficina-->" type="text" class="form-control" placeholder="Ej: Bogota " autocomplete="off">                                                    
+                                                    <input name="ciudadOficina" list="listaCiudades" onkeyup="upperCase(this)" value="<!--4DTEXT [Sarlaft]Ciudad_Oficina-->" type="text" class="form-control" placeholder="Ej: Bogota " autocomplete="off">                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -248,7 +248,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciudadSucursal" list="listaCiudades" value="<!--4DTEXT [Sarlaft]Ciudad_SUcursal-->" type="text" class="form-control" placeholder="Ej: " autocomplete="off">
+                                                    <input name="ciudadSucursal" list="listaCiudades" onkeyup="upperCase(this)" value="<!--4DTEXT [Sarlaft]Ciudad_SUcursal-->" type="text" class="form-control" placeholder="Ej: " autocomplete="off">
                                                     <datalist id="listaCiudades">                                                                             
                                                         <!--4DINCLUDE ../listadoCiudades.shtml-->
                                                     </datalist>

@@ -41,12 +41,22 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-sm-4">
+                                            <label class="col-md-4 control-label">Nombre</label>
+                                            <div class="col-md-8">
+                                                <input name="nombre" type="text" class="form-control" 
+                                                placeholder="Nombre" data-container=".row" data-toggle="popover" 
+                                                data-trigger="hover" data-placement="top" 
+                                                data-content="Nombre del Representante Legal" onkeyup="upperCase(this)" required
+                                                value="<!--4DTEXT [Sarlaft]Nombres-->"> 
+                                            </div>    
+                                        </div> 
+                                        <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label" >Primer Apellido</label>                                                
                                                 <div class="col-md-8">
                                                     <input name="primerApellido" type="text" class="form-control" 
                                                     placeholder="Primer Apellido - Representante Legal" data-container=".row" 
-                                                    data-toggle="popover" data-trigger="hover" data-placement="top" 
+                                                    data-toggle="popover" data-trigger="hover" onkeyup="upperCase(this)" data-placement="top" 
                                                     data-content="Primer Apellido del Representante Legal" required 
                                                     value="<!--4DTEXT [Sarlaft]Primer_Apellido-->">                                                    
                                                 </div>
@@ -58,21 +68,11 @@
                                             <div class="col-md-8">
                                                 <input name="segundoApellido" type="text" class="form-control" 
                                                 placeholder="Segundo Apellido" data-container=".row" data-toggle="popover" 
-                                                data-trigger="hover" data-placement="top" 
+                                                data-trigger="hover" data-placement="top" onkeyup="upperCase(this)"
                                                 data-content="Segundo Apellido del Representante Legal" required
                                                 value="<!--4DTEXT [Sarlaft]Segundo_Apellido-->"> 
                                             </div>    
                                         </div>                                    
-                                        <div class="col-sm-4">
-                                            <label class="col-md-4 control-label">Nombre</label>
-                                            <div class="col-md-8">
-                                                <input name="nombre" type="text" class="form-control" 
-                                                placeholder="Nombre" data-container=".row" data-toggle="popover" 
-                                                data-trigger="hover" data-placement="top" 
-                                                data-content="Nombre del Representante Legal" required
-                                                value="<!--4DTEXT [Sarlaft]Nombres-->"> 
-                                            </div>    
-                                        </div> 
                                     </div>
                                     <br>                                    
                                     <div class="row">
@@ -113,7 +113,10 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Lugar de Expedición</label>
                                                 <div class="col-md-8">
-                                                    <input name="lugarExped" type="text" class="form-control" value="<!--4DTEXT [Sarlaft]Lugar_Expedicion-->">
+                                                    <input name="lugarExped" list="listado" onkeyup="upperCase(this)" type="text" class="form-control" value="<!--4DTEXT [Sarlaft]Lugar_Expedicion-->">
+                                                    <datalist id="listado">
+                                                        <!--4DINCLUDE ../listadoCiudades.shtml-->
+                                                    </datalist>
                                                 </div>
                                             </div>
                                         </div>
@@ -129,7 +132,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Lugar de Nacimiento</label>
                                                 <div class="col-md-8">
-                                                    <input name="lugarNacimiento" type="text" class="form-control" required  value="<!--4DTEXT [Sarlaft]Lugar_Nacimiento-->">
+                                                    <input name="lugarNacimiento" list="listado" onkeyup="upperCase(this)" type="text" class="form-control" required  value="<!--4DTEXT [Sarlaft]Lugar_Nacimiento-->">
                                                 </div>
                                             </div>
                                         </div>                                                                                                                    
@@ -140,7 +143,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Nacionalidad 1</label>
                                                 <div class="col-md-8">
-                                                    <input name="nacionalidad1" type="text" class="form-control" placeholder="Nacionalidad 1" required  value="<!--4DTEXT [Sarlaft]Nacinalidad1-->">
+                                                    <input name="nacionalidad1" type="text" onkeyup="upperCase(this)" class="form-control" placeholder="Nacionalidad 1" required  value="<!--4DTEXT [Sarlaft]Nacinalidad1-->">
                                                 </div>
                                             </div>
                                         </div>       
@@ -148,7 +151,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Nacionalidad 2</label>
                                                 <div class="col-md-8">
-                                                    <input name="nacionalidad2" type="text" class="form-control" placeholder="Nacionalidad 2"  value="<!--4DTEXT [Sarlaft]Nacionalidad2-->">
+                                                    <input name="nacionalidad2" type="text" onkeyup="upperCase(this)" class="form-control" placeholder="Nacionalidad 2"  value="<!--4DTEXT [Sarlaft]Nacionalidad2-->">
                                                 </div>
                                             </div>
                                         </div>     
@@ -193,7 +196,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciudadRep" type="text" class="form-control" placeholder="País"   value="<!--4DTEXT [Sarlaft]Ciudad_RepLegal-->">
+                                                    <input name="ciudadRep" list="listado" onkeyup="upperCase(this)" type="text" class="form-control" placeholder="País"   value="<!--4DTEXT [Sarlaft]Ciudad_RepLegal-->">
                                                 </div>
                                             </div>
                                         </div>
@@ -360,7 +363,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ocupación</label>
                                                 <div class="col-md-8" >
-                                                    <input name="ocupacion" type="text" class="form-control" placeholder="Ocupación"  value="<!--4DTEXT [Sarlaft]Ocupacion-->" >
+                                                    <input name="ocupacion" type="text" onkeyup="upperCase(this)" class="form-control" placeholder="Ocupación"  value="<!--4DTEXT [Sarlaft]Ocupacion-->" >
                                                 </div>
                                             </div>
                                         </div>
@@ -368,7 +371,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Cargo</label>
                                                 <div class="col-md-8">
-                                                        <input name="cargo" type="text" class="form-control" placeholder="Cargo"  value="<!--4DTEXT [Sarlaft]Cargo-->" >
+                                                        <input name="cargo" type="text" onkeyup="upperCase(this)" class="form-control" placeholder="Cargo"  value="<!--4DTEXT [Sarlaft]Cargo-->" >
                                                 </div>
                                             </div>
                                         </div>                                              
@@ -380,7 +383,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Empresa Donde Trabaja</label>
                                                 <div class="col-md-8">
-                                                    <input name="empresaTrabaja" type="text" class="form-control" placeholder="Empresa Donde Trabaja"  value="<!--4DTEXT [Sarlaft]Empresa_Trabaja-->" >
+                                                    <input name="empresaTrabaja" type="text" onkeyup="upperCase(this)" class="form-control" placeholder="Empresa Donde Trabaja"  value="<!--4DTEXT [Sarlaft]Empresa_Trabaja-->" >
                                                 </div>
                                             </div>
                                         </div>   
@@ -397,14 +400,6 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div  class="form-group">
-                                                <label class="col-md-4 control-label">Ciudad</label>
-                                                <div class="col-md-8">
-                                                        <input name="ciudadOficina" type="text" class="form-control" placeholder="Ciudad de la Oficina"  value="<!--4DTEXT [Sarlaft]Ciudad_Oficina-->" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div  class="form-group">
                                                 <label class="col-md-4 control-label">Departamento</label>
                                                 <div class="col-md-8">
                                                     <select name="deptoOficina" class="form-control mb-md">
@@ -414,6 +409,14 @@
                                                 </div>
                                             </div>
                                         </div>  
+                                        <div class="col-sm-6">
+                                            <div  class="form-group">
+                                                <label class="col-md-4 control-label">Ciudad</label>
+                                                <div class="col-md-8">
+                                                    <input name="ciudadOficina" list="listado" onkeyup="upperCase(this)" type="text" class="form-control" placeholder="Ciudad de la Oficina"  value="<!--4DTEXT [Sarlaft]Ciudad_Oficina-->" >
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>                                    
                                     <div class="row">
                                         <div class="col-sm-6">

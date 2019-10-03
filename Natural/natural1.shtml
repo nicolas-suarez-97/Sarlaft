@@ -49,7 +49,7 @@
                             <div class="panel-body">
                                 <form class="form-bordered " method="POST" enctype="multipart/form-data" action="/Natural/datos_basicos">                                    
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-4">
                                             <div class="form-group ">
                                                 <label class="control-label">Fecha Diligenciamiento</label>      
                                                 <!--4DIF ([Sarlaft]Fecha_Diligenciamiento=!00-00-00!)-->
@@ -59,31 +59,34 @@
                                                 <!--4DENDIF-->
                                             </div>   
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label class="control-label" >Ciudad</label>                                                
-                                                <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad diligenciamiento" required name="ciudadDiligenciamiento" value="<!--4DTEXT [Sarlaft]Ciudad_Diligenciamiento-->">                                                
+                                                <input type="text" list="ciudades" onkeyup="upperCase(this)" class="form-control" id="inputCiudad" placeholder="Ciudad diligenciamiento" required name="ciudadDiligenciamiento" value="<!--4DTEXT [Sarlaft]Ciudad_Diligenciamiento-->">
+                                                <datalist id="ciudades">
+                                                    <!--4DINCLUDE ../ciudades.shtml-->
+                                                </datalist>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label class="control-label" >Sucursal</label>                                                
+                                                <input type="text" class="form-control" onkeyup="upperCase(this)" id="inputSucursal" placeholder="Sucursal" required name="sucursal" value="<!--4DTEXT [Sarlaft]Sucursal-->">                                                
                                             </div>
                                         </div>
                                     </div>                                    
-                                                                                                                                                                                                                                                                                        
+                                    <br>                                                                                                                                                                                                                                     
                                     <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label class="control-label" >Sucursal</label>                                                
-                                                <input type="text" class="form-control" id="inputSucursal" placeholder="Sucursal" required name="sucursal" value="<!--4DTEXT [Sarlaft]Sucursal-->">                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
+                                        <!--<div class="col-sm-6">
                                             <div class="form-group">
                                                 <label class="control-label">Tipo Solicitud</label>                                                
                                                 <select class="form-control mb-md" readonly name="tipoSolicitud">
-                                                    <option id="actualizacion" <!--4DIF ([Sarlaft]Tipo_Solicitud="actualizacion")-->selected<!--4DENDIF-->>Actualización</option>
-                                                    <option value="renovacion" <!--4DIF ([Sarlaft]Tipo_Solicitud="renovacion")-->selected<!--4DENDIF-->>Renovación</option>
-                                                    <option value="vinculacion" <!--4DIF ([Sarlaft]Tipo_Solicitud="vinculacion")-->selected<!--4DENDIF-->>Vinculación</option>
+                                                    <option id="actualizacion" <!-4DIF ([Sarlaft]Tipo_Solicitud="actualizacion")->selected<!-4DENDIF->>Actualización</option>
+                                                    <option value="renovacion" <!-4DIF ([Sarlaft]Tipo_Solicitud="renovacion")->selected<!-4DENDIF->>Renovación</option>
+                                                    <option value="vinculacion" <!-4DIF ([Sarlaft]Tipo_Solicitud="vinculacion")->selected<!-4DENDIF->>Vinculación</option>
                                                 </select>                                                
                                             </div>     
-                                        </div>
+                                        </div>-->
                                     </div>                                                                                                                
                                     <div class="panel text-center ajg-color" style="border-radius: 10px">
                                         <p >EN EL EVENTO QUE EL POTENCIAL CLIENTE NO CUENTE CON LA INFORMACIÓN SOLICITADA EN ESTE FORMULARIO, DEBERÁ CONSIGNAR DICHA CIRCUNSTANCIA EN EL ESPACIO CORRESPONDIENTE.</p>  
