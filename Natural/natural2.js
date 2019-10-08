@@ -1,10 +1,30 @@
 var codCiiu = new Map();
 var ciiu1 = document.getElementById("codCiiu1");
 var ciiu2 = document.getElementById("codCiiu2");
+//var fullDir = document.getElementById("fullDir");
+//var dirResidencia = document.getElementById("dirResidencia");
+
 fill();
 validateCIIU(ciiu1,"ciiu1");
 validateCIIU(ciiu2,"ciiu2");
 
+
+function direccion(select, input, dir){
+    var fullDir = document.getElementById(dir);
+    fullDir.innerHTML = "";    
+    for(var i=1; i<=5; i++){
+        fullDir.innerHTML += document.getElementById(select+i).value + " " + document.getElementById(input+i).value.toString().toUpperCase() + " ";        //.replace("-"," ")
+    }
+    fullDir.innerHTML = fullDir.innerHTML.split("-").join(" ");//.replaceAll("-"," ");
+    
+}
+
+function guardarDir( cancel, fullD, dir){
+    var fullDir = document.getElementById(fullD);
+    var dirResidencia = document.getElementById(dir);
+    dirResidencia.value = fullDir.innerHTML;
+    document.getElementById(cancel).click();
+}
 
 function validateCIIU(element,ciiu){
     if(element.value != ""){

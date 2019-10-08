@@ -119,11 +119,8 @@
 
 .top{    
     margin:10px;    
-<<<<<<< HEAD
     display:flex;
     align-items: center;
-=======
->>>>>>> c01933d8de86644c35dc13e76bcd7906b381b1b7
 }
 
 .top .btn-group{
