@@ -45,11 +45,13 @@
                                         <p class="ajg-title-dark">
                                             En cumplimiento de Decreto 1674, se relacionan los siguiente campos en caso de ser considerado como persona 
                                             políticamente expuesta o vínculado:
-                                        </p>                              
-                                        <p>*Vinculo / Relación:</p>
-                                        <p>1. Segundo grado de consanguinidad (padres, abuelos, hermanos, hijos, nietos)</p>
-                                        <p>2. Segundo de afinidad (yerno, nueras, suegros, cuñados, abuelos del cónyuge o compañero/a permantente del PEP)</p>
-                                        <p>3. Primer civil (hijos adoptivos o padres adoptantes)</p>
+                                        </p>                   
+                                        <div class="ajg-title-dark">
+                                            <h5 style="font-weight: bold;">Vinculo / Relación*:</h5>
+                                            <p><span style="font-weight: bold;">1. </span>Segundo grado de consanguinidad (padres, abuelos, hermanos, hijos, nietos)</p>
+                                            <p><span style="font-weight: bold;">2. </span>Segundo de afinidad (yerno, nueras, suegros, cuñados, abuelos del cónyuge o compañero/a permantente del PEP)</p>
+                                            <p><span style="font-weight: bold;">3. </span>Primer civil (hijos adoptivos o padres adoptantes)</p>
+                                        </div>           
                                         <br>                                       
                                                                                   
                                             <div class="table-responsive">
