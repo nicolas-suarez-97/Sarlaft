@@ -81,7 +81,7 @@
                                                             <input name="id1" id="id1" type="text" class="form-control" >
                                                         </td>
                                                         <td>
-                                                            <input name="porcentPart1" id="porcentP" type="number" class="form-control" >
+                                                            <input name="porcentPart1" id="porcentP" type="number" min="0" max="100" onKeyPress="if(this.value.length==2) return false;" class="form-control" >
                                                         </td>    
                                                         <td><button type="button" id="add" class="btn ajg-button col-md-4 col-md-offset-4" style="width:40px"
                                                             <!--4DIF (Records in Selection([Acci_Benef_Finales])>=7)-->disabled<!--4DENDIF--> ><i class="fa fa-plus"></i></button> </td>                                                                                                                   

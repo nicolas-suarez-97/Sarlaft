@@ -64,7 +64,7 @@
                                                         <tr class="ajg-title-dark">
                                                             <th>Tipo ID</th>
                                                             <th>Número ID</th>
-                                                            <th>Nombre</th>
+                                                            <th>Nombre<span style="color:white">_________________________</span></th>
                                                             <th>% Participación</th>
                                                             <th>¿Es Persona Jurídica que cotiza en Bolsa</th>
                                                             <th>¿Es Persona Públicamente Expuesta, o vinculada con una de ellas?</th>
@@ -93,7 +93,7 @@
                                                                 <input name="nombre1" id="nombre" type="text" class="form-control" autocomplete="off" >
                                                             </td>
                                                             <td>
-                                                                <input name="porcent1" id="porcentaje" type="number" class="form-control" autocomplete="off" max=100 >
+                                                                <input name="porcent1" id="porcentaje" type="number" onKeyPress="if(this.value.length==2) return false;" min="0" max="100" class="form-control" autocomplete="off" max=100 >
                                                             </td>
                                                             <td>
                                                                 <select name="cotizaBolsa1" id="cotizaBolsa" class="form-control mb-md" >

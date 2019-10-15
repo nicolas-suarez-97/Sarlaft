@@ -46,8 +46,13 @@
                                         <p class="ajg-title-dark">
                                             En cumplimiento de Decreto 1674, se relacionan los siguiente campos en caso de ser considerado como persona 
                                             políticamente expuesta o vínculado:
-                                        </p>                              
-                                        <p>*Vinculo/Relación: 1. Representante Legal 2. Miembro de la Junda Directiva 3. Accionista</p>         
+                                        </p>
+                                        <div class="ajg-title-dark">
+                                            <h5 style="font-weight: bold;">Vinculo/Relación*: </h5>
+                                            <p><span style="font-weight: bold;">1. </span>Representante Legal</p>
+                                            <p><span style="font-weight: bold;">2. </span>Miembro de la Junda Directiva</p>
+                                            <p><span style="font-weight: bold;">3. </span>Accionista</p>
+                                        </div>
                                         <br>                                       
                                                                                   
                                             <div class="table-responsive">
@@ -56,7 +61,7 @@
                                                 <thead>
                                                     <tr class="ajg-title-dark">
                                                         <th>Vínculo / Relación *</th>
-                                                        <th>Nombre</th>
+                                                        <th>Nombre<span style="color:white">____________________</span></th>
                                                         <th>Tipo ID</th>
                                                         <th>No de ID</th>
                                                         <th>Nacionalidad</th>

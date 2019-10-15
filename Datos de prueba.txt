@@ -7,6 +7,70 @@ SILA3003t_lt
 localcheck.com.co
 infolaf
 
-curl -X POST https://infolaftsearch.com/infolaft/login -H "Content-Type:application/x-www-form-urlencoded" -H "Accept: application/json" --data "username=<Silat>&password=<Silat%2019>" -v
+curl POST https://infolaftsearch.com/infolaft/login -H "Content-Type:application/x-www-form-urlencoded" -H "Accept: application/json" --data "username=webservice.ajg&password=Infolaft%24242" -v
 
-curl -X POST https://infolaftsearch.com/infolaft/Search/searchPaginated?accuracyLevel=MEDIA&forceSearch=true&isPhoneticSearch=true&page=2&queryById=&queryByName=GUSTAVO+CERON&queryByNameAndId=&searchId=dlopp83c40a-e72b-46223db-8546-484c0587acd8&searchMode=SearchByName&size=10&sort=" -H "Accept: application/json" -H "Cookie: JSESSIONID=<<B208533CAAEF52F9D3F7E782F2349255>>" -v
+
+curl --request POST \
+  --url 'https://infolaftsearch.com/infolaft/Search/searchPaginated?accuracyLevel=MEDIA&enableMonitoring=true&forceSearch=true&page=0&size=10&queryById=1020825805&queryByName=&searchMode=SearchById' \
+  --header 'Accept: application/json' \
+  --header 'Accept-Encoding: gzip, deflate' \
+  --header 'Cache-Control: no-cache' \
+  --header 'Connection: keep-alive' \
+  --header 'Content-Length: 0' \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --header 'Cookie: JSESSIONID=0DC89CF5E586695A839975B9E11AC848,JSESSIONID=0DC89CF5E586695A839975B9E11AC848; JSESSIONID=0DC89CF5E586695A839975B9E11AC848' \
+  --header 'Host: infolaftsearch.com' \
+  --header 'Postman-Token: 64c2935d-f3b7-4a05-bbb6-287b2c3f9b37,84dec2bf-e40d-4fb8-9218-f40876a5a9fc' \
+  --header 'User-Agent: PostmanRuntime/7.18.0' \
+  --header 'cache-control: no-cache'
+
+
+  /** PRUEBA DE PROCESAMIENTO POR LOTE **/
+    General:
+        Request URL: https://infolaftsearch.com/infolaft/searchBatch/process/
+        Request Method: POST
+        Status Code: 200 
+        Remote Address: 18.211.132.2:443
+        Referrer Policy: no-referrer-when-downgrade
+
+    Request Headers
+        POST /infolaft/searchBatch/process/ HTTP/1.1
+        Host: infolaftsearch.com
+        Connection: keep-alive
+        Content-Length: 10284
+        Pragma: no-cache
+        Cache-Control: no-cache
+        Accept: application/json, text/plain, */*
+        Origin: https://infolaftsearch.com
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+        Sec-Fetch-Mode: cors
+        Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryFHyb4k2nP7yBSkMU
+        Sec-Fetch-Site: same-origin
+        Referer: https://infolaftsearch.com/
+        Accept-Encoding: gzip, deflate, br
+        Accept-Language: es-ES,es;q=0.9,en;q=0.8
+        Cookie: JSESSIONID=45F8B41BA1085D3EF52F4D04B330F123
+
+    Form data   
+        ------WebKitFormBoundaryFHyb4k2nP7yBSkMU
+        Content-Disposition: form-data; name="file"; filename="PRUEBA.xlsx"
+        Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+
+        ------WebKitFormBoundaryFHyb4k2nP7yBSkMU
+        Content-Disposition: form-data; name="searchMode"
+
+        SearchByName
+        ------WebKitFormBoundaryFHyb4k2nP7yBSkMU
+        Content-Disposition: form-data; name="forceSearch"
+
+        true
+        ------WebKitFormBoundaryFHyb4k2nP7yBSkMU
+        Content-Disposition: form-data; name="accuracyLevel"
+
+        EXACTA
+        ------WebKitFormBoundaryFHyb4k2nP7yBSkMU
+        Content-Disposition: form-data; name="enableMonitoring"
+
+        true
+        ------WebKitFormBoundaryFHyb4k2nP7yBSkMU--

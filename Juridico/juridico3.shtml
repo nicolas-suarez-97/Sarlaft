@@ -175,13 +175,108 @@
                                         <div class="col-sm-8">
                                             <label class="col-md-2 control-label">Dirección</label>
                                             <div class="col-md-10" style="transform: translateX(-5px)">
-                                                <input name="direccionRep" value="<!--4DTEXT [Sarlaft]Direccion_RepLegal-->" type="text" class="form-control"
-                                                    placeholder="Dirección" data-container=".row" data-toggle="popover" data-trigger="hover" data-placement="top"
-                                                    data-content="Dirección de Residencia" autocomplete="off" required>
+                                                <div class="input-group">
+                                                    <input name="direccionRep" value="<!--4DTEXT [Sarlaft]Direccion_RepLegal-->" id="direccionRep" type="text" class="form-control"
+                                                        placeholder="Dirección" style="background-color: white;" autocomplete="off" required readonly>
+                                                    <span class="input-group-btn">
+                                                        <button class="btn ajg-dark-button" type="button" data-toggle="modal" data-target="#modalDireccion"><i class="fa fa-pencil"></i></button>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div> 
                                     </div>
                                     
+                                    <!-- Modal Dirección -->
+                                    <div class="modal fade" id="modalDireccion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+                                        <div class="modal-dialog" role="document" style="min-width:80%">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h3 style="font-weight: bold" class="modal-title" id="exampleModalLabel">Generador de Dirección</h3>                                                                     
+                                                    <h5>Para realizar la separación entre números utilice el símbolo de guión (-)</h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row" style="display:flex; align-items:flex-start ;justify-content:center">
+                                                        <div class="col-sm-3">
+                                                            <h5 id="direccion">DIRECCIÓN: </h5>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <h6 id="fullDir"><!--4DTEXT [Sarlaft]Direccion_RepLegal--></h6>                                                                
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <br>
+                                                    <div class="row" style="display:flex; align-items:center;justify-content:center">
+                                                        <div class="col-sm-3">
+                                                            <select id="select1" class="form-control" onchange="direccion('select','input','fullDir')">
+                                                                <option value=""></option>
+                                                                <!--4DINCLUDE ../nomenclatura.shtml-->                                                                  
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <input type="text" id="input1" onkeyup="direccion('select','input','fullDir')"  class="form-control">
+                                                        </div>
+                                                        
+                                                    </div>      
+                                                    <br> 
+                                                    <div class="row" style="display:flex; align-items:center;justify-content:center">
+                                                        <div class="col-sm-3">
+                                                            <select id="select2" class="form-control" onchange="direccion('select','input','fullDir')">
+                                                                <option value=""></option>
+                                                                <!--4DINCLUDE ../nomenclatura.shtml-->
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <input type="text" id="input2" onkeyup="direccion('select','input','fullDir')" class="form-control">
+                                                        </div>                                                            
+                                                    </div>
+                                                    <br>
+                                                    <div class="row" style="display:flex; align-items:center;justify-content:center">
+                                                        <div class="col-sm-3">
+                                                            <select id="select3" class="form-control" onchange="direccion('select','input','fullDir')">
+                                                                <option value=""></option>
+                                                                <!--4DINCLUDE ../nomenclatura.shtml-->                                                                  
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <input type="text" id="input3" onkeyup="direccion('select','input','fullDir')" class="form-control">
+                                                        </div>                                                           
+                                                    </div>
+                                                    <br> 
+                                                    <div class="row" style="display:flex; align-items:center;justify-content:center">
+                                                        <div class="col-sm-3">
+                                                            <select id="select4" class="form-control" onchange="direccion('select','input','fullDir')">
+                                                                <option value=""></option>
+                                                                <!--4DINCLUDE ../nomenclatura.shtml-->
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <input type="text" id="input4" onkeyup="direccion('select','input','fullDir')" class="form-control">
+                                                        </div>                                                            
+                                                    </div>
+                                                    <br> 
+                                                    <div class="row" style="display:flex; align-items:center;justify-content:center">
+                                                        <div class="col-sm-3">
+                                                            <select id="select5" class="form-control" onchange="direccion('select','input','fullDir')">
+                                                                <option value=""></option>
+                                                                <!--4DINCLUDE ../nomenclatura.shtml-->
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <input type="text" id="input5" onkeyup="direccion('select','input','fullDir')" class="form-control">
+                                                        </div>                                                            
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="modal-footer" style="display: flex; justify-content: center;">
+                                                    <button type="button" style="width:100px;" class="btn btn-primary ajg-dark-button" onclick="guardarDir('cancelar','fullDir','direccionRep')">Guardar</button>
+                                                    <button type="button" style="width:100px;" class="btn " data-dismiss="modal" id="cancelar">Cancelar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>            
+                                    <!-- Fin Modal Dirección -->
+
                                     <div class="row">
                                         <div class="col-sm-3">
                                             <div  class="form-group">
@@ -206,7 +301,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-3 control-label">Teléfono</label>
                                                 <div class="col-md-9">
-                                                    <input name="telefonoRep" value="<!--4DTEXT [Sarlaft]Telefono_RepLegal-->"  type="text" class="form-control" placeholder="Télefono" required autocomplete="off" >
+                                                    <input name="telefonoRep" value="<!--4DTEXT [Sarlaft]Telefono_RepLegal-->"  type="number" class="form-control" placeholder="Télefono" required autocomplete="off" >
                                                 </div>
                                             </div>
                                         </div>                                
@@ -214,7 +309,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-3 control-label">Celular</label>
                                                 <div class="col-md-9">
-                                                    <input name="celularRep" value="<!--4DTEXT [Sarlaft]Celular-->"  type="text" class="form-control" placeholder="Celular" required autocomplete="off">
+                                                    <input name="celularRep" value="<!--4DTEXT [Sarlaft]Celular-->"  type="number" class="form-control" placeholder="Celular" required autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>      
@@ -290,6 +385,7 @@
 				</section>
 			</div>			
 		</section>
-		<!--4DINCLUDE scripts.html-->
+        <!--4DINCLUDE scripts.html-->
+        <script src="juridico3.js"></script>
 	</body>
 </html>
