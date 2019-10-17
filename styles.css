@@ -128,7 +128,7 @@
 }
 
 .tabla{
-    display: none;
+    display: block;
 }
 
 .link{
@@ -142,11 +142,21 @@
     border-width: 0.5px;    
     border-color: rgba(128, 128, 128, 0.322);
 }
-.link:hover{
+/*.link:hover{
     text-decoration: underline;
     color:rgb(0,38,62);
-}
+}*/
 
 .moveRight{
     color:white;
+}
+
+.dataRow{    
+    color:black;
+    text-decoration: none;
+}
+
+.dataRow:hover{    
+    color:rgb(0,38,62);
+    text-decoration: underline;
 }

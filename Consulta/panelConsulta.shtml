@@ -37,6 +37,30 @@
                                 <span><!--4DTEXT [Users]UserName--></span>
                             </a>
                         </li>	
+                        <li>
+                            <a href="#" onclick="clickForm('nuevaSolicitud')" class="ajg-dark-button">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                <span>Nueva Solicitud</span>
+                            </a>
+                            <form action="/Nueva_Solicitud" id="nuevaSolicitud"  method="POST" enctype="multipart/form-data">                                                              
+                            </form> 
+                        </li>	
+                        <li>
+                            <a href="#" onclick="clickForm('solicitudes')" class="ajg-dark-button">
+                                <i class="material-icons">archive</i>
+                                <span>Solicitudes</span>
+                            </a>
+                            <form action="/Solicitudes" id="solicitudes"  method="POST" enctype="multipart/form-data">                                                              
+                            </form> 
+                        </li>	
+                        <li>
+                            <a href="#" onclick="clickForm('sarlaft')" class="ajg-dark-button">                                
+                                <i class="material-icons">folder</i>
+                                <span>Consulta Sarlaft</span>
+                            </a>
+                            <form action="/Consulta_Sarlaft" id="sarlaft"  method="POST" enctype="multipart/form-data">                                                              
+                            </form> 
+                        </li>	
                         <!--<li>
                             <a href="#"  class="ajg-dark-button">
                                 <i class="fa fa-user" aria-hidden="true"></i>
@@ -55,6 +79,10 @@
                                 console.log("Salir");
                                 document.getElementById("form-logOut").submit();
                             });
+
+                            function clickForm(element){                                
+                                document.getElementById(element).submit();
+                            }
                         </script>                      
                         <li class="hidden">
                             <form action="/LogOut" id="form-logOut" method="POST" enctype="multipart/form-data"></form> 

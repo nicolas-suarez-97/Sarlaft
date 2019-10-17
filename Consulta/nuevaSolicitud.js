@@ -1,0 +1,18 @@
+
+
+function direccion(select, input, dir){
+    var fullDir = document.getElementById(dir);
+    fullDir.innerHTML = "";    
+    for(var i=1; i<=5; i++){
+        fullDir.innerHTML += document.getElementById(select+i).value + " " + document.getElementById(input+i).value.toString().toUpperCase() + " ";        //.replace("-"," ")
+    }
+    fullDir.innerHTML = fullDir.innerHTML.split("-").join(" ");//.replaceAll("-"," ");
+    
+}
+
+function guardarDir( cancel, fullD, dir){
+    var fullDir = document.getElementById(fullD);
+    var dirResidencia = document.getElementById(dir);
+    dirResidencia.value = fullDir.innerHTML;
+    document.getElementById(cancel).click();
+}
