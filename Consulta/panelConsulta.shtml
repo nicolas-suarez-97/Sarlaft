@@ -42,7 +42,7 @@
                                 <i class="fa fa-plus" aria-hidden="true"></i>
                                 <span>Nueva Solicitud</span>
                             </a>
-                            <form action="/Nueva_Solicitud" id="nuevaSolicitud"  method="POST" enctype="multipart/form-data">                                                              
+                            <form action="Consulta/Nueva_Solicitud" id="nuevaSolicitud"  method="POST" enctype="multipart/form-data">                                                              
                             </form> 
                         </li>	
                         <li>
@@ -50,7 +50,7 @@
                                 <i class="material-icons">archive</i>
                                 <span>Solicitudes</span>
                             </a>
-                            <form action="/Solicitudes" id="solicitudes"  method="POST" enctype="multipart/form-data">                                                              
+                            <form action="Consulta/Solicitudes" id="solicitudes"  method="POST" enctype="multipart/form-data">                                                              
                             </form> 
                         </li>	
                         <li>
@@ -58,7 +58,7 @@
                                 <i class="material-icons">folder</i>
                                 <span>Consulta Sarlaft</span>
                             </a>
-                            <form action="/Consulta_Sarlaft" id="sarlaft"  method="POST" enctype="multipart/form-data">                                                              
+                            <form action="Consulta/Consulta_Sarlaft" id="sarlaft"  method="POST" enctype="multipart/form-data">                                                              
                             </form> 
                         </li>	
                         <!--<li>

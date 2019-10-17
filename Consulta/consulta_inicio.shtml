@@ -42,7 +42,7 @@
 								<h3 class=" ajg-title-dark" >CONSULTA DE DATOS SARLAFT</h3>   
 							</div>                    
 							<div class="col-sm-4">
-								<a type="button" href="Consulta/nuevaSolicitud.shtml" style="margin-top:10px;" class="btn btn-block ajg-dark-button"><i class="fa fa-plus"></i> Nueva Solicitud</a>
+								<a type="button" href="#" onclick="clickForm('nuevaSolicitud')" style="margin-top:10px;" class="btn btn-block ajg-dark-button"><i class="fa fa-plus"></i> Nueva Solicitud</a>
 							</div>						
 						</div>
 															
