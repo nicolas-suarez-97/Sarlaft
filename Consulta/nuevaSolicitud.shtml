@@ -31,7 +31,7 @@
 					</header>
                     
 					<!-- start: page -->
-					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Agregar_Cliente">
+					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Agregar_Cliente">
 						
 						<input type="text" hidden name="id" value="<!--4DTEXT [Users]ID-->">					
 						<div class="ajg-panel ">
@@ -47,7 +47,7 @@
 										<div class="form-group">
 											<label class="col-md-4 control-label">Tipo de Cliente</label>
 											<div class="col-md-8">
-												<select name="tipoPersona" class="form-control mb-md" required>
+												<select name="tipoCliente" class="form-control mb-md" required>
 													<option></option>
 													<option value="JURÍDICA">JURÍDICA</option>
 													<option value="NATURAL" >NATURAL</option>
@@ -310,7 +310,7 @@
 										<div class="form-group">
 											<label class="col-md-4 control-label" >Tipo de Empresa</label>                                                
 											<div class="col-md-8">
-												<input name="tipoEmpresa" type="text" class="form-control" required value="">
+												<input name="tipoEmpresa" type="text" class="form-control" value="">
 											</div>								  
 										</div>
 									</div>
