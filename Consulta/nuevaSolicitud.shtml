@@ -55,7 +55,17 @@
 											</div>    								  
 										</div>
 									</div>
-								</div>							
+								</div>	
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="col-md-4 control-label" >Nombre o Razón Social</label>                                                
+											<div class="col-md-8">
+												<input type="text" name="razonSocial" class="form-control mb-md" onkeyup="upperCase(this)"  required>											
+											</div>								  
+										</div>
+									</div>
+								</div>						
 								<br>
 								<div class=" top">
 									<div class="col">
