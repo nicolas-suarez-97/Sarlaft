@@ -51,7 +51,7 @@
                 <br>
                 <div class="panel " >  
 					<div class="panel-body" style="border-top-style:solid;border-color:rgb(0,38,62);border-width: 5px;">						
-						<form action="/Consulta_Inicio" method="post">
+						<form action="/Consulta/Consulta_Inicio" method="post">
 							<h3 class="ajg-title-dark">Consulta Sarlaft</h3>
 							<div class="form-group mb-lg">
 								<label>Usuario</label>
