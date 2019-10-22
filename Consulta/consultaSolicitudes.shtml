@@ -44,26 +44,8 @@
 							<div class="col-sm-4">
 								<a type="button" href="#" onclick="clickForm('nuevaSolicitud')" style="margin-top:10px;" class="btn btn-block ajg-dark-button"><i class="fa fa-plus"></i> Nueva Solicitud</a>
 							</div>						
-						</div>
-															
-						<div class="filters ajg-panel" id="filters">  
-							<div class="col-sm-12">
-								<div class="btn-group btn-group-justified">
-									<a class="btn btn-default" role="button" onclick="buscar('all')">Mostrar Todos</a>									
-									<a class="btn btn-default" role="button" data-toggle="modal" data-target="#menuAvanzado">Busqueda Avanzada</a>
-								</div>
-							</div>       							                                                                                                       
-							<div class="col-sm-12" style="display:none">
-								<form action="Consulta_Busqueda" method="POST" enctype="multipart/form-data" class="search nav-form">
-									<div class="input-group input-search">
-										<input type="text" class="form-control" name="buscar" id="buscar" placeholder="Buscar...">
-										<span class="input-group-btn">
-											<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-										</span>										
-									</div>
-								</form>                          
-							</div>                                
-						</div>
+                        </div>
+                        <br>																				
 					</div>  
 					<form action="Detalles_Sarlaft" id="detallesSarlaft" method="POST" enctype="multipart/form-data">
 						<input type="hidden" id="tableID" value="">
@@ -75,20 +57,26 @@
 									<thead>
 										<tr>
 											<th>Nombre Razón Social</th>
-											<th>Nivel de Riesgo</th>
-											<th>Documento</th>
-											<th>Dirección</th>
-											<th>Teléfono</th>
+											<th>Identificación</th>
+											<th>Email</th>
+											<th>Fecha Creación</th>
+                                            <th>Usuario Creación</th>
+                                            <th>Jurídico - Natural</th>
 										</tr>
 									</thead>
 									<tbody>
 										<!--4DLOOP [Clientes]-->
 										<tr class="dataRow">
-											<td ><a href="#" style="color:black" onclick="openView(<!--4DTEXT [Sarlaft]Documento_numero-->)"><!--4DTEXT  [Sarlaft]Nombre_Razon_Social--></a></td>
-											<td><!--4DTEXT [Sarlaft]Nivel_Riesgo--></td>
-											<td><!--4DTEXT [Sarlaft]Tipo_Documento--> : <!--4DTEXT [Sarlaft]Documento_numero--> <!--4DTEXT [Sarlaft]DV--></td>
-											<td><!--4DTEXT [Sarlaft]Direccion--></td>
-											<td><!--4DTEXT [Sarlaft]Telefono--></td>
+											<td ><a href="#" style="color:black" onclick="openView(<!--4DTEXT [Clientes]Identificacion-->)"><!--4DTEXT  [Clientes]Nombre_Razon_Social--></a></td>											
+											<td><!--4DTEXT [Clientes]Tipo_Documento--> : <!--4DTEXT [Clientes]Identificacion--></td>
+											<td><!--4DTEXT [Clientes]Email--></td>
+                                            <td><!--4DTEXT [Clientes]Fecha_Creacion--></td>
+                                            <td><!--4DTEXT [Clientes]Usuario_Creacion--></td>
+                                            <!--4DIF ([Clientes]Juridica_Natural)-->
+                                                <td>Jurídico</td>
+                                            <!--4DELSE-->
+                                                <td>Natural</td>
+                                            <!--4DENDIF-->
 										</tr>					
 										<!--4DENDLOOP-->		
 									</tbody>
