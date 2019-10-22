@@ -31,7 +31,7 @@
 					</header>
                     
 					<!-- start: page -->
-					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Agregar_Cliente">
+					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Consulta_Sarlaft">
 						
 						<input type="text" hidden name="id" value="<!--4DTEXT [Users]ID-->">					
 						<div class="ajg-panel ">
@@ -51,13 +51,17 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label class="col-md-4 control-label">Tipo Documento</label>
-											<p class="col-md-8"><!--4DTEXT [Sarlaft]Tipo_Documento--></p>								  
+											<div class="col-md-8">
+												<p class="form-control"><!--4DTEXT [Sarlaft]Tipo_Documento--></p>
+											</div>
 										</div>
 									</div>								
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label class="col-md-4 control-label">Documento</label>
-											<p class="col-md-8"><!--4DTEXT [Sarlaft]Documento_Numero-->  <!--4DTEXT [Sarlaft]DV--></p>										  
+											<div class="col-md-8">
+												<p class="form-control"><!--4DTEXT [Sarlaft]Documento_Numero-->  <!--4DTEXT [Sarlaft]DV--></p>
+											</div>
 										</div>
 									</div>
 								</div>						
@@ -66,13 +70,17 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label class="col-md-4 control-label">Dirección Principal</label>
-											<p class="col-md-8"><!--4DTEXT [Sarlaft]Direccin_Oficina--></p>								  
+											<div class="col-md-8">
+												<p class="form-control"><!--4DTEXT [Sarlaft]Direccin_Oficina--></p>								  
+											</div>
 										</div>
 									</div>								
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label class="col-md-4 control-label">Tipo Empresa</label>
-											<p class="col-md-8"><!--4DTEXT [Sarlaft]Tipo_Empresa--></p>										  
+											<div class="col-md-8">
+												<p class="form-control"><!--4DTEXT [Sarlaft]Tipo_Empresa--></p>
+											</div>
 										</div>
 									</div>
 								</div>						

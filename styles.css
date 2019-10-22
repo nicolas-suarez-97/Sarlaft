@@ -160,3 +160,7 @@
     color:rgb(0,38,62);
     text-decoration: underline;
 }
+
+.bold{
+    font-weight: bold;
+}
