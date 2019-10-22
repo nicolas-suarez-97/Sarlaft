@@ -18,7 +18,7 @@
 				<!-- end: sidebar -->			
 				<section role="main" class="content-body">
 					<header class="page-header ajg-color-dark "  >
-                        <h2>Solicitud</h2>
+                        <h2>Sarlaft</h2>
 					
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
@@ -45,7 +45,7 @@
 						<div class="ajg-panel ">
 							<div class="row top">
 								<div class="col-sm-6 top">
-									<h3 class=" ajg-title-dark" >NUEVA SOLICITUD</h3>
+									<h3 class=" ajg-title-dark" >SOLICITUD # <!--4DTEXT [Clientes]ID--></h3>
 								</div>															
 							</div>
 							
