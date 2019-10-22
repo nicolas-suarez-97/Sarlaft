@@ -32,7 +32,7 @@
 					</header>
                     
 					<!-- start: page -->
-					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta_Busqueda">                                    
+					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Detalles_Solicitud">                                    
 						<input type="text" hidden name="option" id="option">
 						<input type="text" hidden name="id" value="<!--4DTEXT [Users]ID-->">
 					</form>    
@@ -96,7 +96,7 @@
 			} );
 		</script>
 		
-		<script src="Consulta/consulta_inicio.js"></script>
+		<script src="./consulta_inicio.js"></script>
 		<!--4DINCLUDE scripts.html-->
 		
 	</body>
