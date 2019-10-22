@@ -59,9 +59,10 @@
 											<th>Nombre Razón Social</th>
 											<th>Identificación</th>
 											<th>Email</th>
+											<th>Ramo</th>
+                                            <th>Jurídico - Natural</th>
 											<th>Fecha Creación</th>
                                             <th>Usuario Creación</th>
-                                            <th>Jurídico - Natural</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -70,6 +71,7 @@
 											<td ><a href="#" style="color:black" onclick="openView(<!--4DTEXT [Clientes]Identificacion-->)"><!--4DTEXT  [Clientes]Nombre_Razon_Social--></a></td>											
 											<td><!--4DTEXT [Clientes]Tipo_Documento--> : <!--4DTEXT [Clientes]Identificacion--></td>
 											<td><!--4DTEXT [Clientes]Email--></td>
+											<td><!--4DTEXT [Clientes]Ramo--></td>
                                             <td><!--4DTEXT [Clientes]Fecha_Creacion--></td>
                                             <td><!--4DTEXT [Clientes]Usuario_Creacion--></td>
                                             <!--4DIF ([Clientes]Juridica_Natural)-->
