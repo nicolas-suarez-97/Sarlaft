@@ -66,7 +66,7 @@
 						</div>
 					</div>  
 					<form action="/Consulta/Detalles_Sarlaft" id="detallesSarlaft" method="POST" enctype="multipart/form-data">
-						<input type="hidden" id="tableID" value="">
+						<input type="hidden" id="tableID" name="tableID" value="">
 					</form>   
 					<div class="tabla1" id="tabla">
 						<section class="panel ajg-panel">

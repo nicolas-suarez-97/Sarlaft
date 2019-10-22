@@ -16,8 +16,9 @@ function buscar(action){
     form.submit();
 }
 
-function openView(id){
-    document.getElementById("tableID").value = id;
+function openView(id){    
+    var table = document.getElementById("tableID");    
+    table.value = id;    
     document.getElementById("detallesSarlaft").submit();
 
 }
