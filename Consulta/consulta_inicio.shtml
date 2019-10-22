@@ -106,7 +106,7 @@
 			} );
 		</script>
 		
-		<script src="./consulta_inicio.js"></script>
+		<script src="Consulta/consulta_inicio.js"></script>
 		<!--4DINCLUDE scripts.html-->
 		
 	</body>
