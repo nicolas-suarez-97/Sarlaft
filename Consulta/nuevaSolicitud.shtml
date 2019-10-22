@@ -62,9 +62,23 @@
 											<label class="col-md-4 control-label">Ramo</label>
 											<div class="col-md-8">
 												<select name="ramo" class="form-control mb-md" required>
-													<option></option>
-													<option value="Seguro de Vida">Seguro de Vida</option>
-													<option value="Seguro Automotriz">Seguro Automotriz</option>
+													<option value=""></option>													
+													<option value="Accidentes Personales">Accidentes Personales</option>
+													<option value="Automoviles">Automoviles</option>
+													<option value="Aviación - Casco">Aviación - Casco</option>
+													<option value="Constructor">Constructor</option>
+													<option value="Cumplimiento">Cumplimiento</option>
+													<option value="Exequial">Exequial</option>
+													<option value="Global Bancaria">Global Bancaria</option>
+													<option value="Incendio y Terremoto">Incendio y Terremoto</option>
+													<option value="Judicial">Judicial</option>
+													<option value="Manejo">Manejo</option>
+													<option value="Multiriesgo">Multiriesgo</option>
+													<option value="Responsabilidad Civil">Responsabilidad Civil</option>
+													<option value="Salud">Salud</option>
+													<option value="Seguro Deposito">Seguro Deposito</option>
+													<option value="Todo Riesgo">Todo Riesgo</option>
+													<option value="Vida">Vida</option>
 												</select>  
 											</div>    								  
 										</div>
