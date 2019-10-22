@@ -29,7 +29,7 @@
 						</div>
 					</header>
 					
-					<!--4DIF(creado=True)-->
+					<!--#4DIF (creado = True)-->
 					<div class="ajg-panel" style="background-color: #47a447;">
 						<div class="row " style="display: flex; align-items: center">
 							<div class="col-sm-6">	
@@ -37,7 +37,7 @@
 							</div>								
 						</div>
 					</div>
-					<!--4DENDIF-->
+					<!--#4DENDIF-->
 					<!-- start: page -->
 					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Solicitudes">
 						
@@ -55,11 +55,11 @@
 										<div class="form-group">
 											<label class="col-md-4 control-label">Tipo de Cliente</label>
 											<div class="col-md-8">
-												<!--4DIF([Clientes]Juridica_Natural = True)-->
+												<!--#4DIF ([Clientes]Juridica_Natural = True)-->
 												<p>JURÍDICO</p>
-												<!--4DELSE-->
+												<!--#4DELSE-->
 												<p>NATURAL</p>
-												<!--4DENDIF-->
+												<!--#4DENDIF-->
 											</div>    								  
 										</div>
 									</div>
