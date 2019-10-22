@@ -33,12 +33,12 @@
 					<!-- start: page -->
 					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Consulta_Sarlaft">
 						
-						<input type="text" hidden name="id" value="<!--4DTEXT [Users]ID-->">					
+						<input type="text" hidden name="id" value="<!--4DTEXT [Users]ID-->">
 						<div class="ajg-panel ">
 							<div class="row top">
 								<div class="col-sm-6">
-									<h3 class=" ajg-title-dark" style="font-weight: bold;"><!--4DTEXT [Sarlaft]Nombre_Razon_Social--></h3>								
-								</div>							
+									<h3 class=" ajg-title-dark" style="font-weight: bold;"><!--4DTEXT [Sarlaft]Nombre_Razon_Social--></h3>
+								</div>
 							</div>
 							
 							<div class="panel-body ajg-title-dark">
@@ -55,7 +55,7 @@
 												<p class="form-control"><!--4DTEXT [Sarlaft]Tipo_Documento--></p>
 											</div>
 										</div>
-									</div>								
+									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label class="col-md-4 control-label">Documento</label>

@@ -1,0 +1,85 @@
+NATURAL
+
+Información Básica:
+	Tipo Documento
+	Numero
+	Nombres
+	Primer Apellido
+	Segundo Apellido
+	Fecha Nacimiento
+	Nacionalidad 1 - 2
+	Email
+	Direccion - Res
+	Depto
+	Ciudad
+	Telefono
+	Celular
+	Actividad Principal
+	Sector
+	Ciiu
+	Ocupación
+	Cargo
+	Empresa
+	Dir oficina
+	Tel - Oficina
+
+	Prod que comercializa
+	Persona Públicoamente Expuesta ? 
+	Vinculo con persona Públicamente Exp
+	Adminsitra Rec públicos
+	Obligaciones tributarias en otro pais
+
+Declaración de Origen de Fondos
+	Origen
+
+Actividades en Operaciones Internacionales
+	Transac en moneda extranjera
+	Prod financieros en el exterior
+	Cuentas en moneda Extranjera
+
+Información sobre relcamaciones en seguros
+	
+
+JURÍDICO
+
+Información Básica
+	Nombre o Razón Social
+	Tipo Doc
+	Nit
+	DV
+	Dir principal
+	Tipo Empresa
+	Ciiu
+	Sector
+	Departamento
+	Ciudad
+	Telefono
+	Email
+	Sucursal dir
+
+Representante Legal
+	Nombres
+	Primer Apellido
+	Segundo Apellido
+	Tipo Doc
+	Numero
+	Lugar Nacimiento
+	Nacionalidad 1-2
+	Email
+	Dir Residencia
+	Ciudad
+	Telefono
+	Celular
+	Personas Expuestas?
+	Recursos públicos?
+	obligaciones tributarias?
+
+Declaración de Origen de Fondos
+	Origen de Fondos
+
+Actividades en Operaciones internacionales
+	Moneda Extranjera
+	Productos financieros en el exterior
+	Moneda Extranjera
+
+
