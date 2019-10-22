@@ -12,7 +12,7 @@
                 <!--4DINCLUDE header.html-->
 			<!-- end: header -->
 
-			<div class="inner-wrapper">
+			<h4 class="inner-wrapper">
 				<!-- start: sidebar -->
 			        <!--#4DINCLUDE panelConsulta.shtml-->
 				<!-- end: sidebar -->			
@@ -31,13 +31,13 @@
 					</header>
 					
 					<!--4DIF(creado=True)-->
-					<div class="ajg-panel" style="background-color: #47a447;">
-						<div class="row " style="display: flex; align-items: center">
-							<div class="col-sm-6">	
+					<h4 class="ajg-panel" style="background-color: #47a447;">
+						<h4 class="row " style="display: flex; align-items: center">
+							<h4 class="col-sm-6">	
 								<h4 style="color:white; margin: 20px 0px 20px 20px;" ><i class="fa fa-check"></i>  Creación éxitosa </h4>
-							</div>								
-						</div>
-					</div>
+							</h4>								
+						</h4>
+					</h4>
 					<!--4DENDIF-->
 					<!-- start: page -->
 					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Solicitudes">

@@ -72,13 +72,13 @@
 											<td><!--4DTEXT [Clientes]Tipo_Documento--> : <!--4DTEXT [Clientes]Identificacion--></td>
 											<td><!--4DTEXT [Clientes]Email--></td>
 											<td><!--4DTEXT [Clientes]Ramo--></td>
-                                            <td><!--4DTEXT [Clientes]Fecha_Creacion--></td>
-                                            <td><!--4DTEXT [Clientes]Usuario_Creacion--></td>
                                             <!--4DIF ([Clientes]Juridica_Natural)-->
                                                 <td>Jurídico</td>
                                             <!--4DELSE-->
                                                 <td>Natural</td>
                                             <!--4DENDIF-->
+                                            <td><!--4DTEXT [Clientes]Fecha_Creacion--></td>
+                                            <td><!--4DTEXT [Clientes]Usuario_Creacion--></td>
 										</tr>					
 										<!--4DENDLOOP-->		
 									</tbody>
