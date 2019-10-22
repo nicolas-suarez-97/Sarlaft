@@ -47,7 +47,7 @@
 						</div>
 															
 						<div class="filters ajg-panel" id="filters">  
-							<div class="col-sm-12">
+							<div class="col-sm-12" hidden>
 								<div class="btn-group btn-group-justified">
 									<a class="btn btn-default" role="button" onclick="buscar('all')">Mostrar Todos</a>									
 									<a class="btn btn-default" role="button" data-toggle="modal" data-target="#menuAvanzado">Busqueda Avanzada</a>
@@ -106,7 +106,7 @@
 			} );
 		</script>
 		
-		<script src="Consulta/consulta_inicio.js"></script>
+		<script src="./consulta_inicio.js"></script>
 		<!--4DINCLUDE scripts.html-->
 		
 	</body>
