@@ -65,7 +65,9 @@
 							</div>                                
 						</div>
 					</div>  
-										                  
+					<form action="Detalles_Sarlaft" id="detallesSarlaft" method="POST" enctype="multipart/form-data">
+						<input type="hidden" id="tableID" value="">
+					</form>   
 					<div class="tabla1" id="tabla">
 						<section class="panel ajg-panel">
 							<div class="panel-body" >
@@ -82,7 +84,7 @@
 									<tbody>
 										<!--4DLOOP [Sarlaft]-->
 										<tr class="dataRow">
-											<td ><a href="#" style="color:black" onclick="openView(<!--4DTEXT [Sarlaft]ID-->)"><!--4DTEXT  [Sarlaft]Nombre_Razon_Social--></a></td>
+											<td ><a href="#" style="color:black" onclick="openView(<!--4DTEXT [Sarlaft]Documento_numero-->)"><!--4DTEXT  [Sarlaft]Nombre_Razon_Social--></a></td>
 											<td><!--4DTEXT [Sarlaft]Nivel_Riesgo--></td>
 											<td><!--4DTEXT [Sarlaft]Tipo_Documento--> : <!--4DTEXT [Sarlaft]Documento_numero--> <!--4DTEXT [Sarlaft]DV--></td>
 											<td><!--4DTEXT [Sarlaft]Direccion--></td>

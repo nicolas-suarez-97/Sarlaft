@@ -7,6 +7,33 @@ SILA3003t_lt
 localcheck.com.co
 infolaf
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 curl POST https://infolaftsearch.com/infolaft/login -H "Content-Type:application/x-www-form-urlencoded" -H "Accept: application/json" --data "username=webservice.ajg&password=Infolaft%24242" -v
 
 

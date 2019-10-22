@@ -36,9 +36,9 @@
 						<input type="text" hidden name="id" value="<!--4DTEXT [Users]ID-->">					
 						<div class="ajg-panel ">
 							<div class="row top">
-								<div class="col-sm-6">
+								<div class="col-sm-6 top">
 									<h3 class=" ajg-title-dark" >NUEVA SOLICITUD</h3>								
-								</div>							
+								</div>															
 							</div>
 							
 							<div class="panel-body ajg-title-dark">
@@ -49,29 +49,44 @@
 											<div class="col-md-8">
 												<select name="tipoCliente" class="form-control mb-md" required>
 													<option></option>
-													<option value="JURÍDICA">JURÍDICA</option>
+													<option value="JURÍDICO">JURÍDICO</option>
 													<option value="NATURAL" >NATURAL</option>
 												</select>  
 											</div>    								  
 										</div>
 									</div>
-								</div>	
+								</div>																						
 								<div class="row">
-									<div class="col-sm-6">
+									<div class="col-sm-6 " >									
 										<div class="form-group">
-											<label class="col-md-4 control-label" >Nombre o Razón Social</label>                                                
+											<label class="col-md-4 control-label">Ramo</label>
 											<div class="col-md-8">
-												<input type="text" name="razonSocial" class="form-control mb-md" onkeyup="upperCase(this)"  required>											
-											</div>								  
+												<select name="ramo" class="form-control mb-md" required>
+													<option></option>
+													<option value="Seguro de Vida">Seguro de Vida</option>
+													<option value="Seguro Automotriz">Seguro Automotriz</option>
+												</select>  
+											</div>    								  
 										</div>
 									</div>
-								</div>						
-								<br>
+								</div>
+								<br>								
 								<div class=" top">
 									<div class="col">
 										<h4 class="ajg-title-dark" style="font-weight: bold;">Datos Básicos</h4>
 									</div>
 								</div>
+								<div class="row">
+									<div class="col-sm-8">
+										<div class="form-group">
+											<label class="col-md-3 control-label" >Nombre o Razón Social</label>                                                
+											<div class="col-md-9">
+												<input type="text" name="razonSocial" class="form-control mb-md" onkeyup="upperCase(this)"  required>											
+											</div>								  
+										</div>
+									</div>
+								</div>	
+								<br>
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
@@ -88,7 +103,7 @@
 											<label class="col-md-4 control-label" >Segundo Nombre</label>                                                
 											<div class="col-md-8">
 												<input name="segundoNombre" type="text" class="form-control" 
-												onkeyup="upperCase(this)" 
+												onkeyup="upperCase(this)"
 												value="">
 											</div>								  
 										</div>
@@ -111,7 +126,7 @@
 											<label class="col-md-4 control-label" >Segundo Apellido</label>                                                
 											<div class="col-md-8">
 												<input name="segundoApellido" type="text" class="form-control" 
-												onkeyup="upperCase(this)" 
+												onkeyup="upperCase(this)" required
 												value="">
 											</div>								  
 										</div>
@@ -211,7 +226,7 @@
 											<div class="modal-content">
 												<div class="modal-header">
 													<h3 style="font-weight: bold" class="modal-title" id="exampleModalLabel">Generador de Dirección</h3>                                                                     
-													<h5>Para realizar la separación entre números utilice el símbolo de guión (-)</h5>
+													<h5>Para realizar la separación entre números utilice un espacio.</h5>
 												</div>
 												<div class="modal-body">
 													<div class="row" style="display:flex; align-items:flex-start ;justify-content:center">
@@ -220,8 +235,7 @@
 														</div>
 														<div class="col-sm-3">
 															<h6 id="fullDir"><!--4DTEXT [Sarlaft]Direccion--></h6>                                                                
-														</div>
-													
+														</div>													
 													</div>
 													<br>
 													<div class="row" style="display:flex; align-items:center;justify-content:center">

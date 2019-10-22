@@ -17,5 +17,7 @@ function buscar(action){
 }
 
 function openView(id){
-    alert(id);
+    document.getElementById("tableID").value = id;
+    document.getElementById("detallesSarlaft").submit();
+
 }

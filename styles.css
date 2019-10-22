@@ -120,7 +120,7 @@
 .top{    
     margin:10px;    
     display:flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 .top .btn-group{

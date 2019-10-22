@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="fixed sidebar-left-collapsed">
+	<head>
+		<!--4DINCLUDE headIncludes.html-->
+		<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">-->
+		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<section class="body">
+
+			<!-- start: header -->
+                <!--4DINCLUDE header.html-->
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+			        <!--#4DINCLUDE panelConsulta.shtml-->
+				<!-- end: sidebar -->			
+				<section role="main" class="content-body">
+					<header class="page-header ajg-color-dark "  >
+                        <h2>Detalles de Sarlaft</h2>
+					
+						<div class="right-wrapper pull-right">
+							<ol class="breadcrumbs">
+								<li>									
+									<i class="fa fa-home title" style="padding-right: 1cm; color:white"></i>									
+								</li>								
+							</ol>
+												
+						</div>
+					</header>
+                    
+					<!-- start: page -->
+					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Agregar_Cliente">
+						
+						<input type="text" hidden name="id" value="<!--4DTEXT [Users]ID-->">					
+						<div class="ajg-panel ">
+							<div class="row top">
+								<div class="col-sm-6">
+									<h3 class=" ajg-title-dark" style="font-weight: bold;">XXXXXXXXX<!--4DTEXT [Sarlaft]Nombre_Razon_Social--></h3>								
+								</div>							
+							</div>
+							
+							<div class="panel-body ajg-title-dark">
+                                <div class=" top">
+									<div class="col">
+										<h4 class="ajg-title-dark" style="font-weight: bold;">Información Básica</h4>
+									</div>
+								</div>
+                                <div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="col-md-4 control-label">Tipo Documento</label>
+											<p class="col-md-8">xxxxxx<!--4DTEXT [Sarlaft]Tipo_Documento--></p>								  
+										</div>
+									</div>								
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="col-md-4 control-label">Documento</label>
+											<p class="col-md-8">xxxxxx<!--4DTEXT [Sarlaft]Documento_Numero-->  <!--4DTEXT [Sarlaft]DV--></p>										  
+										</div>
+									</div>
+								</div>						
+                                <br>
+                                <div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="col-md-4 control-label">Dirección Principal</label>
+											<p class="col-md-8">xxxxxx<!--4DTEXT [Sarlaft]Direccin_Oficina--></p>								  
+										</div>
+									</div>								
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="col-md-4 control-label">Tipo Empresa</label>
+											<p class="col-md-8">xxxxxx<!--4DTEXT [Sarlaft]Tipo_Empresa--></p>										  
+										</div>
+									</div>
+								</div>						
+								<br>
+								
+                            <!--                                                                                             
+                                [Sarlaft]CIIU
+                                [Sarlaft]CIIU_cod_Secundaria
+                                [Sarlaft]Sector
+                                [Sarlaft]Departamento
+                                [Sarlaft]Ciudad
+                                [Sarlaft]Telefono
+                                [Sarlaft]EMail
+                            -->
+                                
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="col-md-4 control-label" >Primer Apellido</label>                                                
+											<div class="col-md-8">
+												<input name="primerApellido" type="text" class="form-control" 
+												onkeyup="upperCase(this)" required 
+												value="">
+											</div>								  
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="col-md-4 control-label" >Segundo Apellido</label>                                                
+											<div class="col-md-8">
+												<input name="segundoApellido" type="text" class="form-control" 
+												onkeyup="upperCase(this)" 
+												value="">
+											</div>								  
+										</div>
+									</div>
+								</div>
+							
+								<br>		
+								<button type="button"  class="btn ajg-button col-md-4 col-md-offset-4">Regresar</button>
+								<br>
+							</div>				
+						</div>
+					</form>
+					<!-- end: page -->
+				</section>
+			</div>			
+		</section>				
+		<br>
+		<br>
+		<script src="../funcionesAuxiliares.js"></script>		
+		<script src="nuevaSolicitud.js"></script>
+		<!--4DINCLUDE scripts.html-->	
+	</body>
+</html>
