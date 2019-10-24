@@ -120,7 +120,7 @@
 								</div>
 							
 								<br>		
-								<button type="button"  class="btn ajg-button col-md-4 col-md-offset-4">Regresar</button>
+								<button type="submit"  class="btn ajg-button col-md-4 col-md-offset-4">Regresar</button>
 								<br>
 							</div>				
 						</div>
