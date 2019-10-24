@@ -38,7 +38,7 @@
 							<div class="row top">
 								<div class="col-sm-6">
 									<h3 class=" ajg-title-dark" style="font-weight: bold;"><!--4DTEXT [Sarlaft]Nombre_Razon_Social--></h3>
-									<h6><!--4DTEXT [Sarlaft]Fecha_Diligenciamiento--></h6>
+									<h6>Fecha Diligenciamiento: <!--4DTEXT [Sarlaft]Fecha_Diligenciamiento--></h6>
 								</div>
 								
 							</div>
