@@ -19,14 +19,15 @@ document.getElementById("add").addEventListener("click", function () {
     var tributOtroPais = document.getElementById("tributOtroPais").value;
     
     
-    if(tipoId!="" && numId!="" &&  nombre!="" && 
-    porcentaje!="" && cotizaBolsa!="" && publicamenteExpuesta!="" && tributOtroPais!=""){
+    if(tipoId!="" && numId.length > 4 &&  nombre!="" && 
+    porcentaje!="" && cotizaBolsa!="" && 
+    publicamenteExpuesta!="" && tributOtroPais!="" ){
         console.log("add");
         option.value="add";
         console.log(option);
         form.submit();
     }else{
-        alert("Parece que hay campos sin llenar!!");
+        alert("Parece que hay campos sin finalizar!");
     }
   
 });

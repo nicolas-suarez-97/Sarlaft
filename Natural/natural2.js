@@ -13,10 +13,9 @@ function direccion(select, input, dir){
     var fullDir = document.getElementById(dir);
     fullDir.innerHTML = "";    
     for(var i=1; i<=5; i++){
+        document.getElementById(input+i).value = document.getElementById(input+i).value.split(/[`~!@#$%^&*()_|+\-¿¡=?°¬;:'",.<>\{\}\[\]\\\/]/gi).join(""); 
         fullDir.innerHTML += document.getElementById(select+i).value + " " + document.getElementById(input+i).value.toString().toUpperCase() + " ";        //.replace("-"," ")
-    }
-    fullDir.innerHTML = fullDir.innerHTML.split("-").join(" ");//.replaceAll("-"," ");
-    
+    }        
 }
 
 function guardarDir( cancel, fullD, dir){

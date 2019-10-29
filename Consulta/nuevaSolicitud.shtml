@@ -95,7 +95,7 @@
 										<div class="form-group">
 											<label class="col-md-3 control-label" >Nombre o Razón Social</label>                                                
 											<div class="col-md-9">
-												<input type="text" name="razonSocial" class="form-control mb-md" onkeyup="upperCase(this)"  required>											
+												<input type="text" name="razonSocial" class="form-control mb-md" onkeyup="upperCase(this,false)"  required>											
 											</div>								  
 										</div>
 									</div>
@@ -107,7 +107,7 @@
 											<label class="col-md-4 control-label" >Primer Nombre</label>                                                
 											<div class="col-md-8">
 												<input name="primerNombre" type="text" class="form-control" 
-												onkeyup="upperCase(this)" required 
+												onkeyup="upperCase(this,false)" required 
 												value="">
 											</div>								  
 										</div>
@@ -117,7 +117,7 @@
 											<label class="col-md-4 control-label" >Segundo Nombre</label>                                                
 											<div class="col-md-8">
 												<input name="segundoNombre" type="text" class="form-control" 
-												onkeyup="upperCase(this)"
+												onkeyup="upperCase(this,false)"
 												value="">
 											</div>								  
 										</div>
@@ -130,7 +130,7 @@
 											<label class="col-md-4 control-label" >Primer Apellido</label>                                                
 											<div class="col-md-8">
 												<input name="primerApellido" type="text" class="form-control" 
-												onkeyup="upperCase(this)" required 
+												onkeyup="upperCase(this,false)" required 
 												value="">
 											</div>								  
 										</div>
@@ -140,7 +140,7 @@
 											<label class="col-md-4 control-label" >Segundo Apellido</label>                                                
 											<div class="col-md-8">
 												<input name="segundoApellido" type="text" class="form-control" 
-												onkeyup="upperCase(this)" required
+												onkeyup="upperCase(this,false)" required
 												value="">
 											</div>								  
 										</div>
@@ -179,7 +179,7 @@
 										<div class="form-group">
 											<label class="col-md-3 control-label" >País</label>                                                
 											<div class="col-md-9">
-												<input name="pais" type="text" class="form-control" value="" onkeyup="upperCase(this)"  required>
+												<input name="pais" type="text" class="form-control" value="" onkeyup="upperCase(this,false)"  required>
 											</div>								  
 										</div>
 									</div>
@@ -190,7 +190,7 @@
 										<div class="form-group">
 											<label class="col-md-3 control-label" >Departamento</label>                                                
 											<div class="col-md-9">
-												<input type="text" name="depto" list="deptos" class="form-control mb-md" onkeyup="upperCase(this)"  required>
+												<input type="text" name="depto" list="deptos" class="form-control mb-md" onkeyup="upperCase(this,false)"  required>
 												<datalist id="deptos">
 													<option></option>
 													<!--#4DINCLUDE ../departamentos.shtml-->
@@ -204,7 +204,7 @@
 										<div class="form-group">
 											<label class="col-md-3 control-label" >Ciudad</label>                                                
 											<div class="col-md-9">
-												<input name="ciudad" list="listado" type="text" class="form-control" value="" onkeyup="upperCase(this)"  required>
+												<input name="ciudad" list="listado" type="text" class="form-control" value="" onkeyup="upperCase(this,false)"  required>
 												<datalist id="listado">
 													<!--4DINCLUDE ../listadoCiudades.shtml-->
 												</datalist>

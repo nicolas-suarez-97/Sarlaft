@@ -63,7 +63,7 @@
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label class="control-label" >Ciudad</label>                                                
-                                                <input type="text" list="ciudades" onkeyup="upperCase(this)" value="<!--4DTEXT [Sarlaft]Ciudad_Diligenciamiento-->" class="form-control" id="inputCiudad" placeholder="Ciudad diligenciamiento" required name="ciudadDiligenciamiento" autocomplete="off">
+                                                <input type="text" list="ciudades" onkeyup="upperCase(this,false)" value="<!--4DTEXT [Sarlaft]Ciudad_Diligenciamiento-->" class="form-control" id="inputCiudad" placeholder="Ciudad diligenciamiento" required name="ciudadDiligenciamiento" autocomplete="off">
                                                 <datalist id="ciudades">
                                                     <!--4DINCLUDE ../ciudades.shtml-->
                                                 </datalist>
@@ -72,7 +72,7 @@
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label class="control-label" >Sucursal</label>                                                
-                                                <input type="text" value="<!--4DTEXT [Sarlaft]Sucursal-->" onkeyup="upperCase(this)" class="form-control" id="inputSucursal" placeholder="Sucursal" required name="sucursal" autocomplete="off">                                                
+                                                <input type="text" value="<!--4DTEXT [Sarlaft]Sucursal-->" onkeyup="upperCase(this,false)" class="form-control" id="inputSucursal" placeholder="Sucursal" required name="sucursal" autocomplete="off">                                                
                                             </div>
                                         </div>
                                     </div>                                    

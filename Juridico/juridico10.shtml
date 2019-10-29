@@ -46,15 +46,15 @@
                                             ¿Ha presentado reclamaciones o ha recibido indemnizaciones en seguros en los dos últimos años?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="si" type="radio" name="reclamacion" required  <!--4DIF ([Sarlaft]Reclamacion_Indem=True)-->checked<!--4DENDIF-->/>
+                                            <input value="si" type="radio" onclick="makeRequiredJ('anyo','ramo','compañia','valor','resultado')" name="reclamacion" required  <!--4DIF ([Sarlaft]Reclamacion_Indem=True)-->checked<!--4DENDIF-->/>
                                             <label>Si</label>   
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="no" type="radio" name="reclamacion"  <!--4DIF ([Sarlaft]Reclamacion_Indem=False)-->checked<!--4DENDIF-->/>
+                                            <input value="no" type="radio" onclick="unMakeRequiredJ('anyo','ramo','compañia','valor','resultado')" name="reclamacion"  <!--4DIF ([Sarlaft]Reclamacion_Indem=False)-->checked<!--4DENDIF-->/>
                                             <label>No</label>
                                         </div>                                               
                                     </div>
-                                                                                                                                                                                     
+                                    <input type="hidden" id="numReclamaciones" value="<!--4DTEXT Records in Selection([Reclamaciones])-->">
                                     <div class="table-responsive">
                                         <table class="table mb-none">
             
@@ -71,16 +71,41 @@
                                             <tbody>                                                    
                                                 <tr >                                                          
                                                     <td>
-                                                        <input name="año1"  id="anyo" type="number" class="form-control">
+                                                        <input name="año1"  id="anyo" 
+                                                        onkeypress="if(this.value.length == 4) return false" 
+                                                        onfocusout="valMinLength(this,4)"
+                                                        value="<!--#4DTEXT Number(Year of(Current date))-->"
+                                                        type="number" class="form-control">
+                                                    </td>
+                                                    <td>                                                        
+                                                        <select name="ramo1" id="ramo" class="form-control">
+                                                            <option value=""></option>													
+                                                            <option value="Accidentes Personales">Accidentes Personales</option>
+                                                            <option value="Automoviles">Automoviles</option>
+                                                            <option value="Aviación - Casco">Aviación - Casco</option>
+                                                            <option value="Constructor">Constructor</option>
+                                                            <option value="Cumplimiento">Cumplimiento</option>
+                                                            <option value="Exequial">Exequial</option>
+                                                            <option value="Global Bancaria">Global Bancaria</option>
+                                                            <option value="Incendio y Terremoto">Incendio y Terremoto</option>
+                                                            <option value="Judicial">Judicial</option>
+                                                            <option value="Manejo">Manejo</option>
+                                                            <option value="Multiriesgo">Multiriesgo</option>
+                                                            <option value="Responsabilidad Civil">Responsabilidad Civil</option>
+                                                            <option value="Salud">Salud</option>
+                                                            <option value="Seguro Deposito">Seguro Deposito</option>
+                                                            <option value="Todo Riesgo">Todo Riesgo</option>
+                                                            <option value="Vida">Vida</option>
+                                                            <option value="Otro">Otro</option>
+                                                        </select>  
                                                     </td>
                                                     <td>
-                                                        <input name="ramo1" id="ramo" type="text" class="form-control">
+                                                        <input name="compañia1" id="compañia" onkeyup="upperCase(this,true)" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="compañia1" id="compañia" type="text" class="form-control">
-                                                    </td>                                                   
-                                                    <td>
-                                                        <input name="valor1" id="valor" type="number" class="form-control">
+                                                        <input name="valor1" id="valor" min="0"
+                                                        onkeyup="replaceSpecialCharactersNumber(this)"
+                                                        type="number" class="form-control">
                                                     </td>
                                                     <td>
                                                         <select name="resultado1" id="resultado" class="form-control mb-md">

@@ -58,7 +58,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <label class="col-md-2 control-label" style="font-size:20px;">Origen de Fondos:</label>                                                                                        
-                                            <textarea name="origenFondos"  type="text" class="form-control" required><!--4DTEXT [Sarlaft]Origen_fondos--> </textarea>
+                                            <textarea name="origenFondos" required type="text" class="form-control" onkeyup="upperCase(this,true)" onchange="validateNA(this)" required><!--4DTEXT [Sarlaft]Origen_fondos--> </textarea>
                                         </div>                                                                              
                                     </div>
                                     <br>

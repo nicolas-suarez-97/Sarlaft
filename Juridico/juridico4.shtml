@@ -87,13 +87,22 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <input name="numId1" id="numId" type="number" class="form-control" autocomplete="off" >
+                                                                <input name="numId1" id="numId"
+                                                                onkeyup="replaceSpecialCharactersNumber(this)"
+                                                                onkeypress="if(this.value.length == 10) return false"
+                                                                onfocusout="valMinLength(this,5)"
+                                                                type="number" class="form-control" autocomplete="off" >
                                                             </td>
                                                             <td>
-                                                                <input name="nombre1" id="nombre" type="text" class="form-control" autocomplete="off" >
+                                                                <input name="nombre1" id="nombre"  
+                                                                onkeyup="upperCase(this,true)" onchange="validateNA(this)"
+                                                                type="text" class="form-control" autocomplete="off" >
                                                             </td>
                                                             <td>
-                                                                <input name="porcent1" id="porcentaje" type="number" onKeyPress="if(this.value.length==2) return false;" min="0" max="100" class="form-control" autocomplete="off" max=100 >
+                                                                <input name="porcent1" id="porcentaje" type="number" 
+                                                                onKeyPress="if(this.value.length==2) return false;" 
+                                                                onkeyup="replaceSpecialCharactersNumber(this)"
+                                                                min="0" max="100" class="form-control" autocomplete="off" max=100 >
                                                             </td>
                                                             <td>
                                                                 <select name="cotizaBolsa1" id="cotizaBolsa" class="form-control mb-md" >

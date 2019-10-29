@@ -46,7 +46,7 @@
                                                 <input name="nombre" type="text" class="form-control" 
                                                 placeholder="Nombre" data-container=".row" data-toggle="popover" 
                                                 data-trigger="hover" data-placement="top" 
-                                                data-content="Nombre del Representante Legal" onkeyup="upperCase(this)" required
+                                                data-content="Nombre del Representante Legal" onkeyup="upperCase(this,true)" onchange="validateNA(this)" required
                                                 value="<!--4DTEXT [Sarlaft]Nombres-->"> 
                                             </div>    
                                         </div> 
@@ -56,7 +56,7 @@
                                                 <div class="col-md-8">
                                                     <input name="primerApellido" type="text" class="form-control" 
                                                     placeholder="Primer Apellido - Representante Legal" data-container=".row" 
-                                                    data-toggle="popover" data-trigger="hover" onkeyup="upperCase(this)" data-placement="top" 
+                                                    data-toggle="popover" data-trigger="hover" onkeyup="upperCase(this,true)" onchange="validateNA(this)" data-placement="top" 
                                                     data-content="Primer Apellido del Representante Legal" required 
                                                     value="<!--4DTEXT [Sarlaft]Primer_Apellido-->">                                                    
                                                 </div>
@@ -68,7 +68,7 @@
                                             <div class="col-md-8">
                                                 <input name="segundoApellido" type="text" class="form-control" 
                                                 placeholder="Segundo Apellido" data-container=".row" data-toggle="popover" 
-                                                data-trigger="hover" data-placement="top" onkeyup="upperCase(this)"
+                                                data-trigger="hover" data-placement="top" onkeyup="upperCase(this,true)" onchange="validateNA(this)"
                                                 data-content="Segundo Apellido del Representante Legal" required
                                                 value="<!--4DTEXT [Sarlaft]Segundo_Apellido-->"> 
                                             </div>    
@@ -94,7 +94,7 @@
                                             <div  class="form-group">
                                                 <label class="col-sm-4 control-label">Número</label>
                                                 <div class="col-sm-8">
-                                                    <input name="numDocRep" type="number" class="form-control" placeholder="Número" value="<!--4DTEXT [Sarlaft]Documento_Numero-->">
+                                                    <input name="numDocRep" type="number" class="form-control" readonly style="background-color:white" placeholder="Número" value="<!--4DTEXT [Sarlaft]Documento_Numero-->">
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                    
@@ -113,7 +113,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Lugar de Expedición</label>
                                                 <div class="col-md-8">
-                                                    <input name="lugarExped" list="listado" onkeyup="upperCase(this)" type="text" class="form-control" value="<!--4DTEXT [Sarlaft]Lugar_Expedicion-->">
+                                                    <input name="lugarExped" list="listado" onkeyup="upperCase(this,true)" onchange="validateNA(this)" type="text" class="form-control" value="<!--4DTEXT [Sarlaft]Lugar_Expedicion-->">
                                                     <datalist id="listado">
                                                         <!--4DINCLUDE ../listadoCiudades.shtml-->
                                                     </datalist>
@@ -132,7 +132,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Lugar de Nacimiento</label>
                                                 <div class="col-md-8">
-                                                    <input name="lugarNacimiento" list="listado" onkeyup="upperCase(this)" type="text" class="form-control" required  value="<!--4DTEXT [Sarlaft]Lugar_Nacimiento-->">
+                                                    <input name="lugarNacimiento" list="listado" onkeyup="upperCase(this,true)" onchange="validateNA(this)" type="text" class="form-control" required  value="<!--4DTEXT [Sarlaft]Lugar_Nacimiento-->">
                                                 </div>
                                             </div>
                                         </div>                                                                                                                    
@@ -143,7 +143,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Nacionalidad 1</label>
                                                 <div class="col-md-8">
-                                                    <input name="nacionalidad1" type="text" onkeyup="upperCase(this)" class="form-control" placeholder="Nacionalidad 1" required  value="<!--4DTEXT [Sarlaft]Nacinalidad1-->">
+                                                    <input name="nacionalidad1" type="text" onkeyup="upperCase(this,true)" onchange="validateNA(this)" class="form-control" placeholder="Nacionalidad 1" required  value="<!--4DTEXT [Sarlaft]Nacinalidad1-->">
                                                 </div>
                                             </div>
                                         </div>       
@@ -151,7 +151,11 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Nacionalidad 2</label>
                                                 <div class="col-md-8">
-                                                    <input name="nacionalidad2" type="text" onkeyup="upperCase(this)" class="form-control" placeholder="Nacionalidad 2"  value="<!--4DTEXT [Sarlaft]Nacionalidad2-->">
+                                                    <!--#4DIF ([Sarlaft]Nacionalidad2="")-->
+                                                        <input name="nacionalidad2" type="text" onkeyup="upperCase(this,false)" onchange="validateBlank(this)" class="form-control" placeholder="Nacionalidad 2"  value="N/A">
+                                                    <!--#4DELSE-->                                                    
+                                                        <input name="nacionalidad2" type="text" onkeyup="upperCase(this,false)" onchange="validateBlank(this)" class="form-control" placeholder="Nacionalidad 2"  value="<!--4DTEXT [Sarlaft]Nacionalidad2-->">
+                                                    <!--#4DENDIF-->
                                                 </div>
                                             </div>
                                         </div>     
@@ -159,7 +163,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">E-mail</label>
                                                 <div class="col-md-8">
-                                                    <input name="emailRep" type="email" class="form-control" placeholder="E-mail" required value="<!--4DTEXT [Sarlaft]EMail-->">
+                                                    <input name="emailRep" type="email" class="form-control" placeholder="E-mail"  onchange="validateNA(this)" required value="<!--4DTEXT [Sarlaft]EMail-->">
                                                 </div>
                                             </div>
                                         </div>                                                                                                                         
@@ -190,7 +194,7 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h3 style="font-weight: bold" class="modal-title" id="exampleModalLabel">Generador de Dirección</h3>                                                                     
-                                                        <h5>Para realizar la separación entre números utilice el símbolo de guión (-)</h5>
+                                                        <h5>Para realizar la separación entre números utilice un espacio en blanco.</h5>
                                                     </div>
                                                     <div class="modal-body">
                                                         <div class="row" style="display:flex; align-items:flex-start ;justify-content:center">
@@ -292,7 +296,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciudadRep" list="listado" onkeyup="upperCase(this)" type="text" class="form-control" placeholder="País"   value="<!--4DTEXT [Sarlaft]Ciudad_RepLegal-->">
+                                                    <input name="ciudadRep" list="listado" onkeyup="upperCase(this,false)" type="text" class="form-control" placeholder="País" required value="<!--4DTEXT [Sarlaft]Ciudad_RepLegal-->">
                                                 </div>
                                             </div>
                                         </div>
@@ -435,7 +439,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-6 control-label ">CIIU 2 (cod)</label>
                                                 <div class="col-md-6 ">                                                        
-                                                    <input type="number" id="codCiiu2" class="form-control" name="ciiuSecundario" required style="margin-left:5px;"
+                                                    <input type="number" id="codCiiu2" class="form-control" name="ciiuSecundario" style="margin-left:5px;"
                                                     autocomplete=off value="<!--4DTEXT [Sarlaft]CIIU_cod_Secundaria-->"
                                                     onKeyPress="if(this.value.length==4) return false;" min=0 max=9999
                                                     onchange="validateCIIU(this,'ciiu2')" onkeyup="validateErase(this,'ciiu1')"
@@ -458,8 +462,8 @@
                                         <div class="col-sm-6">
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ocupación</label>
-                                                <div class="col-md-8" >
-                                                    <input name="ocupacion" type="text" onkeyup="upperCase(this)" class="form-control" placeholder="Ocupación"  value="<!--4DTEXT [Sarlaft]Ocupacion-->" >
+                                                <div class="col-md-8" >                                                         
+                                                    <input name="ocupacion" type="text" onkeyup="upperCase(this,false)" required onfocus="validateBlank(this)" onchange="validateBlank(this)" class="form-control" placeholder="Ocupación"  value="<!--4DTEXT [Sarlaft]Ocupacion-->" >
                                                 </div>
                                             </div>
                                         </div>
@@ -467,7 +471,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Cargo</label>
                                                 <div class="col-md-8">
-                                                        <input name="cargo" type="text" onkeyup="upperCase(this)" class="form-control" placeholder="Cargo"  value="<!--4DTEXT [Sarlaft]Cargo-->" >
+                                                    <input name="cargo" type="text" onfocus="validateBlank(this)" onkeyup="upperCase(this,false)" required onchange="validateBlank(this)" class="form-control" placeholder="Cargo"  value="<!--4DTEXT [Sarlaft]Cargo-->" >
                                                 </div>
                                             </div>
                                         </div>                                              
@@ -479,7 +483,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Empresa Donde Trabaja</label>
                                                 <div class="col-md-8">
-                                                    <input name="empresaTrabaja" type="text" onkeyup="upperCase(this)" class="form-control" placeholder="Empresa Donde Trabaja"  value="<!--4DTEXT [Sarlaft]Empresa_Trabaja-->" >
+                                                    <input name="empresaTrabaja" type="text" onfocus="validateBlank(this)" onkeyup="upperCase(this,false)" required onchange="validateBlank(this)" class="form-control" placeholder="Empresa Donde Trabaja"  value="<!--4DTEXT [Sarlaft]Empresa_Trabaja-->" >
                                                 </div>
                                             </div>
                                         </div>   
@@ -488,7 +492,7 @@
                                                 <label class="col-md-4 control-label">Dirección (Oficina)</label>
                                                 <div class="col-md-8">
                                                     <div class="input-group">
-                                                        <input name="dirOficina" type="text" id="idOficina" class="form-control" placeholder="Dirección de la Oficina"  value="<!--4DTEXT [Sarlaft]Direccin_Oficina-->" style="background-color:white" readonly>
+                                                        <input name="dirOficina" type="text" id="idOficina" class="form-control" onfocus="validateBlank(this)" onchange="validateBlank(this)" placeholder="Dirección de la Oficina"  value="<!--4DTEXT [Sarlaft]Direccin_Oficina-->" style="background-color:white" readonly>
                                                         <span class="input-group-btn">
                                                             <button class="btn ajg-dark-button" type="button" data-toggle="modal" data-target="#modalDireccionOficina"><i class="fa fa-pencil"></i></button>
                                                         </span>
@@ -504,7 +508,7 @@
                                        <div class="modal-content">
                                            <div class="modal-header">
                                                <h3 style="font-weight: bold" class="modal-title" id="exampleModalLabel">Generador de Dirección</h3>                                                                     
-                                               <h5>Para realizar la separación entre números utilice el símbolo de guión (-)</h5>
+                                               <h5>Para realizar la separación entre números utilice un espacio en blanco</h5>
                                            </div>
                                            <div class="modal-body">
                                                <div class="row" style="display:flex; align-items:flex-start ;justify-content:center">
@@ -604,7 +608,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciudadOficina" list="listado" onkeyup="upperCase(this)" type="text" class="form-control" placeholder="Ciudad de la Oficina"  value="<!--4DTEXT [Sarlaft]Ciudad_Oficina-->" >
+                                                    <input name="ciudadOficina" list="listado" onkeyup="upperCase(this,false)" onchange="validateBlank(this)" type="text" class="form-control" placeholder="Ciudad de la Oficina"  value="<!--4DTEXT [Sarlaft]Ciudad_Oficina-->" >
                                                 </div>
                                             </div>
                                         </div>
@@ -614,7 +618,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Teléfono (Oficina)</label>
                                                 <div class="col-md-8">
-                                                    <input name="telefonoOficina" type="text" class="form-control" placeholder="Teléfono de la Oficina" value="<!--4DTEXT [Sarlaft]Telefono_oficina-->">
+                                                    <input name="telefonoOficina" type="number" class="form-control" placeholder="Teléfono de la Oficina" value="<!--4DTEXT [Sarlaft]Telefono_oficina-->">
                                                 </div>
                                             </div>
                                         </div>                                             

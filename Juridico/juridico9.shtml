@@ -46,18 +46,18 @@
                                             ¿Realiza Transacciones en Moneda Extranjera?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="si" type="radio" name="monedaExtranjera" required <!--4DIF ([Sarlaft]Transacciones_Moneda_Ext=True)-->checked<!--4DENDIF-->/>
+                                            <input value="si" type="radio" onclick="makeRequired('cualOperacion')" name="monedaExtranjera" required <!--4DIF ([Sarlaft]Transacciones_Moneda_Ext=True)-->checked<!--4DENDIF-->/>
                                             <label >Si</label>
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">
-                                            <input value="no" type="radio" name="monedaExtranjera" <!--4DIF ([Sarlaft]Transacciones_Moneda_Ext=False)-->checked<!--4DENDIF-->/>
+                                            <input value="no" type="radio" name="monedaExtranjera" onclick="unMakeRequired('cualOperacion')" <!--4DIF ([Sarlaft]Transacciones_Moneda_Ext=False)-->checked<!--4DENDIF-->/>
                                             <label>No</label>
                                         </div>    
                                         <div class="col-sm-6">                                        
                                             <div  class="form-group">
                                                 <label class="col-md-3 control-label">Cuál</label>
                                                 <div class="col-md-9">
-                                                    <select name="cualOperacion" class="form-control mb-md">
+                                                    <select name="cualOperacion" id="cualOperacion" class="form-control mb-md">
                                                         <option><!--4DTEXT [Sarlaft]Trans_MonedaE_cual--></option>
                                                         <option>Importaciones</option>
                                                         <option>Exportaciones</option>
@@ -181,7 +181,7 @@
                                     <br>
                                     <div >
                                         <h4 style="font-weight:bold; text-align:center">DOCUMENTOS REQUERIDOS</h4>
-                                        <p style="color:red">*NOTA: Formato PDF no mayor a 5 mb.</p>
+                                        <p style="font-weight: bold;">NOTA: Formato PDF no mayor a 5 mb.</p>
                                         <br>
                                         <div class="row">
                                             <div class="col-md-6">
@@ -206,7 +206,7 @@
                                                 <p>- Certificado de existencia y representación legal expedido por la autoridad competente no mayor a 30 días.</p>                                                
                                             </div>
                                             <div class="col-md-6">                                                
-                                                <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
+                                                <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"certificado")="")-->
                                                 <input type="file" class="form-control-file " required name="certificado"  onchange="ValidateSingleInput(this);">
                                                 <!--4DELSE-->                              
                                                     <div class="col-md-4">
@@ -221,17 +221,17 @@
                                         <br>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <p>- Inventario general de los bienes objeto del seguro.</p>
+                                                <p>- RUT</p>
                                             </div>
                                             <div class="col-md-6">                                                
-                                                <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
-                                                <input type="file" class="form-control-file " required name="inventario"  onchange="ValidateSingleInput(this);">
+                                                <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"rut")="")-->
+                                                <input type="file" class="form-control-file " required name="rut"  onchange="ValidateSingleInput(this);">
                                                 <!--4DELSE-->                              
                                                     <div class="col-md-4">
-                                                            <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"inventario")--></h5>
+                                                            <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"rut")--></h5>
                                                     </div>                
                                                     <div class="col-md-8">
-                                                        <input type="file" class="form-control-file " name="inventario"  onchange="ValidateSingleInput(this);">
+                                                        <input type="file" class="form-control-file " name="rut"  onchange="ValidateSingleInput(this);">
                                                     </div>                      
                                                 <!--4DENDIF-->
                                                 

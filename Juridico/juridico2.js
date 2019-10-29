@@ -2,7 +2,7 @@ var codCiiu = new Map();
 var ciiu1 = document.getElementById("codCiiu1");
 fill();
 validateCIIU(ciiu1,"ciiu1");
-
+enableFields(document.getElementById('sucursalOficina'),'departamento','ciudadSucursal','telefono')
 
 function validateCIIU(element,ciiu){
     if(element.value != ""){
@@ -33,6 +33,18 @@ function validateArrowKey(e){
     } 
 }
 
+function enableFields(e,...opt){
+    if(e.value == "N/A"){
+        for(var v of opt){
+            document.getElementById(v).disabled = true;
+        }
+    }else{
+        for(var v of opt){
+            document.getElementById(v).disabled = false;
+        }
+    }
+    
+}
 
 function fill(){
 

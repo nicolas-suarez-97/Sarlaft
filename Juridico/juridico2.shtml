@@ -46,7 +46,7 @@
                                                 <label class="col-md-3 control-label" >Nombre o Razón Social</label>                                                
                                                 <div class="col-md-9">
                                                     <input name="razonSocial" value="<!--4DTEXT [Sarlaft]Nombre_Razon_Social-->" type="text" class="form-control"
-                                                        placeholder="Nombre - Razón Social" data-container=".row" data-toggle="popover" data-trigger="hover" onkeyup="upperCase(this)"
+                                                        placeholder="Nombre - Razón Social" data-container=".row" data-toggle="popover" data-trigger="hover" onkeyup="upperCase(this,true)" onchange="validateNA(this)"
                                                         data-placement="top" data-content="Nombre" required autocomplete="off">
                                                 </div>
                                             </div>
@@ -194,7 +194,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciudadOficina" list="listaCiudades" onkeyup="upperCase(this)" value="<!--4DTEXT [Sarlaft]Ciudad_Oficina-->" type="text" class="form-control" placeholder="Ej: Bogota " autocomplete="off">                                                    
+                                                    <input name="ciudadOficina" list="listaCiudades" onkeyup="upperCase(this,false)" value="<!--4DTEXT [Sarlaft]Ciudad_Oficina-->" type="text" class="form-control" placeholder="Ej: Bogota " autocomplete="off">                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -225,7 +225,12 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Sucursal o Agencia: Dirección</label>
                                                 <div class="col-md-8">
-                                                    <input name="sucursalOficina"  value="<!--4DTEXT [Sarlaft]Direccion_Sucursal-->" type="text" class="form-control" placeholder="Dirección " autocomplete="off">
+                                                    <!--<input name="sucursalOficina"  value="<!--4DTEXT [Sarlaft]Direccion_Sucursal-->" type="text" class="form-control" placeholder="Dirección " autocomplete="off">-->
+                                                    <select name="sucursalOficina" id="sucursalOficina" onchange="enableFields(this,'departamento','ciudadSucursal','telefono')" class="form-control">
+                                                        <option value="<!--4DTEXT [Sarlaft]Direccion_Sucursal-->"><!--4DTEXT [Sarlaft]Direccion_Sucursal--></option>
+                                                        <option value="N/A">N/A</option>
+                                                        <option value="Otra">Otra</option>                                                        
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -233,7 +238,7 @@
                                             <div  class="form-group">
                                                 <label class="col-sm-4 control-label">Departamento</label>
                                                 <div class="col-sm-8">
-                                                    <select name="departamento" class="form-control mb-md">
+                                                    <select name="departamento" id="departamento" class="form-control mb-md">
                                                         <option><!--4DTEXT [Sarlaft]Departamento_Sucursal--></option>
                                                         <!--#4DINCLUDE ../departamentos.shtml-->
                                                     </select>
@@ -248,7 +253,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Ciudad</label>
                                                 <div class="col-md-8">
-                                                    <input name="ciudadSucursal" list="listaCiudades" onkeyup="upperCase(this)" value="<!--4DTEXT [Sarlaft]Ciudad_SUcursal-->" type="text" class="form-control" placeholder="Ej: " autocomplete="off">
+                                                    <input name="ciudadSucursal" id="ciudadSucursal" list="listaCiudades" onkeyup="upperCase(this,false)" value="<!--4DTEXT [Sarlaft]Ciudad_SUcursal-->" type="text" class="form-control" placeholder="Ej: " autocomplete="off">
                                                     <datalist id="listaCiudades">                                                                             
                                                         <!--4DINCLUDE ../listadoCiudades.shtml-->
                                                     </datalist>
@@ -259,7 +264,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-4 control-label">Teléfono</label>
                                                 <div class="col-md-8">
-                                                    <input name="telefono"  value="<!--4DTEXT [Sarlaft]Telefono_Sucursal-->" type="number" class="form-control" placeholder="Ej: " autocomplete="off">
+                                                    <input name="telefono" id="telefono" value="<!--4DTEXT [Sarlaft]Telefono_Sucursal-->" type="number" class="form-control" placeholder="Ej: " autocomplete="off">
                                                 </div>
                                             </div>
                                         </div>   
