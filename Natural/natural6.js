@@ -1,5 +1,7 @@
 var form = document.getElementById("form-id");
 var option = document.getElementById('option');
+var numRecl = document.getElementById('numReclamaciones');
+makeRequiredJ('año','ramo','compañia','valor','resultado');
 
 document.getElementById("add").addEventListener("click", function () {
     var anyo = document.getElementById("año").value;
@@ -58,4 +60,18 @@ function ValidateSingleInput(oInput) {
     }
 
     return true;
+}
+
+function makeRequiredJ(...list){        
+    if(numRecl.value < 1){                
+        for(var v of list){
+            document.getElementById(v).required = true;
+        }    
+    }
+}
+
+function unMakeRequiredJ(...list){    
+    for(var v of list){        
+        document.getElementById(v).required = false;
+    }
 }

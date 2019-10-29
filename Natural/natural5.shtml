@@ -129,25 +129,43 @@
                                             <tbody>                                                    
                                                 <tr >                                                          
                                                     <td>
-                                                        <input name="tipoProd1" value="<!--4DTEXT [Operaciones_Inter]Tipo_Producto-->" type="text" class="form-control">
+                                                        <input name="tipoProd1" 
+                                                        onkeyup="upperCase(this,true)"
+                                                        onchange="validateNA(this)"
+                                                        value="<!--4DTEXT [Operaciones_Inter]Tipo_Producto-->" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="numProd1" value="<!--4DTEXT [Operaciones_Inter]Iden_Num_Prod-->" type="text" class="form-control">
+                                                        <input name="numProd1" 
+                                                        onkeyup="replaceSpecialCharactersNumber(this)"
+                                                        value="<!--4DTEXT [Operaciones_Inter]Iden_Num_Prod-->" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="entidad1" value="<!--4DTEXT [Operaciones_Inter]Entidad-->" type="text" class="form-control">
+                                                        <input name="entidad1" 
+                                                        onkeyup="upperCase(this,true)"
+                                                        onchange="validateNA(this)"
+                                                        value="<!--4DTEXT [Operaciones_Inter]Entidad-->" type="text" class="form-control">
                                                     </td>                                                   
                                                     <td>
-                                                        <input name="monto1" value="<!--4DTEXT [Operaciones_Inter]Monto-->" type="text" class="form-control">
+                                                        <input name="monto1" 
+                                                        onkeyup="replaceSpecialCharactersNumber(this)"
+                                                        value="<!--4DTEXT [Operaciones_Inter]Monto-->" type="number" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="ciudad1" value="<!--4DTEXT [Operaciones_Inter]Ciudad-->" type="text" class="form-control">
+                                                        <input name="ciudad1" 
+                                                        onkeyup="upperCase(this,true)"
+                                                        onchange="validateNA(this)"
+                                                        value="<!--4DTEXT [Operaciones_Inter]Ciudad-->" type="text" class="form-control">
                                                     </td> 
                                                     <td>
-                                                        <input name="pais1" value="<!--4DTEXT [Operaciones_Inter]Pais-->" type="text" class="form-control">
+                                                        <input name="pais1" 
+                                                        onkeyup="upperCase(this,true)"
+                                                        onchange="validateNA(this)"
+                                                        value="<!--4DTEXT [Operaciones_Inter]Pais-->" type="text" class="form-control">
                                                     </td>
                                                     <td>
-                                                        <input name="moneda1" value="<!--4DTEXT [Operaciones_Inter]Moneda-->" type="number" class="form-control">
+                                                        <input name="moneda1" 
+                                                        onkeyup="replaceSpecialCharactersNumber(this)"
+                                                        value="<!--4DTEXT [Operaciones_Inter]Moneda-->" type="number" class="form-control">
                                                     </td>                                                                                                                       
                                                 </tr>                                                                                                                                       
                                             </tbody>

@@ -165,7 +165,7 @@
                                         <div class="col-sm-4">
                                             <label class="col-md-4 control-label">Sector</label>
                                             <div class="col-md-8">
-                                                <select name="sector" class="form-control mb-md">
+                                                <select name="sector" class="form-control mb-md" >
                                                     <option><!--4DTEXT [Sarlaft]Sector--></option>
                                                     <option>Agropecuadio</option>
                                                     <option>Comercio</option>

@@ -48,3 +48,21 @@ function unMakeRequired(element){
     e.value = "";
     console.log(element + " Not Required");
 }
+
+function validateCero(form,...list){
+    var submit = true;
+    for(var l of list){
+        var v = document.getElementById(l);
+        if(v.value == 0){
+            submit = false;
+            v.style.borderColor = "red";
+        }else{
+            v.style.borderColor = "#cccccc";
+        }
+    }
+    if(submit){
+        document.getElementById(form).submit();
+    }else{
+        console.log("Valor invalido");
+    }
+}

@@ -38,7 +38,7 @@
                                 <h2 class="panel-title text-center ajg-title-dark">Datos Básicos</h2>   
                             </header>
                             <div class="panel-body">
-                                <form class="form-bordered" method="POST" enctype="multipart/form-data" action="/Natural/origen_fondos">                                    
+                                <form class="form-bordered" id="formOri" method="POST" enctype="multipart/form-data" action="/Natural/origen_fondos">                                    
                                     <br>
                                     <div class="row">
                                         <div class="col-md-12">
@@ -52,14 +52,15 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label class="col-md-4">Ingresos Mensuales</label>
-                                            <div class="col-md-8">
-                                                <input name="ingresosMensuales" required value="<!--4DTEXT [Sarlaft]Ingresos_Mensuales-->" type="number" class="form-control" placeholder="Ingresos  Mensuales (Pesos)">
+                                            <div class="col-md-8">                                                                                                                                                
+                                                <input name="ingresosMensuales" id="ingresosMensuales" required value="<!--4DTEXT [Sarlaft]Ingresos_Mensuales-->" type="number" class="form-control" placeholder="Ingresos  Mensuales (Pesos)">                                                
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="col-md-4">Egresos Mensuales</label>
                                             <div class="col-md-8">
-                                                <input name="egresosMensuales" required value="<!--4DTEXT [Sarlaft]Egresos_Mensuales-->" type="number" class="form-control" placeholder="Egresos  Mensuales (Pesos)">
+                                                
+                                                <input name="egresosMensuales" id="egresosMensuales" required value="<!--4DTEXT [Sarlaft]Egresos_Mensuales-->" type="number" class="form-control" placeholder="Egresos  Mensuales (Pesos)">
                                             </div>
                                         </div>
                                     </div>                                   
@@ -69,13 +70,13 @@
                                         <div class="col-md-6">
                                             <label class="col-md-4">Activos</label>
                                             <div class="col-md-8">
-                                                <input name="activos" required value="<!--4DTEXT [Sarlaft]Activos-->" type="number" class="form-control" placeholder="Activos (Pesos)">
+                                                <input name="activos" required id="activos" value="<!--4DTEXT [Sarlaft]Activos-->" type="number" class="form-control" placeholder="Activos (Pesos)">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="col-md-4">Pasivos</label>
                                             <div class="col-md-8">
-                                                <input name="pasivos" required value="<!--4DTEXT [Sarlaft]Pasivo-->" type="number" class="form-control" placeholder="Pasivos (Pesos)">
+                                                <input name="pasivos" required id="pasivos" value="<!--4DTEXT [Sarlaft]Pasivo-->" type="number" class="form-control" placeholder="Pasivos (Pesos)">
                                             </div>
                                         </div>
                                     </div>                                   
@@ -85,13 +86,13 @@
                                         <div class="col-md-6">
                                             <label class="col-md-4">Patrimonio</label>
                                             <div class="col-md-8">
-                                                <input name="patrimonio" required value="<!--4DTEXT [Sarlaft]Patrimonio-->" type="number" class="form-control" placeholder="Patrimonio (Activos - Pasivos, Pesos)">
+                                                <input name="patrimonio" id="patrimonio" required value="<!--4DTEXT [Sarlaft]Patrimonio-->" type="number" class="form-control" placeholder="Patrimonio (Activos - Pasivos, Pesos)">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="col-md-4">Otros Ingresos</label>
                                             <div class="col-md-8">
-                                                <input name="otrosIngresos" value="<!--4DTEXT [Sarlaft]Otros_Ingresos-->" type="number" class="form-control" placeholder="Otros Ingresos (Pesos)">
+                                                <input name="otrosIngresos" id="otrosIngresos" value="<!--4DTEXT [Sarlaft]Otros_Ingresos-->" type="number" class="form-control" placeholder="Otros Ingresos (Pesos)">
                                             </div>
                                         </div>
                                     </div>                                   
@@ -179,7 +180,7 @@
                                     </div>
                                     
                                     <br>
-                                    <button type="submit"  class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>                                                                    
+                                    <button type="button" onclick="validateCero('formOri','ingresosMensuales','egresosMensuales','activos','pasivos','patrimonio')"  class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>                                                                    
                                 </form>
                             </div>
                         </section>

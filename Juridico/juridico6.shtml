@@ -61,13 +61,23 @@
                                                 <tbody>                                                    
                                                     <tr>
                                                         <td>
-                                                            <input name="numID1" id="numId" type="text" class="form-control" >
+                                                            <input name="numID1" id="numId" 
+                                                            onkeypress="if(this.value.length == 10) return false" 
+                                                            onkeyup="replaceSpecialCharactersNumber(this)"                                                    
+                                                            onfocusout="valMinLength(this,1)"
+                                                            type="text" class="form-control" >
                                                         </td>
                                                         <td>
-                                                            <input name="nombre1" id="nombre" type="text" class="form-control" >
+                                                            <input name="nombre1" id="nombre" 
+                                                            onkeyup="upperCase(this,true)"
+                                                            onchange="validateNA(this)"
+                                                            type="text" class="form-control" >
                                                         </td>
                                                         <td>
-                                                            <input name="razonSocial1" id="razonSocial" type="text" class="form-control" >
+                                                            <input name="razonSocial1" id="razonSocial" 
+                                                            onkeyup="upperCase(this,true)"
+                                                            onchange="validateNA(this)"
+                                                            type="text" class="form-control" >
                                                         </td>
                                                         <td>
                                                             <select name="tipoID1" id="tipoID" class="form-control mb-md" >
@@ -78,7 +88,11 @@
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <input name="id1" id="id1" type="text" class="form-control" >
+                                                            <input name="id1" id="id1" 
+                                                            onkeypress="if(this.value.length == 10) return false" 
+                                                            onkeyup="replaceSpecialCharactersNumber(this)"                                                    
+                                                            onfocusout="valMinLength(this,5)"
+                                                            type="text" class="form-control" >
                                                         </td>
                                                         <td>
                                                             <input name="porcentPart1" id="porcentP" type="number" min="0" max="100" onKeyPress="if(this.value.length==2) return false;" class="form-control" >
