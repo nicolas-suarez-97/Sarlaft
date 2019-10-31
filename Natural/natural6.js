@@ -1,6 +1,14 @@
 var form = document.getElementById("form-id");
 var option = document.getElementById('option');
 var numRecl = document.getElementById('numReclamaciones');
+var radioSi = document.getElementById('radioSi');
+
+if(radioSi.checked == true){
+    makeRequiredJ('año','ramo','compañia','valor','resultado');
+}else{
+    unMakeRequiredJ('año','ramo','compañia','valor','resultado');
+}
+
 
 document.getElementById("add").addEventListener("click", function () {
     var anyo = document.getElementById("año").value;

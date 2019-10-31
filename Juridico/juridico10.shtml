@@ -46,7 +46,7 @@
                                             ¿Ha presentado reclamaciones o ha recibido indemnizaciones en seguros en los dos últimos años?
                                         </label>
                                         <div class="radio-custom radio-primary col-sm-1" >
-                                            <input value="si" type="radio" onclick="makeRequiredJ('anyo','ramo','compañia','valor','resultado')" name="reclamacion" required  <!--4DIF ([Sarlaft]Reclamacion_Indem=True)-->checked<!--4DENDIF-->/>
+                                            <input value="si" id="radioSi" type="radio" onclick="makeRequiredJ('anyo','ramo','compañia','valor','resultado')" name="reclamacion" required  <!--4DIF ([Sarlaft]Reclamacion_Indem=True)-->checked<!--4DENDIF-->/>
                                             <label>Si</label>   
                                         </div>
                                         <div class="radio-custom radio-primary col-sm-1">

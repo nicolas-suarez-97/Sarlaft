@@ -1,7 +1,13 @@
 var form = document.getElementById("form-id");
 var option = document.getElementById('option');
 var numRecl = document.getElementById('numReclamaciones');
+var radioSi = document.getElementById('radioSi');
 
+if(radioSi.checked == true){
+    makeRequiredJ('anyo','ramo','compañia','valor','resultado');
+}else{
+    unMakeRequiredJ('anyo','ramo','compañia','valor','resultado');
+}
 
 document.getElementById("add").addEventListener("click", function () {
     var anyo = document.getElementById("anyo").value;
