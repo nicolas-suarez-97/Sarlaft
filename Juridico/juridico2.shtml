@@ -275,7 +275,8 @@
                                         </div>   
                                     </div>
                                     <br>
-                                    <button type="button" onclick="validateFields('form-id','telOficina-7')" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>                                                              
+                                    <button type="button" onclick="validateFields('telOficina-7')" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>                                                              
+                                    <button type="submit" style="display:none" id="submitButton"></button>
                                 </form>
                             </div>
                         </section>

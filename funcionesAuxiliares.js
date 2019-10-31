@@ -70,7 +70,7 @@ function validateCero(form,...list){
     }
 }
 
-function validateFields(form,...fields){    
+function validateFields(...fields){    
     var submit = true;   
     var elem = ""; 
     for(var v of fields){
@@ -89,7 +89,7 @@ function validateFields(form,...fields){
     }
     if(submit){
         console.log("Enviar");
-        document.getElementById(form).submit();
+        document.getElementById('submitButton').click();
     }else{
         if(elem.top <0){
             window.scrollTo(0,-elem.top);

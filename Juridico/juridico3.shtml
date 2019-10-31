@@ -405,7 +405,8 @@
                                             <h5 id="notiText" style="color:white"></h5>
                                         </div>
                                     </section>
-                                    <button type="button" onclick="validateFields('formAcc','numDocRep-5','celularRep-10','telefonoRep-7')"  class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>
+                                    <button type="button" onclick="validateFields('numDocRep-5','celularRep-10','telefonoRep-7')"  class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>
+                                    <button type="submit" style="display:none" id="submitButton"></button>
                                 </form>
                             </div>
                         </section>

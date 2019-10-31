@@ -646,7 +646,8 @@
                                     <br>
                                 </div>
                             </section>
-                            <button type="button" onclick="validateFields('formDat','telefonoRep-7','celularRep-10')" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>
+                            <button type="button" onclick="validateFields('telefonoRep-7','celularRep-10')" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>
+                            <button type="submit" style="display:none" id="submitButton"></button>
                         </form>
                         <br>
                         <br>
