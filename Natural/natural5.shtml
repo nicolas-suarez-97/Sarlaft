@@ -58,18 +58,18 @@
                                                 <div class="col-md-9">
                                                     <select name="cualOperacion"  id="cualOperacion" class="form-control mb-md">
                                                         <!--#4DIF ([Sarlaft]Trans_MonedaE_cual = "")-->
-                                                        <option value=""></option>
+                                                        <option></option>
                                                         <!--4DELSE-->
-                                                        <option value="<!--4DTEXT [Sarlaft]Trans_MonedaE_cual-->"><!--4DTEXT [Sarlaft]Trans_MonedaE_cual--></option>
-                                                        <option value=""></option>
+                                                        <option><!--4DTEXT [Sarlaft]Trans_MonedaE_cual--></option>
+                                                        <option></option>
                                                         <!--4DENDIF-->
-                                                        <option value="Exportaciones">Exportaciones</option>
-                                                        <option value="Giros">Giros</option>
-                                                        <option value="Importaciones">Importaciones</option>
-                                                        <option value="Pago de Servicios">Pago de Servicios</option>
-                                                        <option value="Prestamos">Prestamos</option>
-                                                        <option value="Transferencias">Transferencias</option>
-                                                        <option value="Otras">Otras</option>
+                                                        <option>Exportaciones</option>
+                                                        <option>Giros</option>
+                                                        <option>Importaciones</option>
+                                                        <option>Pago de Servicios</option>
+                                                        <option>Prestamos</option>
+                                                        <option>Transferencias</option>
+                                                        <option>Otras</option>
                                                     </select>
                                                 </div>
                                             </div>                                            

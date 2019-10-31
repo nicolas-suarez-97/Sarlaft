@@ -81,7 +81,9 @@
                                                             </select>
                                                         </td>
                                                         <td>                                                            
-                                                            <input name="nombre1" id="nombre" type="text" class="form-control" autocomplete="off" >
+                                                            <input name="nombre1" id="nombre" 
+                                                            onkeyup="upperCase(this,true)"
+                                                            type="text" class="form-control" autocomplete="off" >
                                                         </td>
                                                         <td>
                                                             <select name="tipoID1" id="tipoID" class="form-control mb-md" >
@@ -94,16 +96,27 @@
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <input name="numID1" id="numID" type="number" class="form-control" autocomplete="off" >
+                                                            <input name="numID1" id="numID" 
+                                                            onkeyup="replaceSpecialCharactersNumber(this)"
+                                                            onfocusout="valMinLength(this,5,'notiNum')"
+                                                            onkeypress="this.style.borderColor='#cccccc'"
+                                                            type="number" class="form-control" autocomplete="off" >
+                                                            <h6 style="color:red; display:none;" id="notiNum">Longitud mínima de 5 dígitos</h6>
                                                         </td>
                                                         <td>
-                                                            <input name="nacionalidad1" id="nacionalidad" type="text" class="form-control" autocomplete="off" >
+                                                            <input name="nacionalidad1" id="nacionalidad" 
+                                                            onkeyup="upperCase(this,true)"
+                                                            type="text" class="form-control" autocomplete="off" >
                                                         </td>
                                                         <td>
-                                                            <input name="entidad1" id="entidad" type="text" class="form-control" autocomplete="off" >
+                                                            <input name="entidad1" id="entidad" 
+                                                            onkeyup="upperCase(this,true)"
+                                                            type="text" class="form-control" autocomplete="off" >
                                                         </td>
                                                         <td>
-                                                            <input name="cargo1" id="cargo" type="text" class="form-control" autocomplete="off" >
+                                                            <input name="cargo1" id="cargo" 
+                                                            onkeyup="upperCase(this,true)"
+                                                            type="text" class="form-control" autocomplete="off" >
                                                         </td>                                                           
                                                         <td>
                                                             <input name="fechaDesvinculacion1" id="fechaDesvinc" type="date" class="form-control" >
