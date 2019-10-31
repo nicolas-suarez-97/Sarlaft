@@ -28,12 +28,14 @@ function replaceSpecialCharactersNumber(e){
     
 }
 
-function valMinLength(e,num){    
+function valMinLength(e,num,noti){    
     if(e.value.length < num){        
-        alert("Por favor termine de diligenciar el campo. (Longitud mínima "+num+" caracteres)");
+        //alert("Por favor termine de diligenciar el campo. (Longitud mínima "+num+" caracteres)");
         e.style.borderColor = "red";
+        document.getElementById(noti).style.display = "block";        
     }else{
         e.style.borderColor = "#cccccc";
+        document.getElementById(noti).style.display = "none";
     }
 }
 function makeRequired(element){
@@ -64,5 +66,35 @@ function validateCero(form,...list){
         document.getElementById(form).submit();
     }else{
         console.log("Valor invalido");
+        window.scrollTo(0,0);
+    }
+}
+
+function validateFields(form,...fields){    
+    var submit = true;   
+    var elem = ""; 
+    for(var v of fields){
+        var arr = v.split("-");
+        var name = arr[0];
+        var num = arr[1];
+        var field = document.getElementById(name);        
+        if(field.value.length < num){
+            submit = false;            
+            field.style.borderColor = "red";
+            if(elem == ""){
+                elem = field.getBoundingClientRect();
+                console.log(elem);
+            }
+        }
+    }
+    if(submit){
+        console.log("Enviar");
+        document.getElementById(form).submit();
+    }else{
+        if(elem.top <0){
+            window.scrollTo(0,-elem.top);
+        }else{
+            window.scrollTo(0,elem.top);
+        }
     }
 }

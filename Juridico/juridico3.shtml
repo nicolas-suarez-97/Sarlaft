@@ -93,8 +93,9 @@
                                                     <input name="numDocRep" id="numDocRep" value="<!--4DTEXT [Sarlaft]Numero_Replegal-->" 
                                                     onkeypress="if(this.value.length == 10) return false" 
                                                     onkeyup="replaceSpecialCharactersNumber(this)"                                                    
-                                                    onfocusout="valMinLength(this,5)"                                                    
+                                                    onfocusout="valMinLength(this,5,'notiNumero')"
                                                     type="number" class="form-control" placeholder="Número" autocomplete="off">
+                                                    <h6 style="color:red; display:none" id="notiNumero">Longitud mínima de 5 dígitos</h6>
                                                 </div>                                 
                                             </div>                                                    
                                         </div>                                    
@@ -316,9 +317,10 @@
                                                 <div class="col-md-9">
                                                     <input name="telefonoRep" id="telefonoRep" value="<!--4DTEXT [Sarlaft]Telefono_RepLegal-->"                                                      
                                                     onkeyup="replaceSpecialCharactersNumber(this)"
-                                                    onfocusout="valMinLength(this,7)"
+                                                    onfocusout="valMinLength(this,7,'notiTelRep')"
                                                     onkeypress="this.style.borderColor='#cccccc'"
                                                     type="number" class="form-control" placeholder="Télefono" required autocomplete="off" >
+                                                    <h6 style="color:red;display:none" id="notiTelRep">Longitud mínima de 7 dígitos</h6>
                                                 </div>
                                             </div>
                                         </div>                                
@@ -329,8 +331,9 @@
                                                     <input name="celularRep" id="celularRep" value="<!--4DTEXT [Sarlaft]Celular-->"                                                      
                                                     onkeyup="replaceSpecialCharactersNumber(this)"
                                                     onkeypress="this.style.borderColor='#cccccc'"
-                                                    onfocusout="valMinLength(this,10)"
+                                                    onfocusout="valMinLength(this,10,'notiCelRep')"
                                                     type="number" class="form-control" placeholder="Celular" required autocomplete="off">
+                                                    <h6 style="color:red; display:none" id="notiCelRep">Longitud mínima de 10 dígitos</h6>
                                                 </div>
                                             </div>
                                         </div>      

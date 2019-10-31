@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 
 .ajg-color{
     background-color: rgb(66, 103, 133);       
@@ -164,3 +167,4 @@
 .bold{
     font-weight: bold;
 }
+

@@ -306,10 +306,11 @@
                                                 <div class="col-md-8">
                                                     <input name="telefonoRep" type="text" id="telefonoRep"
                                                         onkeyup="replaceSpecialCharactersNumber(this)"
-                                                        onfocusout="valMinLength(this,7)"
+                                                        onfocusout="valMinLength(this,7,'notiTel')"
                                                         onkeypress="this.style.borderColor='#cccccc'"
                                                         class="form-control" placeholder="Télefono" 
-                                                        required value="<!--4DTEXT [Sarlaft]Telefono_RepLegal-->"> 
+                                                        required value="<!--4DTEXT [Sarlaft]Telefono_RepLegal-->">
+                                                    <h6 style="color:red; display:none;" id="notiTel">Longitud mínima de 7 dígitos</h6>
                                                 </div>
                                             </div>
                                         </div>                                
@@ -319,9 +320,10 @@
                                                 <div class="col-md-8">
                                                     <input name="celularRep" type="text" class="form-control" id="celularRep"
                                                         onkeyup="replaceSpecialCharactersNumber(this)"
-                                                        onfocusout="valMinLength(this,10)"
+                                                        onfocusout="valMinLength(this,10,'notiCel')"
                                                         onkeypress="this.style.borderColor='#cccccc'"
                                                         placeholder="Celular" required value="<!--4DTEXT [Sarlaft]Celular-->">
+                                                    <h6 style="color:red; display:none;" id="notiCel">Longitud mínima de 10 dígitos</h6>
                                                 </div>
                                             </div>
                                         </div>                                                                                                           
@@ -631,9 +633,12 @@
                                                 <label class="col-md-4 control-label">Teléfono (Oficina)</label>
                                                 <div class="col-md-8">
                                                     <input name="telefonoOficina" type="number" 
-                                                        onkeyup="replaceSpecialCharactersNumber(this)"                                                        
+                                                        onkeyup="replaceSpecialCharactersNumber(this)"                                                            
+                                                        onfocusout="valMinLength(this,7,'notiCel')"
+                                                        onkeypress="this.style.borderColor='#cccccc'"                                                    
                                                         class="form-control" placeholder="Teléfono de la Oficina" 
                                                         value="<!--4DTEXT [Sarlaft]Telefono_oficina-->">
+                                                    <h6 style="color:red; display:none;" id="notiTelOfi">Longitud mínima de 7 dígitos</h6>
                                                 </div>
                                             </div>
                                         </div>                                             

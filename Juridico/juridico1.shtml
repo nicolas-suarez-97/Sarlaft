@@ -225,7 +225,7 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <button class="btn ajg-button col-md-4 col-md-offset-4" type="submit">Siguiente</button>                                                              
+                                    <button class="btn ajg-button col-md-4 col-md-offset-4" type="submit">Siguiente</button>                                    
                                 </form>
                             </div>
                         </section>
@@ -233,7 +233,7 @@
 					<!-- end: page -->
 				</section>
 			</div>			
-        </section>        
-        <!--4DINCLUDE scripts.html-->
+        </section>      
+        <!--4DINCLUDE scripts.html-->     
 	</body>
 </html>

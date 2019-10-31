@@ -1,7 +1,6 @@
 var form = document.getElementById("form-id");
 var option = document.getElementById('option');
 var numRecl = document.getElementById('numReclamaciones');
-makeRequiredJ('año','ramo','compañia','valor','resultado');
 
 document.getElementById("add").addEventListener("click", function () {
     var anyo = document.getElementById("año").value;

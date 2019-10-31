@@ -16,21 +16,3 @@ function guardarDir( cancel, fullD, dir){
     document.getElementById(cancel).click();
 }
 
-function validateFields(form,...fields){    
-    var submit = true;
-    var pending = [];
-    for(var v of fields){
-        var arr = v.split("-");
-        var name = arr[0];
-        var num = arr[1];
-        var field = document.getElementById(name);        
-        if(field.value.length < num){
-            submit = false;
-            pending.push(name);
-        }
-    }
-    if(submit){
-        console.log("Enviar");
-        document.getElementById(form).submit();
-    }
-}

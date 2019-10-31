@@ -90,8 +90,9 @@
                                                                 <input name="numId1" id="numId"
                                                                 onkeyup="replaceSpecialCharactersNumber(this)"
                                                                 onkeypress="if(this.value.length == 10) return false"
-                                                                onfocusout="valMinLength(this,5)"
+                                                                onfocusout="valMinLength(this,5,'notiNumero')"
                                                                 type="number" class="form-control" autocomplete="off" >
+                                                                <h6 style="color:red; display:none" id="notiNumero">Longitud mínima de 5 dígitos</h6>
                                                             </td>
                                                             <td>
                                                                 <input name="nombre1" id="nombre"  

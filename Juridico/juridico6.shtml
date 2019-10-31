@@ -65,7 +65,7 @@
                                                             onkeypress="if(this.value.length == 10) return false" 
                                                             onkeyup="replaceSpecialCharactersNumber(this)"                                                    
                                                             onfocusout="valMinLength(this,1)"
-                                                            type="text" class="form-control" >
+                                                            type="text" class="form-control" >                                                            
                                                         </td>
                                                         <td>
                                                             <input name="nombre1" id="nombre" 
