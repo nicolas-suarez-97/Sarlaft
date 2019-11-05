@@ -3,7 +3,7 @@
 	<head>
 		<!--4DINCLUDE headIncludes.html-->
 		<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">-->
-		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+		<script src='https://code.jquery.com/jquery-3.4.1.js' integrity='sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=' crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<section class="body">
@@ -14,204 +14,836 @@
 
 			<div class="inner-wrapper">
 				<!-- start: sidebar -->
-			        <!--#4DINCLUDE panelConsulta.shtml-->
+					<!--#4DINCLUDE panelConsulta.shtml-->
 				<!-- end: sidebar -->			
 				<section role="main" class="content-body">
 					<header class="page-header ajg-color-dark "  >
                         <h2>Detalles de Sarlaft</h2>
 					
 						<div class="right-wrapper pull-right">
+							<button type="button" class="expButtons"
+								onclick="expandAll('inicio','datBasicos','basico2','origen','opInter','recSeguros','docs','perExpPub')">
+								<i class="fa fa-plus"></i> 
+								Expandir Todo
+							</button>
+							<button type="button" class="expButtons"
+								onclick="collapseAll('inicio','datBasicos','basico2','origen','opInter','recSeguros','docs','perExpPub')">
+								<i class="fa fa-minus"></i> 
+								Colapsar Todo
+							</button>
 							<ol class="breadcrumbs">
 								<li>									
 									<i class="fa fa-home title" style="padding-right: 1cm; color:white"></i>									
-								</li>								
+								</li>																
 							</ol>
 												
 						</div>
 					</header>
                     
 					<!-- start: page -->
-					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Consulta_Sarlaft">
-						
-						<input type="text" hidden name="id" value="<!--4DTEXT [Users]ID-->">
-						<div class="ajg-panel ">
-							<div class="row top">
-								<div class="col-sm-6">
-									<h3 class=" ajg-title-dark" style="font-weight: bold;"><!--4DTEXT [Sarlaft]Nombre_Razon_Social--></h3>
-									<h6>Fecha Diligenciamiento: <!--4DTEXT [Sarlaft]Fecha_Diligenciamiento--></h6>
+				
+					<input type="text" hidden name="id" value="<!--4DTEXT [Users]ID-->">
+					<div class="ajg-panel ">
+						<div class="row top">
+							<div class="col-sm-6">
+								<h3 class=" ajg-title-dark"><span style="font-weight: bold;"><!--4DTEXT [Sarlaft]Nombre_Razon_Social--></span> - <!--4DTEXT [Sarlaft]Documento_Numero--></h3>
+								<h6>Fecha Diligenciamiento: <!--4DTEXT [Sarlaft]Fecha_Diligenciamiento--></h6>
+							</div>												
+						</div>	
+						<br>								
+					</div>
+
+					<!--INICIO-->
+					<section class="ajg-panel">
+						<header class="ajg-panel-header">
+							<h4 class="ajg-panel-title ">Inicio</h4>
+							<button id="button1" type="button" onclick="togglePanel('inicio',this)" href="#" class="fa fa-caret-down ajg-panel-button"></button>								
+						</header>
+						<div class="ajg-panel-body"  id="inicio">
+							<br>
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="form-group ">
+										<label class="control-label">Fecha Diligenciamiento</label>      										
+										<p class="form-control" id="inputDate" name="fechaDiligenciamiento" ><!--4DTEXT Substring(String([Sarlaft]Fecha_Diligenciamiento;ISO date);1;10)--></p>
+									</div>   
 								</div>
-								
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label class="control-label" >Ciudad</label>                                                
+										<p ="ciudades" class="form-control" id="inputCiudad" name="ciudadDiligenciamiento" ><!--4DTEXT [Sarlaft]Ciudad_Diligenciamiento--></p>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label class="control-label" >Sucursal</label>                                                
+										<p class="form-control" id="inputSucursal" name="sucursal" ><!--4DTEXT [Sarlaft]Sucursal--></p>
+									</div>
+								</div>
+							</div>                                    
+							<br>                                                                                                                                                                                                                                     
+							<div class="row">
+								<!--<div class="col-sm-6">
+									<div class="form-group">
+										<label class="control-label">Tipo Solicitud</label>                                                
+										<select class="form-control mb-md" readonly name="tipoSolicitud">
+											<option id="actualizacion" <!-4DIF ([Sarlaft]Tipo_Solicitud="actualizacion")->selected<!-4DENDIF->>Actualización</option>
+											<option value="renovacion" <!-4DIF ([Sarlaft]Tipo_Solicitud="renovacion")->selected<!-4DENDIF->>Renovación</option>
+											<option value="vinculacion" <!-4DIF ([Sarlaft]Tipo_Solicitud="vinculacion")->selected<!-4DENDIF->>Vinculación</option>
+										</select>                                                
+									</div>     
+								</div>-->
+							</div>                                                                                                                
+							<div class="divider"></div>  
+							<br>
+							<div class="form-group">
+								<div  style="display: flex; justify-content: space-between; align-items: center;" >
+									<label class=" control-label">Clase de la Vinculación</label>
+									<div class="checkbox-custom chekbox-primary " >
+										<input value="Tomador" type="checkbox" name="tomador" disabled <!--4DIF ([Sarlaft]Clase_VInculacion_Tomador)-->checked<!--4DENDIF-->/>
+										<label>Tomador</label>
+									</div>
+									<div class="checkbox-custom chekbox-primary ">
+										<input value="Asegurador" type="checkbox" name="asegurador" disabled <!--4DIF ([Sarlaft]Clase_Vinculacion_Asegurado)-->checked<!--4DENDIF-->/>
+										<label>Asegurador</label>
+									</div>                                            
+									<div class="checkbox-custom chekbox-primary ">
+										<input value="Beneficiario" type="checkbox" name="beneficiario" disabled <!--4DIF ([Sarlaft]Clase_Vinculacion_Benef)-->checked<!--4DENDIF-->/>
+										<label>Beneficiario</label>
+									</div>
+									<div class="checkbox-custom chekbox-primary ">
+										<input value="Afianzado" type="checkbox" name="afianzado" disabled <!--4DIF ([Sarlaft]Clase_Vinculacion_Afianzado)-->checked<!--4DENDIF-->/>
+										<label>Afianzado</label>
+									</div>                                            
+									<div class="checkbox-custom chekbox-primary ">
+										<input value="Proveedor" type="checkbox" name="proveedor" disabled <!--4DIF ([Sarlaft]Clase_Vinculacion_Proveedor)-->checked<!--4DENDIF-->/>
+										<label>Proveedor</label>
+									</div>
+									<div class="checkbox-custom chekbox-primary ">
+										<input value="Intermediario" type="checkbox" name="intermediario" disabled <!--4DIF ([Sarlaft]Clase_Vinculacion_Inter)-->checked<!--4DENDIF-->/>
+										<label>Intermediario</label>
+									</div>
+									<div class="col-sm-3" >
+										<label class="col-sm-2">Otro</label>
+										<div class="col-sm-6">
+											<p class="form-control input-sm" name="otroVinculacion" ><!--4DTEXT [Sarlaft]Clase_Vinculacion_Otro--></p>
+										</div>
+									</div>
+								</div>                                                                                    
+							</div>   
+							<br>
+							<div class="divider"></div>  
+							<br> 
+							<div class="form-group">
+								<div class="row">
+									<label class="col-sm-4 control-label">Tomador - Asegurado</label>
+									<div class="radio-custom radio-primary col-sm-1">
+										<input id="awesome" name="TomaASeg" type="radio" value="familiar" disabled  <!--4DIF ([Sarlaft]Tomador_Asegurado_Familiar)-->checked<!--4DENDIF-->/>
+										<label >Familliar</label>
+									</div>
+									<div class="radio-custom radio-primary col-sm-1">
+										<input id="very-awesome" name="TomaASeg" type="radio" value="comercial" disabled <!--4DIF ([Sarlaft]Tomador_Asegurado_Comercial)-->checked<!--4DENDIF-->/>
+										<label >Comercial </label>
+									</div>
+									<div class="radio-custom radio-primary col-sm-1">
+										<input id="ultra-awesome" name="TomaASeg" type="radio" value="laboral" disabled <!--4DIF ([Sarlaft]Tomador_Asegurado_Laboral)-->checked<!--4DENDIF-->/>
+										<label >Laboral</label>
+									</div>
+									<div class="radio-custom radio-primary col-sm-1">
+										<input id="ultra-awesome" name="TomaASeg" type="radio" value="otro" disabled <!--4DIF ([Sarlaft]Tomador_Asegurado_Otra)-->checked<!--4DENDIF-->/>
+										<label for="ultra-awesome">Otro</label>
+									</div>
+									<div class="col-sm-2">                                                    
+										<label class="control-label col-sm-3 " >Cual: </label>  
+										<div class="col-sm-9 ">
+											<p class="form-control input-sm "  name="otroTomadorA" ><!--4DTEXT [Sarlaft]Tomador_Asegurado_Cual--></p>
+										</div>                                              
+									</div>
+								</div>                                    
+								<br>
+								<div class="row">
+									<label class="col-sm-4 control-label">Tomador - Beneficiario</label>
+									<div class="radio-custom radio-primary col-sm-1">
+										<input id="awesome" name="TomaBenef" type="radio" value="familiar" disabled <!--4DIF ([Sarlaft]Tomador_Benef_Familiar)-->checked<!--4DENDIF--> />
+										<label for="awesome">Familliar</label>
+									</div>
+									<div class="radio-custom radio-primary col-sm-1">
+										<input id="very-awesome" name="TomaBenef" type="radio" value="comercial" disabled <!--4DIF ([Sarlaft]Tomador_Benef_Comercial)-->checked<!--4DENDIF-->/>
+										<label for="very-awesome">Comercial </label>
+									</div>
+									<div class="radio-custom radio-primary col-sm-1">
+										<input id="ultra-awesome" name="TomaBenef" type="radio" value="laboral" disabled <!--4DIF ([Sarlaft]Tomador_Benef_Laboral)-->checked<!--4DENDIF-->/>
+										<label for="ultra-awesome">Laboral</label>
+									</div>
+									<div class="radio-custom radio-primary col-sm-1">
+										<input id="ultra-awesome" name="TomaBenef" type="radio" value="otro" disabled <!--4DIF ([Sarlaft]Tomador_Benef_Otra)-->checked<!--4DENDIF-->/>
+										<label for="ultra-awesome">Otro</label>
+									</div>
+									<div class="col-sm-2">                                                    
+										<label class="control-label col-sm-3" >Cual: </label>  
+										<div class="col-sm-9">
+											<p class="form-control input-sm " name="otroTomadorB" ><!--4DTEXT [Sarlaft]Tomador_Benef_Cual--></p>
+										</div>                                              
+									</div>
+								</div>
+								<br>
+								<div class="row">
+									<label class="col-sm-4 control-label">Asegurado - Beneficiario</label>
+									<div class="radio-custom radio-primary col-sm-1">
+										<input id="awesome" name="AsegBenef" type="radio" value="familiar" disabled <!--4DIF ([Sarlaft]Asegura_Benef_Familiar)-->checked<!--4DENDIF-->/>
+										<label for="awesome">Familliar</label>
+									</div>
+									<div class="radio-custom radio-primary col-sm-1">
+										<input id="very-awesome" name="AsegBenef" type="radio" value="comercial" disabled <!--4DIF ([Sarlaft]Asegura_Benef_Comercial)-->checked<!--4DENDIF-->/>
+										<label for="very-awesome">Comercial </label>
+									</div>
+									<div class="radio-custom radio-primary col-sm-1">
+										<input id="ultra-awesome" name="AsegBenef" type="radio" value="laboral" disabled <!--4DIF ([Sarlaft]Asegura_Benef_Laboral)-->checked<!--4DENDIF-->/>
+										<label for="ultra-awesome">Laboral</label>
+									</div>
+									<div class="radio-custom radio-primary col-sm-1">
+										<input id="ultra-awesome" name="AsegBenef" type="radio" value="otro" disabled <!--4DIF ([Sarlaft]Asegura_Benef_Otra)-->checked<!--4DENDIF-->/>
+										<label for="ultra-awesome">Otro</label>
+									</div>
+									<div class="col-sm-2">                                                    
+										<label class="control-label col-sm-3" >Cual: </label>  
+										<div class="col-sm-9">
+											<p class="form-control input-sm "  name="otroAseguradoB" ><!--4DTEXT [Sarlaft]Asegura_Benef_Cual--></p>
+										</div>                                              
+									</div>
+								</div>
 							</div>
-							
-							<div class="panel-body ajg-title-dark">
-                                <div class=" top">
-									<div class="col">
-										<h4 class="ajg-title-dark" style="font-weight: bold;">Información Básica</h4>
+						</div>
+					</section>
+					<!--FIN INICIO-->
+
+					<!--BÁSICO 1-->
+					<section class="ajg-panel">
+						<header class="ajg-panel-header">
+							<h4 class="ajg-panel-title ">Datos Básicos</h4>
+							<button id="button2" type="button" onclick="togglePanel('datBasicos',this)" href="#" class="fa fa-caret-down ajg-panel-button"></button>								
+						</header>
+						<div class="ajg-panel-body"  id="datBasicos" >
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-sm-4">
+										<label class="col-md-4 control-label">Nombre</label>
+										<div class="col-md-8">
+											<p name="nombre" class="form-control" ><!--4DTEXT [Sarlaft]Nombres--></p>
+										</div>    
+									</div> 
+									<div class="col-sm-4">
+										<div class="form-group">
+											<label class="col-md-4 control-label" >Primer Apellido</label>                                                
+											<div class="col-md-8">
+												<p name="primerApellido" class="form-control"><!--4DTEXT [Sarlaft]Primer_Apellido--></p>
+											</div>
+										</div>
 									</div>
+
+									<div class="col-sm-4">
+										<label class="col-md-4 control-label">Segundo Apellido</label>
+										<div class="col-md-8">
+											<p name="segundoApellido" class="form-control" ><!--4DTEXT [Sarlaft]Segundo_Apellido--> </p>
+										</div>    
+									</div>                                    
 								</div>
-                                <div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label class="col-md-4 control-label">Tipo Documento</label>
-											<div class="col-md-8">
-												<p class="form-control"><!--4DTEXT [Sarlaft]Tipo_Documento--></p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label class="col-md-4 control-label">Documento</label>
-											<div class="col-md-8">
-												<p class="form-control"><!--4DTEXT [Sarlaft]Documento_Numero-->  <!--4DTEXT [Sarlaft]DV--></p>
-											</div>
-										</div>
-									</div>
-								</div>						
-								<br>
+								<br>                                    
 								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label class="col-md-4 control-label">Nombres</label>
-											<div class="col-md-8">
-												<p class="form-control"><!--4DTEXT [Sarlaft]Nombres--></p>
-											</div>
-										</div>
+									<div class="col-sm-4">
+										<label class="col-md-4 control-label">Tipo de Documento</label>
+										<div class="col-md-8">
+											<p class="form-control"><!--4DTEXT [Sarlaft]Tipo_Documento--></p>										
+										</div>                                 
 									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label class="col-md-4 control-label">Apellidos</label>
-											<div class="col-md-8">
-												<p class="form-control"><!--4DTEXT [Sarlaft]Primer_Apellido-->  <!--4DTEXT [Sarlaft]Segundo_Apellido--></p>
-											</div>
-										</div>
-									</div>
-								</div>						
-								<br>
+									<div class="col-sm-4">
+										<div  class="form-group">
+											<label class="col-sm-4 control-label">Número</label>
+											<div class="col-sm-8">
+												<p name="numDocRep" class="form-control" ><!--4DTEXT [Sarlaft]Documento_Numero--></p>
+											</div>                                 
+										</div>                                                    
+									</div>                                    
+									<div class="col-sm-4">
+										<div  class="form-group">
+											<label class="col-sm-4 control-label">Fecha de Expedición</label>
+											<div class="col-sm-8">
+												<input disabled style="background-color:white" type="date" name="fechaExpedicion" class="form-control" value="<!--4DTEXT Substring(String([Sarlaft]Fecha_Expedicion;ISO date);1;10)-->">												
+											</div>                                 
+										</div>                                                    
+									</div>                                            
+								</div>
+								<br>                                    
 								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label class="col-md-4 control-label">Fecha Nacimiento</label>
+									<div class="col-sm-4">
+										<div  class="form-group">
+											<label class="col-md-4 control-label">Lugar de Expedición</label>
 											<div class="col-md-8">
-												<p class="form-control"><!--4DTEXT [Sarlaft]Fecha_Nacimiento--></p>
+												<p name="lugarExped" class="form-control" ><!--4DTEXT [Sarlaft]Lugar_Expedicion--></p>											
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label class="col-md-4 control-label">Nacionalidad</label>
+									<div class="col-sm-4">
+										<div  class="form-group">
+											<label class="col-sm-4 control-label">Fecha de Nacimiento</label>
+											<div class="col-sm-8">
+												<input name="fechaNacim" disabled style="background-color:white" type="date" class="form-control" value="<!--4DTEXT Substring(String([Sarlaft]Fecha_Nacimiento;ISO date);1;10)-->">
+											</div>                                 
+										</div>                                                    
+									</div> 
+									<div class="col-sm-4">
+										<div  class="form-group">
+											<label class="col-md-4 control-label">Lugar de Nacimiento</label>
 											<div class="col-md-8">
-												<p class="form-control"><!--4DTEXT [Sarlaft]Nacinalidad1--></p>
+												<p name="lugarNacimiento" class="form-control" ><!--4DTEXT [Sarlaft]Lugar_Nacimiento--></p>
 											</div>
 										</div>
-									</div>
-								</div>						
-								<br>
+									</div>                                                                                                                    
+								</div>
+								<br> 
 								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label class="col-md-4 control-label">Teléfono</label>
+									<div class="col-sm-4">
+										<div  class="form-group">
+											<label class="col-md-4 control-label">Nacionalidad 1</label>
 											<div class="col-md-8">
-												<p class="form-control"><!--4DTEXT [Sarlaft]Telefono--></p>
+												<p name="nacionalidad1" class="form-control" ><!--4DTEXT [Sarlaft]Nacinalidad1--></p>
 											</div>
 										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label class="col-md-4 control-label">Email</label>
+									</div>       
+									<div class="col-sm-4">
+										<div  class="form-group">
+											<label class="col-md-4 control-label">Nacionalidad 2</label>
 											<div class="col-md-8">
-												<p class="form-control"><!--4DTEXT [Sarlaft]EMail--></p>
+												<p name="nacionalidad2" class="form-control" ><!--4DTEXT [Sarlaft]Nacionalidad2--></p>
 											</div>
 										</div>
-									</div>
-								</div>						
-								<br>
-								<div class="row">
-									<div class="col-sm-8">
-										<div class="form-group">
-											<label class="col-md-3 control-label">Dirección Principal</label>
-											<div class="col-md-9">
-												<input class="form-control" value="<!--4DTEXT [Sarlaft]Direccin_Oficina-->" readonly style="background-color: white;">
+									</div>     
+									<div class="col-sm-4">
+										<div  class="form-group">
+											<label class="col-md-4 control-label">E-mail</label>
+											<div class="col-md-8">
+												<p name="emailRep" class="form-control" ><!--4DTEXT [Sarlaft]EMail--></p>
 											</div>
 										</div>
-									</div>									
-								</div>						
+									</div>                                                                                                                         
+								</div>
 								<br>
 
-                                <div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
+								<div class="row ">                                        
+									<div class="col-sm-8">
+										<div  class="form-group">
+											<label class="col-sm-2 control-label">Dirección</label>
+											<div class="col-sm-10 " style="transform: translateX(-5px)" >
+												<p name="dirResidencia" class="form-control"><!--4DTEXT [Sarlaft]Direccion--></p>
+											</div>                                 
+										</div>                                                    
+									</div>  																
+																	
+									<div class="col-sm-4">
+										<div  class="form-group">
 											<label class="col-md-4 control-label">Departamento</label>
-											<div class="col-md-8">												
-												<p class="form-control"><!--4DTEXT [Sarlaft]Departamento--></p>
+											<div class="col-md-8">
+												<p class="form-control"><!--4DTEXT [Sarlaft]Departamento--></p>												
 											</div>
 										</div>
-									</div>								
-									<div class="col-sm-6">
-										<div class="form-group">
+									</div>                                        
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-sm-4">
+										<div  class="form-group">
 											<label class="col-md-4 control-label">Ciudad</label>
 											<div class="col-md-8">
-												<p class="form-control"><!--4DTEXT [Sarlaft]Ciudad--></p>
+												<p name="ciudadRep" class="form-control" ><!--4DTEXT [Sarlaft]Ciudad_RepLegal--></p>
 											</div>
 										</div>
 									</div>
-								</div>						
-								<br>
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label class="col-md-4 control-label">Actividad Principal</label>
+									<div class="col-sm-4">
+										<div  class="form-group">
+											<label class="col-md-4 control-label">Teléfono</label>
 											<div class="col-md-8">
-												<p class="form-control"><!--4DTEXT [Sarlaft]Actividad_Principal--></p>
+												<p name="telefonoRep" class="form-control"> <!--4DTEXT [Sarlaft]Telefono_RepLegal--></p>
 											</div>
 										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label class="col-md-4 control-label">Sector</label>
+									</div>                                
+									<div class="col-sm-4">
+										<div  class="form-group">
+											<label class="col-md-4 control-label">Celular</label>
 											<div class="col-md-8">
-												<p class="form-control"><!--4DTEXT [Sarlaft]Sector--> </p>
+												<p name="celularRep" class="form-control"><!--4DTEXT [Sarlaft]Celular--></p>												
 											</div>
 										</div>
-									</div>
-								</div>						
-								<br>
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label class="col-md-4 control-label">Ocupación</label>
-											<div class="col-md-8">
-												<p class="form-control"><!--4DTEXT [Sarlaft]Ocupacion--></p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label class="col-md-4 control-label">Cargo</label>
-											<div class="col-md-8">
-												<p class="form-control"><!--4DTEXT [Sarlaft]Cargo--></p>
-											</div>
-										</div>
-									</div>
-								</div>						
-                                <br>
-                            <!--                                                                                             
-                              		
-									
-									
-									
-									
-									[Sarlaft]
-									[Sarlaft]
-									[Sarlaft]Ocupacion
-									[Sarlaft]Cargo
-                            -->
-                                								
-							
-								<br>		
-								<button type="submit"  class="btn ajg-button col-md-4 col-md-offset-4">Regresar</button>
-								<br>
-							</div>				
+									</div>                                                                                                           
+								</div>                                                                        
+							<br>
 						</div>
+						</div>
+					</section>
+					<!--FIN BÁSICO 1-->
+
+					<!--BÁSICO 2-->
+					<section class="ajg-panel">
+						<header class="ajg-panel-header">
+							<h4 class="ajg-panel-title ">Datos Básicos 2</h4>
+							<button id="button3" type="button" onclick="togglePanel('basico2',this)" href="#" class="fa fa-caret-down ajg-panel-button"></button>								
+						</header>
+						<div class="ajg-panel-body"  id="basico2">
+							<br>
+							<div class="row">
+								<div class="col-md-12">
+									<label class="col-md-4">¿Qué tipo de productos y/o servicio comercializa?</label>
+									<div class="col-md-8">
+										<p name="productoServicio" class="form-control"  ><!--4DTEXT [Sarlaft]Prod_Serv_Comerc--></p> 
+									</div>
+								</div>
+							</div> 
+							<br>
+							<div class="row">
+								<div class="col-md-6">
+									<label class="col-md-4">Ingresos Mensuales</label>
+									<div class="col-md-8">                                                                                                                                                
+										<p class="form-control"  name="ingresosMensuales" id="ingresosMensuales" ><!--4DTEXT [Sarlaft]Ingresos_Mensuales--></p>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label class="col-md-4">Egresos Mensuales</label>
+									<div class="col-md-8">										
+										<p name="egresosMensuales" id="egresosMensuales"  class="form-control" ><!--4DTEXT [Sarlaft]Egresos_Mensuales--></p>
+									</div>
+								</div>
+							</div>                                   
+							<br>
+
+							<div class="row">
+								<div class="col-md-6">
+									<label class="col-md-4">Activos</label>
+									<div class="col-md-8">
+										<p name="activos" id="activos"  class="form-control" ><!--4DTEXT [Sarlaft]Activos--></p>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label class="col-md-4">Pasivos</label>
+									<div class="col-md-8">
+										<p name="pasivos" id="pasivos" class="form-control" ><!--4DTEXT [Sarlaft]Pasivo--></p>
+									</div>
+								</div>
+							</div>                                   
+							<br>
+
+							<div class="row">
+								<div class="col-md-6">
+									<label class="col-md-4">Patrimonio</label>
+									<div class="col-md-8">
+										<p name="patrimonio" id="patrimonio" class="form-control"><!--4DTEXT [Sarlaft]Patrimonio--></p>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label class="col-md-4">Otros Ingresos</label>
+									<div class="col-md-8">
+										<p name="otrosIngresos" id="otrosIngresos" class="form-control" ><!--4DTEXT [Sarlaft]Otros_Ingresos--></p>
+									</div>
+								</div>
+							</div>                                   
+							<br>
+							<br>
+							<div class="row">
+								<div class="col-md-12">
+									<label class="col-md-4">Concepto Otros Ingresos Mensuales</label>
+									<div class="col-md-8">
+										<p name="conceptoIngresos" class="form-control"><!--4DTEXT [Sarlaft]Concepto_otros_Ingresos--></p>
+									</div>
+								</div>                                       
+							</div>                                   
+							<br>
+							<div class="form-group">
+								<label class="col-sm-6 control-label" style="padding-right: 1cm" >
+									¿Es usted una Pesona Públicamente Expuesta? 
+								</label>								
+								<div class="radio-custom radio-primary col-sm-1"  >
+									<input value="si" type="radio" name="perPublic" disabled <!--4DIF ([Sarlaft]Persona_PPE=True)-->checked<!--4DENDIF-->/>
+									<label >Si</label>
+								</div>
+								<div class="radio-custom radio-primary col-sm-1">
+									<input value="no" type="radio" name="perPublic" disabled <!--4DIF ([Sarlaft]Persona_PPE=False)-->checked<!--4DENDIF-->/>
+									<label >No</label>
+								</div>        
+							</div>
+							<div class="form-group">
+								<label class="col-sm-6 control-label" style="padding-right: 1cm" >
+									¿Existe algún vínculo entre usted y una persona considerada públicamente expuesta?
+								</label>
+								<div class="radio-custom radio-primary col-sm-1" >
+									<input value="si" type="radio" name="vinculoPerExp" disabled <!--4DIF ([Sarlaft]Vinculo_con_PPE=True)-->checked<!--4DENDIF-->/>
+									<label>Si</label>
+								</div>
+								<div class="radio-custom radio-primary col-sm-1">
+									<input value="no" type="radio" name="vinculoPerExp" disabled <!--4DIF ([Sarlaft]Vinculo_con_PPE=False)-->checked<!--4DENDIF-->/>
+									<label>No</label>
+								</div>        
+							</div>
+							<div class="form-group">
+								<label class="col-sm-6 control-label" style="padding-right: 1cm" >
+									¿Por su cargo o actividad, administra recursos públicos?
+								</label>
+								<div class="radio-custom radio-primary col-sm-1" >
+									<input value="si" type="radio" name="recursosPublicos" disabled <!--4DIF ([Sarlaft]Recursos_Publicos=True)-->checked<!--4DENDIF-->/>
+									<label>Si</label>
+								</div>
+								<div class="radio-custom radio-primary col-sm-1">
+									<input value="no" type="radio" name="recursosPublicos" disabled <!--4DIF ([Sarlaft]Recursos_Publicos=False)-->checked<!--4DENDIF-->/>
+									<label>No</label>
+								</div>        
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-6 control-label" style="padding-right: 1cm" >
+									¿Es usted sujeto de obligaciones tributarias en otro país o grupo de paises?
+								</label>
+								<div class="radio-custom radio-primary col-sm-1" >
+									<input value="si" type="radio" name="obligTribut" disabled <!--4DIF ([Sarlaft]Tributa_otro_Pais=True)-->checked<!--4DENDIF-->/>
+									<label>Si</label>
+								</div>
+								<div class="radio-custom radio-primary col-sm-1">
+									<input value="no" type="radio" name="obligTribut" disabled <!--4DIF ([Sarlaft]Tributa_otro_Pais=False)-->checked<!--4DENDIF-->/>
+									<label>No</label>
+								</div>    
+								<div class="col-sm-4">                                        
+									<div  class="form-group">
+										<label class="col-md-3 control-label">Indique</label>
+										<div class="col-md-9">
+											<p name="otroOblig" id="obligTribInd" class="form-control"><!--4DTEXT [Sarlaft]Tributa_Otro_pais_cual--></p>
+										</div>
+									</div>                                            
+								</div>        
+							</div>
+						</div>
+					</section>
+					<!--FIN BÁSICO 2-->
+
+					<!--ORIGEN DE FONDOS-->
+					<section class="ajg-panel">
+						<header class="ajg-panel-header">
+							<h4 class="ajg-panel-title ">Declaración Origen de Fondos</h4>
+							<button id="button4" type="button" onclick="togglePanel('origen',this)" href="#" class="fa fa-caret-down ajg-panel-button"></button>								
+						</header>
+						<div class="ajg-panel-body"  id="origen">
+							<br>
+							<div class="row">
+								<div class="col-sm-12">
+									<textarea name="origenFondos" style="background-color: white;" type="text" disabled class="form-control" ><!--4DTEXT [Sarlaft]Origen_fondos--> </textarea>
+								</div>                                                                              
+							</div>
+							<br>
+						</div>
+					</section>
+					<!--FIN ORIGEN DE FONDOS-->
+
+					<!--OPERACIONES INTERNACIONALES-->
+					<section class="ajg-panel">
+						<header class="ajg-panel-header">
+							<h4 class="ajg-panel-title ">Operaciones Internacionales</h4>
+							<button id="button5" type="button" onclick="togglePanel('opInter',this)"  class="fa fa-caret-down ajg-panel-button"></button>								
+						</header>
+						<div class="ajg-panel-body"  id="opInter" >
+							<br>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" style="padding-right: 1cm" >
+									¿Realiza Transacciones en Moneda Extranjera?
+								</label>
+								<div class="radio-custom radio-primary col-sm-1" >
+									<input value="si" type="radio" name="monedaExtranjera" disabled  <!--4DIF ([Sarlaft]Transacciones_Moneda_Ext=True)-->checked<!--4DENDIF-->/>
+									<label>Si</label>
+								</div>
+								<div class="radio-custom radio-primary col-sm-1">
+									<input value="no" disabled type="radio" name="monedaExtranjera"   <!--4DIF ([Sarlaft]Transacciones_Moneda_Ext=False)-->checked<!--4DENDIF-->/>
+									<label>No</label>
+								</div>    
+								<div class="col-sm-6">                                        
+									<div  class="form-group">
+										<label class="col-md-3 control-label">Cuál</label>
+										<div class="col-md-9">
+											<p class="form-control"><!--4DTEXT [Sarlaft]Trans_MonedaE_cual--></p>											
+										</div>
+									</div>                                            
+								</div>        
+							</div>
+							
+							<div  class="form-group">
+								<label class="col-sm-4 control-label">Indique Otras Operaciones</label>
+								<div class="col-sm-8" style="transform:translateX(-20px)">
+									<p name="otrasOperaciones" class="form-control" ><!--4DTEXT [Sarlaft]Otras_Operaciones--></p>
+								</div>                                 
+							</div>                                                                               
+						
+							<div class="form-group">
+								<label class="col-sm-4 control-label" style="padding-right: 1cm" >
+									¿Posee productos Financieros en el Exterior?
+								</label>
+								<div class="radio-custom radio-primary col-sm-1" >
+									<input value="si" type="radio" name="productosExtranjero" disabled <!--4DIF [Sarlaft]ProductosFin_Exterior=True)-->checked<!--4DENDIF-->/>
+									<label>Si</label>
+								</div>
+								<div class="radio-custom radio-primary col-sm-1">
+									<input value="no" type="radio" name="productosExtranjero" disabled <!--4DIF [Sarlaft]ProductosFin_Exterior=False)-->checked<!--4DENDIF-->/>
+									<label>No</label>
+								</div>                                             
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label" style="padding-right: 1cm" >
+									¿Posee Cuentas en Moneda Extranjera?
+								</label>
+								<div class="radio-custom radio-primary col-sm-1" >
+									<input value="si" type="radio" name="cuentasMonedaExtr" disabled <!--4DIF [Sarlaft]Cuentas_MonedaEx=True)-->checked<!--4DENDIF-->/>
+									<label>Si</label>
+								</div>
+								<div class="radio-custom radio-primary col-sm-1">
+									<input value="no" type="radio" name="cuentasMonedaExtr" disabled <!--4DIF [Sarlaft]Cuentas_MonedaEx=False)-->checked<!--4DENDIF-->/>
+									<label>No</label>
+								</div>                                                  
+							</div>
+							
+															
+							<div class="table-responsive">
+								<table class="table mb-none">
+	
+									<thead>
+										<tr class="ajg-title-dark">
+											<th>Tipo de producto</th>
+											<th>Identificación o Número del Producto</th>
+											<th>Entidad</th>
+											<th>Monto</th>
+											<th>Ciudad</th>
+											<th>País</th>                                                            
+											<th>Moneda</th>
+										</tr>
+									</thead>
+									<tbody>                                                    
+										<tr >                                                          
+											<td>
+												<p name="tipoProd1" class="form-control"><!--4DTEXT [Operaciones_Inter]Tipo_Producto--></p>
+											</td>
+											<td>
+												<p name="numProd1" class="form-control"><!--4DTEXT [Operaciones_Inter]Iden_Num_Prod--></p>
+											</td>
+											<td>
+												<p name="entidad1" class="form-control"><!--4DTEXT [Operaciones_Inter]Entidad--></p>
+											</td>                                                   
+											<td>
+												<p name="monto1" class="form-control"><!--4DTEXT [Operaciones_Inter]Monto--></p>
+											</td>
+											<td>
+												<p name="ciudad1" class="form-control"><!--4DTEXT [Operaciones_Inter]Ciudad--></p>
+											</td> 
+											<td>
+												<p name="pais1" class="form-control"><!--4DTEXT [Operaciones_Inter]Pais--></p>
+											</td>
+											<td>
+												<p name="moneda1" class="form-control"><!--4DTEXT [Operaciones_Inter]Moneda--></p>
+											</td>                                                                                                                       
+										</tr>                                                                                                                                       
+									</tbody>
+								</table>                                                                                        
+							</div>                                     
+							<br>
+						</div>
+					</section>
+					<!--FIN OPERACIONES INTERNACIONALES-->
+
+					<!--RECLAMACIONES EN SEGUROS-->
+					<section class="ajg-panel">
+						<header class="ajg-panel-header">
+							<h4 class="ajg-panel-title ">Reclamaciones en Seguros</h4>
+							<button id="button6" type="button" onclick="togglePanel('recSeguros',this)"  class="fa fa-caret-down ajg-panel-button"></button>								
+						</header>
+						<div class="ajg-panel-body"  id="recSeguros">
+							<br>
+							<div class="form-group">
+								<label class="col-sm-8 control-label" style="padding-right: 1cm" >
+									¿Ha presentado reclamaciones o ha recibido indemnizaciones en seguros en los dos últimos años?
+								</label>
+								<div class="radio-custom radio-primary col-sm-1" >
+									<input value="si" type="radio" id="radioSi"									
+									name="reclamIndem" disabled <!--4DIF [Sarlaft]Reclamacion_Indem=True)-->checked<!--4DENDIF-->/>
+									<label>Si</label>
+								</div>
+								<div class="radio-custom radio-primary col-sm-1">
+									<input value="no" type="radio" 									
+									name="reclamIndem" disabled <!--4DIF [Sarlaft]Reclamacion_Indem=False)-->checked<!--4DENDIF-->/>
+									<label>No</label>
+								</div>                                               
+							</div>
+																
+							<input type="hidden" id="numReclamaciones" value="<!--4DTEXT Records in Selection([Reclamaciones])-->">
+							<div class="table-responsive">
+								<table class="table mb-none">
+									<thead>
+										<tr class="ajg-title-dark">
+											<th>Año</th>
+											<th>Ramo</th>
+											<th>Compañía</th>
+											<th>Valor</th>
+											<th>Resultado</th>   											                                             
+										</tr>
+									</thead>
+									<tbody>                                                    									
+										<!--4DLOOP [Reclamaciones]-->
+										<tr >                                                          
+											<td>
+												<h4 type="text" class="form-control" ><!--4DTEXT [Reclamaciones]Año--></h4>
+											</td>
+											<td>
+												<h4 type="text" class="form-control" ><!--4DTEXT [Reclamaciones]Ramo--></h4>
+											</td>
+											<td>
+												<h4 type="text" class="form-control"> <!--4DTEXT [Reclamaciones]Compañia--></h4>
+											</td>                                                   
+											<td>
+												<h4 type="text" class="form-control"> <!--4DTEXT [Reclamaciones]Valor--></h4>
+											</td>
+											<td>
+												<h4 type="text"  type="text" class="form-control" ><!--4DTEXT [Reclamaciones]Resultado--></h4>
+											</td>											
+										</tr>
+										<!--4DENDLOOP-->
+									</tbody>
+								</table>                                                                                        
+							</div> 
+						</div>
+					</section>
+					<!--FIN RECLAMACIONES EN SEGUROS-->
+
+					<!--DOCUMENTOS  REQUERIDOS-->
+					<section class="ajg-panel">
+						<header class="ajg-panel-header">
+							<h4 class="ajg-panel-title ">Documentos Requeridos</h4>
+							<button id="button7" type="button" onclick="togglePanel('docs',this)"  class="fa fa-caret-down ajg-panel-button"></button>								
+						</header>
+						<div class="ajg-panel-body"  id="docs">
+							<br>
+							<div class="row">
+								<div class="col-md-6">
+									<p>- Fotocopia del documento de identidad del representante legal<span style="color:red">*</span></p>
+									<p style="margin-left:8px;">(Ampliada al 150%)</p>
+								</div>                                                                                         
+								<div class="col-md-6">								                         
+										<div class="col-md-4">
+											<h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"documentoIdentidad")--></h5>
+										</div>                
+										<div class="col-md-8">											
+											<a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank" rel="noopener noreferrer"  href="<!--4DTEXT OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")-->">Ver</a>
+										</div>                      									
+								</div>                                            
+							</div>
+							<br>                                                                                                                        
+							<div class="row">
+								<div class="col-md-6">
+									<p>- RUT.</p>
+								</div>                                                                                       
+								<div class="col-md-6">                                                										                              
+									<div class="col-md-4">
+										<h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"rut")--></h5>
+									</div>                
+									<div class="col-md-8">
+										<a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank" rel="noopener noreferrer"  href="<!--4DTEXT OB Get([Sarlaft]Ruta_Adjuntos;"rut")-->">Ver</a>
+									</div>
+								</div>                                        
+							</div>
+							<br>                                                                                                                        
+							<div class="row">
+								<div class="col-md-6">
+									<p>- Documento de Declaración de Renta.</p>
+								</div>                                                                                       
+								<div class="col-md-6">                                                										                             
+									<div class="col-md-4">
+										<h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"declaracion")--></h5>
+									</div>                
+									<div class="col-md-8">
+										<a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank" rel="noopener noreferrer"  href="<!--4DTEXT OB Get([Sarlaft]Ruta_Adjuntos;"declaracion")-->">Ver</a>
+									</div>                      
+								</div>                                        
+							</div>
+							<br>                                                                                                                        
+							<div class="row">
+								<div class="col-md-6">
+									<p>- Estados Financieros.</p>
+								</div>                                                                                       
+								<div class="col-md-6">                                                
+									<div class="col-md-4">
+										<h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"estados")--></h5>
+									</div>                
+									<div class="col-md-8">
+										<a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank" rel="noopener noreferrer"  href="<!--4DTEXT OB Get([Sarlaft]Ruta_Adjuntos;"estados")-->">Ver</a>
+									</div>                      
+								</div>                                        
+							</div>
+						</div>
+					</section>
+					<!--FIN DOCUMENTOS  REQUERIDOS-->
+
+					<!--PERSONAS EXPUESTAS PÚBLICAMENTE-->
+					<section class="ajg-panel">
+						<header class="ajg-panel-header">
+							<h4 class="ajg-panel-title ">Personas Expuestas Públicamente</h4>
+							<button id="button8" type="button" onclick="togglePanel('perExpPub',this)"  class="fa fa-caret-down ajg-panel-button"></button>								
+						</header>
+						<div class="ajg-panel-body"  id="perExpPub">
+							<div class="table-responsive">
+								<table class="table mb-none">
+	
+									<thead>
+										<tr class="ajg-title-dark">
+											<th>Vínculo / Relación *</th>
+											<th>Nombre</th>
+											<th>Tipo ID</th>
+											<th>No de ID</th>
+											<th>Nacionalidad</th>
+											<th>Entidad</th>
+											<th>Cargo</th>
+											<th>Fecha Desvinculación</th>											
+										</tr>
+									</thead>
+									<tbody>                                                    									
+										<!--4DLOOP [Perso_Expuest_Public]-->
+										<tr>
+											<td>
+												<h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Vinculo_Relacion--></h4>
+											</td>
+											<td>
+												<h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Nombre--></h4>
+											</td>
+											<td>
+												<h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Tipo_Ident--></h4>
+											</td>
+											<td>
+												<h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]No_ID--></h4>
+											</td>
+											<td>
+												<h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Nacionalidad--></h4>
+											</td>
+											<td>
+												<h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Entidad--></h4>
+											</td>
+											<td>
+												<h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Cargo--></h4>
+											</td>                                                           
+											<td>
+												<h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Fecha_Desvinculacion--></h4>
+											</td>                                                     											
+										</tr>
+										<!--4DENDLOOP-->
+										
+									</tbody>
+								</table>                                                                                        
+							</div>
+						</div>
+					</section>
+					<!--FIN PERSONAS EXPUESTAS PÚBLICAMENTE-->
+
+
+
+					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Consulta_Sarlaft">
+						<button type="submit"  class="btn ajg-button col-md-4 col-md-offset-4">Regresar</button>
 					</form>
 					<!-- end: page -->
 				</section>

@@ -60,7 +60,7 @@
                                                     data-content="Primer Apellido del Representante Legal" required 
                                                     value="<!--4DTEXT [Sarlaft]Primer_Apellido-->">                                                    
                                                 </div>
-                                              
+
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
@@ -137,7 +137,7 @@
                                             </div>
                                         </div>                                                                                                                    
                                     </div>
-                                    <br>
+                                    <br> 
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div  class="form-group">

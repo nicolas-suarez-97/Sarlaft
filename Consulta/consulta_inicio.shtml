@@ -15,7 +15,7 @@
 
 			<div class="inner-wrapper">
 				<!-- start: sidebar -->
-			        <!--#4DINCLUDE panelConsulta.shtml-->
+			    	<!--#4DINCLUDE panelConsulta.shtml-->
 				<!-- end: sidebar -->			
 				<section role="main" class="content-body">
 					<header class="page-header ajg-color-dark "  >

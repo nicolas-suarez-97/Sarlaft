@@ -98,3 +98,34 @@ function validateFields(...fields){
         }
     }
 }
+
+function togglePanel(body,arrow){    
+    if(arrow.className == 'fa fa-caret-down ajg-panel-button'){
+        document.getElementById(body).className ='ajg-panel-body active';        
+        arrow.className = 'fa fa-caret-up ajg-panel-button';
+        arrow.scrollIntoView({behavior: "smooth", block:"center"});
+    }else{
+        document.getElementById(body).className ='ajg-panel-body';
+        arrow.className = 'fa fa-caret-down ajg-panel-button'
+    }    
+}
+
+function collapseAll(...sections){
+    for(var s of sections){        
+        document.getElementById(s).className = 'ajg-panel-body';
+    }
+    for(var i = 1; i<=8; i++){
+        document.getElementById('button'+i).className = 'fa fa-caret-down ajg-panel-button';
+    }
+    window.scrollTo(0,0);
+    
+}
+
+function expandAll(...sections){
+    for(var s of sections){
+        document.getElementById(s).className = 'ajg-panel-body active';
+    }
+    for(var i = 1; i<=8; i++){
+        document.getElementById('button'+i).className = 'fa fa-caret-up ajg-panel-button';
+    }
+}
