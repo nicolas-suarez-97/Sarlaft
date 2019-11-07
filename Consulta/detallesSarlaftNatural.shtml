@@ -48,7 +48,11 @@
 							<div class="col-sm-6">
 								<h3 class=" ajg-title-dark"><span style="font-weight: bold;"><!--4DTEXT [Sarlaft]Nombre_Razon_Social--></span> - <!--4DTEXT [Sarlaft]Documento_Numero--></h3>
 								<h6>Fecha Diligenciamiento: <!--4DTEXT [Sarlaft]Fecha_Diligenciamiento--></h6>
-							</div>												
+							</div>		
+							<div class="col-sm-6">								
+								<h5 class="ajg-title-dark">Tipo: <span class="bold">NATURAL</span></h5>
+								
+							</div>										
 						</div>	
 						<br>								
 					</div>
@@ -851,8 +855,8 @@
 		</section>				
 		<br>
 		<br>
-		<script src="../funcionesAuxiliares.js"></script>		
-		<script src="nuevaSolicitud.js"></script>
+		<script src='../funcionesAuxiliares.js'></script>
+		<script src='nuevaSolicitud.js'></script>
 		<!--4DINCLUDE scripts.html-->	
 	</body>
 </html>

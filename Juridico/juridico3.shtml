@@ -416,6 +416,6 @@
 			</div>			
 		</section>
         <!--4DINCLUDE scripts.html-->
-        <script src="juridico3.js"></script>
+        <script src='juridico3.js'></script>
 	</body>
 </html>

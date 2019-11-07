@@ -214,15 +214,17 @@ html {
     color:white;
 }
 
-.dataRow{    
+.dataRow{        
     color:black;
     text-decoration: none;
 }
 
-.dataRow:hover{    
-    color:rgb(0,38,62);
-    text-decoration: underline;
+.dataRow:hover{        
+    font-weight: bold;
+    
 }
+
+
 
 .bold{
     font-weight: bold;

@@ -83,8 +83,17 @@
 									</thead>
 									<tbody>
 										<!--4DLOOP [Sarlaft]-->
-										<tr class="dataRow">
-											<td ><a href="#" style="color:black" onclick="openView(<!--4DTEXT [Sarlaft]Documento_numero-->)"><!--4DTEXT  [Sarlaft]Nombre_Razon_Social--></a></td>
+										<tr class="dataRow" >
+											<td style="display:flex; align-items: center;">
+												<a href="#"  style="color:black; margin: 0px 20px 0px 6px;" onclick="openView(<!--4DTEXT [Sarlaft]Documento_numero-->)">													
+													<i class="material-icons">
+														notes
+													</i>
+												</a>
+												<a href="#" style="color:black;" onclick="openView(<!--4DTEXT [Sarlaft]Documento_numero-->)">
+													<!--4DTEXT  [Sarlaft]Nombre_Razon_Social-->
+												</a>
+											</td>
 											<td><!--4DTEXT [Sarlaft]Nivel_Riesgo--></td>
 											<td><!--4DTEXT [Sarlaft]Tipo_Documento--> : <!--4DTEXT [Sarlaft]Documento_numero--> <!--4DTEXT [Sarlaft]DV--></td>
 											<td><!--4DTEXT [Sarlaft]Direccion--></td>
