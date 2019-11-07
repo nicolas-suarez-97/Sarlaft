@@ -38,6 +38,7 @@ function valMinLength(e,num,noti){
         document.getElementById(noti).style.display = "none";
     }
 }
+
 function makeRequired(element){
     var e = document.getElementById(element);
     e.required = true;
