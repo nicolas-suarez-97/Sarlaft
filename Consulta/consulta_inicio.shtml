@@ -79,6 +79,7 @@
 											<th>Documento</th>
 											<th>Dirección</th>
 											<th>Teléfono</th>
+											<th>Tipo</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -98,6 +99,11 @@
 											<td><!--4DTEXT [Sarlaft]Tipo_Documento--> : <!--4DTEXT [Sarlaft]Documento_numero--> <!--4DTEXT [Sarlaft]DV--></td>
 											<td><!--4DTEXT [Sarlaft]Direccion--></td>
 											<td><!--4DTEXT [Sarlaft]Telefono--></td>
+											<!--#4DIF ([Sarlaft]Juridico_Natural = True)-->
+												<td>Jurídico</td>
+											<!--#4DELSE-->
+												<td>Natural</td>
+											<!--#4DENDIF-->
 										</tr>					
 										<!--4DENDLOOP-->		
 									</tbody>
