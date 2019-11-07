@@ -385,10 +385,10 @@
 					</section>
 					<!--FIN BÁSICO 1-->
 
-					<!--BÁSICO 2-->
+					<!--INFORMACIÓN FINANCIERA 2-->
 					<section class="ajg-panel">
 						<header class="ajg-panel-header">
-							<h4 class="ajg-panel-title ">Datos Básicos 2</h4>
+							<h4 class="ajg-panel-title ">Información Financiera</h4>
 							<button id="button3" type="button" onclick="togglePanel('basico2',this)" href="#" class="fa fa-caret-down ajg-panel-button"></button>								
 						</header>
 						<div class="ajg-panel-body"  id="basico2">
@@ -522,7 +522,7 @@
 							</div>
 						</div>
 					</section>
-					<!--FIN BÁSICO 2-->
+					<!--FIN INFORMACIÓN FINANCIERA-->
 
 					<!--ORIGEN DE FONDOS-->
 					<section class="ajg-panel">
