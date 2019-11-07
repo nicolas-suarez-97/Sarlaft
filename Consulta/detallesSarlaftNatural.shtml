@@ -685,7 +685,7 @@
 										<tr class="ajg-title-dark">
 											<th>Año</th>
 											<th>Ramo</th>
-											<th>Compañía</th>
+											<th>Compañía<span style="color:white">______________________</span></th>
 											<th>Valor</th>
 											<th>Resultado</th>   											                                             
 										</tr>
@@ -798,7 +798,7 @@
 									<thead>
 										<tr class="ajg-title-dark">
 											<th>Vínculo / Relación *</th>
-											<th>Nombre</th>
+											<th>Nombre<span style="color:white">__________________________________________</span></th>
 											<th>Tipo ID</th>
 											<th>No de ID</th>
 											<th>Nacionalidad</th>
@@ -843,8 +843,6 @@
 						</div>
 					</section>
 					<!--FIN PERSONAS EXPUESTAS PÚBLICAMENTE-->
-
-
 
 					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Consulta_Sarlaft">
 						<button type="submit"  class="btn ajg-button col-md-4 col-md-offset-4">Regresar</button>

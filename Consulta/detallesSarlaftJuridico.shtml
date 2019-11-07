@@ -51,7 +51,7 @@
 							</div>		
 							<div class="col-sm-6">
 								
-                                <h5 class="ajg-title-dark">Tipo: <span class="bold">JURÍDICO</span></h5>
+                                <h5 class="ajg-title-dark" >Tipo: <span class="bold">JURÍDICO</span></h5>
 							
 							</div>										
 						</div>	
@@ -233,8 +233,8 @@
                                 <div class="row">                                        
                                     <div class="col-sm-7">
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label" >Nombre o Razón Social</label>                                                
-                                            <div class="col-md-9">
+                                            <label class="col-md-2 control-label" >Nombre o Razón Social</label>                                                
+                                            <div class="col-md-10">
                                                 <p name="razonSocial" class="form-control"><!--4DTEXT [Sarlaft]Nombre_Razon_Social--></p>
                                             </div>
                                         </div>
@@ -630,7 +630,7 @@
                                         <tr class="ajg-title-dark">
                                             <th>Tipo ID</th>
                                             <th>Número ID</th>
-                                            <th>Nombre<span style="color:white">______________________________</span></th>
+                                            <th>Nombre<span style="color:white">__________________________________________</span></th>
                                             <th>% Participación</th>
                                             <th>¿Es Persona Jurídica que cotiza en Bolsa</th>
                                             <th>¿Es Persona Públicamente Expuesta, o vinculada con una de ellas?</th>
@@ -685,7 +685,7 @@
                                     <thead>
                                         <tr class="ajg-title-dark">
                                             <th>Vínculo / Relación *</th>
-                                            <th>Nombre<span style="color:white">____________________</span></th>
+                                            <th>Nombre<span style="color:white">__________________________________________</span></th>
                                             <th>Tipo ID</th>
                                             <th>No de ID</th>
                                             <th>Nacionalidad</th>
@@ -745,7 +745,7 @@
                                     <thead>
                                         <tr class="ajg-title-dark">
                                             <th>Numero ID</th>
-                                            <th>Nombre<span style="color:white">____________________</span></th>
+                                            <th>Nombre<span style="color:white">__________________________________________</span></th>
                                             <th>Nombre/Razón Social de la Sociedad de la que es Accionista</th>
                                             <th>Tipo ID</th>
                                             <th>ID</th>
