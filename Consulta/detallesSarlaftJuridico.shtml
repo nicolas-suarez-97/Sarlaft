@@ -1006,9 +1006,14 @@
                                         <div class="col-md-4">
                                             <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"documentoIdentidad")--></h5>
                                         </div>                
-                                        <div class="col-md-8">											
+                                        <div class="col-md-8">						
+                                            <!--#4DIF (OB Get([Sarlaft]Nombre_Adjuntos;"documentoIdentidad")#"")-->
                                             <a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank"  rel="noopener noreferrer"  
-                                            href="../Documentos_Sarlaft/<!--4DTEXT [Sarlaft]Folder_UUDI--><!--4DTEXT [Sarlaft]Documento_Numero-->/<!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"documentoIdentidad")-->">Ver</a>
+                                            href="<!--4DTEXT OB Get([Sarlaft]Ruta_Parcial_PDF;"documentoIdentidad")-->">Ver</a>
+                                            <!--#4DELSE-->
+                                            <a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank"  rel="noopener noreferrer"  disabled
+                                            href="#"documentoIdentidad")-->">Ver</a>
+                                            <!--#4DENDIF-->
                                         </div> 
                                     </div>   
                                 </div>
@@ -1021,9 +1026,14 @@
                                         <div class="col-md-4">
                                             <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"certificado")--></h5>
                                         </div>                
-                                        <div class="col-md-8">											
+                                        <div class="col-md-8">		
+                                            <!--#4DIF (OB Get([Sarlaft]Nombre_Adjuntos;"certificado")#"")-->									
                                             <a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank"  rel="noopener noreferrer"  
-                                            href="../Documentos_Sarlaft/<!--4DTEXT [Sarlaft]Folder_UUDI--><!--4DTEXT [Sarlaft]Documento_Numero-->/<!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"certificado")-->">Ver</a>
+                                            href="<!--4DTEXT OB Get([Sarlaft]Ruta_Parcial_PDF;"certificado")-->">Ver</a>
+                                            <!--#4DELSE-->
+                                            <a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank"  rel="noopener noreferrer"  disabled
+                                            href="#">Ver</a>
+                                            <!--#4DENDIF-->
                                             
                                         </div> 
                                     </div>  
@@ -1037,9 +1047,14 @@
                                         <div class="col-md-4">
                                             <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"rut")--></h5>
                                         </div>                
-                                        <div class="col-md-8">											
+                                        <div class="col-md-8">
+                                            <!--#4DIF (OB Get([Sarlaft]Nombre_Adjuntos;"rut")#"")-->
                                             <a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank"  rel="noopener noreferrer"  
-                                            href="../Documentos_Sarlaft/<!--4DTEXT [Sarlaft]Folder_UUDI--><!--4DTEXT [Sarlaft]Documento_Numero-->/<!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"rut")-->">Ver</a>
+                                            href="<!--4DTEXT OB Get([Sarlaft]Ruta_Parcial_PDF;"rut")-->">Ver</a>
+                                            <!--#4DELSE-->
+                                            <a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank"  rel="noopener noreferrer"  disabled
+                                            href="#">Ver</a>
+                                            <!--#4DENDIF-->
                                         </div>
                                     </div>
                                 </div>                                        
