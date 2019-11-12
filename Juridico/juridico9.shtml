@@ -255,11 +255,21 @@
                                                 
                                             </div>
                                         </div>                                        
-                                                                                 
                                     </div>
                                     <br>
-                                    <button type="submit" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>
+                                    <button type="submit" id="submitButton" data-toggle="modal" data-target="#loading" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>
                                 </form>
+                            </div>
+                            <div class="modal fade" id="loading" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <h4 style="text-align: center" class="ajg-title-dark">Cargando Sarlaft...</h4>
+                                        </div>
+                                        <img src="../img/loading.gif" class="load">																	
+                                    </div>
+                                </div>
                             </div>
                         </section>
                         
