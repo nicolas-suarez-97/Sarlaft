@@ -104,11 +104,9 @@
                                             <label>No</label>
                                         </div>                                                  
                                     </div>
-                                    
-                                                                         
+
                                     <div class="table-responsive">
                                         <table class="table mb-none">
-            
                                             <thead>
                                                 <tr class="ajg-title-dark">
                                                     <th>Tipo de producto</th>
@@ -265,7 +263,7 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-body">
-                                            <h4 style="text-align: center" class="ajg-title-dark">Cargando Sarlaft...</h4>
+                                            <h4 style="text-align: center" class="ajg-title-dark">Subiendo Archivos...</h4>
                                         </div>
                                         <img src="../img/loading.gif" class="load">																	
                                     </div>
@@ -278,8 +276,6 @@
 					<!-- end: page -->
 				</section>
 			</div>
-
-			
         </section>
         <script src="juridico9.js"></script>
         <!--4DINCLUDE scripts.html-->
