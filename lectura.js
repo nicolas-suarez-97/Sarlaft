@@ -4,7 +4,7 @@ console.log(file);
 function loadFileAsText(){
     console.log("aca");
     var fileToLoad = document.getElementById("fileToLoad").files[0];
-  
+
     var fileReader = new FileReader();
     fileReader.onload = function(fileLoadedEvent){
         var textFromFileLoaded = fileLoadedEvent.target.result;
@@ -20,6 +20,6 @@ function loadFileAsText(){
         }
         document.getElementById("inputTextToSave").innerHTML = result;
     };
-  
+
     fileReader.readAsText(fileToLoad, "UTF-8");
-  }
+ }

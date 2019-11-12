@@ -36,12 +36,10 @@
 									<i class="fa fa-home title" style="padding-right: 1cm; color:white"></i>									
 								</li>																
 							</ol>
-												
 						</div>
-					</header>
-                    
-					<!-- start: page -->
-				
+                    </header>
+
+					<!-- start: page -->				
 					<input type="text" hidden name="id" value="<!--4DTEXT [Users]ID-->">
 					<div class="ajg-panel ">
 						<div class="row top">
@@ -76,7 +74,7 @@
 								<div class="col-sm-4">
 									<div class="form-group">
 										<label class="control-label" >Ciudad</label>                                                
-										<p ="ciudades" class="form-control" id="inputCiudad" name="ciudadDiligenciamiento" ><!--4DTEXT [Sarlaft]Ciudad_Diligenciamiento--></p>
+										<p class="form-control" id="inputCiudad" name="ciudadDiligenciamiento" ><!--4DTEXT [Sarlaft]Ciudad_Diligenciamiento--></p>
 									</div>
 								</div>
 								<div class="col-sm-4">
@@ -1009,7 +1007,8 @@
                                             <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"documentoIdentidad")--></h5>
                                         </div>                
                                         <div class="col-md-8">											
-                                            <a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank" disabled rel="noopener noreferrer"  href="<!--4DTEXT OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")-->">Ver</a>
+                                            <a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank"  rel="noopener noreferrer"  
+                                            href="../Documentos_Sarlaft/<!--4DTEXT [Sarlaft]Folder_UUDI--><!--4DTEXT [Sarlaft]Documento_Numero-->/<!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"documentoIdentidad")-->">Ver</a>
                                         </div> 
                                     </div>   
                                 </div>
@@ -1023,7 +1022,9 @@
                                             <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"certificado")--></h5>
                                         </div>                
                                         <div class="col-md-8">											
-                                            <a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank" disabled rel="noopener noreferrer"  href="<!--4DTEXT OB Get([Sarlaft]Ruta_Adjuntos;"certificado")-->">Ver</a>
+                                            <a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank"  rel="noopener noreferrer"  
+                                            href="../Documentos_Sarlaft/<!--4DTEXT [Sarlaft]Folder_UUDI--><!--4DTEXT [Sarlaft]Documento_Numero-->/<!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"certificado")-->">Ver</a>
+                                            
                                         </div> 
                                     </div>  
                                 </div>
@@ -1037,7 +1038,8 @@
                                             <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"rut")--></h5>
                                         </div>                
                                         <div class="col-md-8">											
-                                            <a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank" disabled rel="noopener noreferrer"  href="<!--4DTEXT OB Get([Sarlaft]rut;"certificado")-->">Ver</a>
+                                            <a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank"  rel="noopener noreferrer"  
+                                            href="../Documentos_Sarlaft/<!--4DTEXT [Sarlaft]Folder_UUDI--><!--4DTEXT [Sarlaft]Documento_Numero-->/<!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"rut")-->">Ver</a>
                                         </div>
                                     </div>
                                 </div>                                        
