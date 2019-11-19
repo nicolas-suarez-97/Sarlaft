@@ -3,7 +3,7 @@
 	<head>
 		<!--4DINCLUDE headIncludes.html-->
 		<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">-->
-		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+		<script src='https://code.jquery.com/jquery-3.4.1.js' integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<section class="body">
@@ -36,9 +36,13 @@
 						<input type="text" hidden name="id" value="<!--4DTEXT [Users]ID-->">					
 						<div class="ajg-panel ">
 							<div class="row top">
-								<div class="col-sm-6 top">
+								<div class="col-md-7 top">
 									<h3 class=" ajg-title-dark" >NUEVA SOLICITUD</h3>								
-								</div>															
+								</div>	
+								<div class="col-md-4">
+									<h5 class="ajg-title-dark">Usuario Creación: <!--4DTEXT [Users]UserName--></h5>
+									<h5 class="ajg-title-dark">Sucursal: <!--4DTEXT [Users]Sucursal --></h5>
+								</div>														
 							</div>
 							
 							<div class="panel-body ajg-title-dark">
@@ -52,7 +56,7 @@
 													<option value="JURÍDICO">JURÍDICO</option>
 													<option value="NATURAL" >NATURAL</option>
 												</select>  
-											</div>    								  
+											</div>   
 										</div>
 									</div>
 								</div>																						
