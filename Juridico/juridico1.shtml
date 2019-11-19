@@ -238,7 +238,7 @@
 				</section>
 			</div>			
         </section>  
-        <script src='juridico1.js'></script>    
+        <script src='Juridico/juridico1.js'></script>    
         <!--4DINCLUDE scripts.html-->     
 	</body>
 </html>
