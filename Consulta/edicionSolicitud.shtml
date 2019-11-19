@@ -3,7 +3,7 @@
 	<head>
 		<!--4DINCLUDE headIncludes.html-->
 		<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">-->
-		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+		<script src='https://code.jquery.com/jquery-3.4.1.js' integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<section class="body">
@@ -46,6 +46,10 @@
 							<div class="row top">
 								<div class="col-sm-6 top">
 									<h3 class=" ajg-title-dark" >SOLICITUD # <!--4DTEXT [Clientes]ID--></h3>
+								</div>		
+								<div class="col-md-4">
+									<h5 class="ajg-title-dark">Usuario Creación: <!--4DTEXT [Clientes]Usuario_Creacion--></h5>
+									<h5 class="ajg-title-dark">Sucursal: <!--4DTEXT [Clientes]Sucursal --></h5>
 								</div>															
 							</div>
 							
