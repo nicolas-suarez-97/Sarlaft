@@ -18,7 +18,6 @@
 				<section role="main" class="content-body">
 					<header class="page-header  ajg-color-dark">
                         <h2>Declaración de Fondos</h2>
-					
 						<div class="right-wrapper pull-right" style="transform: translateX(-10px)">
 							<ol class="breadcrumbs">
 								<li>									
@@ -26,7 +25,6 @@
 								</li>
                                 <li><span style="color:white;padding-right: 1cm;">Declaración de Origen de Fondos</span></li>                                
 							</ol>
-												
 						</div>
 					</header>
 
@@ -66,14 +64,10 @@
                                 </form>
                             </div>
                         </section>
-                        
-                        
                     </div>  
 					<!-- end: page -->
 				</section>
 			</div>
-
-			
 		</section>
 		<!--4DINCLUDE scripts.html-->				
 	</body>

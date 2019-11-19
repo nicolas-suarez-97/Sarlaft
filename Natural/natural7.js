@@ -12,6 +12,7 @@ authSi.addEventListener("click",function(){
 });
 
 
+
 function validateButton(){
     if(authSi.checked){
         return false;

@@ -14,11 +14,9 @@
 				<!-- start: sidebar -->
 				    <!--#4DINCLUDE panelJuridico.shtml-->
 				<!-- end: sidebar -->
-
 				<section role="main" class="content-body">
 					<header class="page-header  ajg-color-dark">
                         <h2>Operaciones Internacionales</h2>
-					
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
 								<li>									

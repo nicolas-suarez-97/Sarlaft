@@ -37,7 +37,7 @@
                         <div class="panel-body " style="margin: 20px;">
                             <h4 class="text-center ajg-title-dark">Bienvenido al portal de manejo de Formulario de conocimiento del cliente de <span>ARTHUR J. GALLAGHER CORREDORES DE SEGUROS S.A.</span></h4>
                             <h4 class="text-center ajg-title-dark">A través de esta plataforma tu podrás ingresar y diligenciar de manera efectiva la información solicitada en el formulario.
-                                  Ingresa y descubre la nueva experiencia digital que hemos desarrollado para ti.</h4>                            
+                                Ingresa y descubre la nueva experiencia digital que hemos desarrollado para ti.</h4>                            
                         </div>
                     </section>
                     <br>
@@ -58,21 +58,25 @@
                                                 <!--4DELSE-->
                                                     <input type="date" class="form-control" id="inputDate" name="fechaDiligenciamiento" value="<!--4DTEXT Substring(String([Sarlaft]Fecha_Diligenciamiento;ISO date);1;10)-->"> 
                                                 <!--4DENDIF-->
-                                            </div>   
+                                            </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label class="control-label" >Ciudad</label>                                                
-                                                <input type="text" list="ciudades" onkeyup="upperCase(this,false)" value="<!--4DTEXT [Sarlaft]Ciudad_Diligenciamiento-->" class="form-control" id="inputCiudad" placeholder="Ciudad diligenciamiento" required name="ciudadDiligenciamiento" autocomplete="off">
-                                                <datalist id="ciudades">
-                                                    <!--4DINCLUDE ../ciudades.shtml-->
-                                                </datalist>
+                                                <select name="ciudadDiligenciamiento" id="inputCiudad" onchange="sucursalChange()" class="form-control" required>
+                                                    <option value=""></option>
+                                                    <option value="BOGOTÁ"  <!--#4DIF ([Sarlaft]Ciudad_Diligenciamiento = "BOGOTÁ")-->selected<!--#4DENDIF-->>BOGOTÁ</option>
+                                                    <option value="BARRANQUILLA" <!--#4DIF ([Sarlaft]Ciudad_Diligenciamiento = "BARRANQUILLA")-->selected<!--#4DENDIF-->>BRRANQUILLA</option>
+                                                    <option value="CALI" <!--#4DIF ([Sarlaft]Ciudad_Diligenciamiento = "CALI")-->selected<!--#4DENDIF-->>CALI</option>
+                                                    <option value="CARTAGENA" <!--#4DIF ([Sarlaft]Ciudad_Diligenciamiento = "CARTAGENA")-->selected<!--#4DENDIF-->>CARTAGENA</option>
+                                                    <option value="MEDELLÍN" <!--#4DIF ([Sarlaft]Ciudad_Diligenciamiento = "MEDELLÍN")-->selected<!--#4DENDIF-->>MEDELLÍN</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label class="control-label" >Sucursal</label>                                                
-                                                <input type="text" value="<!--4DTEXT [Sarlaft]Sucursal-->" onkeyup="upperCase(this,false)" class="form-control" id="inputSucursal" placeholder="Sucursal" required name="sucursal" autocomplete="off">                                                
+                                                <input type="text" value="<!--4DTEXT [Sarlaft]Sucursal-->" onkeyup="upperCase(this,false)" class="form-control" id="inputSucursal" placeholder="Sucursal" readonly name="sucursal" autocomplete="off">                                                
                                             </div>
                                         </div>
                                     </div>                                    
@@ -233,7 +237,8 @@
 					<!-- end: page -->
 				</section>
 			</div>			
-        </section>      
+        </section>  
+        <script src='juridico1.js'></script>    
         <!--4DINCLUDE scripts.html-->     
 	</body>
 </html>
