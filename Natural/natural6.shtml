@@ -231,7 +231,7 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-body">
-                                            <h4 style="text-align: center" class="ajg-title-dark">Cargando Sarlaft...</h4>
+                                            <h4 style="text-align: center" class="ajg-title-dark">Subiendo Archivos...</h4>
                                         </div>
                                         <img src="../img/loading.gif" class="load">																	
                                     </div>
