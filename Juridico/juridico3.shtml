@@ -57,7 +57,6 @@
                                                         onchange="validateNA(this)" placeholder="Primer Apellido - Representante Legal" data-container=".row" data-toggle="popover" data-trigger="hover"
                                                         data-placement="top" data-content="Primer Apellido del Representante Legal" required autocomplete="off">
                                                 </div>
-                                              
                                             </div>
                                         </div>
                                         <div class="col-sm-4">

@@ -18,3 +18,11 @@ function guardarDir( cancel, fullD, dir){
     dirResidencia.value = fullDir.innerHTML;
     document.getElementById(cancel).click();
 }
+
+function validateTipoESect(e){
+    if(e.value == 'NATURAL'){
+        document.getElementById('TipoEmpSector').style.display = 'none';
+    }else{
+        document.getElementById('TipoEmpSector').style.display = 'block';
+    }
+}
