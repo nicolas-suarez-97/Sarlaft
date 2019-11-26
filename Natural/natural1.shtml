@@ -35,9 +35,9 @@
                     <br>
                     <section class="panel">
                         <div class="panel-body" style="margin: 20px;">
-                            <h4 class="text-center ajg-title-dark">Bienvenido al portal de manejo de Formulario de conocimiento del cliente de <span>ARTHUR J. GALLAGHER CORREDORES DE SEGUROS S.A.</span></h4>
-                            <h4 class="text-center ajg-title-dark">A través de esta plataforma tu podrás ingresar y diligenciar de manera efectiva la información solicitada en el formulario.
-                                Ingresa y descubre la nueva experiencia digital que hemos desarrollado para ti.</h4>                            
+                            <h4 class="text-center ajg-title-dark">Bienvenido al portal de manejo de Formulario de conocimiento del cliente de <span style="font-weight: bold;">ARTHUR J. GALLAGHER CORREDORES DE SEGUROS S.A.</span></h4>
+                            <h4 class="text-center ajg-title-dark">A través de esta plataforma podrá diligenciar de manera efectiva la información solicitada en el formulario.
+                                Ingrese y descubra la nueva experiencia digital que hemos desarrollado para usted.</h4>                            
                         </div>
                     </section>
                     <div>
