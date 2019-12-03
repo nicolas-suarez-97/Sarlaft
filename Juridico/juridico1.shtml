@@ -61,7 +61,7 @@
                             <br>
                             <div style="display:flex;justify-content: center">
                                 <div class="checkbox-custom chekbox-primary">
-                                    <input value="Aceptar" type="checkbox" name="aceptarManejoDatos" id="aceptar"/>
+                                    <input value="Aceptar" type="checkbox" id="aceptar"/>
                                     <label for="aceptar">Aceptar</label>
                                 </div> 
                             </div>
@@ -95,7 +95,7 @@
                             </header>
                             <div class="panel-body">
                                 <form class="form-bordered " id="form-id" method="POST" enctype="multipart/form-data" action="/Juridico/datos_basicos">
-
+                                    <input value="Aceptar" type="checkbox" name="aceptarManejoDatos" id="aceptarEnvio" style="display:none"/>
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group ">
