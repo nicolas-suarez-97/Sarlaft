@@ -30,6 +30,54 @@
 						</div>
 					</header>
                     
+                    <!--#4DIF ([Sarlaft]Manejo_Datos = False)-->
+                    <div class="manejoDatos" id="manejoDatos">
+                        <div class="manejoHeader">
+                            <h3 class="text-center ajg-title-dark">Bienvenido al portal de manejo de Formulario de conocimiento del cliente de <span style="font-weight: bold;">ARTHUR J. GALLAGHER CORREDORES DE SEGUROS S.A.</span></h3>
+                        </div>
+                        
+                        <div class="manejoContenido ajg-title-dark" style="text-align: justify;" id="informacion">
+                            <h3 class="text-center ajg-title-dark" style="font-weight: bold;">Manejo de Datos</h3>
+                            <br>
+                            <p>Gallagher le informa que sus datos son tratados conforme a la política de tratamiento de datos de Gallagher, la cual puede consultarla en nuestra página web <a href="#">www.ajg.com</a> .</p>
+                            <br>
+                            <p>Sus datos personales y sensibles son utilizados para los siguientes fines: </p>
+                            <ul>
+                                <li>Llevar a cabo los procesos administrativos, comerciales, contables, operativos y financieros establecidos por Gallagher.</li>
+                                <li>Adelantar los trámites y servicios que tiene a cargo, en ejercicio de sus funciones y objeto social. </li>
+                                <li>Atender Preguntas Quejas y Reclamos – PQRS -. </li>
+                                <li>Ejecución y/o cumplimiento de los contratos o convenios que tiene con terceros para la ejecución de las actividades propias de su objeto social. </li>
+                                <li>Para compartir información con aliados comerciales o corporativos, para el ofrecimiento de servicios o de bienes relacionados con la ejecución de las actividades comprendidas dentro del objeto de Gallagher.</li>
+                                <li>Transferencia y transmisión de datos a terceros dentro y fuera de Colombia con quienes realice convenios o alianzas relacionadas con su objeto o sus actividades, o con quienes contrate estudios o les encargue el Tratamiento de Datos. </li>
+                            </ul>
+                            <br>
+                            <p>Usted como titular podrá ejercer sus derechos de conocer, actualizar, rectificar y suprimir sus datos personales y sensibles enviando su solicitud mediante los canales dispuestos en la Política de Tratamiento de Datos.</p>
+                            <br>
+                            <p>Usted garantiza que cuenta con las autorizaciones necesarias por parte de los terceros titulares, para la trasferencia, transmisión y manejo de datos de la información de éstos que llegare a suministrar a GALLAGHER, conforme a la normatividad vigente, de tal manera que al momento de la trasferencia y/o transmisión de los datos, se encuentre autorizado a entregar la información de cada uno de los terceros que suministra GALLAGHER.</p>
+                            <br>
+                            <p>Leído lo anterior, autoriza de manera previa, explícita e inequívoca a Gallagher para el tratamiento de los datos personales y sensibles suministrados y para que de acuerdo con su política de tratamiento de información personal,
+                                conserve su información y la de terceros que haya entregado dentro de la base de datos que para el efecto ha sido dispuesta y que haga uso de la misma para los precisos fines definidos en dicha política, esto dando cumplimiento de lo previsto en la Ley 1581 
+                                del 2012 y el Decreto 1377 de 2013. Así como la autorización para suministrar, transferir su información y la de terceros que llegare a entregarle, a sociedades matrices, subordinadas o filiales o parte del Grupo empresarial al que pertenece
+                                y/o a terceras personas naturales o jurídicas, con la misma finalidad, así como compartir, entregar, trasladar y/o transferir los datos personales con terceros con quien GALLAGHER sostenga relaciones comerciales.</p>
+                            <br>
+                            <div style="display:flex;justify-content: center">
+                                <div class="checkbox-custom chekbox-primary">
+                                    <input value="Aceptar" type="checkbox" id="aceptar"/>
+                                    <label for="aceptar">Aceptar</label>
+                                </div> 
+                            </div>
+                            <br>
+                            <button class="btn ajg-button col-md-4 col-md-offset-4" onclick="validateManejo()" type="button">Continuar</button>
+                            <div class="divBlank"></div>
+                        </div>
+                        <div class="manejoContenido ajg-title-dark" id="mensajeRechazo" style="display: none;justify-content: center;flex-direction: column;align-items: center;">
+                            <h2>Por favor pongase en contacto con su asesor comercial.</h2>
+                            <form action="/LogIn" id="form-logOut" method="POST" enctype="multipart/form-data" >
+                                <button style="margin-top: 20px;" type="submit" class="btn ajg-button ">Finalizar y Salir <i class="fa fa-sign-out" aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <!--#4DENDIF-->
 					<!-- start: page -->
 					<h3 class="text-center ajg-title-dark">FORMULARIO DE CONOCIMIENTO DEL CLIENTE PERSONA NATURAL-SECTOR ASEGURADOR</h3>                    
                     <br>
@@ -48,6 +96,7 @@
                             </header>
                             <div class="panel-body">
                                 <form class="form-bordered " method="POST" enctype="multipart/form-data" action="/Natural/datos_basicos">                                    
+                                    <input value="Aceptar" type="checkbox" name="aceptarManejoDatos" id="aceptarEnvio" style="display:none"/>
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group ">
