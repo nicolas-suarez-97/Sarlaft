@@ -29,7 +29,7 @@
 												
 						</div>
                     </header>
-                    <!--#4DIF ([Sarlaft]Manejo_Datos = False)-->
+                    <!--#4DIF ([Sarlaft]Manejo_Datos=False)-->
                     <div class="manejoDatos" id="manejoDatos">
                         <div class="manejoHeader">
                             <h3 class="text-center ajg-title-dark">Bienvenido al portal de manejo de Formulario de conocimiento del cliente de <span style="font-weight: bold;">ARTHUR J. GALLAGHER CORREDORES DE SEGUROS S.A.</span></h3>
