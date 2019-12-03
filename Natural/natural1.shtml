@@ -96,7 +96,7 @@
                             </header>
                             <div class="panel-body">
                                 <form class="form-bordered " method="POST" enctype="multipart/form-data" action="/Natural/datos_basicos">                                    
-                                    <input value="Aceptar" type="checkbox" name="aceptarManejoDatos" id="aceptarEnvio" style="display:none"/>
+                                    <input value="Aceptar" type="checkbox" name="aceptarManejoDatos" id="aceptarEnvio" style="display:none" <!--4DIF ([Sarlaft]Manejo_Datos)-->checked<!--4DENDIF-->/>
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <div class="form-group ">
