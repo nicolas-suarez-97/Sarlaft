@@ -1153,7 +1153,7 @@
                             <h4 class="ajg-panel-title ">Resultado Infolaft</h4>
                             <div class="checkbox-custom chekbox-primary " style="margin-right: 30px">
                                 <input value="Aprobado" type="checkbox" name="aprobado" disabled <!--4DIF ([Sarlaft]Aprobado)-->checked<!--4DENDIF-->/>
-                                <label>Aprobado</label>
+                                <label class="ajg-title-dark">Aprobado</label>
                             </div>
 						</header>
                     </section>
