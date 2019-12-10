@@ -38,16 +38,33 @@
                                 <h1 class="panel-title text-center ajg-title-dark">Imprimir Formulario</h1>   
                             </header>
                             <div class="panel-body ajg-title-dark" style="text-align: justify">
+								<!--4DIF ([Sarlaft]Ruta_PDF # "")-->
+								<h4 style="text-align: center;margin-bottom: 20px;"><i class="fa fa-check" aria-hidden="true"></i>Su formulario fue enviado satisfactoriamente. A continuación puede descargar su Sarlaft.</h4>
+								<form action="/Juridico/sarlaft_firmado" method="POST"  enctype="multipart/form-data">
+									<div style="display: flex;flex-direction: column;justify-content: space-evenly;height: 200px;align-items: center;" class="row">
+										<a href="<!--4DTEXT [Sarlaft]Ruta_PDF-->" target="_blank" rel="noopener noreferrer" class="btn ajg-button col-sm-4">1. Descargar PDF</a>
+										<label class="btn ajg-button col-sm-4 " for="inputfile">2. Cargar Archivo Sarlaft Firmado: </label>                                                
+										<input type="file" class="form-control-file inputfile" required onchange="fileName(this)" id="inputfile" required name="sarlaft" >
+										<!--#4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"sarlaft")#"")-->
+										<h4 id="nombreArchivo">Archivo: <!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"sarlaft")--></h4>
+										<button type="submit" class="btn ajg-button col-md-4 ">3. Actualizar</button>
+										<!--#4DELSE-->
+										<h4 style="display:none;" id="nombreArchivo"></h4>
+										<button type="submit" class="btn ajg-button col-sm-4 ">3. Enviar</button>
+										<!--#4DENDIF-->
+									</div>
+								</form>
+								<!--#4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"sarlaft")#"")-->
+								<form action="/LogIn" id="form-logOut" class="form-bordered ajg-title-dark" method="POST" enctype="multipart/form-data" style="display: flex;justify-content: center;">
+									<button type="submit" class="btn ajg-button col-md-4">Finalizar y Salir <i class="fa fa-sign-out" aria-hidden="true"></i></button>
+								</form>	
+								<!--#4DENDIF-->
+								<!--4DELSE-->
+								<h4 style="text-align: center;margin-bottom: 20px;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>  Aun no se ha enviado toda la información, por favor regrese al formulario y finalice de diligenciar los datos.</h4>
 								<form action="/LogIn" id="form-logOut" class="form-bordered ajg-title-dark" method="POST" enctype="multipart/form-data" >
-									<!--<button type="submit" class="btn ajg-button col-md-4 col-md-offset-4">Descargar PDF</button>	-->
-									<!--4DIF ([Sarlaft]Ruta_PDF # "")-->
-									<h4 style="text-align: center;margin-bottom: 20px;"><i class="fa fa-check" aria-hidden="true"></i>Su formulario fue enviado satisfactoriamente. A continuación puede descargar su Sarlaft.</h4>
-									<a href="<!--4DTEXT [Sarlaft]Ruta_PDF-->" target="_blank" rel="noopener noreferrer" class="btn ajg-button col-md-4 col-md-offset-4">Descargar PDF</a>
 									<button style="margin-top: 20px;" type="submit" class="btn ajg-button col-md-4 col-md-offset-4">Finalizar y Salir <i class="fa fa-sign-out" aria-hidden="true"></i></button>
-									<!--4DELSE-->
-									<h4 style="text-align: center;margin-bottom: 20px;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>  Aun no se ha enviado toda la información, por favor regrese al formulario y finalice de diligenciar los datos.</h4>
-									<!--4DENDIF-->
 								</form>								
+								<!--4DENDIF-->
                             </div>
                         </section>
                         
@@ -59,6 +76,43 @@
 
 			
 		</section>
+		<script>
+			function fileName(e){
+				if(ValidateSingleInput(e)){
+					document.getElementById('nombreArchivo').innerHTML ='Archivo: ' + e.files[0].name;
+					document.getElementById('nombreArchivo').style.display = 'block';
+				}
+			}
+			var _validFileExtensions = [".pdf"];    
+			function ValidateSingleInput(oInput) {
+				
+				if (oInput.type == "file") {
+					var sFileName = oInput.value;
+					if (sFileName.length > 0) {
+						var blnValid = false;
+						for (var j = 0; j < _validFileExtensions.length; j++) {
+							var sCurExtension = _validFileExtensions[j];
+							if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+								blnValid = true;
+								break;
+							}
+						}
+						if (!blnValid) {
+							alert("Formato incorrecto, las extensiones permitidas son: " + _validFileExtensions.join(", "));
+							oInput.value = "";
+							return false;
+						}
+					}
+				}
+				var fileSize = oInput.files[0].size/1000;
+				if(fileSize > 5000){
+					alert("El archivo excede el peso máximo");
+					oInput.value = "";
+					return false;
+				}
+				return true;
+			}
+		</script>
 		<!--4DINCLUDE scripts.html-->			
 	</body>
 </html>

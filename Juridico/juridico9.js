@@ -37,7 +37,7 @@ function ValidateSingleInput(oInput) {
     
     if (oInput.type == "file") {
         var sFileName = oInput.value;
-         if (sFileName.length > 0) {
+        if (sFileName.length > 0) {
             var blnValid = false;
             for (var j = 0; j < _validFileExtensions.length; j++) {
                 var sCurExtension = _validFileExtensions[j];
@@ -46,7 +46,6 @@ function ValidateSingleInput(oInput) {
                     break;
                 }
             }
-             
             if (!blnValid) {
                 alert("Formato incorrecto, las extensiones permitidas son: " + _validFileExtensions.join(", "));
                 oInput.value = "";
