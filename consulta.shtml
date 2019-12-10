@@ -4,12 +4,11 @@
 
 		<!-- Basic -->
 		<meta charset="UTF-8">
-		<title>AJG Sarlaft</title>
+		<title>SarlaftAJG</title>
         <link rel="apple-touch-icon" href="/img/touchicon.png" />
         <link rel="icon" href="/img/favicon.png" />
-		<meta name="keywords" content="HTML5 Admin Template" />
-		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
-		<meta name="author" content="okler.net">
+		<meta name="keywords" content="SarlaftAJG" />
+		<meta name="author" content="Silat LTDA">
 
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 		<meta http-equiv="Pragma" content="no-cache">
