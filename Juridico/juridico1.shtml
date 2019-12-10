@@ -126,8 +126,7 @@
                                                 <input type="text" value="<!--4DTEXT [Sarlaft]Sucursal-->" onkeyup="upperCase(this,false)" class="form-control" id="inputSucursal" placeholder="Sucursal" readonly name="sucursal" autocomplete="off">                                                
                                             </div>
                                         </div>
-                                    </div>                                    
-                                                                                                                                                                                                                                                                                        
+                                    </div>
                                     <div class="row">
                                         <!--<div class="col-sm-6">
                                             <div class="form-group">
