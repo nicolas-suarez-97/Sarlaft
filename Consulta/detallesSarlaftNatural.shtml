@@ -805,6 +805,26 @@
 									</div>                      
 								</div>                                        
 							</div>
+							<br>
+							<div class="row">
+								<div class="col-md-6">
+									<p>- Sarlaft Firmado</p>
+								</div>
+								<div class="col-md-6">                                                
+									<div class="col-md-4">
+										<h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"sarlaft")--></h5>
+									</div>                
+									<div class="col-md-8">
+										<!--#4DIF (OB Get([Sarlaft]Nombre_Adjuntos;"sarlaft")#"")-->
+										<a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank"  rel="noopener noreferrer"  
+										href="<!--4DTEXT OB Get([Sarlaft]Ruta_Parcial_PDF;"sarlaft")-->">Ver</a>
+										<!--#4DELSE-->
+										<a class="btn ajg-button col-md-4 col-md-offset-4" target="_blank"  rel="noopener noreferrer"  disabled
+										href="#">Ver</a>
+										<!--#4DENDIF-->
+									</div>
+								</div>
+							</div>
 						</div>
 					</section>
 					<!--FIN DOCUMENTOS  REQUERIDOS-->
