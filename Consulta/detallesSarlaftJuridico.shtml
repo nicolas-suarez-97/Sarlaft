@@ -992,7 +992,7 @@
                     <!--DOCUMENTOS REQUERIDOS-->
                     <section class="ajg-panel">
                         <header class="ajg-panel-header">
-                            <h4 class="ajg-panel-title ">Dcoumentos Requeridos</h4>
+                            <h4 class="ajg-panel-title ">Documentos Requeridos</h4>
                             <button id="button10" type="button" onclick="togglePanel('documentos',this)"  class="fa fa-caret-down ajg-panel-button"></button>								
                         </header>
                         <div class="ajg-panel-body"  id="documentos">
