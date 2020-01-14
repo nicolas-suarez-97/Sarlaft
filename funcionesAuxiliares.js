@@ -7,7 +7,7 @@ function upperCase(e,validateSpecial){
 }
 
 function validateNA(e){
-    if(e.value == "NA" || e.value == "N/A" || e.value == "n/a" || e.value == "na"){
+    if(e.value == "NA" || e.value == "N/A" || e.value == "n/a" || e.value == "na" || e.value == " " || e.value == "  "){
         e.value = "";
     }
 }

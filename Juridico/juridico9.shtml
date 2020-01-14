@@ -250,6 +250,44 @@
                                                 <!--4DENDIF-->
                                                 
                                             </div>
+                                        </div> 
+                                        <br>   
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p>- Declaración de Renta</p>
+                                            </div>
+                                            <div class="col-md-6">                                                
+                                                <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"declaracion")="")-->
+                                                    <input type="file" class="form-control-file " name="declaracion"  onchange="ValidateSingleInput(this);">
+                                                <!--4DELSE-->                              
+                                                    <div class="col-md-4">
+                                                            <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"declaracion")--></h5>
+                                                    </div>                
+                                                    <div class="col-md-8">
+                                                        <input type="file" class="form-control-file " name="declaracion"  onchange="ValidateSingleInput(this);">
+                                                    </div>                      
+                                                <!--4DENDIF-->
+                                                
+                                            </div>
+                                        </div>    
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p>- Estados Financieros del Último Año</p>
+                                            </div>
+                                            <div class="col-md-6">                                                
+                                                <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"estados")="")-->
+                                                <input type="file" class="form-control-file " name="estados"  onchange="ValidateSingleInput(this);">
+                                                <!--4DELSE-->                              
+                                                    <div class="col-md-4">
+                                                            <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"estados")--></h5>
+                                                    </div>                
+                                                    <div class="col-md-8">
+                                                        <input type="file" class="form-control-file " name="estados"  onchange="ValidateSingleInput(this);">
+                                                    </div>                      
+                                                <!--4DENDIF-->
+                                                
+                                            </div>
                                         </div>                                        
                                     </div>
                                     <br>

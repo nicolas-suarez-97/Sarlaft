@@ -152,7 +152,7 @@
                                                 <label class="col-md-4 control-label">Nacionalidad 2</label>
                                                 <div class="col-md-8">
                                                     <!--#4DIF ([Sarlaft]Nacionalidad2="")-->
-                                                        <input name="nacionalidad2" value="N/A" 
+                                                        <input name="nacionalidad2" value="" 
                                                         onkeyup="upperCase(this,false)" 
                                                         onchange="validateBlank(this)" type="text" class="form-control" placeholder="Nacionalidad 2">
                                                     <!--#4DELSE-->
@@ -295,7 +295,7 @@
                                             <div  class="form-group">
                                                 <label class="col-md-5 control-label">Departamento</label>
                                                 <div class="col-md-7">
-                                                    <select name="deptoRep" class="form-control mb-md">
+                                                    <select name="deptoRep" class="form-control mb-md" required>
                                                         <option><!--4DTEXT [Sarlaft]Depto_RepLegal--> </option>
                                                       <!--#4DINCLUDE ../departamentos.shtml-->
                                                     </select>

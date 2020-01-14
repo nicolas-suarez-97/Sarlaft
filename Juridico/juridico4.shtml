@@ -101,7 +101,7 @@
                                                             </td>
                                                             <td>
                                                                 <input name="porcent1" id="porcentaje" type="number" 
-                                                                onKeyPress="if(this.value.length==2) return false;" 
+                                                                onKeyPress="if(this.value.length == 2 || this.value.length == 3){ this.value=100; return false;}" 
                                                                 onkeyup="replaceSpecialCharactersNumber(this)"
                                                                 min="0" max="100" class="form-control" autocomplete="off" max=100 >
                                                             </td>

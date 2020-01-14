@@ -1,7 +1,7 @@
 var authNo = document.getElementById("autNo");
 var authSi = document.getElementById("autSi");
 var button = document.getElementById("submitButton");
-button.disabled = validateButton();
+/*button.disabled = validateButton();
 
 authNo.addEventListener("click",function(){        
     button.disabled = validateButton();
@@ -17,4 +17,4 @@ function validateButton(){
     }else{
         return true;
     }
-}
+}*/

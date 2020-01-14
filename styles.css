@@ -283,3 +283,11 @@ html {
 	position: absolute;
 	z-index: -1;
 }
+
+.border-alert{
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    border-radius: 10px;
+    padding: 10px;
+}
