@@ -177,8 +177,9 @@
                                                 <div class="col-sm-10 " style="transform: translateX(-5px)" >
                                                     <div class="input-group">
                                                         <input name="dirResidencia" type="text" id="dirResidencia" class="form-control"  
-                                                        data-container=".row" data-toggle="popover" data-trigger="hover" style="background-color:white"
-                                                        data-placement="top" data-content="Dirección de Residencia" readonly placeholder="Dirección" required
+                                                        data-container=".row" data-toggle="popover" data-trigger="hover" 
+                                                        style="background-color:white" onKeyPress="return false"
+                                                        data-placement="top" data-content="Dirección de Residencia"  placeholder="Dirección" required
                                                         value="<!--4DTEXT [Sarlaft]Direccion-->">                                                        
                                                         <span class="input-group-btn">
                                                             <button class="btn ajg-dark-button" type="button" data-toggle="modal" data-target="#modalDireccion"><i class="fa fa-pencil"></i></button>

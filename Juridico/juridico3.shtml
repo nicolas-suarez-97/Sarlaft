@@ -189,8 +189,9 @@
                                             <label class="col-md-2 control-label">Dirección</label>
                                             <div class="col-md-10" style="transform: translateX(-5px)">
                                                 <div class="input-group">
-                                                    <input name="direccionRep" value="<!--4DTEXT [Sarlaft]Direccion_RepLegal-->" id="direccionRep" type="text" class="form-control"
-                                                        placeholder="Dirección" style="background-color: white;" autocomplete="off" required readonly>
+                                                    <input name="direccionRep" value="<!--4DTEXT [Sarlaft]Direccion_RepLegal-->" id="direccionRep" 
+                                                    type="text" class="form-control" onKeyPress="return false"
+                                                        placeholder="Dirección" style="background-color: white;" autocomplete="off" required >
                                                     <span class="input-group-btn">
                                                         <button class="btn ajg-dark-button" type="button" data-toggle="modal" data-target="#modalDireccion"><i class="fa fa-pencil"></i></button>
                                                     </span>
