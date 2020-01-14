@@ -14,7 +14,6 @@ function guardarDir( cancel, fullD, dir){
     var fullDir = document.getElementById(fullD);
     var dirResidencia = document.getElementById(dir);
     dirResidencia.value = fullDir.innerHTML.trim();
-    console.log(dirResidencia);
     document.getElementById(cancel).click();
 }
 
