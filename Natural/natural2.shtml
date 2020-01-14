@@ -152,7 +152,7 @@
                                                 <label class="col-md-4 control-label">Nacionalidad 2</label>
                                                 <div class="col-md-8">
                                                     <!--#4DIF ([Sarlaft]Nacionalidad2="")-->
-                                                        <input name="nacionalidad2" type="text" onkeyup="upperCase(this,false)" onchange="validateBlank(this)" class="form-control" placeholder="Nacionalidad 2"  value="N/A">
+                                                        <input name="nacionalidad2" type="text" onkeyup="upperCase(this,false)" onchange="validateBlank(this)" class="form-control" placeholder="Nacionalidad 2"  value="">
                                                     <!--#4DELSE-->                                                    
                                                         <input name="nacionalidad2" type="text" onkeyup="upperCase(this,false)" onchange="validateBlank(this)" class="form-control" placeholder="Nacionalidad 2"  value="<!--4DTEXT [Sarlaft]Nacionalidad2-->">
                                                     <!--#4DENDIF-->
@@ -178,7 +178,7 @@
                                                     <div class="input-group">
                                                         <input name="dirResidencia" type="text" id="dirResidencia" class="form-control"  
                                                         data-container=".row" data-toggle="popover" data-trigger="hover" style="background-color:white"
-                                                        data-placement="top" data-content="Dirección de Residencia" readonly
+                                                        data-placement="top" data-content="Dirección de Residencia" readonly placeholder="Dirección" required
                                                         value="<!--4DTEXT [Sarlaft]Direccion-->">                                                        
                                                         <span class="input-group-btn">
                                                             <button class="btn ajg-dark-button" type="button" data-toggle="modal" data-target="#modalDireccion"><i class="fa fa-pencil"></i></button>

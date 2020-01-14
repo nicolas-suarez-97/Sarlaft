@@ -21,7 +21,7 @@ function direccion(select, input, dir){
 function guardarDir( cancel, fullD, dir){
     var fullDir = document.getElementById(fullD);
     var dirResidencia = document.getElementById(dir);
-    dirResidencia.value = fullDir.innerHTML;
+    dirResidencia.value = fullDir.innerHTML.trim();
     document.getElementById(cancel).click();
 }
 

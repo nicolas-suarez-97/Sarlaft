@@ -64,10 +64,10 @@
 										o indirectamente, por la misma sociedad(es) matriz de la(s) sociedad(es) referenciadas y con la(s) que se suscriban contrato(s) de seguros.
 									</p>
 									<p>
-										Así mismo, entiendase como INTERMEDIARIO DE SEGUROS la(s) sociedad(es) AJG Gallagher, 
+										Así mismo, entiendase como INTERMEDIARIO DE SEGUROS la(s) sociedad(es) <span style="font-weight:bold">AJG GALLAGHER</span>, 
 									</p>
 									<p>
-										Dirección <!--4DTEXT [Sarlaft]Sucursal -->, Teléfono ,
+										Dirección <!--4DTEXT [Sarlaft]Sucursal -->,
 									</p>
 									<p>
 										y/o cualquier sociedad controlada, directa o indirectamente, por la misma sociedad matriz de la(s) sociedad(es) antes mencionada(s).
@@ -182,7 +182,7 @@
 										por las personas, para las finalidades y en los términos que nos fueron informados en este documento.
 									</p>								
 									<br>
-									<button type="submit" id="submitButton" data-toggle="modal" data-target="#loading" class="btn ajg-button col-md-4 col-md-offset-4" disabled>Siguiente</button>	
+									<button type="submit" id="submitButton" data-toggle="modal" data-target="#loading" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>	
 									<br>
 								</div>
 							</form>

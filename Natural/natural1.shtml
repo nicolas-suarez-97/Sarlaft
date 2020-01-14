@@ -98,7 +98,7 @@
                                 <form class="form-bordered " method="POST" enctype="multipart/form-data" action="/Natural/datos_basicos">                                    
                                     <input value="Aceptar" type="checkbox" name="aceptarManejoDatos" id="aceptarEnvio" style="display:none" <!--4DIF ([Sarlaft]Manejo_Datos)-->checked<!--4DENDIF-->/>
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-3">
                                             <div class="form-group ">
                                                 <label class="control-label">Fecha Diligenciamiento</label>      
                                                 <!--4DIF ([Sarlaft]Fecha_Diligenciamiento=!00-00-00!)-->
@@ -108,7 +108,7 @@
                                                 <!--4DENDIF-->
                                             </div>   
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label class="control-label" >Ciudad</label>
                                                 <select name="ciudadDiligenciamiento" id="inputCiudad" onchange="sucursalChange()" class="form-control" required>
@@ -121,14 +121,33 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label class="control-label" >Sucursal</label>                                                
-                                                <input type="text" class="form-control" onkeyup="upperCase(this,false)" readonly id="inputSucursal" placeholder="Sucursal" name="sucursal" value="<!--4DTEXT [Sarlaft]Sucursal-->">                                                
+                                                <select name="sucursal" id="inputSucursal" class="form-control" required>
+                                                    <option value=""></option>
+                                                    <option value="BOGOTÁ"  <!--#4DIF ([Sarlaft]Sucursal = "BOGOTÁ")-->selected<!--#4DENDIF-->>BOGOTÁ</option>
+                                                    <option value="BARRANQUILLA" <!--#4DIF ([Sarlaft]Sucursal = "BARRANQUILLA")-->selected<!--#4DENDIF-->>BARRANQUILLA</option>
+                                                    <option value="CALI" <!--#4DIF ([Sarlaft]Sucursal = "CALI")-->selected<!--#4DENDIF-->>CALI</option>
+                                                    <option value="CARTAGENA" <!--#4DIF ([Sarlaft]Sucursal = "CARTAGENA")-->selected<!--#4DENDIF-->>CARTAGENA</option>
+                                                    <option value="MEDELLÍN" <!--#4DIF ([Sarlaft]Sucursal = "MEDELLÍN")-->selected<!--#4DENDIF-->>MEDELLÍN</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label class="control-label" >Tipo Solicitud</label>                                                
+                                                <select name="tipoSolicitud" id="tipoSolicitud" class="form-control" required>
+                                                    <option value=""></option>
+                                                    <option value="Actualización"  <!--#4DIF ([Sarlaft]Tipo_Solicitud = "Actualización")-->selected<!--#4DENDIF-->>Actualización</option>
+                                                    <option value="Vinculación" <!--#4DIF ([Sarlaft]Tipo_Solicitud = "Vinculación")-->selected<!--#4DENDIF-->>Vinculación</option>
+                                                    <option value="Renovación" <!--#4DIF ([Sarlaft]Tipo_Solicitud = "Renovación")-->selected<!--#4DENDIF-->>Renovación</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>                                    
-                                    <br>                                                                                                                                                                                                                                     
+                                    <br>      
+
                                     <div class="row">
                                         <!--<div class="col-sm-6">
                                             <div class="form-group">
@@ -146,36 +165,36 @@
                                     </div>  
 
                                     <div class="form-group">
-                                        <div class="row ">
+                                        <div class="row padre" id="claseVinculacion">
                                             <label class="col-sm-3 control-label">Clase de la Vinculación</label>
                                             <div class="checkbox-custom chekbox-primary col-sm-1" >
-                                                <input value="Tomador" type="checkbox" name="tomador" <!--4DIF ([Sarlaft]Clase_VInculacion_Tomador)-->checked<!--4DENDIF-->/>
+                                                <input value="Tomador" type="checkbox" name="tomador" id="tomador" <!--4DIF ([Sarlaft]Clase_VInculacion_Tomador)-->checked<!--4DENDIF-->/>
                                                 <label>Tomador</label>
                                             </div>
                                             <div class="checkbox-custom chekbox-primary col-sm-1">
-                                                <input value="Asegurador" type="checkbox" name="asegurador" <!--4DIF ([Sarlaft]Clase_Vinculacion_Asegurado)-->checked<!--4DENDIF-->/>
+                                                <input value="Asegurador" type="checkbox" name="asegurador" id="asegurador" <!--4DIF ([Sarlaft]Clase_Vinculacion_Asegurado)-->checked<!--4DENDIF-->/>
                                                 <label>Asegurador</label>
                                             </div>                                            
                                             <div class="checkbox-custom chekbox-primary col-sm-1">
-                                                <input value="Beneficiario" type="checkbox" name="beneficiario" <!--4DIF ([Sarlaft]Clase_Vinculacion_Benef)-->checked<!--4DENDIF-->/>
+                                                <input value="Beneficiario" type="checkbox" name="beneficiario" id="beneficiario" <!--4DIF ([Sarlaft]Clase_Vinculacion_Benef)-->checked<!--4DENDIF-->/>
                                                 <label>Beneficiario</label>
                                             </div>
                                             <div class="checkbox-custom chekbox-primary col-sm-1">
-                                                <input value="Afianzado" type="checkbox" name="afianzado" <!--4DIF ([Sarlaft]Clase_Vinculacion_Afianzado)-->checked<!--4DENDIF-->/>
+                                                <input value="Afianzado" type="checkbox" name="afianzado" id="afianzado" <!--4DIF ([Sarlaft]Clase_Vinculacion_Afianzado)-->checked<!--4DENDIF-->/>
                                                 <label>Afianzado</label>
                                             </div>                                            
                                             <div class="checkbox-custom chekbox-primary col-sm-1">
-                                                <input value="Proveedor" type="checkbox" name="proveedor" <!--4DIF ([Sarlaft]Clase_Vinculacion_Proveedor)-->checked<!--4DENDIF-->/>
+                                                <input value="Proveedor" type="checkbox" name="proveedor" id="proveedor" <!--4DIF ([Sarlaft]Clase_Vinculacion_Proveedor)-->checked<!--4DENDIF-->/>
                                                 <label>Proveedor</label>
                                             </div>
                                             <div class="checkbox-custom chekbox-primary col-sm-1">
-                                                <input value="Intermediario" type="checkbox" name="intermediario" <!--4DIF ([Sarlaft]Clase_Vinculacion_Inter)-->checked<!--4DENDIF-->/>
+                                                <input value="Intermediario" type="checkbox" name="intermediario" id="intermediario"<!--4DIF ([Sarlaft]Clase_Vinculacion_Inter)-->checked<!--4DENDIF-->/>
                                                 <label>Intermediario</label>
                                             </div>
                                             <div class="col-sm-3  ">
                                                 <label class="col-sm-2">Otro</label>
                                                 <div class="col-sm-6">
-                                                    <input type="text" class="form-control input-sm" name="otroVinculacion" value="<!--4DTEXT [Sarlaft]Clase_Vinculacion_Otro-->"/>
+                                                    <input type="text" class="form-control input-sm" name="otroVinculacion" id="otro" value="<!--4DTEXT [Sarlaft]Clase_Vinculacion_Otro-->"/>
                                                 </div>
                                             </div>
                                         </div>                                                                                    
@@ -263,7 +282,8 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <button class="btn ajg-button col-md-4 col-md-offset-4" type="submit">Siguiente</button>                                                              
+                                    <button class="btn ajg-button col-md-4 col-md-offset-4" onclick="validateVinculacion()" type="button">Siguiente</button>                                    
+                                    <button type="submit" style="display:none" id="submitButton"></button>
                                 </form>
                             </div>
                         </section>

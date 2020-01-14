@@ -25,8 +25,8 @@ function validateVinculacion(){
     var afianzado = document.getElementById('afianzado').checked;
     var proveedor = document.getElementById('proveedor').checked;
     var intermediario = document.getElementById('intermediario').checked;
-    var otro = document.getElementById('otro').checked;
-    if(tomador==false && asegurador==false && beneficiario==false && afianzado==false && proveedor==false && intermediario==false && otro==false){
+    var otro = document.getElementById('otro').value;
+    if(tomador==false && asegurador==false && beneficiario==false && afianzado==false && proveedor==false && intermediario==false && otro==""){
         var vinculacion =  document.getElementById('claseVinculacion');
         vinculacion.className = 'row padre border-alert';
         window.scrollTo(0,vinculacion.offsetTop-50);
