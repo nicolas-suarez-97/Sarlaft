@@ -138,9 +138,9 @@
                                                 <label class="control-label" >Tipo Solicitud</label>                                                
                                                 <select name="tipoSolicitud" id="tipoSolicitud" class="form-control" required>
                                                     <option value=""></option>
-                                                    <option value="Actualización"  <!--#4DIF ([Sarlaft]Tipo_Solicitud = "Actualización")-->selected<!--#4DENDIF-->>Actualización</option>
-                                                    <option value="Vinculación" <!--#4DIF ([Sarlaft]Tipo_Solicitud = "Vinculación")-->selected<!--#4DENDIF-->>Vinculación</option>
-                                                    <option value="Renovación" <!--#4DIF ([Sarlaft]Tipo_Solicitud = "Renovación")-->selected<!--#4DENDIF-->>Renovación</option>
+                                                    <option value="Actualizacion"  <!--#4DIF ([Sarlaft]Tipo_Solicitud = "Actualizacion")-->selected<!--#4DENDIF-->>Actualización</option>
+                                                    <option value="Vinculacion" <!--#4DIF ([Sarlaft]Tipo_Solicitud = "Vinculacion")-->selected<!--#4DENDIF-->>Vinculación</option>
+                                                    <option value="Renovacion" <!--#4DIF ([Sarlaft]Tipo_Solicitud = "Renovacion")-->selected<!--#4DENDIF-->>Renovación</option>
                                                 </select>
                                             </div>
                                         </div>
