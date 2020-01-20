@@ -22,7 +22,17 @@ function guardarDir( cancel, fullD, dir){
 function validateTipoESect(e){
     if(e.value == 'NATURAL'){
         document.getElementById('TipoEmpSector').style.display = 'none';
+        document.getElementById('Nombres').style.display = 'block';
+        document.getElementById('Apellidos').style.display = 'block';
+        document.getElementById('PrimerNombre').required = true;
+        document.getElementById('PrimerApellido').required = true;
+        document.getElementById('SegundoApellido').required = true;
     }else{
         document.getElementById('TipoEmpSector').style.display = 'block';
+        document.getElementById('Nombres').style.display = 'none';
+        document.getElementById('Apellidos').style.display = 'none';
+        document.getElementById('PrimerNombre').required = false;
+        document.getElementById('PrimerApellido').required = false;
+        document.getElementById('SegundoApellido').required = false;
     }
 }

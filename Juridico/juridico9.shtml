@@ -109,7 +109,7 @@
                                                 <tr class="ajg-title-dark">
                                                     <th>Tipo de producto</th>
                                                     <th>Identificación o Número del Producto</th>
-                                                    <th>Entidad</th>
+                                                    <th>Entidad <span style="color: white;">___________________</span></th>
                                                     <th>Monto</th>
                                                     <th>Ciudad</th>
                                                     <th>País</th>                                                            
@@ -168,16 +168,16 @@
                                                         <h4 type="text" class="form-control" ><!--4DTEXT [Operaciones_Inter]Tipo_Producto--></h4>
                                                     </td>
                                                     <td>
-                                                        <h4 type="text" class="form-control" ><!--4DTEXT [Operaciones_Inter]Iden_Num_Prod--></h4>
+                                                        <textarea rows="1" readonly style="background-color: white;" class="form-control" ><!--4DTEXT [Operaciones_Inter]Iden_Num_Prod--></textarea>
                                                     </td>
                                                     <td>
-                                                        <h4 type="text" class="form-control" ><!--4DTEXT [Operaciones_Inter]Entidad--></h4>
+                                                        <textarea rows="1" readonly style="background-color: white;" class="form-control" ><!--4DTEXT [Operaciones_Inter]Entidad--></textarea>
                                                     </td>                                                   
                                                     <td>
                                                         <h4 type="text" class="form-control" ><!--4DTEXT [Operaciones_Inter]Monto--></h4>
                                                     </td>
                                                     <td>
-                                                        <h4 type="text" class="form-control" ><!--4DTEXT [Operaciones_Inter]Ciudad--></h4>
+                                                        <textarea rows="1" readonly style="background-color: white;" class="form-control" ><!--4DTEXT [Operaciones_Inter]Ciudad--></textarea>
                                                     </td> 
                                                     <td>
                                                         <h4 type="text" class="form-control" ><!--4DTEXT [Operaciones_Inter]Pais--></h4>

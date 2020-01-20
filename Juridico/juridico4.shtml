@@ -64,7 +64,7 @@
                                                         <tr class="ajg-title-dark">
                                                             <th>Tipo ID</th>
                                                             <th>Número ID</th>
-                                                            <th>Nombre<span style="color:white">_________________________</span></th>
+                                                            <th>Nombre<span style="color: white;">___________________________________</span></th>
                                                             <th>% Participación</th>
                                                             <th>¿Es Persona Jurídica que cotiza en Bolsa</th>
                                                             <th>¿Es Persona Públicamente Expuesta, o vinculada con una de ellas?</th>
@@ -137,7 +137,7 @@
                                                                 <h4 type="text" class="form-control" ><!--4DTEXT [Accionistas]Numero_ID--></h4>
                                                             </td>
                                                             <td>
-                                                                <h4 type="text" class="form-control" ><!--4DTEXT [Accionistas]Nombre--></h4>
+                                                                <textarea rows="1" readonly style="background-color: white;" class="form-control" ><!--4DTEXT [Accionistas]Nombre--></textarea>
                                                             </td>
                                                             <td>
                                                                 <h4 type="text" class="form-control" ><!--4DTEXT [Accionistas]Porcent_Participacion--></h4>

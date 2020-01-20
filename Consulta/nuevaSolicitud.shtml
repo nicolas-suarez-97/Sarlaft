@@ -105,13 +105,13 @@
 									</div>
 								</div>	
 								<br>
-								<div class="row">
+								<div class="row" id="Nombres">
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label class="col-md-4 control-label" >Primer Nombre</label>                                                
 											<div class="col-md-8">
 												<input name="primerNombre" type="text" class="form-control" 
-												onkeyup="upperCase(this,false)" required 
+												onkeyup="upperCase(this,false)" id="PrimerNombre"
 												value="">
 											</div>								  
 										</div>
@@ -128,13 +128,13 @@
 									</div>
 								</div>
 								<br>
-								<div class="row">
+								<div class="row" id="Apellidos">
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label class="col-md-4 control-label" >Primer Apellido</label>                                                
 											<div class="col-md-8">
 												<input name="primerApellido" type="text" class="form-control" 
-												onkeyup="upperCase(this,false)" required 
+												onkeyup="upperCase(this,false)" id="PrimerApellido"
 												value="">
 											</div>								  
 										</div>
@@ -144,7 +144,7 @@
 											<label class="col-md-4 control-label" >Segundo Apellido</label>                                                
 											<div class="col-md-8">
 												<input name="segundoApellido" type="text" class="form-control" 
-												onkeyup="upperCase(this,false)" required
+												onkeyup="upperCase(this,false)" id="SegundoApellido"
 												value="">
 											</div>								  
 										</div>

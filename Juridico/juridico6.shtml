@@ -50,7 +50,7 @@
                                                 <thead>
                                                     <tr class="ajg-title-dark">
                                                         <th>Numero ID</th>
-                                                        <th>Nombre</th>
+                                                        <th>Nombre <span style="color: white;">_____________________________</span></th>
                                                         <th>Nombre/Razón Social de la Sociedad de la que es Accionista</th>
                                                         <th>Tipo ID</th>
                                                         <th>ID</th>
@@ -112,10 +112,10 @@
                                                             <h4 type="text" class="form-control" ><!--4DTEXT [Acci_Benef_Finales]Nume_ID--></h4>
                                                         </td>
                                                         <td>
-                                                            <h4 type="text" class="form-control" ><!--4DTEXT [Acci_Benef_Finales]Nombre--></h4>
+                                                            <textarea rows="1" readonly style="background-color: white;" class="form-control" ><!--4DTEXT [Acci_Benef_Finales]Nombre--></textarea>
                                                         </td>
                                                         <td>
-                                                            <h4 type="text" class="form-control" ><!--4DTEXT [Acci_Benef_Finales]Razon_Social_Sociedad--></h4>
+                                                            <textarea rows="1" readonly style="background-color: white;" class="form-control" ><!--4DTEXT [Acci_Benef_Finales]Razon_Social_Sociedad--></textarea>
                                                         </td>
                                                         <td>
                                                             <h4 type="text" class="form-control" ><!--4DTEXT [Acci_Benef_Finales]Tipo_Ident--></h4>
