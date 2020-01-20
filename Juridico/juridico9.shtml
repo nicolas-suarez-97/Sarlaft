@@ -203,13 +203,13 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
-                                                    <input type="file" class="form-control-file " required name="documentoIdentidad"  onchange="ValidateSingleInput(this);">
+                                                    <input type="file" class="form-control-file " required name="documentoIdentidad" id="documentoIdentidad" onchange="ValidateSingleInput(this);">
                                                 <!--4DELSE-->                              
                                                     <div class="col-md-4">
                                                         <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"documentoIdentidad")--></h5>
                                                     </div>                
                                                     <div class="col-md-8">
-                                                        <input type="file" class="form-control-file " name="documentoIdentidad"  onchange="ValidateSingleInput(this);">
+                                                        <input type="file" class="form-control-file " name="documentoIdentidad" id="documentoIdentidad" onchange="ValidateSingleInput(this);">
                                                     </div>                      
                                                 <!--4DENDIF-->
                                             </div>   
@@ -221,13 +221,13 @@
                                             </div>
                                             <div class="col-md-6">                                                
                                                 <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"certificado")="")-->
-                                                <input type="file" class="form-control-file " required name="certificado"  onchange="ValidateSingleInput(this);">
+                                                <input type="file" class="form-control-file " required name="certificado" id="certificado" onchange="ValidateSingleInput(this);">
                                                 <!--4DELSE-->                              
                                                     <div class="col-md-4">
                                                         <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"certificado")--></h5>
                                                     </div>                
                                                     <div class="col-md-8">
-                                                        <input type="file" class="form-control-file " name="certificado"  onchange="ValidateSingleInput(this);">
+                                                        <input type="file" class="form-control-file " name="certificado" id="certificado" onchange="ValidateSingleInput(this);">
                                                     </div>                      
                                                 <!--4DENDIF-->
                                             </div>  
@@ -239,13 +239,13 @@
                                             </div>
                                             <div class="col-md-6">                                                
                                                 <!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"rut")="")-->
-                                                <input type="file" class="form-control-file " required name="rut"  onchange="ValidateSingleInput(this);">
+                                                <input type="file" class="form-control-file " required name="rut" id="rut" onchange="ValidateSingleInput(this);">
                                                 <!--4DELSE-->                              
                                                     <div class="col-md-4">
                                                             <h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"rut")--></h5>
                                                     </div>                
                                                     <div class="col-md-8">
-                                                        <input type="file" class="form-control-file " name="rut"  onchange="ValidateSingleInput(this);">
+                                                        <input type="file" class="form-control-file " name="rut" id="rut" onchange="ValidateSingleInput(this);">
                                                     </div>                      
                                                 <!--4DENDIF-->
                                                 
@@ -291,7 +291,8 @@
                                         </div>                                        
                                     </div>
                                     <br>
-                                    <button type="submit" id="submitButton" data-toggle="modal" data-target="#loading" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>
+                                    <button type="button" class="btn ajg-button col-md-4 col-md-offset-4" onclick="operInter('documentoIdentidad','certificado','rut')">Siguiente</button>
+                                    <button disabled style="display:none" type="submit" id="submitButton" data-toggle="modal" data-target="#loading" ></button>
                                 </form>
                             </div>
                             <div class="modal fade" id="loading" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

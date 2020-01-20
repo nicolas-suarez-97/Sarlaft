@@ -295,6 +295,7 @@
 			
         </section>
         <script src='Natural/natural1.js'></script>
+        <script src='natural1.js'></script>
         <!--4DINCLUDE scripts.html-->
 	</body>
 </html>

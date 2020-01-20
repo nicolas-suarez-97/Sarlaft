@@ -165,8 +165,8 @@
                                     
                                     </div>                                                                                    
                                     <br>
-
-                                    <button class="btn ajg-button col-md-4 col-md-offset-4" type="submit">Siguiente</button>                                                                                                            
+                                    <button class="btn ajg-button col-md-4 col-md-offset-4" type="button" onclick="validateList('botonPersonasExpuestas','vinculo','nombre','tipoID','numID','nacionalidad','entidad','cargo','fechaDesvinc')">Siguiente</button>
+                                    <button disabled style="display: none;" type="submit" id="botonPersonasExpuestas"></button>
                                 </form>
                             </div>
                         </section>

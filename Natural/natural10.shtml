@@ -53,14 +53,13 @@
                                             <p><span style="font-weight: bold;">3. </span>Primer civil (hijos adoptivos o padres adoptantes)</p>
                                         </div>           
                                         <br>                                       
-                                                                                  
                                         <div class="table-responsive">
                                             <table class="table mb-none">
                 
                                                 <thead>
                                                     <tr class="ajg-title-dark">
                                                         <th>Vínculo / Relación *</th>
-                                                        <th>Nombre</th>
+                                                        <th>Nombre <span style="color:white">________________</span></th>
                                                         <th>Tipo ID</th>
                                                         <th>No de ID</th>
                                                         <th>Nacionalidad</th>
@@ -131,7 +130,7 @@
                                                             <h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Vinculo_Relacion--></h4>
                                                         </td>
                                                         <td>
-                                                            <h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Nombre--></h4>
+                                                            <textarea rows="1" style="background-color: white;" readonly class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Nombre--></textarea>
                                                         </td>
                                                         <td>
                                                             <h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Tipo_Ident--></h4>
@@ -143,10 +142,10 @@
                                                             <h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Nacionalidad--></h4>
                                                         </td>
                                                         <td>
-                                                            <h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Entidad--></h4>
+                                                            <textarea rows="1" readonly style="background-color: white;" type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Entidad--></textarea>
                                                         </td>
                                                         <td>
-                                                            <h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Cargo--></h4>
+                                                            <textarea rows="1" readonly style="background-color: white;" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Cargo--></textarea>
                                                         </td>                                                           
                                                         <td>
                                                             <h4 type="text" class="form-control" ><!--4DTEXT [Perso_Expuest_Public]Fecha_Desvinculacion--></h4>
@@ -159,8 +158,8 @@
                                         </div>                                     
                                     </div>                                                                                    
                                     <br>
-
-                                    <button class="btn ajg-button col-md-4 col-md-offset-4" type="submit">Siguiente</button>                                                                                                            
+                                    <button class="btn ajg-button col-md-4 col-md-offset-4" type="button" onclick="validateList('botonPersonasExp','vinculo','nombre','tipoID','numID','nacionalidad','entidad','cargo','fechaDesvinc')">Siguiente</button>
+                                    <button style="display:none" disabled id="botonPersonasExp" type="submit"></button>
                                 </form>
                             </div>
                         </section>

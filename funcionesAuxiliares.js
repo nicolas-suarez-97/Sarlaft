@@ -131,3 +131,76 @@ function expandAll(...sections){
         document.getElementById('button'+i).className = 'fa fa-caret-up ajg-panel-button';
     }
 }
+
+function validateList(boton,...campos){
+    var continuar = true;
+    for(var c of campos){
+        var campoAux = document.getElementById(c);
+        if(campoAux.value != ""){
+            continuar = false;
+            campoAux.style.borderColor = 'red';
+        }else{
+            campoAux.style.borderColor = '#cccccc';
+        }
+    }
+    if(continuar){
+        var boton = document.getElementById(boton);
+        boton.disabled = false;
+        boton.click();
+    }else{
+        alert("Por favor verifique que no hayan datos sin guardar.");
+        var boton = document.getElementById(boton);
+        boton.disabled = true;
+    }
+}
+
+function operInter(...archivos){
+    var continuar = true;
+    for(a of archivos){
+        var arch = document.getElementById(a);
+        if(arch.required == true){
+            if(arch.value == ""){
+                arch.style.borderStyle = 'solid';
+                arch.style.borderColor = 'red';
+                arch.style.borderWidth = '1px';
+                continuar = false;
+
+            }else{
+                arch.style.borderStyle = 'none';
+            }
+        }
+        
+    }
+    if(continuar){
+        validateList('submitButton','tipoProd','numProd','entidad','monto','ciudad','pais','moneda');
+    }else{
+        validateList('','tipoProd','numProd','entidad','monto','ciudad','pais','moneda');
+    }
+
+
+}
+
+function reclamSeg(...archivos){
+    var continuar = true;
+    for(a of archivos){
+        var arch = document.getElementById(a);
+        if(arch.required == true){
+            if(arch.value == ""){
+                arch.style.borderStyle = 'solid';
+                arch.style.borderColor = 'red';
+                arch.style.borderWidth = '1px';
+                continuar = false;
+
+            }else{
+                arch.style.borderStyle = 'none';
+            }
+        }
+        
+    }
+    if(continuar){
+        validateList('submitButton','año','ramo','compañia','valor','resultado');
+    }else{
+        validateList('','año','ramo','compañia','valor','resultado');
+    }
+}
+

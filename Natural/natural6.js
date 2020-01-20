@@ -73,6 +73,7 @@ function makeRequiredJ(...list){
     if(numRecl.value < 1){                
         for(var v of list){
             document.getElementById(v).required = true;
+            document.getElementById(v).disabled = false;
         }    
     }
 }
@@ -80,5 +81,8 @@ function makeRequiredJ(...list){
 function unMakeRequiredJ(...list){    
     for(var v of list){        
         document.getElementById(v).required = false;
+        document.getElementById(v).disabled = true;
+        document.getElementById(v).value = "";
+        document.getElementById(v).style.borderColor = "#cccccc";
     }
 }
