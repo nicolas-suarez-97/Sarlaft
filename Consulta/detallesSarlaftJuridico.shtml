@@ -1257,9 +1257,9 @@
                                 <div class="form-group">
                                     <label class="control-label ajg-title-dark" >Entrevista: </label>
                                     <select name="entrevista" id="entrev" class="form-control" disabled style="background-color: white;">
-                                        <option value=""><!--4DTEXT [Sarlaft]Lugar_Entrevista--></option>
-                                        <option value="Presencial">Presencial</option>
-                                        <option value="Telefónica">Telefónica</option>
+                                        <option value=""></option>
+                                        <option value="Presencial" <!--#4DIF ( [Sarlaft]Lugar_Entrevista="Presencial")-->selected<!--#4DENDIF-->>Presencial</option>
+                                        <option value="Telefónica" <!--#4DIF ( [Sarlaft]Lugar_Entrevista="Telefónica")-->selected<!--#4DENDIF-->>Telefónica</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
