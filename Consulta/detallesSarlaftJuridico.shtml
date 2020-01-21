@@ -1250,21 +1250,21 @@
                                     </div>
                                     <div class="form-group col-sm-6">
                                         <label class="control-label ajg-title-dark" >Autorizador: </label>
-                                        <input type="text" class="form-control" readonly value="">
+                                        <input type="text" class="form-control" readonly value="<!--4DTEXT [Sarlaft]Nombre_Asesor-->">
                                     </div>
 
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label ajg-title-dark" >Entrevista: </label>
                                     <select name="entrevista" id="entrev" class="form-control" disabled style="background-color: white;">
-                                        <option value=""><!--4DTEXT [Sarlaft]Entrevista--></option>
+                                        <option value=""><!--4DTEXT [Sarlaft]Lugar_Entrevista--></option>
                                         <option value="Presencial">Presencial</option>
                                         <option value="Telefónica">Telefónica</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label ajg-title-dark" >Observaciones: </label>
-                                    <textarea name="observacionesEntrev" id="observaciones" cols="30" rows="2" class="form-control" disabled style="background-color: white;"><!--4DTEXT [Sarlaft]Observaciones_Entrevista--></textarea>
+                                    <textarea name="observacionesEntrev" id="observaciones" cols="30" rows="2" class="form-control" disabled style="background-color: white;"><!--4DTEXT [Sarlaft]Obser_Entrevista--></textarea>
                                 </div>
                                 <input type="hidden" value="<!--4DTEXT [Sarlaft]Documento_Numero-->" name="id">
                                 <input type="hidden"  name="resultado" id="resultado2">
