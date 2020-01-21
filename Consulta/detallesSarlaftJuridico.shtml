@@ -1242,7 +1242,7 @@
                         </header>
                         <div class="ajg-panel-body"  id="aprob" >
                             <br>
-                            <form  id="formAprobado2" method="POST" enctype="multipart/form-data" action="/Consulta/Detalles_Sarlaft_Aprobacion" ></form>
+                            <form  id="formAprobado2" method="POST" enctype="multipart/form-data" action="/Consulta/Detalles_Sarlaft_Aprobacion" >
                                 <div class="row">
                                     <div class="form-group col-sm-6">
                                         <label class="control-label ajg-title-dark" >Estado: </label>
