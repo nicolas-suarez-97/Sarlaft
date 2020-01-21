@@ -930,7 +930,7 @@
                                 
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <button type="button" onclick="aprobacion('Aprobado','formAprobado','resultado1')" class="btn btn-success btn-block " <!--#4DIF ([Sarlaft]Aprobado#True)--><!--#4DENDIF-->>Aprobar</button>
+                                        <button type="button" onclick="aprobacion('Aprobado','formAprobado','resultado1')" class="btn btn-success btn-block " <!--#4DIF ([Sarlaft]Aprobado#True)-->disabled<!--#4DENDIF-->>Aprobar</button>
                                     </div>
                                     <div class="col-sm-6">
                                         <button type="button" onclick="aprobacion('Rechazado','formAprobado','resultado1')" class="btn btn-danger btn-block">Rechazar</button>
@@ -973,7 +973,7 @@
 
                                 <div class="row" style="display:none" id="botones">
                                     <div class="col-sm-4">
-                                        <button type="button" onclick="aprobacion('Aprobado','formAprobado2','resultado2')" class="btn btn-success btn-block " <!--#4DIF ([Sarlaft]Aprobado#True)--><!--#4DENDIF-->>Aprobar</button>
+                                        <button type="button" onclick="aprobacion('Aprobado','formAprobado2','resultado2')" class="btn btn-success btn-block " <!--#4DIF ([Sarlaft]Aprobado#True)-->disabled<!--#4DENDIF-->>Aprobar</button>
                                     </div>
                                     <div class="col-sm-4">
                                         <button type="button" onclick="aprobacion('Rechazado','formAprobado2','resultado2')" class="btn btn-danger btn-block">Rechazar</button>
