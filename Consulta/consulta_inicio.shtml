@@ -97,13 +97,15 @@
 											</td>
 											<td><!--4DTEXT [Sarlaft]Nivel_Riesgo--></td>
 											<td><!--4DTEXT [Sarlaft]Tipo_Documento--> : <!--4DTEXT [Sarlaft]Documento_numero--> <!--4DTEXT [Sarlaft]DV--></td>
-											<td><!--4DTEXT [Sarlaft]Direccion--></td>
 											<!--#4DIF ([Sarlaft]Juridico_Natural = True)-->
-												<td>Jurídico</td>
+											<td><!--4DTEXT [Sarlaft]Direccin_Oficina--></td>	
+											<td>Jurídico</td>
+											<td><!--4DTEXT [Sarlaft]Telefono_Oficina--></td>
 											<!--#4DELSE-->
-												<td>Natural</td>
-											<!--#4DENDIF-->
+											<td><!--4DTEXT [Sarlaft]Direccion--></td>
+											<td>Natural</td>
 											<td><!--4DTEXT [Sarlaft]Telefono--></td>
+											<!--#4DENDIF-->
 										</tr>					
 										<!--4DENDLOOP-->		
 									</tbody>

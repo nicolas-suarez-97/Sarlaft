@@ -22,12 +22,12 @@
 					
 						<div class="right-wrapper pull-right">
 							<button type="button" class="expButtons hidden-xs"
-								onclick="expandAll('inicio','datBasicos','basico2','origen','opInter','recSeguros','docs','perExpPub')">
+								onclick="expandAll('inicio','datBasicos','basico2','origen','opInter','recSeguros','docs','perExpPub','aprob')">
 								<i class="fa fa-plus"></i> 
 								Expandir Todo
 							</button>
 							<button type="button" class="expButtons hidden-xs"
-								onclick="collapseAll('inicio','datBasicos','basico2','origen','opInter','recSeguros','docs','perExpPub')">
+								onclick="collapseAll('inicio','datBasicos','basico2','origen','opInter','recSeguros','docs','perExpPub','aprob')">
 								<i class="fa fa-minus"></i> 
 								Colapsar Todo
 							</button>
@@ -51,6 +51,9 @@
 							</div>		
 							<div class="col-sm-6">								
 								<h5 class="ajg-title-dark">Tipo: <span class="bold">NATURAL</span></h5>
+								<!--#4DIF ([Sarlaft]Estado # "")-->
+                                <h5 class="ajg-title-dark" >Estado: <span class="bold"><!--4DTEXT [Sarlaft]Estado--></span></h5> 
+                                <!--#4DENDIF-->
 								
 							</div>										
 						</div>	
@@ -897,8 +900,99 @@
 							<label class="ajg-title-dark">Aprobado</label>
 						</div>
 					</header>
-				</section>
-				<!--FIN RESULTADO INFOLAFT-->
+					</section>
+					<!--FIN RESULTADO INFOLAFT-->
+
+ 					<!--APROBACIÓN-->
+                    <!--#4DIF ([Sarlaft]Estado#"")-->
+                    <section class="ajg-panel" >
+                        <header class="ajg-panel-header">
+                            <h4 class="ajg-panel-title ">Aprobación</h4>
+                            
+                        <!--#4DIF ([Sarlaft]Estado="Pendiente")-->
+                        </header>
+                        <form  id="formAprobado" method="POST" enctype="multipart/form-data" action="/Consulta/Detalles_Sarlaft_Aprobacion" >
+                            <div style="margin: 20px;">
+                                <div class="form-group">
+                                    <label class="control-label ajg-title-dark" >Entrevista: </label>
+                                    <select name="sucursal" id="entrevista" class="form-control" required>
+                                        <option value=""></option>
+                                        <option value="Presencial">Presencial</option>
+                                        <option value="Telefónica">Telefónica</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label ajg-title-dark" >Observaciones: </label>
+                                    <textarea name="observacionesEntrev" id="" cols="30" rows="2" class="form-control"></textarea>
+                                </div>
+                                <input type="hidden" value="<!--4DTEXT [Sarlaft]Documento_Numero-->" name="id">
+                                <input type="hidden"  name="resultado" id="resultado1">
+                                
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <button type="button" onclick="aprobacion('Aprobado','formAprobado','resultado1')" class="btn btn-success btn-block " <!--#4DIF ([Sarlaft]Aprobado#True)--><!--#4DENDIF-->>Aprobar</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button type="button" onclick="aprobacion('Rechazado','formAprobado','resultado1')" class="btn btn-danger btn-block">Rechazar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <br>
+                        <!--#4DELSE-->
+                            <button id="button12" type="button" onclick="togglePanel('aprob',this)"  class="fa fa-caret-down ajg-panel-button"></button>
+                        </header>
+                        <div class="ajg-panel-body"  id="aprob" >
+                            <br>
+                            <form  id="formAprobado2" method="POST" enctype="multipart/form-data" action="/Consulta/Detalles_Sarlaft_Aprobacion" ></form>
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <label class="control-label ajg-title-dark" >Estado: </label>
+                                        <input type="text" class="form-control" readonly value="<!--4DTEXT [Sarlaft]Estado-->">
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label class="control-label ajg-title-dark" >Autorizador: </label>
+                                        <input type="text" class="form-control" readonly value="">
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label ajg-title-dark" >Entrevista: </label>
+                                    <select name="sucursal" id="entrev" class="form-control" disabled style="background-color: white;">
+                                        <option value=""><!--4DTEXT [Sarlaft]Entrevista--></option>
+                                        <option value="Presencial">Presencial</option>
+                                        <option value="Telefónica">Telefónica</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label ajg-title-dark" >Observaciones: </label>
+                                    <textarea name="observacionesEntrev" id="observaciones" cols="30" rows="2" class="form-control" disabled style="background-color: white;"><!--4DTEXT [Sarlaft]Observaciones_Entrevista--></textarea>
+                                </div>
+                                <input type="hidden" value="<!--4DTEXT [Sarlaft]Documento_Numero-->" name="id">
+                                <input type="hidden"  name="resultado" id="resultado2">
+
+                                <div class="row" style="display:none" id="botones">
+                                    <div class="col-sm-4">
+                                        <button type="button" onclick="aprobacion('Aprobado','formAprobado2','resultado2')" class="btn btn-success btn-block " <!--#4DIF ([Sarlaft]Aprobado#True)--><!--#4DENDIF-->>Aprobar</button>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <button type="button" onclick="aprobacion('Rechazado','formAprobado2','resultado2')" class="btn btn-danger btn-block">Rechazar</button>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <button type="button" onclick="cancelarAprob()" class="btn btn-block">Cancelar</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="form-group">
+                                <button type="button" onclick="editarAprob(this)" id="editar" class="btn ajg-button"><i class="fa fa-pencil"></i> Editar</button>
+                            </div>
+                        </div>
+                        <!--#4DENDIF-->
+                    </section>
+                    <br>
+                    <!--#4DENDIF-->
+                    <!--FIN APROBACIÓN-->
+
 
 					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Consulta_Sarlaft">
 						<button type="submit"  class="btn ajg-button col-md-4 col-md-offset-4">Regresar</button>

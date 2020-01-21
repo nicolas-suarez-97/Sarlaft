@@ -204,3 +204,22 @@ function reclamSeg(...archivos){
     }
 }
 
+function aprobacion(value, form,resInput){
+    document.getElementById(resInput).value = value;
+    document.getElementById(form).submit();
+    
+}
+
+function editarAprob(button){
+    button.style.display = 'none';
+    document.getElementById('botones').style.display = 'block';
+    document.getElementById('entrev').disabled = false;
+    document.getElementById('observaciones').disabled = false;
+}
+
+function cancelarAprob(){
+    document.getElementById('editar').style.display = 'block';
+    document.getElementById('botones').style.display = 'none';
+    document.getElementById('entrev').disabled = true;
+    document.getElementById('observaciones').disabled = true;
+}
