@@ -915,7 +915,7 @@
                             <div style="margin: 20px;">
                                 <div class="form-group">
                                     <label class="control-label ajg-title-dark" >Entrevista: </label>
-                                    <select name="sucursal" id="entrevista" class="form-control" required>
+                                    <select name="entrevista" id="entrevista" class="form-control" required>
                                         <option value=""></option>
                                         <option value="Presencial">Presencial</option>
                                         <option value="Telefónica">Telefónica</option>
@@ -944,7 +944,7 @@
                         </header>
                         <div class="ajg-panel-body"  id="aprob" >
                             <br>
-                            <form  id="formAprobado2" method="POST" enctype="multipart/form-data" action="/Consulta/Detalles_Sarlaft_Aprobacion" ></form>
+                            <form  id="formAprobado2" method="POST" enctype="multipart/form-data" action="/Consulta/Detalles_Sarlaft_Aprobacion" >
                                 <div class="row">
                                     <div class="form-group col-sm-6">
                                         <label class="control-label ajg-title-dark" >Estado: </label>
@@ -958,7 +958,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label ajg-title-dark" >Entrevista: </label>
-                                    <select name="sucursal" id="entrev" class="form-control" disabled style="background-color: white;">
+                                    <select name="entrevista" id="entrev" class="form-control" disabled style="background-color: white;">
                                         <option value=""><!--4DTEXT [Sarlaft]Lugar_Entrevista--></option>
                                         <option value="Presencial">Presencial</option>
                                         <option value="Telefónica">Telefónica</option>
