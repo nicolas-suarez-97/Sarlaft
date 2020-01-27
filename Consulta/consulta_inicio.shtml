@@ -32,7 +32,7 @@
 					</header>
                     
 					<!-- start: page -->
-					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta_Busqueda">                                    
+					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Consulta_Busqueda">                                    
 						<input type="text" hidden name="option" id="option">
 						<input type="text" hidden name="id" value="<!--4DTEXT [Users]ID-->">
 					</form>    
@@ -40,6 +40,9 @@
 						<div class="row top">
 							<div class="col-sm-8">
 								<h3 class=" ajg-title-dark" >CONSULTA DE DATOS SARLAFT</h3>   
+								<!--#4DIF (registros#"")-->
+								<h4 class="ajg-title-dark"><!--4DTEXT registros--></h4>
+								<!--#4DENDIF-->
 							</div>                    
 							<div class="col-sm-4">
 								<a type="button" href="#" onclick="clickForm('nuevaSolicitud')" style="margin-top:10px;" class="btn btn-block ajg-dark-button"><i class="fa fa-plus"></i> Nueva Solicitud</a>
@@ -47,22 +50,15 @@
 						</div>
 															
 						<div class="filters ajg-panel" id="filters">  
-							<div class="col-sm-12" hidden>
+							<!--4DIF (registros#"")-->
+							<div class="col-sm-12" >
 								<div class="btn-group btn-group-justified">
+									<a class="btn btn-default" role="button"  onclick="buscar('')" >Pendientes</a>
 									<a class="btn btn-default" role="button" onclick="buscar('all')">Mostrar Todos</a>									
-									<a class="btn btn-default" role="button" data-toggle="modal" data-target="#menuAvanzado">Busqueda Avanzada</a>
+									
 								</div>
-							</div>       							                                                                                                       
-							<div class="col-sm-12" style="display:none">
-								<form action="Consulta_Busqueda" method="POST" enctype="multipart/form-data" class="search nav-form">
-									<div class="input-group input-search">
-										<input type="text" class="form-control" name="buscar" id="buscar" placeholder="Buscar...">
-										<span class="input-group-btn">
-											<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-										</span>										
-									</div>
-								</form>                          
-							</div>                                
+							</div>
+							<!--4DENDIF-->                              
 						</div>
 					</div>  
 					<form action="/Consulta/Detalles_Sarlaft" id="detallesSarlaft" method="POST" enctype="multipart/form-data">
