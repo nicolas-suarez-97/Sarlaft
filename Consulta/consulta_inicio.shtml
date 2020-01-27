@@ -80,6 +80,7 @@
 											<th>Dirección<span style="color:white">_____________________</span></th>
 											<th>Tipo</th>
 											<th>Teléfono</th>
+											<th>Fecha</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -101,10 +102,12 @@
 											<td><!--4DTEXT [Sarlaft]Direccin_Oficina--></td>	
 											<td>Jurídico</td>
 											<td><!--4DTEXT [Sarlaft]Telefono_Oficina--></td>
+											<td><!--4DTEXT [Sarlaft]Fecha_Diligenciamiento--></td>
 											<!--#4DELSE-->
 											<td><!--4DTEXT [Sarlaft]Direccion--></td>
 											<td>Natural</td>
 											<td><!--4DTEXT [Sarlaft]Telefono--></td>
+											<td><!--4DTEXT [Sarlaft]Fecha_Diligenciamiento--></td>
 											<!--#4DENDIF-->
 										</tr>					
 										<!--4DENDLOOP-->		
