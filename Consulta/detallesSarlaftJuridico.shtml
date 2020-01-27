@@ -1228,10 +1228,10 @@
                                 
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <button type="button" onclick="aprobacion('Aprobado','formAprobado','resultado1')" class="btn btn-success btn-block " >Aprobar</button>
+                                        <button type="button" onclick="aprobacion('Aprobado','formAprobado','resultado1','entrevista')" class="btn btn-success btn-block " >Aprobar</button>
                                     </div>
                                     <div class="col-sm-6">
-                                        <button type="button" onclick="aprobacion('Rechazado','formAprobado','resultado1')" class="btn btn-danger btn-block">Rechazar</button>
+                                        <button type="button" onclick="aprobacion('Rechazado','formAprobado','resultado1','entrevista')" class="btn btn-danger btn-block">Rechazar</button>
                                     </div>
                                 </div>
                             </div>
@@ -1271,10 +1271,10 @@
 
                                 <div class="row" style="display:none" id="botones">
                                     <div class="col-sm-4">
-                                        <button type="button" onclick="aprobacion('Aprobado','formAprobado2','resultado2')" class="btn btn-success btn-block " >Aprobar</button>
+                                        <button type="button" onclick="aprobacion('Aprobado','formAprobado2','resultado2','entrev')" class="btn btn-success btn-block " >Aprobar</button>
                                     </div>
                                     <div class="col-sm-4">
-                                        <button type="button" onclick="aprobacion('Rechazado','formAprobado2','resultado2')" class="btn btn-danger btn-block">Rechazar</button>
+                                        <button type="button" onclick="aprobacion('Rechazado','formAprobado2','resultado2','entrev')" class="btn btn-danger btn-block">Rechazar</button>
                                     </div>
                                     <div class="col-sm-4">
                                         <button type="button" onclick="cancelarAprob()" class="btn btn-block">Cancelar</button>

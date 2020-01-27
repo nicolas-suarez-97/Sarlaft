@@ -204,9 +204,14 @@ function reclamSeg(...archivos){
     }
 }
 
-function aprobacion(value, form,resInput){
-    document.getElementById(resInput).value = value;
-    document.getElementById(form).submit();
+function aprobacion(value, form,resInput,entrevista){
+    var entrev = document.getElementById(entrevista);
+    if(entrev.value != ""){
+        document.getElementById(resInput).value = value;
+        document.getElementById(form).submit();
+    }else{
+        entrev.style.borderColor = 'red';
+    }
     
 }
 
