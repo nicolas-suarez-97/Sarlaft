@@ -148,7 +148,7 @@ function validateList(boton,...campos){
         boton.disabled = false;
         boton.click();
     }else{
-        alert("Por favor verifique que no hayan datos sin guardar.");
+        alert("Por favor verifique que no hayan datos sin guardar. (Para guardar oprima el botón +)");
         var boton = document.getElementById(boton);
         boton.disabled = true;
     }
