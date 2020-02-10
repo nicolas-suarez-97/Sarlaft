@@ -40,6 +40,9 @@
                             </header>
                             <div class="panel-body">
                                 <form class="form-bordered ajg-title-dark" id="formOri" method="POST" enctype="multipart/form-data" action="/Juridico/origen_fondos">                                                                                                               
+                                    <div class="row">
+                                        <h5 class="col-sm-4" style="margin-left: 14px;font-weight: bold;">* Valores en miles de pesos</h5>
+                                    </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-4">
