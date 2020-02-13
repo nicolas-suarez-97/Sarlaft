@@ -1,3 +1,4 @@
+
 function upperCase(e,validateSpecial){    
     e.value = e.value.toString().toUpperCase();
     

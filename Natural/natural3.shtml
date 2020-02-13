@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="fixed sidebar-left-collapsed">
 	<head>
-	    <!--4DINCLUDE headIncludes.html-->
+        <!--4DINCLUDE headIncludes.html-->
 	</head>
 	<body>
 		<section class="body">
@@ -57,7 +57,7 @@
                                         <div class="col-md-6">
                                             <label class="col-md-4">Ingresos Mensuales</label>
                                             <div class="col-md-8">                                                                                                                                                
-                                                <input name="ingresosMensuales" id="ingresosMensuales" required value="<!--4DTEXT [Sarlaft]Ingresos_Mensuales-->" type="number" class="form-control" placeholder="Ingresos  Mensuales (Pesos)">                                                
+                                                <input name="ingresosMensuales" id="ingresosMensuales" required value="<!--4DTEXT [Sarlaft]Ingresos_Mensuales-->" type="number" class="form-control" placeholder="Ingresos  Mensuales (Pesos)">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -196,5 +196,6 @@
 			
 		</section>
         <!--4DINCLUDE scripts.html-->
+        <script src="natural3.js"></script>
 	</body>
 </html>
