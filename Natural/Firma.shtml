@@ -17,7 +17,8 @@
               canvas.freeDrawingBrush.color = "#000000";
               canvas.allowTouchScrolling = false;
               canvas.backgroundColor = "#ffffff";
-              if(window.screen.width < 400){
+
+              if(window.screen.width < 500){
                 canvas.setWidth(300);
                 canvas.setHeight(400);
                 
