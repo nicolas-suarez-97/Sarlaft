@@ -45,7 +45,7 @@
 						</div>
 					</header>
           <div style="display: flex; justify-content: center;">
-            <canvas id="sheet" width="600" height="400"></canvas>
+            <canvas id="sheet" width="300" height="500"></canvas>
           </div>
 				</section>
 			</div>
