@@ -11,10 +11,25 @@
         </style>
         <script type='text/javascript'>
             window.onload=function(){
-                var canvas = new fabric.Canvas('sheet');
-                canvas.isDrawingMode = true;
-                canvas.freeDrawingBrush.width = 3;
-                canvas.freeDrawingBrush.color = "#000000";
+              var canvas = new fabric.Canvas('sheet');
+              canvas.isDrawingMode = true;
+              canvas.freeDrawingBrush.width = 2;
+              canvas.freeDrawingBrush.color = "#000000";
+              canvas.allowTouchScrolling = false;
+              canvas.backgroundColor = "#ffffff";
+              if(window.screen.width < 400){
+                canvas.setWidth(300);
+                canvas.setHeight(400);
+                
+              }else{
+                canvas.setHeight(200);
+                canvas.setWidth(500);
+              }
+              document.getElementById('clearButton').addEventListener('click',function(){
+                canvas.backgroundColor = "#ffffff";
+                canvas.clear();
+              });
+
             }
         </script>
 	</head>
@@ -37,15 +52,19 @@
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
 								<li>									
-                                    <i class="fa fa-home title"></i>									
+                  <i class="fa fa-home title"></i>									
 								</li>
 								<li><span style="padding-right: 1cm; color:white">Creación Sarlaft</span></li>
 							</ol>
 												
 						</div>
 					</header>
-          <div style="display: flex; justify-content: center;">
-            <canvas id="sheet" width="500" height="300"></canvas>
+          <div style="display: flex; justify-content: space-between; flex-direction: column; align-items: center;">
+            <canvas id="sheet""></canvas>
+            <div style="margin: 10px;">
+              <button class="btn btn-danger" id="clearButton" type="button">Borrar</button>
+              <button class="btn btn-success" id="clearButton" type="button">Enviar</button>
+            </div>
           </div>
 				</section>
 			</div>
