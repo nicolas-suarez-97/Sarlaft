@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="fixed sidebar-left-collapsed">
+	<head>
+        <!--4DINCLUDE headIncludes.html-->
+        <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js'></script>
+
+        <style type='text/css'>
+            #sheet {
+                border:1px solid black;
+            }
+        </style>
+        <script type='text/javascript'>
+            window.onload=function(){
+                var canvas = new fabric.Canvas('sheet');
+                canvas.isDrawingMode = true;
+                canvas.freeDrawingBrush.width = 3;
+                canvas.freeDrawingBrush.color = "#000000";
+            }
+        </script>
+	</head>
+	<body>
+		<section class="body">
+
+			<!-- start: header -->
+                <!--4DINCLUDE ../header.html-->
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+			        <!--#4DINCLUDE panelNatural.shtml-->
+				<!-- end: sidebar -->
+
+				<section role="main" class="content-body">
+					<header class="page-header ajg-color-dark " >
+                        <h2>Creación Sarlaft</h2>
+					
+						<div class="right-wrapper pull-right">
+							<ol class="breadcrumbs">
+								<li>									
+                                    <i class="fa fa-home title"></i>									
+								</li>
+								<li><span style="padding-right: 1cm; color:white">Creación Sarlaft</span></li>
+							</ol>
+												
+						</div>
+					</header>
+          <div style="display: flex; justify-content: center;">
+            <canvas id="sheet" width="600" height="400"></canvas>
+          </div>
+				</section>
+			</div>
+
+			
+        </section>
+        <script src='Natural/natural1.js'></script>
+        <script src='natural1.js'></script>
+        <!--4DINCLUDE scripts.html-->
+	</body>
+</html>
