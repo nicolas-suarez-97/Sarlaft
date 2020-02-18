@@ -19,8 +19,9 @@
               canvas.backgroundColor = "#ffffff";
 
               if(window.screen.width < 500){
+                var newHeight = window.screen.height * 0.8;
                 canvas.setWidth(300);
-                canvas.setHeight(400);
+                canvas.setHeight(500);
                 
               }else{
                 canvas.setHeight(200);
@@ -72,8 +73,6 @@
 
 			
         </section>
-        <script src='Natural/natural1.js'></script>
-        <script src='natural1.js'></script>
-        <!--4DINCLUDE scripts.html-->
+        
 	</body>
 </html>
