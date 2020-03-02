@@ -902,11 +902,13 @@
 							</div>
 						</div>
 						<!--#4DIF ([Sarlaft]Aprobado # true)-->
+						<!--#4DIF (JSON Stringify([Sarlaft]Resultado_Infolaft) # "undefined")-->
 						<div style="display:flex; flex-direction: column; padding: 20px">
 							<h4 class="ajg-title-dark">Por favor verifique el resultado de la consulta del cliente! </h4>
 							<label for="result" class="ajg-title-dark">Consulta:</label>
 							<textarea name="result" id="result" cols="80%" rows="10" readonly><!--4DTEXT JSON Stringify([Sarlaft]Resultado_Infolaft) --></textarea>
 						</div>
+						<!--#4DENDIF-->
 						<!--#4DENDIF-->
 					</header>
 					</section>
