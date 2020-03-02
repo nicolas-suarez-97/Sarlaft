@@ -1191,12 +1191,21 @@
                     
                     <!--RESULTADO INFOLAFT-->
 					<section class="ajg-panel">
-						<header class="ajg-panel-header">
-                            <h4 class="ajg-panel-title ">Resultado Infolaft</h4>
-                            <div class="checkbox-custom chekbox-primary " style="margin-right: 30px">
-                                <input value="Aprobado" type="checkbox" name="aprobado" disabled <!--4DIF ([Sarlaft]Aprobado)-->checked<!--4DENDIF-->/>
-                                <label class="ajg-title-dark">Aprobado</label>
+						<header >
+                            <div class="ajg-panel-header">
+                                <h4 class="ajg-panel-title ">Resultado Infolaft</h4>
+                                <div class="checkbox-custom chekbox-primary " style="margin-right: 30px">
+                                    <input value="Aprobado" type="checkbox" name="aprobado" disabled <!--4DIF ([Sarlaft]Aprobado)-->checked<!--4DENDIF-->/>
+                                    <label class="ajg-title-dark">Aprobado</label>
+                                </div>
                             </div>
+                            <!--#4DIF ([Sarlaft]Aprobado # true)-->
+                            <div style="display:flex; flex-direction: column; padding: 20px">
+                                <h4 class="ajg-title-dark">Por favor verifique el resultado de la consulta del cliente! </h4>
+                                <label for="result" class="ajg-title-dark">Consulta:</label>
+                                <textarea name="result" id="result" cols="80%" rows="10" readonly><!--4DTEXT JSON Stringify([Sarlaft]Resultado_Infolaft) --></textarea>
+                            </div>
+                            <!--#4DENDIF-->
 						</header>
                     </section>
                     <!--FIN RESULTADO INFOLAFT-->
