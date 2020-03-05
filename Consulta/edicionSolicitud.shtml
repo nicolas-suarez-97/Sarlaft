@@ -38,14 +38,28 @@
 						</div>
 					</div>
 					<!--#4DENDIF-->
+
+					<!--#4DIF (correo = True)-->
+					<div class="ajg-panel" style="background-color: #47a447;">
+						<div class="row " style="display: flex; align-items: center">
+							<div class="col-sm-6">	
+								<h4 style="color:white; margin: 20px 0px 20px 20px;" ><i class="fa fa-check"></i>  Envío exitoso de correo </h4>
+							</div>								
+						</div>
+					</div>
+					<!--#4DENDIF-->
+
 					<!-- start: page -->
 					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Solicitudes">
 						
 						<input type="text" hidden name="id" value="<!--4DTEXT [Users]ID-->">					
 						<div class="ajg-panel ">
 							<div class="row top">
-								<div class="col-sm-6 top">
+								<div class="col-sm-6 ">
 									<h3 class=" ajg-title-dark" >SOLICITUD # <!--4DTEXT [Clientes]ID--></h3>
+									<form action="/Consulta/Reenviar_Correo" method="POST">
+										<button type="submit" class="btn ajg-button">Reenviar Correo</button>
+									</form>
 								</div>		
 								<div class="col-md-4">
 									<h5 class="ajg-title-dark">Usuario Creación: <!--4DTEXT [Clientes]Usuario_Creacion--></h5>
@@ -192,11 +206,9 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<div  class="form-group">
-											<label class="col-sm-2 control-label ">Dirección:</label>
-											<div class="col-sm-10 ">
-												<div class="input-group">
-													<p class="form-control"><!--4DTEXT [Clientes]Oficina_Principal_DIr--></p>
-												</div>                                                                                                 
+											<label class="col-md-2 control-label ">Dirección:</label>
+											<div class="col-md-10">
+												<p class="form-control"><!--4DTEXT [Clientes]Oficina_Principal_DIr--></p>
 											</div>                                 
 										</div>                                                    
 									</div>  																	
