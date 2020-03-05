@@ -48,7 +48,7 @@
 						</div>
 					</div>
 					<!--#4DENDIF-->
-
+					<form action="/Consulta/Reenviar_Correo" method="POST" id="reenvio"></form>
 					<!-- start: page -->
 					<form class="form-bordered " id="search" method="POST" enctype="multipart/form-data" action="/Consulta/Solicitudes">
 						
@@ -57,9 +57,7 @@
 							<div class="row top">
 								<div class="col-sm-6 ">
 									<h3 class=" ajg-title-dark" >SOLICITUD # <!--4DTEXT [Clientes]ID--></h3>
-									<form action="/Consulta/Reenviar_Correo" method="POST">
-										<button type="submit" class="btn ajg-button">Reenviar Correo</button>
-									</form>
+									<button type="button" onclick="reenviarCorreo()" class="btn ajg-button">Reenviar Correo</button>
 								</div>		
 								<div class="col-md-4">
 									<h5 class="ajg-title-dark">Usuario Creación: <!--4DTEXT [Clientes]Usuario_Creacion--></h5>

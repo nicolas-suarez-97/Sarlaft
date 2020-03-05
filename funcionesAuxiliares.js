@@ -229,3 +229,7 @@ function cancelarAprob(){
     document.getElementById('entrev').disabled = true;
     document.getElementById('observaciones').disabled = true;
 }
+
+function reenviarCorreo(){
+    document.getElementById('reenvio').submit();
+}
