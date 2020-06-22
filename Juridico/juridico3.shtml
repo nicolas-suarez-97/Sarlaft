@@ -74,14 +74,9 @@
                                             <label class="col-md-4 control-label">Tipo de Documento</label>
                                             <div class="col-md-8">
                                                 <select name="tipoDocRep" class="form-control mb-md" required>
-                                                    <option><!--4DTEXT [Sarlaft]Tipo_doc_RepLegal--> </option>
-                                                    <option>C.C.</option>
-                                                    <option>C.E.</option>
-                                                    <option>NIT</option>
-                                                    <option>NUIP</option>
-                                                    <option>T.I.</option>
-                                                    <option>Pasaporte</option>
-                                                    <option>Otro Sin</option>
+                                                    <option></option>
+                                                    <option <!--4DIF ([Sarlaft]Tipo_doc_RepLegal="C.C.")--> selected<!--4DENDIF-->>C.C.</option>
+                                                    <option <!--4DIF ([Sarlaft]Tipo_doc_RepLegal="C.E.")--> selected<!--4DENDIF-->>C.E.</option>
                                                 </select>  
                                             </div>                                 
                                         </div>
@@ -405,8 +400,10 @@
                                             <h5 id="notiText" style="color:white"></h5>
                                         </div>
                                     </section>
-                                    <button type="button" onclick="validateFields('numDocRep-5','celularRep-10','telefonoRep-7')"  class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>
-                                    <button type="submit" style="display:none" id="submitButton"></button>
+                                    <div style="display: flex;justify-content: center;">
+                                        <button type="button" onclick="validateFields('numDocRep-5','celularRep-10','telefonoRep-7')"  class="btn ajg-button col-md-4">Siguiente</button>
+                                        <button type="submit" style="display:none" id="submitButton"></button>
+                                    </div>
                                 </form>
                             </div>
                         </section>

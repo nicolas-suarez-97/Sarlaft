@@ -136,8 +136,10 @@
                                     
                                     </div>                                                                                    
                                     <br>
-                                    <button type="button" class="btn ajg-button col-md-4 col-md-offset-4" onclick="validateList('botonAccionistasBenef','numId','nombre','razonSocial','tipoID','id1','porcentP')">Siguiente</button>
-                                    <button disabled style="display: none;" type="submit" id="botonAccionistasBenef"></button>
+                                    <div style="display: flex;justify-content: center;">
+                                        <button type="button" class="btn ajg-button col-md-4 " onclick="validateList('botonAccionistasBenef','numId','nombre','razonSocial','tipoID','id1','porcentP')">Siguiente</button>
+                                        <button disabled style="display: none;" type="submit" id="botonAccionistasBenef"></button>
+                                    </div>
                                 </form>
                             </div>
                         </section>

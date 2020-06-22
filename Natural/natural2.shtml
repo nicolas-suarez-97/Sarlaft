@@ -83,10 +83,10 @@
                                                     <option></option>
                                                     <option <!--4DIF ([Sarlaft]Tipo_Documento="C.C.")--> selected<!--4DENDIF-->>C.C.</option>
                                                     <option <!--4DIF ([Sarlaft]Tipo_Documento="C.E.")--> selected<!--4DENDIF-->>C.E.</option>
-                                                    <option <!--4DIF ([Sarlaft]Tipo_Documento="NIT")--> selected<!--4DENDIF-->>NIT</option>
-                                                    <option <!--4DIF ([Sarlaft]Tipo_Documento="NUIP")--> selected<!--4DENDIF-->>NUIP</option>
-                                                    <option <!--4DIF ([Sarlaft]Tipo_Documento="T.I.")--> selected<!--4DENDIF-->>T.I.</option>
-                                                    <option <!--4DIF ([Sarlaft]Tipo_Documento="Pasaporte")--> selected<!--4DENDIF-->>Pasaporte</option>                                                    
+                                                    <!--<option <!-4DIF ([Sarlaft]Tipo_Documento="NIT")-> selected<!-4DENDIF->>NIT</option>
+                                                    <option <!-4DIF ([Sarlaft]Tipo_Documento="NUIP")-> selected<!-4DENDIF->>NUIP</option>
+                                                    <option <!-4DIF ([Sarlaft]Tipo_Documento="T.I.")-> selected<!-4DENDIF->>T.I.</option>
+                                                    <option <!-4DIF ([Sarlaft]Tipo_Documento="Pasaporte")-> selected<!-4DENDIF->>Pasaporte</option>-->
                                                 </select>  
                                             </div>                                 
                                         </div>
@@ -647,8 +647,10 @@
                                     <br>
                                 </div>
                             </section>
-                            <button type="button" onclick="validateFields('telefonoRep-7','celularRep-10')" class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>
-                            <button type="submit" style="display:none" id="submitButton"></button>
+                            <div style="display: flex;justify-content: center;">
+                                <button type="button" onclick="validateFields('telefonoRep-7','celularRep-10')" class="btn ajg-button col-md-4">Siguiente</button>
+                                <button type="submit" style="display:none" id="submitButton"></button>
+                            </div>
                         </form>
                         <br>
                         <br>

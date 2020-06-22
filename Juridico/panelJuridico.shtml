@@ -126,10 +126,10 @@
                                     </form>
                                 </li> 
                                 <li>
-                                    <form action="/Juridico/imprimir_formulario"  method="POST" enctype="multipart/form-data">
+                                    <!--<form action="/Juridico/imprimir_formulario"  method="POST" enctype="multipart/form-data">
                                         <input type="hidden" name="panel" value="true">
                                         <button type="submit" class="btn btn-link ajg-title-dark" style="margin-left: 45px;">7. Imprimir Formulario </button>
-                                    </form>
+                                    </form>-->
                                 </li>                                                        
                             </ul>
                         </li>  

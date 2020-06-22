@@ -103,7 +103,9 @@
                                         </div>                                                                              
                                     </div>
                                     <br>
-                                    <button type="button" onclick="validateCero('formOri','ingresosMensuales','egresosMensuales','activos','pasivos','patrimonio')"  class="btn ajg-button col-md-4 col-md-offset-4">Siguiente</button>                                   
+                                    <div style="display: flex;justify-content: center;">
+                                        <button type="button" onclick="validateCero('formOri','ingresosMensuales','egresosMensuales','activos','pasivos','patrimonio')"  class="btn ajg-button col-md-4 ">Siguiente</button>                                   
+                                    </div>
                                                                         
                                 </form>
                             </div>

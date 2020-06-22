@@ -141,8 +141,10 @@
                                         </table>                                                                                        
                                     </div>                                                                         
                                     <br>
-                                    <button type="button" class="btn ajg-button col-md-4 col-md-offset-4" onclick="validateList('botonReclamaciones','anyo','ramo','compañia','valor','resultado')">Siguiente</button>
-                                    <button disabed type="submit" style="display:none" id="botonReclamaciones"></button>
+                                    <div style="display: flex;justify-content: center;">
+                                        <button type="button" class="btn ajg-button col-md-4" onclick="validateList('botonReclamaciones','anyo','ramo','compañia','valor','resultado')">Siguiente</button>
+                                        <button disabed type="submit" style="display:none" id="botonReclamaciones"></button>
+                                    </div>
                                 </form>
                             </div>
                         </section>
