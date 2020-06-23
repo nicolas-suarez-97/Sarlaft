@@ -77,6 +77,7 @@
 								</div>
 								<div style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
 									<p>Acontinuación puede descargar su Sarlaft en formato PDF y verificar que la información sea correcta.</p>
+									<p style="text-align: center;font-style: italic;margin: 10px;" class="col-sm-7"><span style="font-weight: bold">Nota:</span> Para visualizar la firma electrónica se recomienda hacer uso de un software de lectura de PDF como "Adobe Reader"</p>
 									<a  target="_blank" rel="noopener noreferrer" class="btn ajg-button col-sm-4" href="<!--4DTEXT OB Get([Sarlaft]Ruta_Parcial_PDF;"sarlaft")-->">
 										Descargar Sarlaft
 									</a>
