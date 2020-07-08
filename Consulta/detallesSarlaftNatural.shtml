@@ -829,6 +829,10 @@
 									</div>
 								</div>
 							</div>
+							<br>
+							<div style="display: flex;justify-content: center;">
+								<button class="btn ajg-button col-md-5" data-toggle="modal" data-target="#modalDocumentos">Cargar Documentos</button>
+							</div>
 						</div>
 					</section>
 					<!--FIN DOCUMENTOS  REQUERIDOS-->
@@ -1013,6 +1017,99 @@
 				</section>
 			</div>			
 		</section>				
+		<!-- Modal Cargar Documentos -->
+		<div class="modal fade" id="modalDocumentos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document" style="min-width:80%">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 style="font-weight: bold" class="modal-title" id="exampleModalLabel">Carga de Documentos</h3>
+					</div>
+					<div class="modal-body">
+						<form action="/Consulta/Cargar_Documentos" method="POST" enctype="multipart/form-data">
+							<div class="row">
+								<div class="col-md-6">
+									<p>- Fotocopia del documento de identidad<span style="color:red">*</span></p>
+									<p style="margin-left:8px;">(Ampliada al 150%)</p>
+								</div>                                                                                         
+								<div class="col-md-6">
+									<!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"documentoIdentidad")="")-->
+										<input type="file" class="form-control-file " required name="documentoIdentidad" id="documentoIdentidad"  onchange="ValidateSingleInput(this);">
+									<!--4DELSE-->                              
+										<div class="col-md-4">
+											<h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"documentoIdentidad")--></h5>
+										</div>                
+										<div class="col-md-8">
+											<input type="file" class="form-control-file " name="documentoIdentidad" id="documentoIdentidad" onchange="ValidateSingleInput(this);">
+										</div>                      
+									<!--4DENDIF-->
+								</div>                                            
+							</div>
+							<br>                                                                                                                        
+							<div class="row">
+								<div class="col-md-6">
+									<p>- RUT.</p>
+								</div>                                                                                       
+								<div class="col-md-6">                                                
+									<!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"rut")="")-->
+										<input type="file" class="form-control-file" name="rut" onchange="ValidateSingleInput(this);">
+									<!--4DELSE-->                              
+										<div class="col-md-4">
+												<h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"rut")--></h5>
+										</div>                
+										<div class="col-md-8">
+											<input type="file" class="form-control-file " name="rut" onchange="ValidateSingleInput(this);">
+										</div>                      
+									<!--4DENDIF-->                                                
+								</div>                                        
+							</div>
+							<br>                                                                                                                        
+							<div class="row">
+								<div class="col-md-6">
+									<p>- Documento de Declaración de Renta.</p>
+								</div>                                                                                       
+								<div class="col-md-6">                                                
+									<!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"declaracion")="")-->
+										<input type="file" class="form-control-file" name="declaracion" onchange="ValidateSingleInput(this);">
+									<!--4DELSE-->                              
+										<div class="col-md-4">
+												<h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"declaracion")--></h5>
+										</div>                
+										<div class="col-md-8">
+											<input type="file" class="form-control-file " name="declaracion" onchange="ValidateSingleInput(this);">
+										</div>                      
+									<!--4DENDIF-->                                                
+								</div>                                        
+							</div>
+							<br>                                                                                                                        
+							<div class="row">
+								<div class="col-md-6">
+									<p>- Estados Financieros.</p>
+								</div>                                                                                       
+								<div class="col-md-6">                                                
+									<!--4DIF (OB Get([Sarlaft]Ruta_Adjuntos;"estados")="")-->
+										<input type="file" class="form-control-file" name="estados" onchange="ValidateSingleInput(this);">
+									<!--4DELSE-->                              
+										<div class="col-md-4">
+												<h5><!--4DTEXT OB Get([Sarlaft]Nombre_Adjuntos;"estados")--></h5>
+										</div>                
+										<div class="col-md-8">
+											<input type="file" class="form-control-file " name="estados" onchange="ValidateSingleInput(this);">
+										</div>                      
+									<!--4DENDIF-->                                                
+								</div>                                        
+							</div>
+							<br>    
+							<div class="modal-footer" style="display: flex; justify-content: center;">
+								<button type="submit" style="width:100px;" class="btn btn-primary ajg-dark-button" >Guardar</button>
+								<button type="button" style="width:100px;" class="btn " data-dismiss="modal" id="cancelar">Cancelar</button>
+							</div>
+						</form>
+					</div>
+					<br>
+				</div>
+			</div>
+		</div>            
+		<!-- Fin Modal Cargar Documentos -->	
 		<br>
 		<br>
 		<script src='../funcionesAuxiliares.js'></script>
